@@ -1,0 +1,543 @@
+[submodule "provider/terraform-provider-alicloud"]
+	path = provider/terraform-provider-alicloud
+	url = git@github.com:aliyun/terraform-provider-alicloud.git
+[submodule "modules/terraform-alicloud-concourse"]
+	path = modules/terraform-alicloud-concourse
+	url = git@github.com:aliyun/terraform-alicloud-concourse.git
+[submodule "modules/terraform-alicloud-kubernetes"]
+	path = modules/terraform-alicloud-kubernetes
+	url = git@github.com:aliyun/terraform-alicloud-kubernetes.git
+[submodule "modules/terraform-alicloud-classic-load-balance"]
+	path = modules/terraform-alicloud-classic-load-balance
+	url = git@github.com:aliyun/terraform-alicloud-classic-load-balance.git
+[submodule "modules/terraform-alicloud-security-group"]
+	path = modules/terraform-alicloud-security-group
+	url = git@github.com:alibaba/terraform-alicloud-security-group.git
+[submodule "modules/terraform-alicloud-slb"]
+	path = modules/terraform-alicloud-slb
+	url = git@github.com:alibaba/terraform-alicloud-slb.git
+[submodule "modules/terraform-alicloud-vpc"]
+	path = modules/terraform-alicloud-vpc
+	url = git@github.com:alibaba/terraform-alicloud-vpc.git
+[submodule "modules/terraform-alicloud-ecs-instance"]
+	path = modules/terraform-alicloud-ecs-instance
+	url = git@github.com:alibaba/terraform-alicloud-ecs-instance.git
+[submodule "modules/terraform-alicloud-adb"]
+	path = modules/terraform-alicloud-adb
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-adb.git
+[submodule "modules/terraform-alicloud-ram-role"]
+	path = modules/terraform-alicloud-ram-role
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ram-role.git
+[submodule "modules/terraform-alicloud-nas"]
+	path = modules/terraform-alicloud-nas
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-nas.git
+[submodule "modules/terraform-alicloud-slb-acl"]
+	path = modules/terraform-alicloud-slb-acl
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-slb-acl.git
+[submodule "modules/terraform-alicloud-fc"]
+	path = modules/terraform-alicloud-fc
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-fc.git
+[submodule "modules/terraform-alicloud-ecs-spot-instance"]
+	path = modules/terraform-alicloud-ecs-spot-instance
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ecs-spot-instance.git
+[submodule "modules/terraform-alicloud-cen-bandwidth"]
+	path = modules/terraform-alicloud-cen-bandwidth
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-cen-bandwidth.git
+[submodule "modules/terraform-alicloud-ecs-bare-metal-instance"]
+	path = modules/terraform-alicloud-ecs-bare-metal-instance
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ecs-bare-metal-instance.git
+[submodule "modules/terraform-alicloud-serverless-webapp"]
+	path = modules/terraform-alicloud-serverless-webapp
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-serverless-webapp.git
+[submodule "modules/terraform-alicloud-tensorflow"]
+	path = modules/terraform-alicloud-tensorflow
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-tensorflow.git
+[submodule "modules/terraform-alicloud-market-jenkins"]
+	path = modules/terraform-alicloud-market-jenkins
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-market-jenkins.git
+[submodule "modules/terraform-alicloud-market-tensorflow"]
+	path = modules/terraform-alicloud-market-tensorflow
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-market-tensorflow.git
+[submodule "modules/terraform-alicloud-market-wordpress"]
+	path = modules/terraform-alicloud-market-wordpress
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-market-wordpress.git
+[submodule "modules/terraform-alicloud-jenkins"]
+	path = modules/terraform-alicloud-jenkins
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-jenkins.git
+[submodule "modules/terraform-alicloud-slb-udp"]
+	path = modules/terraform-alicloud-slb-udp
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-slb-udp.git
+[submodule "modules/terraform-alicloud-emr-druid"]
+	path = modules/terraform-alicloud-emr-druid
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-emr-druid.git
+[submodule "modules/terraform-alicloud-key-pair"]
+	path = modules/terraform-alicloud-key-pair
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-key-pair.git
+[submodule "modules/terraform-alicloud-emr-zookeeper"]
+	path = modules/terraform-alicloud-emr-zookeeper
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-emr-zookeeper.git
+[submodule "modules/terraform-alicloud-wordpress"]
+	path = modules/terraform-alicloud-wordpress
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-wordpress.git
+[submodule "modules/terraform-alicloud-kubernetes-nodes-supplement"]
+	path = modules/terraform-alicloud-kubernetes-nodes-supplement
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-kubernetes-nodes-supplement.git
+[submodule "modules/terraform-alicloud-ecs-gpu-instance"]
+	path = modules/terraform-alicloud-ecs-gpu-instance
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ecs-gpu-instance.git
+[submodule "modules/terraform-alicloud-memcache"]
+	path = modules/terraform-alicloud-memcache
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-memcache.git
+[submodule "modules/terraform-alicloud-maxcompute-project"]
+	path = modules/terraform-alicloud-maxcompute-project
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-maxcompute-project.git
+[submodule "modules/terraform-alicloud-api-gateway"]
+	path = modules/terraform-alicloud-api-gateway
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-api-gateway.git
+[submodule "modules/terraform-alicloud-hbase-cluster"]
+	path = modules/terraform-alicloud-hbase-cluster
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-hbase-cluster.git
+[submodule "modules/terraform-alicloud-rds"]
+	path = modules/terraform-alicloud-rds
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-rds.git
+[submodule "modules/terraform-alicloud-mongodb-sharding"]
+	path = modules/terraform-alicloud-mongodb-sharding
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-mongodb-sharding.git
+[submodule "modules/terraform-alicloud-market-app-on-autoscaling"]
+	path = modules/terraform-alicloud-market-app-on-autoscaling
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-market-app-on-autoscaling.git
+[submodule "modules/terraform-alicloud-kubernetes-wordpress"]
+	path = modules/terraform-alicloud-kubernetes-wordpress
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-kubernetes-wordpress.git
+[submodule "modules/terraform-alicloud-multi-zone-infrastructure-with-ots"]
+	path = modules/terraform-alicloud-multi-zone-infrastructure-with-ots
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-multi-zone-infrastructure-with-ots.git
+[submodule "modules/terraform-alicloud-analyticdb-mysql"]
+	path = modules/terraform-alicloud-analyticdb-mysql
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-analyticdb-mysql.git
+[submodule "modules/terraform-alicloud-serverless-kubernetes"]
+	path = modules/terraform-alicloud-serverless-kubernetes
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-serverless-kubernetes.git
+[submodule "modules/terraform-alicloud-lnmp"]
+	path = modules/terraform-alicloud-lnmp
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-lnmp.git
+[submodule "modules/terraform-alicloud-rds-postgres"]
+	path = modules/terraform-alicloud-rds-postgres
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-rds-postgres.git
+[submodule "modules/terraform-alicloud-market-app-with-ecs-image"]
+	path = modules/terraform-alicloud-market-app-with-ecs-image
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-market-app-with-ecs-image.git
+[submodule "modules/terraform-alicloud-mongodb"]
+	path = modules/terraform-alicloud-mongodb
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-mongodb.git
+[submodule "modules/terraform-alicloud-slb-http"]
+	path = modules/terraform-alicloud-slb-http
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-slb-http.git
+[submodule "modules/terraform-alicloud-network-with-security-group"]
+	path = modules/terraform-alicloud-network-with-security-group
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-network-with-security-group.git
+[submodule "modules/terraform-alicloud-slb-listener"]
+	path = modules/terraform-alicloud-slb-listener
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-slb-listener.git
+[submodule "modules/terraform-alicloud-private-zone"]
+	path = modules/terraform-alicloud-private-zone
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-private-zone.git
+[submodule "modules/terraform-alicloud-disk"]
+	path = modules/terraform-alicloud-disk
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-disk.git
+[submodule "modules/terraform-alicloud-redis"]
+	path = modules/terraform-alicloud-redis
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-redis.git
+[submodule "modules/terraform-alicloud-ram"]
+	path = modules/terraform-alicloud-ram
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ram.git
+[submodule "modules/terraform-alicloud-rds-mysql"]
+	path = modules/terraform-alicloud-rds-mysql
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-rds-mysql.git
+[submodule "modules/terraform-alicloud-cdn"]
+	path = modules/terraform-alicloud-cdn
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-cdn.git
+[submodule "modules/terraform-alicloud-remote-backend"]
+	path = modules/terraform-alicloud-remote-backend
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-remote-backend.git
+[submodule "modules/terraform-alicloud-elasticsearch-instance"]
+	path = modules/terraform-alicloud-elasticsearch-instance
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-elasticsearch-instance.git
+[submodule "modules/terraform-alicloud-gpdb"]
+	path = modules/terraform-alicloud-gpdb
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-gpdb.git
+[submodule "modules/terraform-alicloud-ecs-image"]
+	path = modules/terraform-alicloud-ecs-image
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ecs-image.git
+[submodule "modules/terraform-alicloud-slb-tcp"]
+	path = modules/terraform-alicloud-slb-tcp
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-slb-tcp.git
+[submodule "modules/terraform-alicloud-managed-kubernetes"]
+	path = modules/terraform-alicloud-managed-kubernetes
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-managed-kubernetes.git
+[submodule "modules/terraform-alicloud-vpn-gateway"]
+	path = modules/terraform-alicloud-vpn-gateway
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vpn-gateway.git
+[submodule "modules/terraform-alicloud-autoscaling-rule"]
+	path = modules/terraform-alicloud-autoscaling-rule
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-autoscaling-rule.git
+[submodule "modules/terraform-alicloud-sls-logtail"]
+	path = modules/terraform-alicloud-sls-logtail
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-sls-logtail.git
+[submodule "modules/terraform-alicloud-hbase"]
+	path = modules/terraform-alicloud-hbase
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-hbase.git
+[submodule "modules/terraform-alicloud-actiontrail"]
+	path = modules/terraform-alicloud-actiontrail
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-actiontrail.git
+[submodule "modules/terraform-alicloud-mns-queue"]
+	path = modules/terraform-alicloud-mns-queue
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-mns-queue.git
+[submodule "modules/terraform-alicloud-automation-elastic-landing"]
+	path = modules/terraform-alicloud-automation-elastic-landing
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-automation-elastic-landing.git
+[submodule "modules/terraform-alicloud-network-with-nat"]
+	path = modules/terraform-alicloud-network-with-nat
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-network-with-nat.git
+[submodule "modules/terraform-alicloud-emr-hadoop"]
+	path = modules/terraform-alicloud-emr-hadoop
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-emr-hadoop.git
+[submodule "modules/terraform-alicloud-eip"]
+	path = modules/terraform-alicloud-eip
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-eip.git
+[submodule "modules/terraform-alicloud-vpc-peering-multi-region"]
+	path = modules/terraform-alicloud-vpc-peering-multi-region
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vpc-peering-multi-region.git
+[submodule "modules/terraform-alicloud-scdn"]
+	path = modules/terraform-alicloud-scdn
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-scdn.git
+[submodule "modules/terraform-alicloud-ecs-rds"]
+	path = modules/terraform-alicloud-ecs-rds
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ecs-rds.git
+[submodule "modules/terraform-alicloud-eip-slb-ecs-polardb"]
+	path = modules/terraform-alicloud-eip-slb-ecs-polardb
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-eip-slb-ecs-polardb.git
+[submodule "modules/terraform-alicloud-ecs-rds-redis"]
+	path = modules/terraform-alicloud-ecs-rds-redis
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ecs-rds-redis.git
+[submodule "modules/terraform-alicloud-dms-rds"]
+	path = modules/terraform-alicloud-dms-rds
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-dms-rds.git
+[submodule "modules/terraform-alicloud-ess-scaling-rule"]
+	path = modules/terraform-alicloud-ess-scaling-rule
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ess-scaling-rule.git
+[submodule "modules/terraform-alicloud-slb-rule"]
+	path = modules/terraform-alicloud-slb-rule
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-slb-rule.git
+[submodule "modules/terraform-alicloud-eip-slb-ecs-redis-rds"]
+	path = modules/terraform-alicloud-eip-slb-ecs-redis-rds
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-eip-slb-ecs-redis-rds.git
+[submodule "modules/terraform-alicloud-eip-slb-ecs-rds"]
+	path = modules/terraform-alicloud-eip-slb-ecs-rds
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-eip-slb-ecs-rds.git
+[submodule "modules/terraform-alicloud-ecs-redis-mongodb-polardb"]
+	path = modules/terraform-alicloud-ecs-redis-mongodb-polardb
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ecs-redis-mongodb-polardb.git
+[submodule "modules/terraform-alicloud-waf"]
+	path = modules/terraform-alicloud-waf
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-waf.git
+[submodule "modules/terraform-alicloud-mongodb-multi"]
+	path = modules/terraform-alicloud-mongodb-multi
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-mongodb-multi.git
+[submodule "modules/terraform-alicloud-amqp-ram-cloudmonitor"]
+	path = modules/terraform-alicloud-amqp-ram-cloudmonitor
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-amqp-ram-cloudmonitor.git
+[submodule "modules/terraform-alicloud-eip-slb-ecs-redis-polardb"]
+	path = modules/terraform-alicloud-eip-slb-ecs-redis-polardb
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-eip-slb-ecs-redis-polardb.git
+[submodule "modules/terraform-alicloud-kafka-cloudmonitor"]
+	path = modules/terraform-alicloud-kafka-cloudmonitor
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-kafka-cloudmonitor.git
+[submodule "modules/terraform-alicloud-vpc-privatelink-connection"]
+	path = modules/terraform-alicloud-vpc-privatelink-connection
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vpc-privatelink-connection.git
+[submodule "modules/terraform-alicloud-rocketmq-redis"]
+	path = modules/terraform-alicloud-rocketmq-redis
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-rocketmq-redis.git
+[submodule "modules/terraform-alicloud-ram-fc"]
+	path = modules/terraform-alicloud-ram-fc
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ram-fc.git
+[submodule "modules/terraform-alicloud-rds-to-gpdb"]
+	path = modules/terraform-alicloud-rds-to-gpdb
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-rds-to-gpdb.git
+[submodule "modules/terraform-alicloud-dcdn"]
+	path = modules/terraform-alicloud-dcdn
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-dcdn.git
+[submodule "modules/terraform-alicloud-cen-instance"]
+	path = modules/terraform-alicloud-cen-instance
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-cen-instance.git
+[submodule "modules/terraform-alicloud-mns-topic"]
+	path = modules/terraform-alicloud-mns-topic
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-mns-topic.git
+[submodule "modules/terraform-alicloud-snat"]
+	path = modules/terraform-alicloud-snat
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-snat.git
+[submodule "modules/terraform-alicloud-oss-object"]
+	path = modules/terraform-alicloud-oss-object
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-oss-object.git
+[submodule "modules/terraform-alicloud-autoscaling"]
+	path = modules/terraform-alicloud-autoscaling
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-autoscaling.git
+[submodule "modules/terraform-alicloud-table-store"]
+	path = modules/terraform-alicloud-table-store
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-table-store.git
+[submodule "modules/terraform-alicloud-ram-policy"]
+	path = modules/terraform-alicloud-ram-policy
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ram-policy.git
+[submodule "modules/terraform-alicloud-dnat"]
+	path = modules/terraform-alicloud-dnat
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-dnat.git
+[submodule "modules/terraform-alicloud-emr-kafka"]
+	path = modules/terraform-alicloud-emr-kafka
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-emr-kafka.git
+[submodule "modules/terraform-alicloud-sls"]
+	path = modules/terraform-alicloud-sls
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-sls.git
+[submodule "modules/terraform-alicloud-kubernetes-networking"]
+	path = modules/terraform-alicloud-kubernetes-networking
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-kubernetes-networking.git
+[submodule "modules/terraform-alicloud-nat-gateway"]
+	path = modules/terraform-alicloud-nat-gateway
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-nat-gateway.git
+[submodule "modules/terraform-alicloud-ram-user"]
+	path = modules/terraform-alicloud-ram-user
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ram-user.git
+[submodule "modules/terraform-alicloud-ecs-cluster"]
+	path = modules/terraform-alicloud-ecs-cluster
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ecs-cluster.git
+[submodule "modules/terraform-alicloud-dns"]
+	path = modules/terraform-alicloud-dns
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-dns.git
+[submodule "modules/terraform-alicloud-best-practice-084"]
+	path = modules/terraform-alicloud-best-practice-084
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-best-practice-084.git
+[submodule "modules/terraform-alicloud-oss-bucket"]
+	path = modules/terraform-alicloud-oss-bucket
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-oss-bucket.git
+[submodule "modules/terraform-alicloud-kms"]
+	path = modules/terraform-alicloud-kms
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-kms.git
+[submodule "modules/terraform-alicloud-demo-test"]
+	path = modules/terraform-alicloud-demo-test
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-demo-test.git
+[submodule "modules/terraform-alicloud-acr-personal"]
+	path = modules/terraform-alicloud-acr-personal
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-acr-personal.git
+[submodule "modules/terraform-alicloud-alikafka"]
+	path = modules/terraform-alicloud-alikafka
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-alikafka.git
+[submodule "modules/terraform-alicloud-ga-slb-ecs-cdn-oss"]
+	path = modules/terraform-alicloud-ga-slb-ecs-cdn-oss
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ga-slb-ecs-cdn-oss.git
+[submodule "modules/terraform-alicloud-control-policy"]
+	path = modules/terraform-alicloud-control-policy
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-control-policy.git
+[submodule "modules/terraform-alicloud-ecommerce-elasticsearch"]
+	path = modules/terraform-alicloud-ecommerce-elasticsearch
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ecommerce-elasticsearch.git
+[submodule "modules/terraform-alicloud-ram-vpc-ecs-cloudmonitor"]
+	path = modules/terraform-alicloud-ram-vpc-ecs-cloudmonitor
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ram-vpc-ecs-cloudmonitor.git
+[submodule "modules/terraform-alicloud-ons-redis"]
+	path = modules/terraform-alicloud-ons-redis
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ons-redis.git
+[submodule "modules/terraform-alicloud-rabbitmq"]
+	path = modules/terraform-alicloud-rabbitmq
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-rabbitmq.git
+[submodule "modules/terraform-alicloud-vpc-bastionhost"]
+	path = modules/terraform-alicloud-vpc-bastionhost
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vpc-bastionhost.git
+[submodule "modules/terraform-alicloud-vpc-ecs-rds-slb"]
+	path = modules/terraform-alicloud-vpc-ecs-rds-slb
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vpc-ecs-rds-slb.git
+[submodule "modules/terraform-alicloud-vpc-slb-ecs-ga-dns"]
+	path = modules/terraform-alicloud-vpc-slb-ecs-ga-dns
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vpc-slb-ecs-ga-dns.git
+[submodule "modules/terraform-alicloud-rds-to-polardb"]
+	path = modules/terraform-alicloud-rds-to-polardb
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-rds-to-polardb.git
+[submodule "modules/terraform-alicloud-vpc-ecs"]
+	path = modules/terraform-alicloud-vpc-ecs
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vpc-ecs.git
+[submodule "modules/terraform-alicloud-vpc-slb-ecs-rds-drds"]
+	path = modules/terraform-alicloud-vpc-slb-ecs-rds-drds
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vpc-slb-ecs-rds-drds.git
+[submodule "modules/terraform-alicloud-vpc-ecs-eip"]
+	path = modules/terraform-alicloud-vpc-ecs-eip
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vpc-ecs-eip.git
+[submodule "modules/terraform-alicloud-vpc-ecs-rds-slb-redis"]
+	path = modules/terraform-alicloud-vpc-ecs-rds-slb-redis
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vpc-ecs-rds-slb-redis.git
+[submodule "modules/terraform-alicloud-fc-oss-trigger"]
+	path = modules/terraform-alicloud-fc-oss-trigger
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-fc-oss-trigger.git
+[submodule "modules/terraform-alicloud-influxdb"]
+	path = modules/terraform-alicloud-influxdb
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-influxdb.git
+[submodule "modules/terraform-alicloud-logstore-alb-listener"]
+	path = modules/terraform-alicloud-logstore-alb-listener
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-logstore-alb-listener.git
+[submodule "modules/terraform-alicloud-vpc-click-house-cluster-account"]
+	path = modules/terraform-alicloud-vpc-click-house-cluster-account
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vpc-click-house-cluster-account.git
+[submodule "modules/terraform-alicloud-vpc-log-flows"]
+	path = modules/terraform-alicloud-vpc-log-flows
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vpc-log-flows.git
+[submodule "modules/terraform-alicloud-msc-subscription"]
+	path = modules/terraform-alicloud-msc-subscription
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-msc-subscription.git
+[submodule "modules/terraform-alicloud-cloud-sso"]
+	path = modules/terraform-alicloud-cloud-sso
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-cloud-sso.git
+[submodule "modules/terraform-alicloud-sae"]
+	path = modules/terraform-alicloud-sae
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-sae.git
+[submodule "modules/terraform-alicloud-enable"]
+	path = modules/terraform-alicloud-enable
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-enable.git
+[submodule "modules/terraform-alicloud-eip-anycast"]
+	path = modules/terraform-alicloud-eip-anycast
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-eip-anycast.git
+[submodule "modules/terraform-alicloud-alb-quic"]
+	path = modules/terraform-alicloud-alb-quic
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-alb-quic.git
+[submodule "modules/terraform-alicloud-arms"]
+	path = modules/terraform-alicloud-arms
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-arms.git
+[submodule "modules/terraform-alicloud-prometheus"]
+	path = modules/terraform-alicloud-prometheus
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-prometheus.git
+[submodule "modules/terraform-alicloud-hdfs"]
+	path = modules/terraform-alicloud-hdfs
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-hdfs.git
+[submodule "modules/terraform-alicloud-mybase"]
+	path = modules/terraform-alicloud-mybase
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-mybase.git
+[submodule "modules/terraform-alicloud-eci"]
+	path = modules/terraform-alicloud-eci
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-eci.git
+[submodule "modules/terraform-alicloud-eventbridge"]
+	path = modules/terraform-alicloud-eventbridge
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-eventbridge.git
+[submodule "modules/terraform-alicloud-ess-clb"]
+	path = modules/terraform-alicloud-ess-clb
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ess-clb.git
+[submodule "modules/terraform-alicloud-bastionhost"]
+	path = modules/terraform-alicloud-bastionhost
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-bastionhost.git
+[submodule "modules/terraform-alicloud-cloud-firewall"]
+	path = modules/terraform-alicloud-cloud-firewall
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-cloud-firewall.git
+[submodule "modules/terraform-alicloud-acr-enterprise"]
+	path = modules/terraform-alicloud-acr-enterprise
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-acr-enterprise.git
+[submodule "modules/terraform-alicloud-data-security-center"]
+	path = modules/terraform-alicloud-data-security-center
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-data-security-center.git
+[submodule "modules/terraform-alicloud-direct-mail"]
+	path = modules/terraform-alicloud-direct-mail
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-direct-mail.git
+[submodule "modules/terraform-alicloud-eds"]
+	path = modules/terraform-alicloud-eds
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-eds.git
+[submodule "modules/terraform-alicloud-serverless-workflow"]
+	path = modules/terraform-alicloud-serverless-workflow
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-serverless-workflow.git
+[submodule "modules/terraform-alicloud-simple-application-server"]
+	path = modules/terraform-alicloud-simple-application-server
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-simple-application-server.git
+[submodule "modules/terraform-alicloud-vbr"]
+	path = modules/terraform-alicloud-vbr
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vbr.git
+[submodule "modules/terraform-alicloud-hbr-ecs"]
+	path = modules/terraform-alicloud-hbr-ecs
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-hbr-ecs.git
+[submodule "modules/terraform-alicloud-sag"]
+	path = modules/terraform-alicloud-sag
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-sag.git
+[submodule "modules/terraform-alicloud-ecp"]
+	path = modules/terraform-alicloud-ecp
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ecp.git
+[submodule "modules/terraform-alicloud-imp"]
+	path = modules/terraform-alicloud-imp
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-imp.git
+[submodule "modules/terraform-alicloud-eais"]
+	path = modules/terraform-alicloud-eais
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-eais.git
+[submodule "modules/terraform-alicloud-vpn-pbr-route-entry"]
+	path = modules/terraform-alicloud-vpn-pbr-route-entry
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-vpn-pbr-route-entry.git
+[submodule "modules/terraform-alicloud-hbr-oss"]
+	path = modules/terraform-alicloud-hbr-oss
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-hbr-oss.git
+[submodule "modules/terraform-alicloud-cloud-config"]
+	path = modules/terraform-alicloud-cloud-config
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-cloud-config.git
+[submodule "modules/terraform-alicloud-dts"]
+	path = modules/terraform-alicloud-dts
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-dts.git
+[submodule "modules/terraform-alicloud-dbfs"]
+	path = modules/terraform-alicloud-dbfs
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-dbfs.git
+[submodule "modules/terraform-alicloud-service-mesh"]
+	path = modules/terraform-alicloud-service-mesh
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-service-mesh.git
+[submodule "modules/terraform-alicloud-hpc-cluster"]
+	path = modules/terraform-alicloud-hpc-cluster
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-hpc-cluster.git
+[submodule "modules/terraform-alicloud-oos"]
+	path = modules/terraform-alicloud-oos
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-oos.git
+[submodule "modules/terraform-alicloud-polardb-mysql"]
+	path = modules/terraform-alicloud-polardb-mysql
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-polardb-mysql.git
+[submodule "modules/terraform-alicloud-polardb-postgresql"]
+	path = modules/terraform-alicloud-polardb-postgresql
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-polardb-postgresql.git
+[submodule "modules/terraform-alicloud-hbr-nas"]
+	path = modules/terraform-alicloud-hbr-nas
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-hbr-nas.git
+[submodule "modules/terraform-alicloud-alb-server-group"]
+	path = modules/terraform-alicloud-alb-server-group
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-alb-server-group.git
+[submodule "modules/terraform-alicloud-alb-http"]
+	path = modules/terraform-alicloud-alb-http
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-alb-http.git
+[submodule "modules/terraform-alicloud-alb-https"]
+	path = modules/terraform-alicloud-alb-https
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-alb-https.git
+[submodule "modules/terraform-alicloud-global-accelerator"]
+	path = modules/terraform-alicloud-global-accelerator
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-global-accelerator.git
+[submodule "modules/terraform-alicloud-mse"]
+	path = modules/terraform-alicloud-mse
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-mse.git
+[submodule "modules/terraform-alicloud-ssl-certificate"]
+	path = modules/terraform-alicloud-ssl-certificate
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ssl-certificate.git
+[submodule "modules/terraform-alicloud-landing-zone-cloud-sso-multi-account-policy"]
+	path = modules/terraform-alicloud-landing-zone-cloud-sso-multi-account-policy
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-landing-zone-cloud-sso-multi-account-policy.git
+[submodule "modules/terraform-alicloud-ess-alb"]
+	path = modules/terraform-alicloud-ess-alb
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-ess-alb.git
+[submodule "modules/terraform-alicloud-service-linked-role"]
+	path = modules/terraform-alicloud-service-linked-role
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-service-linked-role.git
+[submodule "modules/terraform-alicloud-cen-transit-router"]
+	path = modules/terraform-alicloud-cen-transit-router
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-cen-transit-router.git
+[submodule "modules/terraform-alicloud-cloud-storage-gateway"]
+	path = modules/terraform-alicloud-cloud-storage-gateway
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-cloud-storage-gateway.git
+[submodule "modules/terraform-alicloud-clickhouse"]
+	path = modules/terraform-alicloud-clickhouse
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-clickhouse.git
+[submodule "modules/terraform-alicloud-alb"]
+	path = modules/terraform-alicloud-alb
+	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-alb.git

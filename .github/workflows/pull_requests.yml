@@ -1,0 +1,50 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+    branches:
+      - master
+      - main
+    types: [ 'opened', 'synchronize' ]
+    paths:
+      - '.github/**'
+      - '.github/workflows/**'
+      - 'quickstarts/**'
+
+jobs:
+  terrafmt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo "GO_VERSION=$(cat .go-version)" >> $GITHUB_ENV
+      - uses: actions/setup-go@v2
+        with:
+          go-version: ${{ env.GO_VERSION }}
+      - name: terrafmt
+        run: |
+          export PATH=$PATH:$(go env GOPATH)/bin
+          go install github.com/katbyte/terrafmt@latest
+          terrafmt diff ./quickstarts --check --pattern '*.tf'
+
+  prepr-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v34
+        with:
+          dir_names: "true"
+          separator: ","
+          files: "quickstart/*"
+          dir_names_max_depth: 2
+      - name: pr-check
+        run: |
+          export CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
+          if [ -z "${{ github.event.number }}" ]; then
+            CHANGED_FOLDERS=$(find ./quickstarts -maxdepth 1 -mindepth 1 -type d | tr '\n' ',')
+          fi
+          wget https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_amd64.zip
+          unzip terraform_1.6.0_linux_amd64.zip  -d /usr/local/bin/
+          sh scripts/terraform-validate.sh

@@ -58,7 +58,7 @@ jobs:
           dir_names_max_depth: 2
       - name: pr-check
         run: |
-          export CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
+          CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
           if [ -z "${{ github.event.number }}" ]; then
             CHANGED_FOLDERS=$(find ./quickstarts -maxdepth 1 -mindepth 1 -type d | tr '\n' ',')
           fi

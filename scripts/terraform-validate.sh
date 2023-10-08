@@ -5,14 +5,12 @@ folders=$CHANGED_FOLDERS
 for f in ${folders//,/ }
 do
 	f=$(echo $f | xargs echo -n)
-  (echo "===> Terraform validating in" /src/$f && cd /src/$f && rm -f .terraform.lock.hcl && rm -rf .terraform && terraform init -upgrade && terraform validate -json | jq -e .valid) || error=true
-  if ${error}; then
-     echo "------------------------------------------------"
-     echo ""
-     echo "Some Terraform codes contain errors."
-     echo "$(cd /src/$f && terraform validate -json)"
-     echo ""
-     exit 1
+	echo "===> Terraform validating in" $f
+  terraform -chdir=$f init -upgrade
+  terraform -chdir=$f validate
+  if [[ $? -ne 0 ]]; then
+    echo -e "\033[1m[ERROR]\033[0m: Some quickstarts codes contain errors, and please running terraform validate command before pushing."
+    exit 1
   fi
 done
 

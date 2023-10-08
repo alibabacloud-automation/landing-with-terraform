@@ -36,10 +36,9 @@ jobs:
           for f in ${folders//,/ }
           do
           	f=$(echo $f | xargs echo -n)
-            (echo "===> Terraform fmt checking in" $f && terrafmt diff $f --check) || error=true
+            (echo "===> Terrafmt diff checking in" $f && terrafmt diff $f --check) || error=true
             if ${error}; then
-               echo "${error}"
-               echo "Some Terraform codes has not been formated, and please running terraform fmt --recursive command before pushing"
+               echo -e "\033[1m[ERROR]\033[0m: Some quickstarts codes has not been formated, and please running terraform fmt --recursive command before pushing."
                exit 1
             fi
           done
@@ -67,4 +66,4 @@ jobs:
             wget -q https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_amd64.zip
             unzip terraform_1.6.0_linux_amd64.zip -d /usr/local/bin/
           fi
-          sh scripts/terraform-validate.sh
+          sh scripts/terraform-validate.sh CHANGED_FOLDERS=${CHANGED_FOLDERS}

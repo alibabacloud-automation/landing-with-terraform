@@ -38,10 +38,8 @@ jobs:
           	f=$(echo $f | xargs echo -n)
             (echo "===> Terraform fmt checking in" $f && terrafmt diff $f --check) || error=true
             if ${error}; then
-               echo "------------------------------------------------"
-               echo ""
-               echo "Some Terraform codes has not formated, and please running terraform fmt --recursive before pushing"
-               echo ""
+               echo "${error}"
+               echo "Some Terraform codes has not been formated, and please running terraform fmt --recursive command before pushing"
                exit 1
             fi
           done
@@ -65,8 +63,8 @@ jobs:
           if [ -z "${{ github.event.number }}" ]; then
             CHANGED_FOLDERS=$(find ./quickstarts -maxdepth 1 -mindepth 1 -type d | tr '\n' ',')
           fi
-          if [ -f /usr/local/bin/terraform ]; then
-            wget https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_amd64.zip
+          if [ ! -f /usr/local/bin/terraform ]; then
+            wget -q https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_amd64.zip
             unzip terraform_1.6.0_linux_amd64.zip -d /usr/local/bin/
           fi
           sh scripts/terraform-validate.sh

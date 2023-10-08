@@ -26,7 +26,7 @@ jobs:
           go install github.com/katbyte/terrafmt@latest
           terrafmt diff ./quickstarts --check --pattern '*.tf'
 
-  prepr-check:
+  pre-pr-check:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -37,7 +37,7 @@ jobs:
         with:
           dir_names: "true"
           separator: ","
-          files: "quickstart/*"
+          files: "quickstarts/*"
           dir_names_max_depth: 2
       - name: pr-check
         run: |

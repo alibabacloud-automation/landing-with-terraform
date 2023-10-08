@@ -20,11 +20,31 @@ jobs:
       - uses: actions/setup-go@v2
         with:
           go-version: ${{ env.GO_VERSION }}
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v34
+        with:
+          dir_names: "true"
+          separator: ","
+          files: "quickstarts/*"
+          dir_names_max_depth: 2
       - name: terrafmt
         run: |
           export PATH=$PATH:$(go env GOPATH)/bin
           go install github.com/katbyte/terrafmt@latest
-          terrafmt diff ./quickstarts --check --pattern '*.tf'
+          folders=${{ steps.changed-files.outputs.all_changed_files }}
+          for f in ${folders//,/ }
+          do
+          	f=$(echo $f | xargs echo -n)
+            (echo "===> Terraform fmt checking in" $f && terrafmt diff $f --check) || error=true
+            if ${error}; then
+               echo "------------------------------------------------"
+               echo ""
+               echo "Some Terraform codes has not formated, and please running terraform fmt --recursive before pushing"
+               echo ""
+               exit 1
+            fi
+          done
 
   pre-pr-check:
     runs-on: ubuntu-latest
@@ -45,6 +65,8 @@ jobs:
           if [ -z "${{ github.event.number }}" ]; then
             CHANGED_FOLDERS=$(find ./quickstarts -maxdepth 1 -mindepth 1 -type d | tr '\n' ',')
           fi
-          wget https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_amd64.zip
-          unzip terraform_1.6.0_linux_amd64.zip  -d /usr/local/bin/
+          if [ -f /usr/local/bin/terraform ]; then
+            wget https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_amd64.zip
+            unzip terraform_1.6.0_linux_amd64.zip -d /usr/local/bin/
+          fi
           sh scripts/terraform-validate.sh

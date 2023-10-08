@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 error=false
 
-folders=$CHANGED_FOLDERS
+folders=$1
 for f in ${folders//,/ }
 do
 	f=$(echo $f | xargs echo -n)

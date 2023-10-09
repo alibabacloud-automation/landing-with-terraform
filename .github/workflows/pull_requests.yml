@@ -28,8 +28,8 @@ jobs:
           (terraform -chdir=quickstarts fmt -check -recursive -list=false) || error=true
           terraform -chdir=quickstarts fmt -diff -recursive
           if ${error}; then
-            echo -e "\031[1m[ERROR]\031[0m: Some quickstarts codes has not been formatted, and please running terraform fmt --recursive command before pushing."
-          exit 1
+            echo -e "\033[31m[ERROR]\033[0m: Some quickstarts codes has not been formatted, and please running terraform fmt --recursive command before pushing."
+            exit 1
           fi
 
   pre-pr-check:

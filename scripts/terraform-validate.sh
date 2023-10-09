@@ -9,7 +9,7 @@ do
   terraform -chdir=$f init -upgrade
   terraform -chdir=$f validate
   if [[ $? -ne 0 ]]; then
-    echo -e "\031[1m[ERROR]\031[0m: Some quickstarts codes contain errors, and please running terraform validate command before pushing."
+    echo -e "\033[31m[ERROR]\033[0m: Some quickstarts codes contain errors, and please running terraform validate command before pushing."
     exit 1
   fi
 done

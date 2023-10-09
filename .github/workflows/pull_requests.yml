@@ -15,33 +15,22 @@ jobs:
   terrafmt:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: echo "GO_VERSION=$(cat .go-version)" >> $GITHUB_ENV
-      - uses: actions/setup-go@v2
-        with:
-          go-version: ${{ env.GO_VERSION }}
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v34
-        with:
-          dir_names: "true"
-          separator: ","
-          files: "quickstarts/*"
-          dir_names_max_depth: 2
-      - name: terrafmt
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: terrafmt-check
         run: |
-          export PATH=$PATH:$(go env GOPATH)/bin
-          go install github.com/katbyte/terrafmt@latest
-          folders=${{ steps.changed-files.outputs.all_changed_files }}
-          for f in ${folders//,/ }
-          do
-          	f=$(echo $f | xargs echo -n)
-            (echo "===> Terrafmt diff checking in" $f && terrafmt diff $f --check) || error=true
-            if ${error}; then
-               echo -e "\033[1m[ERROR]\033[0m: Some quickstarts codes has not been formated, and please running terraform fmt --recursive command before pushing."
-               exit 1
-            fi
-          done
+          if [ ! -f /usr/local/bin/terraform ]; then
+            wget -q https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_amd64.zip
+            unzip terraform_1.6.0_linux_amd64.zip -d /usr/local/bin/
+          fi
+          error=false
+          echo "===> Terraform fmt -diff checking in quickstarts"
+          (terraform -chdir=quickstarts fmt -check -recursive -list=false) || error=true
+          terraform -chdir=quickstarts fmt -diff -recursive
+          if ${error}; then
+            echo -e "\031[1m[ERROR]\031[0m: Some quickstarts codes has not been formatted, and please running terraform fmt --recursive command before pushing."
+          exit 1
+          fi
 
   pre-pr-check:
     runs-on: ubuntu-latest

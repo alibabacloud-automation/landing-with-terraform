@@ -26,6 +26,7 @@ jobs:
           dir_names_max_depth: 2
       - name: test pr
         run: |
+          bash scripts/terraform-install.sh
           folders="${{ steps.changed-files.outputs.all_changed_files }}"
           for f in ${folders//,/ }
           do

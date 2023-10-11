@@ -27,7 +27,9 @@ jobs:
       - name: test pr
         run: |
           bash scripts/terraform-install.sh
+          echo "cat ~/.aliyun/config.json"
           cat ~/.aliyun/config.json
+          echo "aaa: $ALICLOUD_ACCESS"
           echo $ALICLOUD_ACCESS
           export ALICLOUD_PROFILE=${{ secrets.PROFILENAME }}
           folders="${{ steps.changed-files.outputs.all_changed_files }}"

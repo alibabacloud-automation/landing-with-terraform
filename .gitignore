@@ -3,6 +3,8 @@
 .idea
 *.DS_Store
 
+submodule.sh
+
 .terraform
 .terraform.lock.hcl
 *.tmp

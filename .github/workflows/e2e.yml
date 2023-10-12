@@ -1,10 +1,7 @@
 name: E2E Test Check
 on:
-  pull_request:
-    branches:
-      - master
-      - main
-    types: [ 'opened', 'synchronize' ]
+  pull_request_review:
+    types: [edited, submitted]
     paths:
       - '.github/**'
       - '.github/workflows/**'

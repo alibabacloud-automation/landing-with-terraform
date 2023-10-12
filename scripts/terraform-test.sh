@@ -10,12 +10,16 @@ do
   terraform -chdir=$f init -upgrade
   ~/.init-env
   source ./.terraform_profile
+  echo "---> plan testing"
+  echo ""
   cp scripts/plan.tftest.hcl $f/
   terraform -chdir=$f test test -verbose
   if [[ $? -ne 0 ]]; then
     success=false
     echo -e "\033[31m[ERROR]\033[0m: running terraform test for plan failed."
   else
+    echo "---> plan testing"
+    echo ""
     rm -rf scripts/plan.tftest.hcl
     cp scripts/apply.tftest.hcl $f/
     terraform -chdir=$f test test
@@ -27,7 +31,7 @@ do
   fi
 done
 
-if [[ $success ]]; then
+if [[ $success == "false" ]]; then
   exit 1
 fi
 exit 0

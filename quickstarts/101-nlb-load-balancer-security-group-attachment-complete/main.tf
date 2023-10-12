@@ -47,7 +47,7 @@ resource "alicloud_nlb_load_balancer" "default" {
   }
   zone_mappings {
     vswitch_id = local.vswitch_id_2
-    zone_id  = local.zone_id_2
+    zone_id    = local.zone_id_2
   }
 }
 

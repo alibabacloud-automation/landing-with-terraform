@@ -1,14 +1,17 @@
 name: E2E Test Check
 on:
-  pull_request_review:
-    types: [edited, submitted]
+  pull_request:
+    branches:
+      - master
+      - main
+    types: [ 'opened', 'synchronize' ]
     paths:
       - '.github/**'
       - '.github/workflows/**'
       - 'quickstarts/**'
 
 jobs:
-  e2e-check
+  e2e-check:
     if: github.event.review.state == 'approved' || github.event.review.body == 'approved'
     runs-on: terraform-alicloud-landing
     environment:

@@ -30,5 +30,6 @@ jobs:
       - name: test pr
         run: |
           bash scripts/terraform-install.sh
+          echo ${{ secrets.PROFILE }}
           CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
           bash scripts/terraform-test.sh ${CHANGED_FOLDERS}

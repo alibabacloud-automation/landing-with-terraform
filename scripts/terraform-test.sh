@@ -8,7 +8,8 @@ do
   f=$(echo $f | xargs echo -n)
   echo "===> Terraform testing in" $f
   terraform -chdir=$f init -upgrade
-  source ~/.terraform_profile
+  ~/.init-env
+  source ./.terraform_profile
   cp scripts/plan.tftest.hcl $f/
   terraform -chdir=$f test test -verbose
   if [[ $? -ne 0 ]]; then

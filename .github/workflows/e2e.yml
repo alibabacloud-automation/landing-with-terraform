@@ -31,4 +31,4 @@ jobs:
         run: |
           bash scripts/terraform-install.sh
           CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
-          bash scripts/terraform-validate.sh ${CHANGED_FOLDERS}
+          bash scripts/terraform-test.sh ${CHANGED_FOLDERS}

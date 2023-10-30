@@ -5,8 +5,10 @@ summary: "云上自动化的四个层次，自动化实践过程的关键点，�
 ---
 
 ## 视频原文
-- 微博：[Auto Talk 第三期 - 云上自动化 Tips](https://weibo.com/u/1939498534?tabtype=newVideo&layerid=4957414480940353)
+- 微博：[Auto Talk 第三期 - 云上自动化 Tips](https://video.weibo.com/show?fid=1034:4957412818616334)
 - B 站：[Auto Talk 第三期 - 云上自动化 Tips](https://www.bilibili.com/video/BV15N4y1y7DE)
+
+**NOTE:** 微博视频链接如果失效，可点击重试或者访问[阿里云云栖号](https://weibo.com/u/1939498534?tabtype=newVideo)搜索观看。
 
 ## 推荐视频
 - [Auto Talk 第一期 - 什么是云上自动化?](101-autotalk01-what-is-cloud-automation.markdown)

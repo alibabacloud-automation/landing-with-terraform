@@ -1,16 +1,21 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 error=false
 
 success=true
+record=false
 folders=$1
+if  [ ! -n "$1" ] ;then
+  record=true
+  folders=$(find quickstarts -maxdepth 1 -mindepth 1 -type d)
+fi
 for f in ${folders//,/ }
 do
   f=$(echo $f | xargs echo -n)
   echo ""
   echo "====> Terraform testing in" $f
   terraform -chdir=$f init -upgrade
-  ~/.init-env
-  source ./.terraform_profile
+  ~/init_env.sh
+  source ~/.terraform_profile
   echo ""
   echo "----> Plan Testing"
   cp scripts/plan.tftest.hcl $f/
@@ -18,6 +23,7 @@ do
   if [[ $? -ne 0 ]]; then
     success=false
     echo -e "\033[31m[ERROR]\033[0m: running terraform test for plan failed."
+    bash scripts/generate-test-record.sh $record $f "Plan: running terraform test for plan failed."
   else
     echo ""
     echo "----> Apply Testing"
@@ -27,6 +33,7 @@ do
     if [[ $? -ne 0 ]]; then
       success=false
       echo -e "\033[31m[ERROR]\033[0m: running terraform test for apply failed."
+      bash scripts/generate-test-record.sh $record $f "Apply: running terraform test for apply failed."
     fi
     rm -rf $f/apply.tftest.hcl
   fi
@@ -35,4 +42,5 @@ done
 if [[ $success == "false" ]]; then
   exit 1
 fi
+bash scripts/generate-test-record.sh $record $f
 exit 0

@@ -1,0 +1,12 @@
+[
+	{
+		"id": "eu-central-1a",
+		"local_name": "Frankfurt Zone A",
+		"zone_id": "eu-central-1a"
+	},
+	{
+		"id": "eu-central-1b",
+		"local_name": "Frankfurt Zone B",
+		"zone_id": "eu-central-1b"
+	}
+]

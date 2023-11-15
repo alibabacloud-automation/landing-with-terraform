@@ -14,3 +14,7 @@ TestRecord
 **/TestRecord.md.tmp
 terraform.tfstate
 terraform.tfstate.backup
+
+aliyun
+*.tgz
+*.zip

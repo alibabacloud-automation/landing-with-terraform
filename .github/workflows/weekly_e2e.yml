@@ -1,0 +1,34 @@
+name: Weekly E2E Test Check
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 0'
+      
+    
+jobs:
+  all-e2e-test:
+    runs-on: terraform-alicloud-landing
+    timeout-minutes: 1440
+    environment:
+      name: acctests
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: test all
+        run: |
+          bash scripts/terraform-install.sh
+          bash scripts/terraform-test.sh all examples
+      - name: update TestRecord
+        run: |
+          bash scripts/update-test-record.sh
+          cd .git
+          sudo chmod -R a+rwX .
+          sudo find . -type d -exec chmod g+s '{}' +
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message: 'Update TestRecord'
+          branch: main

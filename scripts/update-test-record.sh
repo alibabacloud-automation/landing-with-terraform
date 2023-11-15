@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+git pull --rebase origin main
+
 git config --global --add safe.directory '*'
 
 if [ ! -d "TestRecord" ]; then
@@ -13,12 +15,13 @@ folders=$(find ./ -maxdepth 1 -mindepth 1 -type d)
 for f in $folders; do
   d=${f#"./"}
 
-  if [ ! -f ../quickstart/$d/TestRecord.md ]; then
-    touch ../quickstart/$d/TestRecord.md
+  if [ ! -f "../quickstarts/$d/TestRecord.md" ]; then
+    touch ../quickstarts/$d/TestRecord.md
   fi
 
-  cat ../quickstart/$d/TestRecord.md >> $d/TestRecord.md.tmp
-  cat $d/TestRecord.md.tmp > ../quickstart/$d/TestRecord.md
+  echo -e "\n" >> ./$d/TestRecord.md.tmp
+  cat ../quickstarts/$d/TestRecord.md >> ./$d/TestRecord.md.tmp
+  cat ./$d/TestRecord.md.tmp > ../quickstarts/$d/TestRecord.md
 done
 
 cd ..

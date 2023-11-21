@@ -1,51 +1,44 @@
 data "alicloud_nlb_zones" "default" {
 }
 
-data "alicloud_vpcs" "default" {
-  name_regex = "^default-NODELETING$"
+resource "alicloud_vpc" "default" {
+  vpc_name   = "tf-example"
+  cidr_block = "10.4.0.0/16"
 }
 
 data "alicloud_resource_manager_resource_groups" "default" {
 }
 
-data "alicloud_vswitches" "default_1" {
-  vpc_id  = data.alicloud_vpcs.default.ids.0
-  zone_id = data.alicloud_nlb_zones.default.zones.0.id
+resource "alicloud_vswitch" "default_1" {
+  vpc_id     = alicloud_vpc.default.id
+  zone_id    = data.alicloud_nlb_zones.default.zones.0.id
+  cidr_block = "10.4.0.0/24"
 }
 
-data "alicloud_vswitches" "default_2" {
-  vpc_id  = data.alicloud_vpcs.default.ids.0
-  zone_id = data.alicloud_nlb_zones.default.zones.1.id
+resource "alicloud_vswitch" "default_2" {
+  vpc_id     = alicloud_vpc.default.id
+  zone_id    = data.alicloud_nlb_zones.default.zones.1.id
+  cidr_block = "10.4.1.0/24"
 }
 
 locals {
   zone_id_1    = data.alicloud_nlb_zones.default.zones.0.id
-  vswitch_id_1 = data.alicloud_vswitches.default_1.ids[0]
+  vswitch_id_1 = alicloud_vswitch.default_1.id
   zone_id_2    = data.alicloud_nlb_zones.default.zones.1.id
-  vswitch_id_2 = data.alicloud_vswitches.default_2.ids[0]
+  vswitch_id_2 = alicloud_vswitch.default_2.id
 }
 
 resource "alicloud_common_bandwidth_package" "default" {
-  bandwidth              = 2
-  internet_charge_type   = "PayByBandwidth"
-  bandwidth_package_name = var.name
-  description            = "${var.name}_description"
+  bandwidth            = 2
+  internet_charge_type = "PayByBandwidth"
+  name                 = var.name
+  description          = "${var.name}_description"
 }
 
 resource "alicloud_nlb_load_balancer" "default" {
-  deletion_protection_enabled = var.deletion_protection_enabled_var
-  tags = {
-    Created = "tfexample0"
-    For     = "Tfexample 0"
-  }
-  address_type                   = var.address_type_var
-  resource_group_id              = data.alicloud_resource_manager_resource_groups.default.ids.0
-  vpc_id                         = data.alicloud_vpcs.default.ids.0
-  load_balancer_type             = "Network"
-  address_ip_version             = "Ipv4"
-  modification_protection_status = var.modification_protection_status_var
-  load_balancer_name             = var.name
-  bandwidth_package_id           = alicloud_common_bandwidth_package.default.id
+  vpc_id                      = alicloud_vpc.default.id
+  deletion_protection_reason  = var.deletion_protection_reason
+  deletion_protection_enabled = var.deletion_protection_enabled
   zone_mappings {
     vswitch_id = local.vswitch_id_1
     zone_id    = local.zone_id_1
@@ -55,7 +48,17 @@ resource "alicloud_nlb_load_balancer" "default" {
     zone_id    = local.zone_id_2
   }
 
-  deletion_protection_reason     = var.deletion_protection_reason_var
-  modification_protection_reason = var.modification_protection_reason_var
-  cross_zone_enabled             = var.cross_zone_enabled_var
+  cross_zone_enabled             = var.cross_zone_enabled
+  modification_protection_status = var.modification_protection_status
+  tags = {
+    For     = "tf-example"
+    Created = "tf-example"
+  }
+  address_ip_version             = "Ipv4"
+  modification_protection_reason = var.modification_protection_reason
+  address_type                   = var.address_type
+  bandwidth_package_id           = alicloud_common_bandwidth_package.default.id
+  load_balancer_name             = var.name
+  resource_group_id              = data.alicloud_resource_manager_resource_groups.default.ids.0
+  load_balancer_type             = "Network"
 }

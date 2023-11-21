@@ -2,8 +2,8 @@ formatter: "markdown" # this is required
 
 version: ""
 
-header-from: main.tf
-footer-from: ""
+header-from: header.md
+footer-from: footer.md
 
 recursive:
   enabled: false

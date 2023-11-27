@@ -40,10 +40,10 @@ do
     fi
     rm -rf $f/apply.tftest.hcl
   fi
+  bash scripts/generate-test-record.sh $record $f
 done
 
 if [[ $success == "false" && $record == "false" ]]; then
     exit 1
 fi
-bash scripts/generate-test-record.sh $record $f
 exit 0

@@ -11,6 +11,7 @@ jobs:
     timeout-minutes: 1440
     environment:
       name: acctests
+    permissions: write-all
     steps:
       - name: checkout
         uses: actions/checkout@v3

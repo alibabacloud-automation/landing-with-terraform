@@ -4,7 +4,13 @@
 
 The naming of a catalog consists of a prefix and a usage situation. 
 
-The naming prefix reflects the complexity of the examples. It consists of the following values: `101`, `201`, `301`, which indicate the `primary`, `intermediate`, and `advanced` usage of the resource, respectively.
+The naming prefix reflects the complexity of the examples. It consists of the following values: `101`, `201`, `301`, which indicate the `beginner`, `intermediate`, and `advanced` usage of the resource, respectively.
+
+- beginner：For beginner developers, mainly for single resource types. The directory naming format is: 101-\<example name\>.
+
+- intermediate：For intermediate developers, mainly multi-resource types, presenting a small scene. The directory naming format is: 201-\<example name\>.
+
+- advanced：Aimed at advanced developers, the main focus is on actual customer scenarios, presenting an actual customer scenario example. The directory naming format is: 301-\<example name\>.
 
 An example contains at least the following files: 
 

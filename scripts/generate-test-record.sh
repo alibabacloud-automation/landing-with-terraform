@@ -9,7 +9,10 @@ if [ -n "$3" ] ;then
   success=false
 fi
 
-fileName=$(basename $2)
+subcategory=$(dirname $2)
+subcategory=$(basename $subcategory)
+fileName=$subcategory/$(basename $2)
+
 testRecordFile=TestRecord/$fileName/TestRecord.md.tmp
 if [ ! -d "TestRecord/${fileName}" ]; then
   mkdir -p TestRecord/$fileName

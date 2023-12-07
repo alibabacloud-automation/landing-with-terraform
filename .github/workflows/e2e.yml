@@ -26,7 +26,7 @@ jobs:
           separator: ","
           files: "quickstarts/*"
           files_ignore: "**/TestRecord.md"
-          dir_names_max_depth: 2
+          dir_names_max_depth: 3
       - name: test pr
         run: |
           bash scripts/terraform-install.sh

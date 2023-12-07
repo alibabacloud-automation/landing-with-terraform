@@ -9,10 +9,11 @@ if  [ ! -n "$1" ] ;then
 fi
 if  [ -n "$2" ] ;then
   record=true
-  folders=$(find quickstarts -maxdepth 1 -mindepth 1 -type d)
+  folders=$(find quickstarts -maxdepth 2 -mindepth 2 -type d)
 fi
 for f in ${folders//,/ }
 do
+  echo $f
   f=$(echo $f | xargs echo -n)
   echo ""
   echo "====> Terraform testing in" $f
@@ -40,10 +41,14 @@ do
     fi
     rm -rf $f/apply.tftest.hcl
   fi
-  bash scripts/generate-test-record.sh $record $f
+  if [[ $success == "true" ]]; then
+    bash scripts/generate-test-record.sh $record $f
+  fi
 done
 
+# e2e
 if [[ $success == "false" && $record == "false" ]]; then
     exit 1
 fi
+
 exit 0

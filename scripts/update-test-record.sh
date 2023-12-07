@@ -11,7 +11,7 @@ fi
 
 cd TestRecord
 
-folders=$(find ./ -maxdepth 1 -mindepth 1 -type d)
+folders=$(find . -maxdepth 2 -mindepth 2 -type d)
 for f in $folders; do
   d=${f#"./"}
 

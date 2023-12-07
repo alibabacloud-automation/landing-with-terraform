@@ -1,6 +1,7 @@
 variable "name" {
-  default = "tfexample"
+  default = "tf-example"
 }
+
 resource "alicloud_resource_manager_resource_share" "example" {
   resource_share_name = var.name
 }

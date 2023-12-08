@@ -33,3 +33,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           message: 'Update TestRecord'
           branch: main
+      - name: update oss bucket
+        run: |
+          python3 scripts/upload-test-record-to-oss.py
+          aliyun oss cp TestRecord.json oss://$bucketObject -u -e $ossEndpoint --region $ossRegion

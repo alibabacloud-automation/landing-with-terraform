@@ -1,0 +1,30 @@
+<!-- BEGIN_TF_DOCS -->
+## Introduction
+
+This example is used to create a `alicloud_image_copy` resource.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_alicloud.hz"></a> [alicloud.hz](#provider\_alicloud.hz) | n/a |
+| <a name="provider_alicloud.sh"></a> [alicloud.sh](#provider\_alicloud.sh) | n/a |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [alicloud_image.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/image) | resource |
+| [alicloud_image_copy.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/image_copy) | resource |
+| [alicloud_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/instance) | resource |
+| [alicloud_security_group.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/security_group) | resource |
+| [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
+| [alicloud_vswitch.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
+| [alicloud_images.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/images) | data source |
+| [alicloud_instance_types.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/instance_types) | data source |
+| [alicloud_zones.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/zones) | data source |
+
+## Inputs
+
+No inputs.
+<!-- END_TF_DOCS -->    

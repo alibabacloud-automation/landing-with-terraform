@@ -57,10 +57,14 @@ Before executing the following commands, you need to [Install the terraform-docs
 
 ```bash
 # The argument is the path of the examples, unlimited in number.
-# If there are no arguments, all examples‘ documents in the quickstarts directory will be generated
-./scripts/doc-generate.sh quickstarts/101-vpc-complete
-```
+./scripts/doc-generate.sh quickstarts/VPC/101-vpc-complete quickstarts/VPC/101-vpc-doc-Example
 
+# You can also specify a folder to generate documents.
+./scripts/doc-generate.sh quickstarts/VPC/
+
+# If there are no arguments, all examples‘ documents in the quickstarts directory will be generated
+./scripts/doc-generate.sh 
+```
 
 
 ### `header.md` 

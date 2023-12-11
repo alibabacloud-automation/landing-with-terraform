@@ -19,5 +19,5 @@ This example is used to create a `alicloud_resource_manager_resource_share` reso
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tfexample"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
 <!-- END_TF_DOCS -->    

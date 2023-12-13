@@ -51,6 +51,8 @@ do
   fi
 done
 
+unset TF_LOG_PATH
+
 # e2e
 if [[ $allSuccess == "false" && $record == "false" ]]; then
     exit 1

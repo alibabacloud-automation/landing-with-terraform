@@ -15,6 +15,7 @@ for f in ${folders//,/ }
 do
   echo $f
   f=$(echo $f | xargs echo -n)
+  export TF_LOG_PATH=${f}/terraform.log
   echo ""
   echo "====> Terraform testing in" $f
   terraform -chdir=$f init -upgrade
@@ -45,6 +46,8 @@ do
     bash scripts/generate-test-record.sh $record $f
   fi
 done
+
+unset TF_LOG_PATH
 
 # e2e
 if [[ $success == "false" && $record == "false" ]]; then

@@ -1,5 +1,5 @@
 variable "name" {
-  default = "tf-testAcc"
+  default = "tf-example"
 }
 
 data "alicloud_zones" "default" {
@@ -38,7 +38,7 @@ data "alicloud_images" "default" {
 resource "alicloud_instance" "default" {
   availability_zone = data.alicloud_zones.default.zones.0.id
   instance_name     = var.name
-  host_name         = "tf-testAcc"
+  host_name         = "tf-example"
   image_id          = data.alicloud_images.default.images.0.id
   instance_type     = data.alicloud_instance_types.default.instance_types.0.id
   security_groups   = [alicloud_security_group.default.id]
@@ -53,11 +53,11 @@ resource "alicloud_ecs_network_interface" "default" {
   network_interface_name = var.name
   vswitch_id             = alicloud_vswitch.default.id
   security_group_ids     = [alicloud_security_group.default.id]
-  description            = "Basic test"
+  description            = "Basic example"
   primary_ip_address     = "192.168.0.2"
   tags = {
     Created = "TF",
-    For     = "Test",
+    For     = "example",
   }
   resource_group_id = data.alicloud_resource_manager_resource_groups.default.ids.0
 }

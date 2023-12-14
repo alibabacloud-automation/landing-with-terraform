@@ -12,7 +12,17 @@ resource "alicloud_vpc" "defaulteVpc" {
 
 resource "alicloud_vpc_gateway_endpoint" "defaultGE" {
   service_name                = "com.aliyun.cn-hangzhou.oss"
-  policy_document             = "{ \"Version\" : \"1\", \"Statement\" : [ { \"Effect\" : \"Allow\", \"Resource\" : [ \"*\" ], \"Action\" : [ \"*\" ], \"Principal\" : [ \"*\" ] } ] }"
+  policy_document             = <<EOF
+        {
+          "Version": "1",
+          "Statement": [{
+            "Effect": "Allow",
+            "Resource": ["*"],
+            "Action": ["*"],
+            "Principal": ["*"]
+          }]
+        }
+        EOF
   vpc_id                      = alicloud_vpc.defaulteVpc.id
   gateway_endpoint_descrption = "test-gateway-endpoint"
   gateway_endpoint_name       = "${var.name}1"

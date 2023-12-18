@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+unset TF_LOG_PATH
+
 if [ "$1" == "false" ];then
   exit 0
 fi
@@ -39,4 +41,4 @@ if [ -n "$3" ] ;then
   echo $3 >> $testRecordFile
 fi
 
-echo "generate-test-record successfully"
+echo "generate-test-record ${testRecordFile} successfully" 

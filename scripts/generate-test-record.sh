@@ -38,3 +38,5 @@ echo -e "\n### Error\n" >> $testRecordFile
 if [ -n "$3" ] ;then
   echo $3 >> $testRecordFile
 fi
+
+echo "generate-test-record successfully"

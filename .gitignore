@@ -17,6 +17,7 @@ terraform.tfstate
 terraform.tfstate.backup
 quickstarts/**/header.md
 quickstarts/**/footer.md
+quickstarts/**/plan.tftest.hcl
 **/terraform.log
 
 aliyun

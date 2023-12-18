@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-git pull --rebase origin main
-
 git config --global --add safe.directory '*'
 
 if [ ! -d "TestRecord" ]; then

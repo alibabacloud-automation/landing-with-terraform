@@ -1,4 +1,6 @@
-provider "alicloud" {}
+provider "alicloud" {
+  region = "cn-beijing"
+}
 
 
 resource "alicloud_vpc" "vpc" {

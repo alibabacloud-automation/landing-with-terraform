@@ -2,6 +2,7 @@
 error=false
 
 success=true
+allSuccess=true
 record=false
 folders=$1
 if  [ ! -n "$1" ] ;then
@@ -13,6 +14,7 @@ if  [ -n "$2" ] ;then
 fi
 for f in ${folders//,/ }
 do
+  success=true
   echo $f
   f=$(echo $f | xargs echo -n)
   export TF_LOG_PATH=${f}/terraform.log
@@ -27,6 +29,7 @@ do
   terraform -chdir=$f test test -verbose
   if [[ $? -ne 0 ]]; then
     success=false
+    allSuccess=false
     echo -e "\033[31m[ERROR]\033[0m: running terraform test for plan failed."
     bash scripts/generate-test-record.sh $record $f "Plan: running terraform test for plan failed."
   else
@@ -37,6 +40,7 @@ do
     terraform -chdir=$f test test
     if [[ $? -ne 0 ]]; then
       success=false
+      allSuccess=false
       echo -e "\033[31m[ERROR]\033[0m: running terraform test for apply failed."
       bash scripts/generate-test-record.sh $record $f "Apply: running terraform test for apply failed."
     fi
@@ -48,7 +52,7 @@ do
 done
 
 # e2e
-if [[ $success == "false" && $record == "false" ]]; then
+if [[ $allSuccess == "false" && $record == "false" ]]; then
     exit 1
 fi
 

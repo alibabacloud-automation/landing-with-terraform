@@ -24,7 +24,7 @@ resource "alicloud_vswitch" "default" {
 }
 
 resource "alicloud_security_group" "default" {
-  name        = "tf-test"
+  name        = "tf-example"
   description = "New security group"
   vpc_id      = alicloud_vpc.default.id
 }

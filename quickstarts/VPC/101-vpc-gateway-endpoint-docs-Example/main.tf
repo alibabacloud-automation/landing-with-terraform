@@ -24,5 +24,15 @@ resource "alicloud_vpc_gateway_endpoint" "default" {
   vpc_id                      = alicloud_vpc.defaultVpc.id
   resource_group_id           = alicloud_resource_manager_resource_group.defaultRg.id
   service_name                = var.domain
-  policy_document             = "{ \"Version\" : \"1\", \"Statement\" : [ { \"Effect\" : \"Allow\", \"Resource\" : [ \"*\" ], \"Action\" : [ \"*\" ], \"Principal\" : [ \"*\" ] } ] }"
+  policy_document             = <<EOF
+      {
+        "Version": "1",
+        "Statement": [{
+          "Effect": "Allow",
+          "Resource": ["*"],
+          "Action": ["*"],
+          "Principal": ["*"]
+        }]
+      }
+      EOF
 }

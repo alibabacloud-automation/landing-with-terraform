@@ -1,0 +1,33 @@
+<!-- BEGIN_TF_DOCS -->
+## Introduction
+
+This example is used to create a `alicloud_cen_transit_router_multicast_domain_member` resource.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [alicloud_cen_instance.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_instance) | resource |
+| [alicloud_cen_transit_router.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_transit_router) | resource |
+| [alicloud_cen_transit_router_multicast_domain.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_transit_router_multicast_domain) | resource |
+| [alicloud_cen_transit_router_multicast_domain_association.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_transit_router_multicast_domain_association) | resource |
+| [alicloud_cen_transit_router_multicast_domain_member.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_transit_router_multicast_domain_member) | resource |
+| [alicloud_cen_transit_router_vpc_attachment.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_transit_router_vpc_attachment) | resource |
+| [alicloud_ecs_network_interface.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ecs_network_interface) | resource |
+| [alicloud_security_group.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/security_group) | resource |
+| [alicloud_vpc.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
+| [alicloud_vswitch.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
+| [alicloud_cen_transit_router_available_resources.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/cen_transit_router_available_resources) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf_example"` | no |
+<!-- END_TF_DOCS -->    

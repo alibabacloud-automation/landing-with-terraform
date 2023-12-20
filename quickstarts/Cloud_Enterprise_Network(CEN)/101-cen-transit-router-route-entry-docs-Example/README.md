@@ -1,0 +1,31 @@
+<!-- BEGIN_TF_DOCS -->
+## Introduction
+
+This example is used to create a `alicloud_cen_transit_router_route_entry` resource.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+| <a name="provider_random"></a> [random](#provider\_random) | n/a |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [alicloud_cen_instance.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_instance) | resource |
+| [alicloud_cen_transit_router.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_transit_router) | resource |
+| [alicloud_cen_transit_router_route_entry.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_transit_router_route_entry) | resource |
+| [alicloud_cen_transit_router_route_table.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_transit_router_route_table) | resource |
+| [alicloud_cen_transit_router_vbr_attachment.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_transit_router_vbr_attachment) | resource |
+| [alicloud_express_connect_virtual_border_router.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/express_connect_virtual_border_router) | resource |
+| [random_integer.vlan_id](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
+| [alicloud_express_connect_physical_connections.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/express_connect_physical_connections) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf_example"` | no |
+<!-- END_TF_DOCS -->    

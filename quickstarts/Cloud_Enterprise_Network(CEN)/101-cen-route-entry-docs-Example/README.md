@@ -1,0 +1,32 @@
+<!-- BEGIN_TF_DOCS -->
+## Introduction
+
+This example is used to create a `alicloud_cen_route_entry` resource.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [alicloud_cen_instance.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_instance) | resource |
+| [alicloud_cen_instance_attachment.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_instance_attachment) | resource |
+| [alicloud_cen_route_entry.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_route_entry) | resource |
+| [alicloud_instance.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/instance) | resource |
+| [alicloud_route_entry.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/route_entry) | resource |
+| [alicloud_security_group.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/security_group) | resource |
+| [alicloud_vpc.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
+| [alicloud_vswitch.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
+| [alicloud_images.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/images) | data source |
+| [alicloud_instance_types.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/instance_types) | data source |
+| [alicloud_regions.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/regions) | data source |
+| [alicloud_zones.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/zones) | data source |
+
+## Inputs
+
+No inputs.
+<!-- END_TF_DOCS -->    

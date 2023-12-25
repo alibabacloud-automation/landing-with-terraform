@@ -12,4 +12,3 @@ resource "alicloud_ecs_key_pair" "publickey" {
   key_pair_name = "my_public_key"
   public_key    = "ssh-rsa AAAAB3Nza12345678qwertyuudsfsg"
 }
-

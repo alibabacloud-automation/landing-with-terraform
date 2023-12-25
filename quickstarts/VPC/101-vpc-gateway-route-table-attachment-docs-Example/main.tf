@@ -20,4 +20,3 @@ resource "alicloud_vpc_gateway_route_table_attachment" "example" {
   ipv4_gateway_id = alicloud_vpc_ipv4_gateway.example.id
   route_table_id  = alicloud_route_table.example.id
 }
-

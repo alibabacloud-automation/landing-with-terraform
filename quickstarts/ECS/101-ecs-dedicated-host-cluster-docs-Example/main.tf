@@ -9,4 +9,3 @@ resource "alicloud_ecs_dedicated_host_cluster" "example" {
     For    = "DDH_Cluster_Test",
   }
 }
-

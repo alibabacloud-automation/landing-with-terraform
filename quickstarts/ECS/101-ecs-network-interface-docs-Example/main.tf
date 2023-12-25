@@ -39,4 +39,3 @@ resource "alicloud_ecs_network_interface" "default" {
   }
   resource_group_id = data.alicloud_resource_manager_resource_groups.default.ids.0
 }
-

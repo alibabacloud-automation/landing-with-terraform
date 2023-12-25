@@ -44,4 +44,3 @@ resource "alicloud_db_instance" "example" {
   db_instance_storage_type = "cloud_essd"
   security_group_ids       = [alicloud_security_group.example.id]
 }
-

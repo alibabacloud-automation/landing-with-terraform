@@ -1,4 +1,3 @@
-
 resource "alicloud_ram_group" "default" {
   count    = "5"
   name     = "tf-example-${count.index}"

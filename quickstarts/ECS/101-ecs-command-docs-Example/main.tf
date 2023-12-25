@@ -5,4 +5,3 @@ resource "alicloud_ecs_command" "example" {
   type            = "RunShellScript"
   working_dir     = "/root"
 }
-

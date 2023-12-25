@@ -66,4 +66,3 @@ resource "alicloud_ecs_network_interface_attachment" "default" {
   network_interface_id = alicloud_ecs_network_interface.default.id
   instance_id          = alicloud_instance.default.id
 }
-

@@ -53,4 +53,3 @@ resource "alicloud_db_instance" "example" {
     min_capacity = 2
   }
 }
-

@@ -1,0 +1,41 @@
+variable "name" {
+  default = "tf-example"
+}
+
+resource "alicloud_ots_instance" "default" {
+  name        = var.name
+  description = var.name
+  accessed_by = "Any"
+  tags = {
+    Created = "TF",
+    For     = "example",
+  }
+}
+
+resource "alicloud_ots_table" "default" {
+  instance_name = alicloud_ots_instance.default.name
+  table_name    = "tf_example"
+  time_to_live  = -1
+  max_version   = 1
+  enable_sse    = true
+  sse_key_type  = "SSE_KMS_SERVICE"
+  primary_key {
+    name = "pk1"
+    type = "Integer"
+  }
+  primary_key {
+    name = "pk2"
+    type = "String"
+  }
+  primary_key {
+    name = "pk3"
+    type = "Binary"
+  }
+}
+
+resource "alicloud_ots_tunnel" "default" {
+  instance_name = alicloud_ots_instance.default.name
+  table_name    = alicloud_ots_table.default.table_name
+  tunnel_name   = "tf_example"
+  tunnel_type   = "BaseAndStream"
+}

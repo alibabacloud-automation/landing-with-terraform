@@ -47,4 +47,3 @@ resource "alicloud_db_instance" "example" {
   zone_id                  = data.alicloud_db_zones.example.zones.0.id
   zone_id_slave_a          = data.alicloud_db_zones.example.zones.1.id
 }
-

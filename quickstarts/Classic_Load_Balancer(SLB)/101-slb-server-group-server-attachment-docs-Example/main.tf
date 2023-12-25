@@ -74,4 +74,3 @@ resource "alicloud_slb_server_group_server_attachment" "server_attachment" {
   port            = 8080
   weight          = 0
 }
-

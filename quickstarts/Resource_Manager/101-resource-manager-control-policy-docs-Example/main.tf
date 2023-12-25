@@ -24,4 +24,3 @@ resource "alicloud_resource_manager_control_policy" "example" {
   }
   EOF
 }
-

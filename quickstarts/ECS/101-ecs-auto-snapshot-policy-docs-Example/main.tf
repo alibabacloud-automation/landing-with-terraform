@@ -4,4 +4,3 @@ resource "alicloud_ecs_auto_snapshot_policy" "example" {
   retention_days  = -1
   time_points     = ["1", "22", "23"]
 }
-

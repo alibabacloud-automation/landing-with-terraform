@@ -28,5 +28,5 @@ This example is used to create a `alicloud_ecs_network_interface_attachment` res
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-testAcc"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
 <!-- END_TF_DOCS -->    

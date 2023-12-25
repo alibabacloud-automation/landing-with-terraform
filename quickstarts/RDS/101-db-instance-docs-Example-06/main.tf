@@ -54,4 +54,3 @@ resource "alicloud_db_instance" "example" {
     switch_force = false
   }
 }
-

@@ -1,4 +1,3 @@
-
 resource "alicloud_ram_policy" "default" {
   name        = var.name
   document    = <<EOF

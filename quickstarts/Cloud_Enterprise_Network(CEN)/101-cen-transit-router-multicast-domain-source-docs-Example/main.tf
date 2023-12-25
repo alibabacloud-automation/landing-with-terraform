@@ -64,14 +64,12 @@ data "alicloud_resource_manager_resource_groups" "default" {
 }
 
 resource "alicloud_cen_transit_router_multicast_domain" "default" {
-  depends_on                                  = ["alicloud_cen_transit_router_vpc_attachment.default"]
   transit_router_id                           = alicloud_cen_transit_router.default.transit_router_id
   transit_router_multicast_domain_name        = var.name
   transit_router_multicast_domain_description = var.name
 }
 
 resource "alicloud_ecs_network_interface" "default" {
-  depends_on             = ["alicloud_cen_transit_router_multicast_domain.default"]
   network_interface_name = var.name
   vswitch_id             = alicloud_vswitch.default_master.id
   security_group_ids     = [alicloud_security_group.default.id]

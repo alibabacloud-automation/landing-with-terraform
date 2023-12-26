@@ -1,0 +1,25 @@
+<!-- BEGIN_TF_DOCS -->
+## Introduction
+
+This example is used to create a `alicloud_cloud_monitor_service_group_monitoring_agent_process` resource.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [alicloud_cloud_monitor_service_group_monitoring_agent_process.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_monitor_service_group_monitoring_agent_process) | resource |
+| [alicloud_cms_alarm_contact_group.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cms_alarm_contact_group) | resource |
+| [alicloud_cms_monitor_group.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cms_monitor_group) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
+<!-- END_TF_DOCS -->    

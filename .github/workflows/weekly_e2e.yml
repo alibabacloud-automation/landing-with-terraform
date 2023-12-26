@@ -7,6 +7,7 @@ on:
     
 jobs:
   all-e2e-test:
+    if: github.repository_owner == 'alibabacloud-automation'
     runs-on: terraform-alicloud-landing
     timeout-minutes: 1440
     environment:
@@ -35,5 +36,6 @@ jobs:
           branch: main
       - name: update oss bucket
         run: |
+          source ~/.terraform_profile
           python3 scripts/upload-test-record-to-oss.py
           aliyun oss cp TestRecord.json oss://$BUCKET_EXAMPLE_OBJECT/TestRecord.json -u -e $ossEndpoint --region $ossRegion

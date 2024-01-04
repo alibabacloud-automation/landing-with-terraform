@@ -1,5 +1,5 @@
 variable "instance_name" {
-  default = "alikafkaInstanceName"
+  default = "tf-example"
 }
 
 data "alicloud_zones" "default" {

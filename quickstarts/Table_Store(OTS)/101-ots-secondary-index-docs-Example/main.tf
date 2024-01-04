@@ -1,5 +1,5 @@
 variable "name" {
-  default = "tf-example"
+  default = "tf-example-si"
 }
 
 resource "alicloud_ots_instance" "default" {

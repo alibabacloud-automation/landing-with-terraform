@@ -1,3 +1,17 @@
+## 07 Jan 2024 19:35 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
+
+### Error
+
+Plan: running terraform test for plan failed.
+
+
 ## 31 Dec 2023 18:52 UTC
 
 success: true

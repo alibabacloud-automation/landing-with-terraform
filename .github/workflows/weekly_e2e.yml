@@ -8,34 +8,27 @@ on:
 jobs:
   all-e2e-test:
     if: github.repository_owner == 'alibabacloud-automation'
-    runs-on: terraform-alicloud-landing
-    timeout-minutes: 1440
-    environment:
-      name: acctests
+    name: 'weekly e2e check'
+    runs-on: ubuntu-latest
     permissions: write-all
     steps:
       - name: checkout
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-      - name: test all
-        run: |
-          bash scripts/terraform-install.sh
-          bash scripts/terraform-test.sh all examples
-      - name: update TestRecord
-        run: |
-          bash scripts/update-test-record.sh
-          cd .git
-          sudo chmod -R a+rwX .
-          sudo find . -type d -exec chmod g+s '{}' +
-      - name: Commit & Push changes
-        uses: actions-js/push@master
+      - name: set id
+        id: set-job-id
+        uses: ayachensiyuan/get-action-job-id@v1.6
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          message: 'Update TestRecord'
-          branch: main
-      - name: update oss bucket
+          job-name: 'weekly e2e check'   
+      - name: get pull request info
         run: |
-          source ~/.terraform_profile
-          python3 scripts/upload-test-record-to-oss.py
-          aliyun oss cp TestRecord.json oss://$BUCKET_EXAMPLE_OBJECT/TestRecord.json -u -e $ossEndpoint --region $ossRegion
+          echo "repo name is" ${{github.event.pull_request.head.repo.full_name}}
+          echo "branch is" ${{github.event.pull_request.head.ref}}
+          echo "the current job id is ${{ steps.set-job-id.outputs.jobId }}"
+      - name: weekly e2e test
+        run: |
+          objectPath="github-action/${{github.repository}}/weekly-e2e/Action-${{github.run_number}}-${{github.run_id}}-${{ steps.set-job-id.outputs.jobId }}"
+          curl -H "X-Fc-Invocation-Type:Async" -s https://example-ci-terrafoodule-ci-svrrwvrpnj.ap-southeast-1.fcapp.run/?branch=main\&repo_name=${{github.repository}}\&oss_object_path=${objectPath}

@@ -12,23 +12,32 @@ on:
 
 jobs:
   e2e-check:
-    runs-on: terraform-alicloud-landing
-    environment:
-      name: acctests
+    runs-on: ubuntu-latest
+    name: 'e2e check'
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - name: Get changed files
-        id: changed-files
-        uses: tj-actions/changed-files@v34
-        with:
-          dir_names: "true"
-          separator: ","
-          files: "quickstarts/*"
-          files_ignore: "**/TestRecord.md"
-          dir_names_max_depth: 3
-      - name: test pr
+      - name: Checking the max commits number
         run: |
-          bash scripts/terraform-install.sh
-          CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
-          bash scripts/terraform-test.sh ${CHANGED_FOLDERS}
+          commitNum=${{ github.event.pull_request.commits }}
+          if [[ ${commitNum} -gt 1 ]]; then
+            echo -e "\nERROR: The PR has ${commitNum} commits, and please rebase it to 1.\n"
+            exit 1
+          fi
+      - name: set id
+        id: set-job-id
+        uses: ayachensiyuan/get-action-job-id@v1.6
+        env: 
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          job-name: 'e2e check'   
+      - name: get pull request info
+        run: |
+          echo "repo name is" ${{github.event.pull_request.head.repo.full_name}}
+          echo "branch is" ${{github.event.pull_request.head.ref}}
+          echo "the current job id is ${{ steps.set-job-id.outputs.jobId }}"
+      - name: e2e test
+        run: |
+          objectPath="github-action/${{github.repository}}/e2e/Action-${{github.run_number}}-${{github.run_id}}-${{ steps.set-job-id.outputs.jobId }}"
+          curl -H "X-Fc-Invocation-Type:Async" -s https://example-ci-terrafoodule-ci-svrrwvrpnj.ap-southeast-1.fcapp.run/?branch=${{github.event.pull_request.head.ref}}\&repo_name=${{github.event.pull_request.head.repo.full_name}}\&oss_object_path=${objectPath}
+          go run scripts/e2e_check.go ${objectPath}

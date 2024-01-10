@@ -1,3 +1,0 @@
-run "apply" {
-  command = apply
-}

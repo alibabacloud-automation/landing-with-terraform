@@ -1,0 +1,29 @@
+name: Weekly E2E Update Test Record
+on: 
+  repository_dispatch:
+    types:
+      - update_record
+jobs:
+  run:
+    if: github.repository_owner == 'alibabacloud-automation' && ${{ github.event.sender.login }} == 'shanye997'
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: update TestRecord
+        run: |
+          echo ${{ github.event.client_payload.ossObejctPath }}
+          echo ${{ github.event.sender.login }}
+          go run scripts/update_test_record.go ${{ github.event.client_payload.ossObejctPath }}
+          cd .git
+          sudo chmod -R a+rwX .
+          sudo find . -type d -exec chmod g+s '{}' +
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message: 'Update TestRecord'
+          branch: main

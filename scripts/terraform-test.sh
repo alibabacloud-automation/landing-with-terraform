@@ -1,59 +1,65 @@
 #!/usr/bin/env sh
-error=false
 
+if [ ! $# -eq 1 ];then
+  exit 1
+fi
+
+f=$1
 success=true
-allSuccess=true
-record=false
-folders=$1
-if  [ ! -n "$1" ] ;then
-  exit 0
-fi
-if  [ -n "$2" ] ;then
-  record=true
-  folders=$(find quickstarts -maxdepth 2 -mindepth 2 -type d)
-fi
-for f in ${folders//,/ }
-do
-  success=true
-  echo $f
-  f=$(echo $f | xargs echo -n)
-  export TF_LOG_PATH=${f}/terraform.log
+
+echo $f
+f=$(echo $f | xargs echo -n)
+
+echo ""
+echo "====> Terraform testing in" $f
+terraform -chdir=$f init -upgrade >/dev/null
+
+echo ""
+echo "----> Plan Testing"
+terraform -chdir=$f plan >/dev/null
+if [[ $? -ne 0 ]]; then
+  success=false
+  echo -e "\033[31m[ERROR]\033[0m: running terraform plan failed."
+  bash scripts/generate-test-record.sh $f "Plan: running terraform plan failed."
+else
+  echo -e "\033[32mSuccess!\033[0m"
   echo ""
-  echo "====> Terraform testing in" $f
-  terraform -chdir=$f init -upgrade
-  ~/init_env.sh
-  source ~/.terraform_profile
-  echo ""
-  echo "----> Plan Testing"
-  cp scripts/plan.tftest.hcl $f/
-  terraform -chdir=$f test test -verbose
+  echo "----> Apply Testing"
+  terraform -chdir=$f apply -auto-approve >/dev/null 
   if [[ $? -ne 0 ]]; then
     success=false
-    allSuccess=false
-    echo -e "\033[31m[ERROR]\033[0m: running terraform test for plan failed."
-    bash scripts/generate-test-record.sh $record $f "Plan: running terraform test for plan failed."
+    echo -e "\033[31m[ERROR]\033[0m: running terraform apply failed."
+    bash scripts/generate-test-record.sh $f "Apply: running terraform apply failed."
   else
-    echo ""
-    echo "----> Apply Testing"
-    rm -rf $f/plan.tftest.hcl
-    cp scripts/apply.tftest.hcl $f/
-    terraform -chdir=$f test test
-    if [[ $? -ne 0 ]]; then
-      success=false
-      allSuccess=false
-      echo -e "\033[31m[ERROR]\033[0m: running terraform test for apply failed."
-      bash scripts/generate-test-record.sh $record $f "Apply: running terraform test for apply failed."
-    fi
-    rm -rf $f/apply.tftest.hcl
+      echo -e "\033[32mSuccess!\033[0m"
+      echo ""
+      echo -e "----> Checking Diff\n"
+      terraform -chdir=$f plan -detailed-exitcode
+      if [[ $? -ne 0 ]]; then
+        success=false
+        echo -e "\033[31m[ERROR]\033[0m: running terraform plan for checking diff failed."
+        bash scripts/generate-test-record.sh $f "Checking diff: running terraform plan for checking diff failed."
+      else
+        echo -e "\033[32mSuccess!\033[0m"
+      fi
   fi
-  if [[ $success == "true" ]]; then
-    bash scripts/generate-test-record.sh $record $f
+  echo ""
+  echo "----> Destroying"
+  terraform -chdir=$f destroy -auto-approve >/dev/null 
+  if [[ $? -ne 0 ]]; then
+    success=false
+    echo -e "\033[31m[ERROR]\033[0m: running terraform destroy failed."
+  else
+    echo -e "\033[32mSuccess!\033[0m"
   fi
-done
-
-# e2e
-if [[ $allSuccess == "false" && $record == "false" ]]; then
-    exit 1
 fi
 
+
+if [[ $success == "true" ]]; then
+  bash scripts/generate-test-record.sh $f
+fi
+
+if [[ $success == "false" ]]; then
+    exit 1
+fi
 exit 0

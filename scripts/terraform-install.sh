@@ -8,13 +8,5 @@ else
   echo "terraform exists!"
 fi
 
-if [ ! -f /usr/bin/aliyun ]; then
-  echo "aliyun does not exist!"
-  wget -q https://github.com/aliyun/aliyun-cli/releases/download/v3.0.186/aliyun-cli-linux-3.0.186-amd64.tgz
-  tar xzvf aliyun-cli-linux-3.0.186-amd64.tgz
-  mv aliyun /usr/bin
-else
-  echo "aliyun exists!"
-fi
 
 exit 0

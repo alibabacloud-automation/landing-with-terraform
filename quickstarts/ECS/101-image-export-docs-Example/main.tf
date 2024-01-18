@@ -38,15 +38,15 @@ resource "alicloud_instance" "default" {
   internet_max_bandwidth_out = 10
 }
 
-resource "alicloud_image" "default" {
-  instance_id = alicloud_instance.default.id
-  image_name  = "terraform-example"
-  description = "terraform-example"
-}
-
 resource "random_integer" "default" {
   max = 99999
   min = 10000
+}
+
+resource "alicloud_image" "default" {
+  instance_id = alicloud_instance.default.id
+  image_name  = "terraform-example-${random_integer.default.result}"
+  description = "terraform-example"
 }
 
 resource "alicloud_oss_bucket" "default" {

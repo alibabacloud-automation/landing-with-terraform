@@ -1,5 +1,14 @@
+variable "instance_name" {
+  default = "tf-example"
+}
+
 data "alicloud_zones" "default" {
   available_resource_creation = "VSwitch"
+}
+
+resource "random_integer" "default" {
+  min = 10000
+  max = 99999
 }
 
 resource "alicloud_vpc" "default" {
@@ -17,7 +26,7 @@ resource "alicloud_security_group" "default" {
 }
 
 resource "alicloud_alikafka_instance" "default" {
-  name           = "tf-example"
+  name           = "${var.instance_name}-${random_integer.default.result}"
   partition_num  = "50"
   disk_type      = "1"
   disk_size      = "500"

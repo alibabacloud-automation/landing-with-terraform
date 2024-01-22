@@ -1,16 +1,13 @@
 <!-- BEGIN_TF_DOCS -->
-
-## Introduction
-
-Here is the brief introduction for example usage scenes.
-
-## Requirements
-
-Here is a list of dependencies that need to be created before executing the example
-
 ## Providers
 
 No providers.
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_ram_user"></a> [ram\_user](#module\_ram\_user) | terraform-alicloud-modules/ram/alicloud | n/a |
 
 ## Resources
 
@@ -20,7 +17,6 @@ No resources.
 
 No inputs.
 
-## Documentation
 <!-- docs-link -->
 
 The template is based on Aliyun document: [CCreate a RAM user](https://help.aliyun.com/document_detail/146286.html)

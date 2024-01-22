@@ -88,6 +88,7 @@ func main() {
 			curTimeStr := strings.TrimLeft(currentUpdateTime, "## ")
 			preTime, err := time.Parse("02 Jan 2006 15:04 UTC", preTimeStr)
 			if err != nil {
+				testRecordFile.WriteString(testRecord.(string))
 				continue
 			}
 			curTime, err := time.Parse("02 Jan 2006 15:04 UTC", curTimeStr)

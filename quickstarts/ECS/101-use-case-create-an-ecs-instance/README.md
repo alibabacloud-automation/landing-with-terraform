@@ -1,13 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
 
-## Introduction
-
-Here is the brief introduction for example usage scenes.
-
-## Requirements
-
-Here is a list of dependencies that need to be created before executing the example
-
 ## Providers
 
 | Name | Version |

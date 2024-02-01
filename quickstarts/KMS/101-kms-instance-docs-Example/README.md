@@ -1,7 +1,7 @@
 <!-- BEGIN_TF_DOCS -->
 ## Introduction
 
-This example is used to create a `alicloud_kms_client_key` resource.
+This example is used to create a `alicloud_kms_instance` resource.
 
 ## Providers
 
@@ -17,8 +17,9 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_kms_application_access_point.AAP0](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/kms_application_access_point) | resource |
-| [alicloud_kms_client_key.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/kms_client_key) | resource |
+| [alicloud_kms_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/kms_instance) | resource |
+| [alicloud_vpcs.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/vpcs) | data source |
+| [alicloud_vswitches.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/vswitches) | data source |
 
 ## Inputs
 

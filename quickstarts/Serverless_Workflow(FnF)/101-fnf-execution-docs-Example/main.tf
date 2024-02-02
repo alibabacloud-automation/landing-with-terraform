@@ -3,7 +3,7 @@ provider "alicloud" {
 }
 
 variable "name" {
-  default = "tf-testacc-fnfflow"
+  default = "tf-example-fnfflow"
 }
 
 resource "alicloud_ram_role" "default" {

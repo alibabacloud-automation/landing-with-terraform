@@ -1,7 +1,7 @@
 <!-- BEGIN_TF_DOCS -->
 ## Introduction
 
-This example is used to create a `alicloud_dcdn_waf_policy` resource.
+This example is used to create a `alicloud_dcdn_waf_rule` resource.
 
 ## Providers
 
@@ -19,6 +19,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_dcdn_waf_policy.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/dcdn_waf_policy) | resource |
+| [alicloud_dcdn_waf_rule.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/dcdn_waf_rule) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs

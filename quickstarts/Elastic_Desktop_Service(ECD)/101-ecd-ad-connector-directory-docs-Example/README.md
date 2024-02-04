@@ -1,7 +1,7 @@
 <!-- BEGIN_TF_DOCS -->
 ## Introduction
 
-This example is used to create a `alicloud_edas_application` resource.
+This example is used to create a `alicloud_ecd_ad_connector_directory` resource.
 
 ## Providers
 
@@ -18,15 +18,15 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_edas_application.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/edas_application) | resource |
-| [alicloud_edas_cluster.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/edas_cluster) | resource |
+| [alicloud_ecd_ad_connector_directory.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ecd_ad_connector_directory) | resource |
 | [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
+| [alicloud_vswitch.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
-| [alicloud_regions.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/regions) | data source |
+| [alicloud_ecd_zones.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/ecd_zones) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->    

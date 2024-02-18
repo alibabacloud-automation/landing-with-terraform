@@ -2,6 +2,11 @@ provider "alicloud" {
   region = "cn-beijing"
 }
 
+data "alicloud_zones" "default" {
+  available_disk_category     = "cloud_efficiency"
+  available_resource_creation = "VSwitch"
+}
+
 resource "alicloud_vpc" "vpc" {
   vpc_name   = "tf_test_foo"
   cidr_block = "172.16.0.0/12"
@@ -10,7 +15,7 @@ resource "alicloud_vpc" "vpc" {
 resource "alicloud_vswitch" "vsw" {
   vpc_id     = alicloud_vpc.vpc.id
   cidr_block = "172.16.0.0/21"
-  zone_id    = "cn-beijing-b"
+  zone_id    = data.alicloud_zones.default.zones.0.id
 }
 
 resource "alicloud_security_group" "default" {
@@ -20,10 +25,10 @@ resource "alicloud_security_group" "default" {
 
 resource "alicloud_instance" "instance" {
   # cn-beijing
-  availability_zone = "cn-beijing-b"
+  availability_zone = data.alicloud_zones.default.zones.0.id
   security_groups   = alicloud_security_group.default.*.id
   # series III
-  instance_type              = "ecs.n2.small"
+  instance_type              = "ecs.n4.large"
   system_disk_category       = "cloud_efficiency"
   image_id                   = "ubuntu_18_04_64_20G_alibase_20190624.vhd"
   instance_name              = "test_foo"

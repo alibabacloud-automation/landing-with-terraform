@@ -1,7 +1,7 @@
 <!-- BEGIN_TF_DOCS -->
 ## Introduction
 
-This example is used to create a `alicloud_cloud_storage_gateway_storage_bundle` resource.
+This example is used to create a `alicloud_database_gateway_gateway` resource.
 
 ## Providers
 
@@ -17,7 +17,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_cloud_storage_gateway_storage_bundle.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_storage_gateway_storage_bundle) | resource |
+| [alicloud_database_gateway_gateway.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/database_gateway_gateway) | resource |
 
 ## Inputs
 

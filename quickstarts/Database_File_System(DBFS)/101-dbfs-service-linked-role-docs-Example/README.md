@@ -1,7 +1,7 @@
 <!-- BEGIN_TF_DOCS -->
 ## Introduction
 
-This example is used to create a `alicloud_cloud_storage_gateway_storage_bundle` resource.
+This example is used to create a `alicloud_dbfs_service_linked_role` resource.
 
 ## Providers
 
@@ -17,7 +17,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_cloud_storage_gateway_storage_bundle.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_storage_gateway_storage_bundle) | resource |
+| [alicloud_dbfs_service_linked_role.service_linked_role](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/dbfs_service_linked_role) | resource |
 
 ## Inputs
 

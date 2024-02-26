@@ -1,0 +1,29 @@
+<!-- BEGIN_TF_DOCS -->
+## Introduction
+
+This example is used to create a `alicloud_ens_instance_security_group_attachment` resource.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [alicloud_ens_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ens_instance) | resource |
+| [alicloud_ens_instance_security_group_attachment.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ens_instance_security_group_attachment) | resource |
+| [alicloud_ens_security_group.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ens_security_group) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
+<!-- END_TF_DOCS -->    

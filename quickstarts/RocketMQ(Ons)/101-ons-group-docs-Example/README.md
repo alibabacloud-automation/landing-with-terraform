@@ -1,7 +1,7 @@
 <!-- BEGIN_TF_DOCS -->
 ## Introduction
 
-This example is used to create a `alicloud_ots_instance` resource.
+This example is used to create a `alicloud_ons_group` resource.
 
 ## Providers
 
@@ -18,12 +18,14 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_ots_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ots_instance) | resource |
+| [alicloud_ons_group.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ons_group) | resource |
+| [alicloud_ons_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ons_instance) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
+| <a name="input_group_name"></a> [group\_name](#input\_group\_name) | n/a | `string` | `"GID-tf-example"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"GID-tf-example"` | no |
 <!-- END_TF_DOCS -->    

@@ -1,7 +1,7 @@
 <!-- BEGIN_TF_DOCS -->
 ## Introduction
 
-This example is used to create a `alicloud_ots_instance` resource.
+This example is used to create a `alicloud_sae_config_map` resource.
 
 ## Providers
 
@@ -18,8 +18,10 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_ots_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ots_instance) | resource |
+| [alicloud_sae_config_map.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/sae_config_map) | resource |
+| [alicloud_sae_namespace.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/sae_namespace) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
+| [alicloud_regions.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/regions) | data source |
 
 ## Inputs
 

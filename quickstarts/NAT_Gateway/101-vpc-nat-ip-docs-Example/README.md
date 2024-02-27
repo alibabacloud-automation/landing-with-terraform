@@ -9,6 +9,10 @@ This example is used to create a `alicloud_vpc_nat_ip` resource.
 |------|---------|
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
 
+## Modules
+
+No modules.
+
 ## Resources
 
 | Name | Type |

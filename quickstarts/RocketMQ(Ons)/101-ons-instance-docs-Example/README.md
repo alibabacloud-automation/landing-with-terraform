@@ -1,7 +1,7 @@
 <!-- BEGIN_TF_DOCS -->
 ## Introduction
 
-This example is used to create a `alicloud_ots_instance` resource.
+This example is used to create a `alicloud_ons_instance` resource.
 
 ## Providers
 
@@ -18,7 +18,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_ots_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ots_instance) | resource |
+| [alicloud_ons_instance.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ons_instance) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs

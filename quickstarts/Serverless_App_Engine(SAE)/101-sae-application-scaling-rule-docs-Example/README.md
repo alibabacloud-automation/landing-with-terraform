@@ -1,7 +1,7 @@
 <!-- BEGIN_TF_DOCS -->
 ## Introduction
 
-This example is used to create a `alicloud_ots_instance_attachment` resource.
+This example is used to create a `alicloud_sae_application_scaling_rule` resource.
 
 ## Providers
 
@@ -18,11 +18,14 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_ots_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ots_instance) | resource |
-| [alicloud_ots_instance_attachment.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ots_instance_attachment) | resource |
+| [alicloud_sae_application.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/sae_application) | resource |
+| [alicloud_sae_application_scaling_rule.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/sae_application_scaling_rule) | resource |
+| [alicloud_sae_namespace.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/sae_namespace) | resource |
+| [alicloud_security_group.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/security_group) | resource |
 | [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 | [alicloud_vswitch.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
+| [alicloud_regions.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/regions) | data source |
 | [alicloud_zones.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/zones) | data source |
 
 ## Inputs

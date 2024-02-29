@@ -10,6 +10,10 @@ This example is used to create a `alicloud_image_copy` resource.
 | <a name="provider_alicloud.hz"></a> [alicloud.hz](#provider\_alicloud.hz) | n/a |
 | <a name="provider_alicloud.sh"></a> [alicloud.sh](#provider\_alicloud.sh) | n/a |
 
+## Modules
+
+No modules.
+
 ## Resources
 
 | Name | Type |

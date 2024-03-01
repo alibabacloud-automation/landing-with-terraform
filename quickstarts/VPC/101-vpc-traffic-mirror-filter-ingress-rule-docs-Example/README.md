@@ -9,6 +9,10 @@ This example is used to create a `alicloud_vpc_traffic_mirror_filter_ingress_rul
 |------|---------|
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
 
+## Modules
+
+No modules.
+
 ## Resources
 
 | Name | Type |

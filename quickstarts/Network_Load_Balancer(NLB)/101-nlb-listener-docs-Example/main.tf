@@ -53,7 +53,7 @@ resource "alicloud_nlb_server_group" "default" {
   vpc_id                   = alicloud_vpc.default.id
   scheduler                = "Wrr"
   protocol                 = "TCP"
-  connection_drain         = true
+  connection_drain_enabled = true
   connection_drain_timeout = 60
   address_ip_version       = "Ipv4"
   health_check {
@@ -81,7 +81,6 @@ resource "alicloud_nlb_listener" "default" {
   server_group_id        = alicloud_nlb_server_group.default.id
   idle_timeout           = "900"
   proxy_protocol_enabled = "true"
-  sec_sensor_enabled     = "true"
   cps                    = "10000"
   mss                    = "0"
 }

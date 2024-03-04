@@ -49,6 +49,11 @@ resource "alicloud_nlb_server_group" "create_sg" {
 
 }
 
+resource "random_integer" "default" {
+  min = 10000
+  max = 99999
+}
+
 resource "alicloud_ssl_certificates_service_certificate" "ssl0" {
   cert             = <<EOF
 -----BEGIN CERTIFICATE-----
@@ -72,7 +77,7 @@ Ofi6hVgErtHaXJheuPVeW6eAW8mHBoEfvDAfU3y9waYrtUevSl07643bzKL6v+Qd
 DUBTxOAvSYfXTtI90EAxEG/bJJyOm5LqoiA=
 -----END CERTIFICATE-----
 EOF
-  certificate_name = join("-", [var.name, 0])
+  certificate_name = join("-", [var.name, random_integer.default.result, 0])
 
   key = <<EOF
 -----BEGIN RSA PRIVATE KEY-----
@@ -125,7 +130,7 @@ Ofi6hVgErtHaXJheuPVeW6eAW8mHBoEfvDAfU3y9waYrtUevSl07643bzKL6v+Qd
 DUBTxOAvSYfXTtI90EAxEG/bJJyOm5LqoiA=
 -----END CERTIFICATE-----
 EOF
-  certificate_name = join("-", [var.name, 1])
+  certificate_name = join("-", [var.name, random_integer.default.result, 1])
 
   key = <<EOF
 -----BEGIN RSA PRIVATE KEY-----

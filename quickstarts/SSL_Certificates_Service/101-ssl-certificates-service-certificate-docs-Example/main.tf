@@ -1,5 +1,10 @@
+resource "random_integer" "default" {
+  min = 10000
+  max = 99999
+}
+
 resource "alicloud_ssl_certificates_service_certificate" "default" {
-  certificate_name = "tf-example"
+  certificate_name = "tf-example-${random_integer.default.result}"
   cert             = <<EOF
 -----BEGIN CERTIFICATE-----
 MIIDeDCCAmCgAwIBAgIEN3ZT6zANBgkqhkiG9w0BAQsFADBVMQswCQYDVQQGEwJD

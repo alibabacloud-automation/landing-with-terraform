@@ -23,7 +23,6 @@ No modules.
 | [alicloud_dbs_backup_plan.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/dbs_backup_plan) | resource |
 | [alicloud_rds_account.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/rds_account) | resource |
 | [alicloud_security_group.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/security_group) | resource |
-| [alicloud_vswitch.this](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
 | [alicloud_db_instance_classes.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/db_instance_classes) | data source |
 | [alicloud_db_zones.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/db_zones) | data source |
 | [alicloud_resource_manager_resource_groups.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/resource_manager_resource_groups) | data source |

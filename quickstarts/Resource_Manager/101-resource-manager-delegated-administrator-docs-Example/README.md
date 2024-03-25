@@ -20,8 +20,8 @@ No modules.
 |------|------|
 | [alicloud_resource_manager_account.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_account) | resource |
 | [alicloud_resource_manager_delegated_administrator.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_delegated_administrator) | resource |
-| [alicloud_resource_manager_folder.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_folder) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
+| [alicloud_resource_manager_folders.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/resource_manager_folders) | data source |
 
 ## Inputs
 

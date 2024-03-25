@@ -23,7 +23,7 @@ resource "alicloud_vswitch" "default" {
 }
 
 resource "alicloud_cs_edge_kubernetes" "default" {
-  name                         = var.name
+  name_prefix                  = var.name
   worker_vswitch_ids           = [alicloud_vswitch.default.id]
   worker_instance_types        = [data.alicloud_instance_types.default.instance_types.0.id]
   version                      = "1.26.3-aliyun.1"

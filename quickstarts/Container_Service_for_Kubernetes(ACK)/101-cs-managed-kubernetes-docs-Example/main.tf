@@ -119,7 +119,7 @@ resource "alicloud_vswitch" "terway_vswitches" {
 }
 
 resource "alicloud_cs_managed_kubernetes" "k8s" {
-  name         = var.name
+  name_prefix  = var.name
   cluster_spec = "ack.pro.small"
   # version can not be defined in variables.tf.
   version            = "1.26.3-aliyun.1"

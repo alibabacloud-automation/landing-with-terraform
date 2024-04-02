@@ -26,7 +26,8 @@ locals {
 }
 
 resource "alicloud_nlb_load_balancer" "default" {
-  vpc_id = alicloud_vpc.default.id
+  load_balancer_name = "tf-example"
+  vpc_id             = alicloud_vpc.default.id
   zone_mappings {
     vswitch_id = local.vswitch_id_1
     zone_id    = local.zone_id_1

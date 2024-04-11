@@ -1,8 +1,8 @@
-<!-- BEGIN_TF_DOCS -->
 ## Introduction
 
 This example is used to create a `alicloud_vpc_ipv6_egress_rule` resource.
 
+<!-- BEGIN_TF_DOCS -->
 ## Providers
 
 | Name | Version |

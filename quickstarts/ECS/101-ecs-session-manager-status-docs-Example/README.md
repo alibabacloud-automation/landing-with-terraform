@@ -1,8 +1,8 @@
-<!-- BEGIN_TF_DOCS -->
 ## Introduction
 
 This example is used to create a `alicloud_ecs_session_manager_status` resource.
 
+<!-- BEGIN_TF_DOCS -->
 ## Providers
 
 | Name | Version |

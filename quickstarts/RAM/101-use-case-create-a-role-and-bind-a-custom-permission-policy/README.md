@@ -5,6 +5,10 @@
 |------|---------|
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
 
+## Modules
+
+No modules.
+
 ## Resources
 
 | Name | Type |
@@ -16,11 +20,10 @@
 ## Inputs
 
 No inputs.
-
+<!-- END_TF_DOCS -->
 ## Documentation
 <!-- docs-link -->
 
 The template is based on Aliyun document: [Create a role and bind a custom permission policy to the role](https://help.aliyun.com/document_detail/145530.html)
 
 <!-- docs-link -->
-<!-- END_TF_DOCS -->    

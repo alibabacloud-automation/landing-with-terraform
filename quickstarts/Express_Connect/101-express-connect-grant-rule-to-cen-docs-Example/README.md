@@ -1,8 +1,8 @@
-<!-- BEGIN_TF_DOCS -->
 ## Introduction
 
 This example is used to create a `alicloud_express_connect_grant_rule_to_cen` resource.
 
+<!-- BEGIN_TF_DOCS -->
 ## Providers
 
 | Name | Version |

@@ -1,8 +1,8 @@
-<!-- BEGIN_TF_DOCS -->
 ## Introduction
 
 This example is used to create a `alicloud_resource_manager_resource_share` resource.
 
+<!-- BEGIN_TF_DOCS -->
 ## Providers
 
 | Name | Version |

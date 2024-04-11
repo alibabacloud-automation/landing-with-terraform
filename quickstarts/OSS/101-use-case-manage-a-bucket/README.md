@@ -1,11 +1,15 @@
-<!-- BEGIN_TF_DOCS -->
 
+<!-- BEGIN_TF_DOCS -->
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_alicloud.bj-prod"></a> [alicloud.bj-prod](#provider\_alicloud.bj-prod) | n/a |
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
+
+## Modules
+
+No modules.
 
 ## Resources
 
@@ -17,11 +21,10 @@
 ## Inputs
 
 No inputs.
-
+<!-- END_TF_DOCS -->
 ## Documentation
 <!-- docs-link -->
 
 The template creates a bucket basing on Aliyun document: [Manage a Bucket](http://help.aliyun.com/document_detail/111911.html)
 
 <!-- docs-link -->
-<!-- END_TF_DOCS -->    

@@ -2,9 +2,6 @@ formatter: "markdown" # this is required
 
 version: ""
 
-header-from: header.md
-footer-from: footer.md
-
 recursive:
   enabled: false
   path: modules
@@ -20,11 +17,11 @@ content: ""
 
 output:
   file: "README.md"
-  mode: replace
+  mode: inject
   template: |-
     <!-- BEGIN_TF_DOCS -->
     {{ .Content }}
-    <!-- END_TF_DOCS -->    
+    <!-- END_TF_DOCS -->
 
 output-values:
   enabled: false

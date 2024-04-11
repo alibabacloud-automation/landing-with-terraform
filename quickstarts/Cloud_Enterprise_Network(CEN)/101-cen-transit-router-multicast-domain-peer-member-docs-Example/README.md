@@ -1,8 +1,8 @@
-<!-- BEGIN_TF_DOCS -->
 ## Introduction
 
 This example is used to create a `alicloud_cen_transit_router_multicast_domain_peer_member` resource.
 
+<!-- BEGIN_TF_DOCS -->
 ## Providers
 
 | Name | Version |
@@ -10,6 +10,10 @@ This example is used to create a `alicloud_cen_transit_router_multicast_domain_p
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
 | <a name="provider_alicloud.hz"></a> [alicloud.hz](#provider\_alicloud.hz) | n/a |
 | <a name="provider_alicloud.qd"></a> [alicloud.qd](#provider\_alicloud.qd) | n/a |
+
+## Modules
+
+No modules.
 
 ## Resources
 

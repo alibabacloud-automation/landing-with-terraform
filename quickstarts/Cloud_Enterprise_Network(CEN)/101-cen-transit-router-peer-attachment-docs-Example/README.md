@@ -1,14 +1,18 @@
-<!-- BEGIN_TF_DOCS -->
 ## Introduction
 
 This example is used to create a `alicloud_cen_transit_router_peer_attachment` resource.
 
+<!-- BEGIN_TF_DOCS -->
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_alicloud.bj"></a> [alicloud.bj](#provider\_alicloud.bj) | n/a |
 | <a name="provider_alicloud.hz"></a> [alicloud.hz](#provider\_alicloud.hz) | n/a |
+
+## Modules
+
+No modules.
 
 ## Resources
 

@@ -1,14 +1,18 @@
-<!-- BEGIN_TF_DOCS -->
 ## Introduction
 
 This example is used to create a `alicloud_eipanycast_anycast_eip_address_attachment` resource.
 
+<!-- BEGIN_TF_DOCS -->
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_alicloud.beijing"></a> [alicloud.beijing](#provider\_alicloud.beijing) | n/a |
 | <a name="provider_alicloud.hangzhou"></a> [alicloud.hangzhou](#provider\_alicloud.hangzhou) | n/a |
+
+## Modules
+
+No modules.
 
 ## Resources
 

@@ -23,11 +23,10 @@ No modules.
 ## Inputs
 
 No inputs.
-
+<!-- END_TF_DOCS -->
 ## Documentation
 <!-- docs-link -->
 
 The template is based on Aliyun document: [Create an ECS instance](https://help.aliyun.com/document_detail/95829.html)
 
 <!-- docs-link -->
-<!-- END_TF_DOCS -->    

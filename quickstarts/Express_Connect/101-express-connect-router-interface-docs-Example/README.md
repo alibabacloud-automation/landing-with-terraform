@@ -1,8 +1,8 @@
-<!-- BEGIN_TF_DOCS -->
 ## Introduction
 
 This example is used to create a `alicloud_express_connect_router_interface` resource.
 
+<!-- BEGIN_TF_DOCS -->
 ## Providers
 
 | Name | Version |
@@ -18,8 +18,8 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_express_connect_router_interface.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/express_connect_router_interface) | resource |
-| [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 | [alicloud_regions.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/regions) | data source |
+| [alicloud_vpcs.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/vpcs) | data source |
 
 ## Inputs
 

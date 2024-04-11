@@ -16,10 +16,4 @@ No resources.
 ## Inputs
 
 No inputs.
-
-<!-- docs-link -->
-
-The template is based on Aliyun document: [CCreate a RAM user](https://help.aliyun.com/document_detail/146286.html)
-
-<!-- docs-link -->
 <!-- END_TF_DOCS -->    

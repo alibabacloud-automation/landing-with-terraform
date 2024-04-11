@@ -1,8 +1,8 @@
-<!-- BEGIN_TF_DOCS -->
 ## Introduction
 
 This example is used to create a `alicloud_cen_inter_region_traffic_qos_queue` resource.
 
+<!-- BEGIN_TF_DOCS -->
 ## Providers
 
 | Name | Version |
@@ -10,6 +10,10 @@ This example is used to create a `alicloud_cen_inter_region_traffic_qos_queue` r
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
 | <a name="provider_alicloud.bj"></a> [alicloud.bj](#provider\_alicloud.bj) | n/a |
 | <a name="provider_alicloud.hz"></a> [alicloud.hz](#provider\_alicloud.hz) | n/a |
+
+## Modules
+
+No modules.
 
 ## Resources
 

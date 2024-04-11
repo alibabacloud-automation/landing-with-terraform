@@ -1,10 +1,14 @@
-<!-- BEGIN_TF_DOCS -->
 
+<!-- BEGIN_TF_DOCS -->
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+
+## Modules
+
+No modules.
 
 ## Resources
 
@@ -18,11 +22,10 @@
 ## Inputs
 
 No inputs.
-
+<!-- END_TF_DOCS -->
 ## Documentation
 <!-- docs-link -->
 
 The template is based on Aliyun document: [Create an SLB instance in a VPC](http://help.aliyun.com/document_detail/111830.htm)
 
 <!-- docs-link -->
-<!-- END_TF_DOCS -->    

@@ -20,11 +20,10 @@
 ## Inputs
 
 No inputs.
-
+<!-- END_TF_DOCS -->
 ## Documentation
 <!-- docs-link -->
 
 The template creates a bucket basing on Aliyun document: [Quick start for Alibaba Cloud OSS Backend for Terraform](http://help.aliyun.com/document_detail/145541.html)
 
 <!-- docs-link -->
-<!-- END_TF_DOCS -->    

@@ -1,17 +1,24 @@
 name: E2E Test Check
 on:
-  pull_request:
-    branches:
-      - master
-      - main
-    types: [ 'opened', 'synchronize' ]
+  pull_request_review:
+    types: [edited, submitted]
     paths:
       - '.github/**'
       - '.github/workflows/**'
       - 'quickstarts/**'
+  # pull_request:
+  #   branches:
+  #     - master
+  #     - main
+  #   types: [ 'opened', 'synchronize' ]
+  #   paths:
+  #     - '.github/**'
+  #     - '.github/workflows/**'
+  #     - 'quickstarts/**'
 
 jobs:
   e2e-check:
+    if: github.event.review.state == 'approved' || github.event.review.body == 'approved'
     runs-on: ubuntu-latest
     name: 'e2e check'
     steps:

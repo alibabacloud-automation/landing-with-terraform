@@ -1,6 +1,7 @@
 variable "name" {
   default = "tf-example"
 }
+
 resource "random_integer" "default" {
   min = 10000
   max = 99999

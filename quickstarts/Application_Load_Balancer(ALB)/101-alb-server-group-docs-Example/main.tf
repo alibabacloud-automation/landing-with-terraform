@@ -1,25 +1,30 @@
 variable "name" {
   default = "terraform-example"
 }
+
+data "alicloud_resource_manager_resource_groups" "example" {
+}
+
 data "alicloud_zones" "example" {
   available_resource_creation = "Instance"
 }
+
 data "alicloud_instance_types" "example" {
   availability_zone = data.alicloud_zones.example.zones.0.id
   cpu_core_count    = 1
   memory_size       = 2
 }
+
 data "alicloud_images" "example" {
   name_regex = "^ubuntu_[0-9]+_[0-9]+_x64*"
   owners     = "system"
-}
-data "alicloud_resource_manager_resource_groups" "example" {
 }
 
 resource "alicloud_vpc" "example" {
   vpc_name   = var.name
   cidr_block = "10.4.0.0/16"
 }
+
 resource "alicloud_vswitch" "example" {
   vswitch_name = var.name
   cidr_block   = "10.4.0.0/16"
@@ -47,6 +52,11 @@ resource "alicloud_alb_server_group" "example" {
   vpc_id            = alicloud_vpc.example.id
   server_group_name = var.name
   resource_group_id = data.alicloud_resource_manager_resource_groups.example.groups.0.id
+  sticky_session_config {
+    sticky_session_enabled = true
+    cookie                 = "tf-example"
+    sticky_session_type    = "Server"
+  }
   health_check_config {
     health_check_connect_port = "46325"
     health_check_enabled      = true
@@ -61,14 +71,6 @@ resource "alicloud_alb_server_group" "example" {
     healthy_threshold         = 3
     unhealthy_threshold       = 3
   }
-  sticky_session_config {
-    sticky_session_enabled = true
-    cookie                 = "tf-example"
-    sticky_session_type    = "Server"
-  }
-  tags = {
-    Created = "TF"
-  }
   servers {
     description = var.name
     port        = 80
@@ -76,5 +78,8 @@ resource "alicloud_alb_server_group" "example" {
     server_ip   = alicloud_instance.example.private_ip
     server_type = "Ecs"
     weight      = 10
+  }
+  tags = {
+    Created = "TF"
   }
 }

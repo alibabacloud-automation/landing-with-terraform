@@ -39,8 +39,8 @@ resource "alicloud_alikafka_instance" "default" {
 }
 
 resource "alicloud_alikafka_instance_allowed_ip_attachment" "default" {
-  allowed_ip   = "114.237.9.78/32"
-  allowed_type = "vpc"
   instance_id  = alicloud_alikafka_instance.default.id
+  allowed_type = "vpc"
   port_range   = "9092/9092"
+  allowed_ip   = "114.237.9.78/32"
 }

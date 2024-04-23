@@ -4,7 +4,7 @@ variable "name" {
 
 
 resource "alicloud_eip_address" "default" {
-  description               = "test"
+  description               = var.name
   isp                       = "BGP"
   address_name              = var.name
   netmode                   = "public"

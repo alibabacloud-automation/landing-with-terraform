@@ -1,6 +1,7 @@
 variable "name" {
   default = "tf-example"
 }
+
 data "alicloud_zones" "example" {
   available_resource_creation = "Instance"
 }

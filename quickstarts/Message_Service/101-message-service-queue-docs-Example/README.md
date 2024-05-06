@@ -8,6 +8,7 @@ This example is used to create a `alicloud_message_service_queue` resource.
 | Name | Version |
 |------|---------|
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+| <a name="provider_random"></a> [random](#provider\_random) | n/a |
 
 ## Modules
 
@@ -18,6 +19,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_message_service_queue.queue](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/message_service_queue) | resource |
+| [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs
 

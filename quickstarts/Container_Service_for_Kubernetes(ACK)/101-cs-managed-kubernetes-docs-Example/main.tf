@@ -56,44 +56,6 @@ variable "terway_vswitch_cidrs" {
   default     = ["10.4.0.0/16", "10.5.0.0/16"]
 }
 
-variable "cluster_addons" {
-  type = list(object({
-    name   = string
-    config = string
-  }))
-
-  default = [
-    {
-      "name"   = "terway-eniip",
-      "config" = "",
-    },
-    {
-      "name"   = "csi-plugin",
-      "config" = "",
-    },
-    {
-      "name"   = "csi-provisioner",
-      "config" = "",
-    },
-    {
-      "name"   = "logtail-ds",
-      "config" = "{'IngressDashboardEnabled':'true'}",
-    },
-    {
-      "name"   = "nginx-ingress-controller",
-      "config" = "{'IngressSlbNetworkType':'internet'}",
-    },
-    {
-      "name"   = "arms-prometheus",
-      "config" = "",
-    },
-    {
-      "name"   = "ack-node-problem-detector",
-      "config" = "{'sls_project_name':''}",
-    }
-  ]
-}
-
 data "alicloud_enhanced_nat_available_zones" "enhanced" {}
 
 # If there is not specifying vpc_id, the module will launch a new vpc
@@ -119,10 +81,10 @@ resource "alicloud_vswitch" "terway_vswitches" {
 }
 
 resource "alicloud_cs_managed_kubernetes" "k8s" {
-  name_prefix  = var.name
+  name         = var.name
   cluster_spec = "ack.pro.small"
   # version can not be defined in variables.tf.
-  version            = "1.26.3-aliyun.1"
+  # version            = "1.26.3-aliyun.1"
   worker_vswitch_ids = length(var.vswitch_ids) > 0 ? split(",", join(",", var.vswitch_ids)) : length(var.vswitch_cidrs) < 1 ? [] : split(",", join(",", alicloud_vswitch.vswitches.*.id))
   pod_vswitch_ids    = length(var.terway_vswitch_ids) > 0 ? split(",", join(",", var.terway_vswitch_ids)) : length(var.terway_vswitch_cidrs) < 1 ? [] : split(",", join(",", alicloud_vswitch.terway_vswitches.*.id))
   new_nat_gateway    = true
@@ -130,11 +92,36 @@ resource "alicloud_cs_managed_kubernetes" "k8s" {
   proxy_mode         = var.proxy_mode
   service_cidr       = var.service_cidr
 
-  dynamic "addons" {
-    for_each = var.cluster_addons
-    content {
-      name   = lookup(addons.value, "name", var.cluster_addons)
-      config = lookup(addons.value, "config", var.cluster_addons)
-    }
+  addons {
+    name = "terway-eniip"
+  }
+  addons {
+    name = "csi-plugin"
+  }
+  addons {
+    name = "csi-provisioner"
+  }
+  addons {
+    name = "logtail-ds"
+    config = jsonencode({
+      IngressDashboardEnabled = "true"
+    })
+  }
+  addons {
+    name = "nginx-ingress-controller"
+    config = jsonencode({
+      IngressSlbNetworkType = "internet"
+    })
+    # to disable install nginx-ingress-controller automatically
+    # disabled = true
+  }
+  addons {
+    name = "arms-prometheus"
+  }
+  addons {
+    name = "ack-node-problem-detector"
+    config = jsonencode({
+      # sls_project_name = "your-sls-project"
+    })
   }
 }

@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_amqp_instance` resource.
+This example is used to create a `alicloud_oss_bucket_cors` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -17,11 +17,12 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_amqp_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/amqp_instance) | resource |
+| [alicloud_oss_bucket.CreateBucket](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
+| [alicloud_oss_bucket_cors.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_cors) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
-<!-- END_TF_DOCS -->    
+<!-- END_TF_DOCS -->

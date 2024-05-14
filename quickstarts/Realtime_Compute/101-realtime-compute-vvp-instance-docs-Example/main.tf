@@ -6,6 +6,10 @@ provider "alicloud" {
   region = "cn-hangzhou"
 }
 
+variable "zone_id" {
+  default = "cn-hangzhou-i"
+}
+
 resource "random_integer" "default" {
   min = 10000
   max = 99999
@@ -21,7 +25,7 @@ data "alicloud_vpcs" "default" {
 
 data "alicloud_vswitches" "default" {
   vpc_id  = data.alicloud_vpcs.default.ids.0
-  zone_id = "cn-hangzhou-h"
+  zone_id = var.zone_id
 }
 
 resource "alicloud_oss_bucket" "defaultOSS" {
@@ -41,7 +45,7 @@ resource "alicloud_realtime_compute_vvp_instance" "default" {
 
   vvp_instance_name = "${var.name}-${random_integer.default.result}"
   vpc_id            = data.alicloud_vpcs.default.ids.0
-  zone_id           = "cn-hangzhou-h"
+  zone_id           = var.zone_id
   vswitch_ids = [
     "${data.alicloud_vswitches.default.ids.0}"
   ]

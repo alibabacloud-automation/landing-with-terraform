@@ -8,6 +8,7 @@ This example is used to create a `alicloud_ecd_network_package` resource.
 | Name | Version |
 |------|---------|
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+| <a name="provider_random"></a> [random](#provider\_random) | n/a |
 
 ## Modules
 
@@ -18,7 +19,8 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_ecd_network_package.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ecd_network_package) | resource |
-| [alicloud_ecd_simple_office_sites.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/ecd_simple_office_sites) | data source |
+| [alicloud_ecd_simple_office_site.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ecd_simple_office_site) | resource |
+| [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs
 

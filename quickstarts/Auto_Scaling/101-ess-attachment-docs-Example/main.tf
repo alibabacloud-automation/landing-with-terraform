@@ -2,6 +2,15 @@ variable "name" {
   default = "terraform-example"
 }
 
+resource "random_integer" "default" {
+  min = 10000
+  max = 99999
+}
+
+locals {
+  name = "${var.name}-${random_integer.default.result}"
+}
+
 data "alicloud_zones" "default" {
   available_disk_category     = "cloud_efficiency"
   available_resource_creation = "VSwitch"
@@ -48,7 +57,7 @@ resource "alicloud_security_group_rule" "default" {
 resource "alicloud_ess_scaling_group" "default" {
   min_size           = 0
   max_size           = 2
-  scaling_group_name = var.name
+  scaling_group_name = local.name
   removal_policies   = ["OldestInstance", "NewestInstance"]
   vswitch_ids        = [data.alicloud_vswitches.default.ids[0]]
 }

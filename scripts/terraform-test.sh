@@ -1,9 +1,5 @@
 #!/usr/bin/env sh
 
-if [ ! $# -eq 1 ];then
-  exit 6
-fi
-
 f=$1
 success=true
 

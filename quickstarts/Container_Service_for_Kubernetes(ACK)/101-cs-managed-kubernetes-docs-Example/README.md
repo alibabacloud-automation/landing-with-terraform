@@ -27,7 +27,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cluster_addons"></a> [cluster\_addons](#input\_cluster\_addons) | n/a | <pre>list(object({<br>    name   = string<br>    config = string<br>  }))</pre> | <pre>[<br>  {<br>    "config": "",<br>    "name": "terway-eniip"<br>  },<br>  {<br>    "config": "",<br>    "name": "csi-plugin"<br>  },<br>  {<br>    "config": "",<br>    "name": "csi-provisioner"<br>  },<br>  {<br>    "config": "{'IngressDashboardEnabled':'true'}",<br>    "name": "logtail-ds"<br>  },<br>  {<br>    "config": "{'IngressSlbNetworkType':'internet'}",<br>    "name": "nginx-ingress-controller"<br>  },<br>  {<br>    "config": "",<br>    "name": "arms-prometheus"<br>  },<br>  {<br>    "config": "{'sls_project_name':''}",<br>    "name": "ack-node-problem-detector"<br>  }<br>]</pre> | no |
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
 | <a name="input_node_cidr_mask"></a> [node\_cidr\_mask](#input\_node\_cidr\_mask) | The node cidr block to specific how many pods can run on single node. | `number` | `24` | no |
 | <a name="input_proxy_mode"></a> [proxy\_mode](#input\_proxy\_mode) | Proxy mode is option of kube-proxy. | `string` | `"ipvs"` | no |

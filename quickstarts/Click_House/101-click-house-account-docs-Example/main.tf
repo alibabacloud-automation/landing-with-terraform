@@ -1,6 +1,10 @@
 variable "name" {
   default = "tf-example"
 }
+variable "type" {
+  default = "Normal"
+}
+
 data "alicloud_click_house_regions" "default" {
   current = true
 }
@@ -34,4 +38,5 @@ resource "alicloud_click_house_account" "default" {
   account_description = "tf-example-description"
   account_name        = "examplename"
   account_password    = "Example1234"
+  type                = var.type
 }

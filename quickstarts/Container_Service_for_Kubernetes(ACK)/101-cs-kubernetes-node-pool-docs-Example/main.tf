@@ -10,11 +10,12 @@ variable "name" {
 data "alicloud_enhanced_nat_available_zones" "enhanced" {
 }
 
-data "alicloud_instance_types" "default" {
+data "alicloud_instance_types" "cloud_efficiency" {
   availability_zone    = data.alicloud_enhanced_nat_available_zones.enhanced.zones.0.zone_id
   cpu_core_count       = 4
   memory_size          = 8
   kubernetes_node_role = "Worker"
+  system_disk_category = "cloud_efficiency"
 }
 
 resource "alicloud_vpc" "default" {
@@ -47,7 +48,7 @@ resource "alicloud_cs_kubernetes_node_pool" "default" {
   name                 = var.name
   cluster_id           = alicloud_cs_managed_kubernetes.default.id
   vswitch_ids          = [alicloud_vswitch.default.id]
-  instance_types       = ["ecs.c7.xlarge"]
+  instance_types       = [data.alicloud_instance_types.cloud_efficiency.instance_types.0.id]
   system_disk_category = "cloud_efficiency"
   system_disk_size     = 40
   key_name             = alicloud_key_pair.default.key_name
@@ -78,19 +79,19 @@ resource "alicloud_cs_kubernetes_node_pool" "desired_size" {
   name                 = "desired_size"
   cluster_id           = alicloud_cs_managed_kubernetes.default.id
   vswitch_ids          = [alicloud_vswitch.default.id]
-  instance_types       = [data.alicloud_instance_types.default.instance_types.0.id]
+  instance_types       = [data.alicloud_instance_types.cloud_efficiency.instance_types.0.id]
   system_disk_category = "cloud_efficiency"
   system_disk_size     = 40
   key_name             = alicloud_key_pair.default.key_name
-  desired_size         = 2
+  desired_size         = 0
 }
 
-#Create a managed node pool. If you need to enable maintenance window, you need to set the maintenance window in `alicloud_cs_managed_kubernetes`.
+# Create a managed node pool. If you need to enable maintenance window, you need to set the maintenance window in `alicloud_cs_managed_kubernetes`.
 resource "alicloud_cs_kubernetes_node_pool" "maintenance" {
   name                 = "maintenance"
   cluster_id           = alicloud_cs_managed_kubernetes.default.id
   vswitch_ids          = [alicloud_vswitch.default.id]
-  instance_types       = [data.alicloud_instance_types.default.instance_types.0.id]
+  instance_types       = [data.alicloud_instance_types.cloud_efficiency.instance_types.0.id]
   system_disk_category = "cloud_efficiency"
   system_disk_size     = 40
 
@@ -133,7 +134,7 @@ resource "alicloud_cs_kubernetes_node_pool" "spot_instance" {
   name                 = "spot_instance"
   cluster_id           = alicloud_cs_managed_kubernetes.default.id
   vswitch_ids          = [alicloud_vswitch.default.id]
-  instance_types       = [data.alicloud_instance_types.default.instance_types.0.id, data.alicloud_instance_types.default.instance_types.1.id]
+  instance_types       = [data.alicloud_instance_types.cloud_efficiency.instance_types.0.id, data.alicloud_instance_types.cloud_efficiency.instance_types.1.id]
   system_disk_category = "cloud_efficiency"
   system_disk_size     = 40
   key_name             = alicloud_key_pair.default.key_name
@@ -144,13 +145,13 @@ resource "alicloud_cs_kubernetes_node_pool" "spot_instance" {
   # spot config
   spot_strategy = "SpotWithPriceLimit"
   spot_price_limit {
-    instance_type = data.alicloud_instance_types.default.instance_types.0.id
+    instance_type = data.alicloud_instance_types.cloud_efficiency.instance_types.0.id
     # Different instance types have different price caps
     price_limit = "0.70"
   }
   // define with multi-spot_price_limit by defining with spot_price_limit blocks
   spot_price_limit {
-    instance_type = data.alicloud_instance_types.default.instance_types.1.id
+    instance_type = data.alicloud_instance_types.cloud_efficiency.instance_types.1.id
     price_limit   = "0.72"
   }
 }
@@ -161,7 +162,7 @@ resource "alicloud_cs_kubernetes_node_pool" "spot_auto_scaling" {
   name                 = "spot_auto_scaling"
   cluster_id           = alicloud_cs_managed_kubernetes.default.id
   vswitch_ids          = [alicloud_vswitch.default.id]
-  instance_types       = [data.alicloud_instance_types.default.instance_types.0.id]
+  instance_types       = [data.alicloud_instance_types.cloud_efficiency.instance_types.0.id]
   system_disk_category = "cloud_efficiency"
   system_disk_size     = 40
   key_name             = alicloud_key_pair.default.key_name
@@ -175,7 +176,7 @@ resource "alicloud_cs_kubernetes_node_pool" "spot_auto_scaling" {
   # spot price config
   spot_strategy = "SpotWithPriceLimit"
   spot_price_limit {
-    instance_type = data.alicloud_instance_types.default.instance_types.0.id
+    instance_type = data.alicloud_instance_types.cloud_efficiency.instance_types.0.id
     price_limit   = "0.70"
   }
 }
@@ -185,7 +186,7 @@ resource "alicloud_cs_kubernetes_node_pool" "prepaid_node" {
   name                 = "prepaid_node"
   cluster_id           = alicloud_cs_managed_kubernetes.default.id
   vswitch_ids          = [alicloud_vswitch.default.id]
-  instance_types       = [data.alicloud_instance_types.default.instance_types.0.id]
+  instance_types       = [data.alicloud_instance_types.cloud_efficiency.instance_types.0.id]
   system_disk_category = "cloud_efficiency"
   system_disk_size     = 40
   key_name             = alicloud_key_pair.default.key_name
@@ -200,12 +201,12 @@ resource "alicloud_cs_kubernetes_node_pool" "prepaid_node" {
   install_cloud_monitor = true
 }
 
-#Create a node pool with customized kubelet parameters
+##Create a node pool with customized kubelet parameters
 resource "alicloud_cs_kubernetes_node_pool" "customized_kubelet" {
   name                 = "customized_kubelet"
   cluster_id           = alicloud_cs_managed_kubernetes.default.id
   vswitch_ids          = [alicloud_vswitch.default.id]
-  instance_types       = [data.alicloud_instance_types.default.instance_types.0.id]
+  instance_types       = [data.alicloud_instance_types.cloud_efficiency.instance_types.0.id]
   system_disk_category = "cloud_efficiency"
   system_disk_size     = 40
   instance_charge_type = "PostPaid"

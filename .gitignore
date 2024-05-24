@@ -13,12 +13,15 @@ go.sum
 TestRecord
 **/TestRecord.md.tmp
 TestRecord.json
+TestRecordImport
+TestRecordImport.json
 terraform.tfstate
 terraform.tfstate.backup
 quickstarts/**/header.md
 quickstarts/**/footer.md
 quickstarts/**/plan.tftest.hcl
 quickstarts/**/apply.tftest.hcl
+quickstarts/**/import_test/
 **/terraform.log
 
 aliyun

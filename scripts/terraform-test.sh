@@ -45,6 +45,10 @@ else
           bash scripts/generate-test-record.sh $f "Checking diff: running terraform plan for checking diff failed."
         else
           echo -e "\033[32m - apply diff check: success\033[0m"
+          echo ""
+          if [ "$2" = "weekly" ]; then
+            go run scripts/import_check.go $f
+          fi
         fi
     fi
     echo ""

@@ -23,7 +23,7 @@ func getImportFile(stateFilePath string) {
 
 	// Skip the test for the examples with provider
 	mainContent, err := os.ReadFile(stateFilePath + "/main.tf")
-	if strings.Contains(string(mainContent), "provider \"alicloud\""){
+	if strings.Contains(string(mainContent), "provider \"alicloud\"") {
 		log.Println("Skip the test for the examples with provider")
 		return
 	}

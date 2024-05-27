@@ -5,17 +5,21 @@ f=$2
 exitCode=0
 success=true
 echo ""
-echo "====> Import testing in" $f 
-cp -r $root/.terraform $f
-cp $root/.terraform.lock.hcl $f
-cp $root/provider.tf $f
+echo "====> Import testing in" $f
+
+# initialize
+cp -r $root/.terraform $f && cp $root/.terraform.lock.hcl $f && cp $root/provider.tf $f
 if [ $? -ne 0 ]; then
-  success=false
-  exitCode=1
-  echo -e "\033[31m[ERROR]\033[0m: copy terraform files failed."
-  exit $exitCode
+  terraform -chdir=$f init -upgrade
+  if [ $? -ne 0 ]; then
+    success=false
+    exitCode=1
+    echo -e "\033[31m[ERROR]\033[0m: terraform init failed."
+    exit $exitCode
+  fi
 fi
 
+# test
 echo ""
 echo " ----> import pre check"
 importCheckLog=$f/import-pre-check.log
@@ -24,6 +28,9 @@ haveDiff=$(cat ${importCheckLog} | grep "0 to add, 0 to change, 0 to destroy")
 if [[ $planResult -ne 0 || ${haveDiff} == "" ]]; then
   success=false
   exitCode=2
+  if [[ ${haveDiff} == "" ]];then
+    echo -e "Error: import pre diff check failed\n" >&2
+  fi
   echo -e "\033[31m[ERROR]\033[0m: running import pre check failed."
 else
   echo -e "\033[32m - pre check: success\033[0m"

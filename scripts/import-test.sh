@@ -5,7 +5,7 @@ f=$2
 exitCode=0
 success=true
 echo ""
-echo "====> Import testing in" $f
+echo "  ====> Import testing in" $f
 
 # initialize
 cp -r $root/.terraform $f && cp $root/.terraform.lock.hcl $f && cp $root/provider.tf $f
@@ -14,44 +14,38 @@ if [ $? -ne 0 ]; then
   if [ $? -ne 0 ]; then
     success=false
     exitCode=1
-    echo -e "\033[31m[ERROR]\033[0m: terraform init failed."
+    echo -e "Error: terraform init failed." >&2
     exit $exitCode
   fi
 fi
 
 # test
 echo ""
-echo " ----> import pre check"
+echo "   ----> import pre check"
 importCheckLog=$f/import-pre-check.log
 planResult=$({ terraform -chdir=${f} plan -out=tf.tfplan -generate-config-out=generate.tf  -no-color; } > ${importCheckLog})
 haveDiff=$(cat ${importCheckLog} | grep "0 to add, 0 to change, 0 to destroy")
 if [[ $planResult -ne 0 || ${haveDiff} == "" ]]; then
   success=false
   exitCode=2
-  if [[ ${haveDiff} == "" ]];then
-    echo -e "Error: import pre diff check failed\n" >&2
-  fi
-  echo -e "\033[31m[ERROR]\033[0m: running import pre check failed."
+  echo -e "Error: terraform import pre check failed." >&2
+  cat ${importCheckLog} >&1
 else
-  echo -e "\033[32m - pre check: success\033[0m"
   echo ""
-  echo " ----> import apply check"
-  terraform -chdir=$f apply tf.tfplan
+  echo "   ----> import apply check"
+  terraform -chdir=$f apply tf.tfplan >/dev/null
   if [ $? -ne 0 ]; then
     success=false
     exitCode=3      
-    echo -e "\033[31m[ERROR]\033[0m: running import apply failed."
+    echo -e "Error: terraform import apply failed."  >&2
   else
-    echo -e "\033[32m - import: success\033[0m"
     echo ""
-    echo " ----> import diff check"
-    terraform -chdir=$f plan
+    echo "   ----> import diff check"
+    terraform -chdir=$f plan >/dev/null
     if [ $? -ne 0 ]; then
       success=false
       exitCode=4
-      echo -e "\033[31m[ERROR]\033[0m: running import diff check failed."
-    else
-      echo -e "\033[32m - import diff check: success\033[0m"
+      echo -e "Error: terraform import diff check failed."  >&2
     fi
   fi
 fi

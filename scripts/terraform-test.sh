@@ -47,7 +47,7 @@ else
           echo -e "\033[32m - apply diff check: success\033[0m"
           echo ""
           if [ "$2" = "weekly" ]; then
-            go run scripts/import_check.go $f
+            go run scripts/import_tfer_check.go $f
           fi
         fi
     fi

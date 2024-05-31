@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_oss_bucket_acl` resource.
+This example is used to create a `alicloud_sls_scheduled_sql` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -18,8 +18,9 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_oss_bucket.CreateBucket](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
-| [alicloud_oss_bucket_acl.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
+| [alicloud_log_project.defaultKIe4KV](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/log_project) | resource |
+| [alicloud_log_store.default1LI9we](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/log_store) | resource |
+| [alicloud_sls_scheduled_sql.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/sls_scheduled_sql) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs

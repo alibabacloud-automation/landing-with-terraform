@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_oss_bucket_acl` resource.
+This example is used to create a `alicloud_oss_bucket_data_redundancy_transition` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -19,7 +19,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_oss_bucket.CreateBucket](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
-| [alicloud_oss_bucket_acl.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
+| [alicloud_oss_bucket_data_redundancy_transition.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_data_redundancy_transition) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs

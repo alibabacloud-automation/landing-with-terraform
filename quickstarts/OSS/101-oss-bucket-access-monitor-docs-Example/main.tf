@@ -16,7 +16,8 @@ resource "alicloud_oss_bucket" "CreateBucket" {
   bucket        = "${var.name}-${random_integer.default.result}"
 }
 
-resource "alicloud_oss_bucket_acl" "default" {
+
+resource "alicloud_oss_bucket_access_monitor" "default" {
+  status = "Enabled"
   bucket = alicloud_oss_bucket.CreateBucket.bucket
-  acl    = "private"
 }

@@ -25,6 +25,7 @@ haveNoResource=$(cat ${importCheckLog} | grep "Number of resources is zero")
 if [[ $notSupported ]];then
   exitCode=1
   echo -e "\nError: terraformer not support this resourceType: alicloud_${resourceType}." >&2
+  rm -rf $output
   exit $exitCode
 elif [[ $importResult -ne 0 || $haveNoResource ]];then
   exitCode=2
@@ -33,6 +34,7 @@ elif [[ $importResult -ne 0 || $haveNoResource ]];then
     echo -e "Error: The number of imported resources is zero." >&2
   fi
   cat ${importCheckLog}
+  rm -rf $output
   exit $exitCode
 fi
 
@@ -46,6 +48,7 @@ if [ $? -ne 0 ]; then
   if [ $? -ne 0 ]; then
     exitCode=3
     echo -e "Error: terraformer import diff failed. terraform init failed." >&2
+    rm -rf $output
     exit $exitCode
   fi
 fi
@@ -55,10 +58,10 @@ terraform -chdir=${output} plan -detailed-exitcode -no-color >/dev/null
 if [ $? -ne 0 ]; then
   exitCode=3
   echo -e "Error: terraformer import diff failed." >&2
+  rm -rf $output
   exit $exitCode
 fi
 
 rm -rf $output
-
 exit $exitCode
 

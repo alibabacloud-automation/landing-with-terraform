@@ -15,6 +15,7 @@ if [ $? -ne 0 ]; then
     success=false
     exitCode=1
     echo -e "Error: terraform init failed." >&2
+    rm -rf $f
     exit $exitCode
   fi
 fi

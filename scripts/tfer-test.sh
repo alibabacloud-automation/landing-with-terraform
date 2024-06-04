@@ -54,7 +54,7 @@ if [ $? -ne 0 ]; then
 fi
 
 terraform -chdir=$output refresh >/dev/null 2>&1
-terraform -chdir=${output} plan -detailed-exitcode -no-color >/dev/null
+terraform -chdir=${output} plan -detailed-exitcode -no-color
 if [ $? -ne 0 ]; then
   exitCode=3
   echo -e "Error: terraformer import diff failed." >&2

@@ -196,7 +196,7 @@ func excuteTferTest() {
 		errMessage := ""
 		errMessageSlice := strings.Split(stderr.String(), "\n")
 		for _, v := range errMessageSlice {
-			if strings.Contains(v, "Error: ") || strings.Contains(v, "no definition was found") {
+			if strings.Contains(v, "Error: ") || strings.Contains(v, "is required, but no definition") {
 				errMessage += v + "\n"
 			}
 		}

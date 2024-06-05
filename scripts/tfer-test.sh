@@ -19,7 +19,8 @@ export TF_DATA_TFER_DIR="$(pwd)/${root}/.terraform"
 
 mkdir -p $output
 importCheckLog=$output/import-pre-check.log
-importResult=$({ terraformer import alicloud -o=${output} -r=${resourceType} --terraform-version=1.6.0 --path-pattern=${output} --filter=${filter}; } > ${importCheckLog})
+terraformer import alicloud -o=${output} -r=${resourceType} --terraform-version=1.6.0 --path-pattern=${output} --filter=${filter} > ${importCheckLog}
+importResult=$?
 notSupported=$(cat ${importCheckLog} | grep "not supported service") 
 haveNoResource=$(cat ${importCheckLog} | grep "Number of resources is zero")
 if [[ $notSupported ]];then
@@ -29,7 +30,7 @@ if [[ $notSupported ]];then
   exit $exitCode
 elif [[ $importResult -ne 0 || $haveNoResource ]];then
   exitCode=2
-  echo -e "Error: terraformer import failed." >&2
+  echo -e "\nError: terraformer import failed." >&2
   if [[ $haveNoResource ]];then
     echo -e "Error: The number of imported resources is zero." >&2
   fi

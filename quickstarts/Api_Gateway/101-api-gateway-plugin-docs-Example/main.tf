@@ -1,10 +1,50 @@
+variable "name" {
+  default = "terraform_example"
+}
+
+provider "alicloud" {
+  region = "cn-hangzhou"
+}
+
+
 resource "alicloud_api_gateway_plugin" "default" {
-  description = "tf_example"
-  plugin_name = "tf_example"
-  plugin_data = "{\"allowOrigins\": \"api.foo.com\",\"allowMethods\": \"GET,POST,PUT,DELETE,HEAD,OPTIONS,PATCH\",\"allowHeaders\": \"Authorization,Accept,Accept-Ranges,Cache-Control,Range,Date,Content-Type,Content-Length,Content-MD5,User-Agent,X-Ca-Signature,X-Ca-Signature-Headers,X-Ca-Signature-Method,X-Ca-Key,X-Ca-Timestamp,X-Ca-Nonce,X-Ca-Stage,X-Ca-Request-Mode,x-ca-deviceid\",\"exposeHeaders\": \"Content-MD5,Server,Date,Latency,X-Ca-Request-Id,X-Ca-Error-Code,X-Ca-Error-Message\",\"maxAge\": 172800,\"allowCredentials\": true}"
-  plugin_type = "cors"
-  tags = {
-    Created = "TF",
-    For     = "example",
-  }
+  description = var.name
+  plugin_name = var.name
+  plugin_data = jsonencode({
+    "routes" : [
+      {
+        "name" : "Vip",
+        "condition" : "$CaAppId = 123456",
+        "backend" : {
+          "type" : "HTTP-VPC",
+          "vpcAccessName" : "slbAccessForVip"
+        }
+      },
+      {
+        "name" : "MockForOldClient",
+        "condition" : "$ClientVersion < '2.0.5'",
+        "backend" : {
+          "type" : "MOCK",
+          "statusCode" : 400,
+          "mockBody" : "This version is not supported!!!"
+        }
+      },
+      {
+        "name" : "BlueGreenPercent05",
+        "condition" : "1 = 1",
+        "backend" : {
+          "type" : "HTTP",
+          "address" : "https://beta-version.api.foo.com"
+        },
+        "constant-parameters" : [
+          {
+            "name" : "x-route-blue-green",
+            "location" : "header",
+            "value" : "route-blue-green"
+          }
+        ]
+      }
+    ]
+  })
+  plugin_type = "routing"
 }

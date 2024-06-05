@@ -1,5 +1,5 @@
-resource "alicloud_kms_key" "key" {
+resource "alicloud_kms_key" "default" {
   description            = "Hello KMS"
-  pending_window_in_days = "7"
   status                 = "Enabled"
+  pending_window_in_days = "7"
 }

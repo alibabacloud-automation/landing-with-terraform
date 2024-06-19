@@ -19,7 +19,9 @@
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"cn-hangzhou"` | no |
 <!-- END_TF_DOCS -->
 ## Documentation
 <!-- docs-link -->

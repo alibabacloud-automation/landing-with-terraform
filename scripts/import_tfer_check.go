@@ -7,6 +7,7 @@ import (
 	"log"
 	"os"
 	"os/exec"
+	"regexp"
 	"strings"
 )
 
@@ -15,6 +16,8 @@ func main() {
 	importFilePath = stateFilePath + importFilePath
 	tferFilePath = stateFilePath + tferFilePath
 
+	getProviderInfo()
+
 	getResourceInfo()
 
 	excuteImportTest()
@@ -22,15 +25,68 @@ func main() {
 	excuteTferTest()
 }
 
-func getResourceInfo() {
-
-	// Skip the test for the examples with provider
+func getProviderInfo() {
 	mainContent, err := os.ReadFile(stateFilePath + "/main.tf")
-	if strings.Contains(string(mainContent), "provider \"alicloud\"") {
-		log.Println("Skip the test for the examples with provider")
-		return
+	if err != nil {
+		log.Println("reading the main file failed, error: ", err)
+		os.Exit(1)
+	}
+	originProviderList := []ProviderInfo{}
+	variableMap := make(map[string]string)
+
+	// get provider block info
+	providerRe, err := regexp.Compile(providerRegexPattern)
+	allProviderBlocks := providerRe.FindAllString(string(mainContent), -1)
+	for _, provider := range allProviderBlocks {
+		providerInfo := ProviderInfo{}
+		parts := strings.Split(provider, "\n")
+		for _, v := range parts[1:] {
+			if strings.Contains(v, "alias") || strings.Contains(v, "region") {
+				vv := v[strings.Index(v, "=")+1:]
+				vv = strings.TrimSpace(vv)
+				vv = strings.ReplaceAll(vv, "\"", "")
+				if strings.Contains(v, "alias") {
+					providerInfo.Alias = vv
+				} else if strings.Contains(v, "region") {
+					providerInfo.Region = vv
+				}
+			}
+		}
+		originProviderList = append(originProviderList, providerInfo)
 	}
 
+	// get variable block info
+	variableRe, err := regexp.Compile(variableRegexPattern)
+	allVariableBlocks := variableRe.FindAllString(string(mainContent), -1)
+	for _, variable := range allVariableBlocks {
+		parts := strings.Split(variable, "\n")
+		key := strings.TrimPrefix(parts[0], "variable \"")
+		key = strings.TrimSuffix(key, "\" {")
+		for _, v := range parts[1:] {
+			if strings.Contains(v, "default") {
+				vv := v[strings.Index(v, "=")+1:]
+				vv = strings.TrimSpace(vv)
+				vv = strings.ReplaceAll(vv, "\"", "")
+				variableMap[key] = vv
+			}
+		}
+	}
+
+	// handle variables in provider block
+	for _, originProvider := range originProviderList {
+		if strings.Contains(originProvider.Region, "var.") {
+			originProvider.Region = variableMap[strings.TrimPrefix(originProvider.Region, "var.")]
+		}
+		// noAlias
+		if originProvider.Alias == "" {
+			providerInfo["default"] = originProvider.Region
+		} else {
+			providerInfo[originProvider.Alias] = originProvider.Region
+		}
+	}
+}
+
+func getResourceInfo() {
 	var providerVersion string
 	cmd := exec.Command("terraform", "-chdir="+stateFilePath, "version")
 	stdout, _ := cmd.CombinedOutput()
@@ -87,6 +143,15 @@ func getResourceInfo() {
 				Id:              id.(string),
 				ProviderVersion: providerVersion,
 			}
+
+			providerName := res.Provider[strings.Index(res.Provider, "]")+1:]
+			providerName = strings.TrimPrefix(providerName, ".")
+			if region, ok := providerInfo["default"]; ok && len(providerName) == 0 {
+				resource.Region = region
+			}
+			if region, ok := providerInfo[providerName]; ok {
+				resource.Region = region
+			}
 			resourceInfo = append(resourceInfo, resource)
 		}
 	}
@@ -108,6 +173,20 @@ import {
 	to = %s
 }
 		`, resource.Id, importName)
+		if len(resource.Region) != 0 {
+			importStr = fmt.Sprintf(`
+provider "alicloud" {
+  alias  = "my-provider"
+  region = "%s"
+}
+
+import {
+  provider = alicloud.my-provider
+  id       = "%s"
+  to       = %s
+}
+					`, resource.Region, resource.Id, importName)
+		}
 
 		os.Mkdir(importFilePath+importName, 0755)
 		os.Create(importFilePath + importName + "/import.tf")
@@ -177,7 +256,7 @@ func excuteTferTest() {
 		resourceType := strings.TrimPrefix(resource.ResourceType, "alicloud_")
 
 		testFilePath := tferFilePath + resource.ResourceName
-		cmd := exec.Command("bash", "scripts/tfer-test.sh", stateFilePath, resourceType, resource.Id, testFilePath)
+		cmd := exec.Command("bash", "scripts/tfer-test.sh", stateFilePath, resourceType, resource.Id, testFilePath, resource.Region)
 		var stdout, stderr bytes.Buffer
 		cmd.Stdout = &stdout
 		cmd.Stderr = &stderr
@@ -227,6 +306,9 @@ func excuteTferTest() {
 }
 
 var (
+	providerRegexPattern = `provider "alicloud" {\s*[^}]*}`
+	variableRegexPattern = `variable ".*?" {\s*.*?\s*}`
+
 	stateFilePath = ""
 
 	importFilePath       = "/import_test/"
@@ -238,7 +320,13 @@ var (
 	tferResultFileName = "tferResult.json"
 
 	resourceInfo = []ResourceInfo{}
+	providerInfo = map[string]string{}
 )
+
+type ProviderInfo struct {
+	Region string
+	Alias  string
+}
 
 type TestResult struct {
 	ExamplePath     string `json:"example_path"`
@@ -255,6 +343,7 @@ type ResourceInfo struct {
 	ResourceName    string
 	Id              string
 	ProviderVersion string
+	Region          string
 }
 
 type TerraformState struct {
@@ -263,13 +352,13 @@ type TerraformState struct {
 	Serial           int         `json:"serial"`
 	Lineage          string      `json:"lineage"`
 	Outputs          interface{} `json:"outputs"`
-	Resources        []Resource  `json: "resources"`
+	Resources        []Resource  `json:"resources"`
 	CheckResults     interface{} `json:"check_results"`
 }
 
 type Resource struct {
 	Mode      string        `json:"mode"`
-	Type      string        `json: "type"`
+	Type      string        `json:"type"`
 	Name      string        `json:"name"`
 	Provider  string        `json:"provider"`
 	Instances []interface{} `json:"instances"`

@@ -17,9 +17,11 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_nas_auto_snapshot_policy.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/nas_auto_snapshot_policy) | resource |
+| [alicloud_nas_auto_snapshot_policy.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/nas_auto_snapshot_policy) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->    

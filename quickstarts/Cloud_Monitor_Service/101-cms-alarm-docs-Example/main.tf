@@ -1,17 +1,20 @@
 variable "name" {
   default = "tf-example"
 }
-data "alicloud_images" "default" {
-  name_regex = "^ubuntu_18.*64"
-  owners     = "system"
-}
+
 data "alicloud_zones" "default" {
-  available_resource_creation = "Instance"
+  available_disk_category     = "cloud_efficiency"
+  available_resource_creation = "VSwitch"
 }
+
+data "alicloud_images" "default" {
+  most_recent = true
+  owners      = "system"
+}
+
 data "alicloud_instance_types" "default" {
   availability_zone = data.alicloud_zones.default.zones.0.id
-  cpu_core_count    = 1
-  memory_size       = 2
+  image_id          = data.alicloud_images.default.images.0.id
 }
 
 resource "alicloud_vpc" "default" {
@@ -25,7 +28,6 @@ resource "alicloud_vswitch" "default" {
   vpc_id       = alicloud_vpc.default.id
   zone_id      = data.alicloud_zones.default.zones.0.id
 }
-
 
 resource "alicloud_security_group" "default" {
   name   = var.name
@@ -46,18 +48,24 @@ resource "alicloud_cms_alarm_contact_group" "default" {
 }
 
 resource "alicloud_cms_alarm" "default" {
-  name              = var.name
-  project           = "acs_ecs_dashboard"
-  metric            = "disk_writebytes"
-  metric_dimensions = "[{\"instanceId\":\"${alicloud_instance.default.id}\",\"device\":\"/dev/vda1\"}]"
+  name               = var.name
+  project            = "acs_ecs_dashboard"
+  metric             = "disk_writebytes"
+  period             = 900
+  contact_groups     = [alicloud_cms_alarm_contact_group.default.alarm_contact_group_name]
+  effective_interval = "06:00-20:00"
+  metric_dimensions  = <<EOF
+  [
+    {
+      "instanceId": "${alicloud_instance.default.id}",
+      "device": "/dev/vda1"
+    }
+  ]
+  EOF
   escalations_critical {
     statistics          = "Average"
     comparison_operator = "<="
     threshold           = 35
     times               = 2
   }
-  period = 900
-  contact_groups = [
-  alicloud_cms_alarm_contact_group.default.alarm_contact_group_name]
-  effective_interval = "06:00-20:00"
 }

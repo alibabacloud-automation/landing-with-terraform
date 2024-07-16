@@ -9,15 +9,13 @@ echo "  ====> Import testing in" $f
 
 # initialize
 cp -r $root/.terraform $f && cp $root/.terraform.lock.hcl $f && cp $root/provider.tf $f
+terraform -chdir=$f init -upgrade >/dev/null 2>&1
 if [ $? -ne 0 ]; then
-  terraform -chdir=$f init -upgrade
-  if [ $? -ne 0 ]; then
-    success=false
-    exitCode=1
-    echo -e "Error: terraform init failed." >&2
-    rm -rf $f
-    exit $exitCode
-  fi
+  success=false
+  exitCode=1
+  echo -e "Error: terraform init failed." >&2
+  rm -rf $f
+  exit $exitCode
 fi
 
 # test

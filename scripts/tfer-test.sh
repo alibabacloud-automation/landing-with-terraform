@@ -44,19 +44,16 @@ elif [[ $importResult -ne 0 || $haveNoResource ]];then
   exit $exitCode
 fi
 
-
 echo ""
 echo "   ----> terraformer import diff check"
 terraform -chdir=$output state replace-provider -auto-approve "registry.terraform.io/-/alicloud" "aliyun/alicloud" >/dev/null 2>&1
 cp -r $root/.terraform $output && cp $root/.terraform.lock.hcl $output
+terraform -chdir=$output init -upgrade >/dev/null 2>&1
 if [ $? -ne 0 ]; then
-  terraform -chdir=$output init -upgrade >/dev/null 2>&1
-  if [ $? -ne 0 ]; then
-    exitCode=3
-    echo -e "Error: terraformer import diff failed. terraform init failed." >&2
-    rm -rf $output
-    exit $exitCode
-  fi
+  exitCode=3
+  echo -e "Error: terraformer import diff failed. terraform init failed." >&2
+  rm -rf $output
+  exit $exitCode
 fi
 
 terraform -chdir=$output refresh >/dev/null 2>&1

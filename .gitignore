@@ -7,6 +7,7 @@ submodule.sh
 
 .terraform
 .terraform.lock.hcl
+.terraform.tfstate.lock.info
 *.tmp
 go.sum
 

@@ -307,7 +307,7 @@ func excuteTferTest() {
 
 var (
 	providerRegexPattern = `provider "alicloud" {\s*[^}]*}`
-	variableRegexPattern = `variable ".*?" {\s*.*?\s*}`
+	variableRegexPattern = `variable\s+"(\w+)"\s*{[^}]*}`
 
 	stateFilePath = ""
 

@@ -1,3 +1,16 @@
+## 27 Jul 2024 01:08 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.227.1
+
+### Error
+
+Checking diff: running terraform plan for checking diff failed.
 ## 20 Jul 2024 01:06 UTC
 
 success: false

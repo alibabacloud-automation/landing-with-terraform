@@ -1,3 +1,7 @@
+provider "alicloud" {
+  region = "cn-shanghai"
+}
+
 variable "name" {
   default = "tf_example"
 }
@@ -13,7 +17,7 @@ resource "alicloud_vswitch" "default" {
   count        = 2
   vpc_id       = alicloud_vpc.default.id
   cidr_block   = format("10.4.%d.0/24", count.index + 1)
-  zone_id      = data.alicloud_alb_zones.default.zones[count.index].id
+  zone_id      = data.alicloud_alb_zones.default.zones[count.index + 3].id
   vswitch_name = format("${var.name}_%d", count.index + 1)
 }
 
@@ -32,11 +36,11 @@ resource "alicloud_alb_load_balancer" "default" {
   }
   zone_mappings {
     vswitch_id = alicloud_vswitch.default.0.id
-    zone_id    = data.alicloud_alb_zones.default.zones.0.id
+    zone_id    = alicloud_vswitch.default.0.zone_id
   }
   zone_mappings {
     vswitch_id = alicloud_vswitch.default.1.id
-    zone_id    = data.alicloud_alb_zones.default.zones.1.id
+    zone_id    = alicloud_vswitch.default.1.zone_id
   }
 }
 

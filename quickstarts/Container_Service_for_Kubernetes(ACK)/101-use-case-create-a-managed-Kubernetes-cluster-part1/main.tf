@@ -1,6 +1,11 @@
 provider "alicloud" {
-  region = "cn-zhangjiakou"
+  region = var.region
 }
+
+variable "region" {
+  default = "cn-zhangjiakou"
+}
+
 # 默认资源名称
 variable "name" {
   default = "my-first-kubernetes-demo"

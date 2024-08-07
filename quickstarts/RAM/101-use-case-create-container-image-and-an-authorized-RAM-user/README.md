@@ -28,7 +28,9 @@ Here is a list of dependencies that need to be created before executing the exam
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"cn-beijing"` | no |
 <!-- END_TF_DOCS -->
 ## Documentation
 <!-- docs-link -->

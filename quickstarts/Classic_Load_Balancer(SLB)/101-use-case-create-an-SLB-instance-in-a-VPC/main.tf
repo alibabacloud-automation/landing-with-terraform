@@ -1,5 +1,13 @@
+variable "region" {
+  default = "cn-hangzhou"
+}
+
 provider "alicloud" {
-  region = "cn-hangzhou"
+  region = var.region
+}
+
+data "alicloud_zones" "default" {
+  available_resource_creation = "VSwitch"
 }
 
 resource "alicloud_vpc" "main" {
@@ -13,7 +21,7 @@ resource "alicloud_vswitch" "main" {
   # 交换机地址块
   cidr_block = "10.1.0.0/24"
   # 可用区
-  zone_id = "cn-hangzhou-b"
+  zone_id = data.alicloud_zones.default.zones[0].id
 }
 
 resource "alicloud_slb_load_balancer" "instance" {

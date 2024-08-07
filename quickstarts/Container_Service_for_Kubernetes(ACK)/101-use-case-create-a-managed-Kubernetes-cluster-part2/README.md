@@ -28,6 +28,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_log_project_name"></a> [log\_project\_name](#input\_log\_project\_name) | 日志服务项目名称 | `string` | `"my-first-kubernetes-sls-demo"` | no |
 | <a name="input_name"></a> [name](#input\_name) | 默认资源名称 | `string` | `"my-first-kubernetes-demo"` | no |
+| <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"cn-zhangjiakou"` | no |
 <!-- END_TF_DOCS -->
 ## Documentation
 <!-- docs-link -->

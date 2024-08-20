@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_api_gateway_plugin` resource.
+This example is used to create a `alicloud_aligreen_audit_callback` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -17,11 +17,11 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_api_gateway_plugin.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/api_gateway_plugin) | resource |
+| [alicloud_aligreen_audit_callback.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/aligreen_audit_callback) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform_example"` | no |
-<!-- END_TF_DOCS -->    
+<!-- END_TF_DOCS -->

@@ -5,10 +5,14 @@ resource "random_integer" "default" {
 
 resource "alicloud_oss_bucket" "bucket-tags" {
   bucket = "terraform-example-${random_integer.default.result}"
-  acl    = "private"
 
   tags = {
     key1 = "value1"
     key2 = "value2"
   }
+}
+
+resource "alicloud_oss_bucket_acl" "bucket-tags" {
+  bucket = alicloud_oss_bucket.bucket-tags.bucket
+  acl    = "private"
 }

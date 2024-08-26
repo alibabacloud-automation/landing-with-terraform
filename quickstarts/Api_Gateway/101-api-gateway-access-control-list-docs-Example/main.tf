@@ -17,9 +17,11 @@ resource "alicloud_api_gateway_instance" "defaultxywS8c" {
 
 resource "alicloud_api_gateway_access_control_list" "default" {
   access_control_list_name = var.name
-  acl_entrys {
-    acl_entry_ip      = "128.0.0.1/32"
-    acl_entry_comment = "example comment"
-  }
-  address_ip_version = "ipv4"
+  address_ip_version       = "ipv4"
+}
+
+resource "alicloud_api_gateway_acl_entry_attachment" "default" {
+  acl_id  = alicloud_api_gateway_access_control_list.default.id
+  entry   = "128.0.0.1/32"
+  comment = "example comment"
 }

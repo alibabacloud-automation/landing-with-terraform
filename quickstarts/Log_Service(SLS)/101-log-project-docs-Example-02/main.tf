@@ -4,9 +4,9 @@ resource "random_integer" "default" {
 }
 
 resource "alicloud_log_project" "example_policy" {
-  name        = "terraform-example-${random_integer.default.result}"
-  description = "terraform-example"
-  policy      = <<EOF
+  project_name = "terraform-example-${random_integer.default.result}"
+  description  = "terraform-example"
+  policy       = <<EOF
 {
   "Statement": [
     {

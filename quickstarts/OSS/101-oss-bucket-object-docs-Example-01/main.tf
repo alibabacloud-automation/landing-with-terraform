@@ -5,6 +5,10 @@ resource "random_integer" "default" {
 
 resource "alicloud_oss_bucket" "default" {
   bucket = "terraform-example-${random_integer.default.result}"
+}
+
+resource "alicloud_oss_bucket_acl" "default" {
+  bucket = alicloud_oss_bucket.default.bucket
   acl    = "private"
 }
 

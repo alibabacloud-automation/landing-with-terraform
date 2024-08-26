@@ -20,8 +20,8 @@ resource "random_integer" "default" {
 }
 
 resource "alicloud_log_project" "defaultINsMgl" {
-  description = "${var.project_name}-${random_integer.default.result}"
-  name        = "${var.project_name}-${random_integer.default.result}"
+  description  = "${var.project_name}-${random_integer.default.result}"
+  project_name = "${var.project_name}-${random_integer.default.result}"
 }
 
 resource "alicloud_sls_alert" "default" {
@@ -105,7 +105,7 @@ resource "alicloud_sls_alert" "default" {
       role_arn       = "acs:ram::1654218965343050:role/aliyunslsalertmonitorrole"
       query          = "* | select *"
       time_span_type = "Relative"
-      project        = alicloud_log_project.defaultINsMgl.name
+      project        = alicloud_log_project.defaultINsMgl.project_name
       power_sql_mode = "disable"
       dashboard_id   = "wkb-dashboard"
       chart_title    = "wkb-chart"
@@ -158,5 +158,5 @@ resource "alicloud_sls_alert" "default" {
   }
 
   alert_name   = var.alert_name
-  project_name = alicloud_log_project.defaultINsMgl.name
+  project_name = alicloud_log_project.defaultINsMgl.project_name
 }

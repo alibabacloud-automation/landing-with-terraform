@@ -58,9 +58,9 @@ resource "alicloud_cs_managed_kubernetes" "default" {
 }
 
 resource "alicloud_cs_kubernetes_node_pool" "default" {
-  name        = var.name
-  cluster_id  = alicloud_cs_managed_kubernetes.default.id
-  vswitch_ids = [alicloud_vswitch.default.id]
+  node_pool_name = var.name
+  cluster_id     = alicloud_cs_managed_kubernetes.default.id
+  vswitch_ids    = [alicloud_vswitch.default.id]
   # ssh登录集群节点的密码。您必须指定password或key_name kms_encrypted_password字段。
   password = "Yourpassword1234"
   # kubernetes集群的总工作节点数。

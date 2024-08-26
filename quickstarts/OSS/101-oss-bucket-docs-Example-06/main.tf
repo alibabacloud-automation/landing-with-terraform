@@ -5,7 +5,6 @@ resource "random_integer" "default" {
 
 resource "alicloud_oss_bucket" "bucket-policy" {
   bucket = "example-policy-${random_integer.default.result}"
-  acl    = "private"
 
   policy = <<POLICY
   {"Statement":
@@ -16,4 +15,9 @@ resource "alicloud_oss_bucket" "bucket-policy" {
             ["acs:oss:*:*:*"]}],
    "Version":"1"}
   POLICY
+}
+
+resource "alicloud_oss_bucket_acl" "default" {
+  bucket = alicloud_oss_bucket.bucket-policy.bucket
+  acl    = "private"
 }

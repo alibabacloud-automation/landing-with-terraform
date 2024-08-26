@@ -4,13 +4,13 @@ resource "random_integer" "default" {
 }
 
 resource "alicloud_log_project" "example" {
-  name        = "terraform-example-${random_integer.default.result}"
-  description = "terraform-example"
+  project_name = "terraform-example-${random_integer.default.result}"
+  description  = "terraform-example"
 }
 
 resource "alicloud_log_store" "example" {
-  project               = alicloud_log_project.example.name
-  name                  = "example-store"
+  project_name          = alicloud_log_project.example.project_name
+  logstore_name         = "example-store"
   retention_period      = 3650
   shard_count           = 3
   auto_split            = true
@@ -21,7 +21,7 @@ resource "alicloud_log_store" "example" {
 resource "alicloud_log_alert" "example-2" {
   version           = "2.0"
   type              = "default"
-  project_name      = alicloud_log_project.example.name
+  project_name      = alicloud_log_project.example.project_name
   alert_name        = "example-alert"
   alert_displayname = "example-alert"
   mute_until        = "1632486684"
@@ -29,7 +29,6 @@ resource "alicloud_log_alert" "example-2" {
   no_data_severity  = 8
   send_resolved     = true
   auto_annotation   = true
-  dashboard         = "example-dashboard"
   schedule {
     type            = "FixedRate"
     interval        = "5m"
@@ -39,26 +38,28 @@ resource "alicloud_log_alert" "example-2" {
     run_immediately = false
   }
   query_list {
-    store          = alicloud_log_store.example.name
+    store          = alicloud_log_store.example.logstore_name
     store_type     = "log"
-    project        = alicloud_log_project.example.name
+    project        = alicloud_log_project.example.project_name
     region         = "cn-heyuan"
     chart_title    = "chart_title"
     start          = "-60s"
     end            = "20s"
     query          = "* AND aliyun | select count(1) as cnt"
     power_sql_mode = "auto"
+    dashboard_id   = "example-dashboard"
   }
   query_list {
-    store          = alicloud_log_store.example.name
+    store          = alicloud_log_store.example.logstore_name
     store_type     = "log"
-    project        = alicloud_log_project.example.name
+    project        = alicloud_log_project.example.project_name
     region         = "cn-heyuan"
     chart_title    = "chart_title"
     start          = "-60s"
     end            = "20s"
     query          = "error | select count(1) as error_cnt"
     power_sql_mode = "enable"
+    dashboard_id   = "example-dashboard"
   }
   labels {
     key   = "env"

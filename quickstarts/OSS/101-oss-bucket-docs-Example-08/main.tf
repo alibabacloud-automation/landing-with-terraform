@@ -5,11 +5,15 @@ resource "random_integer" "default" {
 
 resource "alicloud_oss_bucket" "bucket-sserule" {
   bucket = "terraform-example-${random_integer.default.result}"
-  acl    = "private"
 
   server_side_encryption_rule {
     sse_algorithm = "AES256"
   }
+}
+
+resource "alicloud_oss_bucket_acl" "bucket-kms" {
+  bucket = alicloud_oss_bucket.bucket-sserule.bucket
+  acl    = "private"
 }
 
 resource "alicloud_kms_key" "kms" {
@@ -20,10 +24,14 @@ resource "alicloud_kms_key" "kms" {
 
 resource "alicloud_oss_bucket" "bucket-kms" {
   bucket = "terraform-example-kms-${random_integer.default.result}"
-  acl    = "private"
 
   server_side_encryption_rule {
     sse_algorithm     = "KMS"
     kms_master_key_id = alicloud_kms_key.kms.id
   }
+}
+
+resource "alicloud_oss_bucket_acl" "bucket-kms" {
+  bucket = alicloud_oss_bucket.bucket-kms.bucket
+  acl    = "private"
 }

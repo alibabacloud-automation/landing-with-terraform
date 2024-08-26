@@ -29,10 +29,10 @@ locals {
 }
 
 resource "alicloud_common_bandwidth_package" "default" {
-  bandwidth            = 2
-  internet_charge_type = "PayByBandwidth"
-  name                 = var.name
-  description          = "${var.name}_description"
+  bandwidth              = 2
+  internet_charge_type   = "PayByBandwidth"
+  bandwidth_package_name = var.name
+  description            = "${var.name}_description"
 }
 
 resource "alicloud_nlb_load_balancer" "default" {

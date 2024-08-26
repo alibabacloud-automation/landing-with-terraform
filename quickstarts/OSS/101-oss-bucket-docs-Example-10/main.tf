@@ -5,9 +5,12 @@ resource "random_integer" "default" {
 
 resource "alicloud_oss_bucket" "bucket-versioning" {
   bucket = "terraform-example-${random_integer.default.result}"
-  acl    = "private"
-
   versioning {
     status = "Enabled"
   }
+}
+
+resource "alicloud_oss_bucket_acl" "default" {
+  bucket = alicloud_oss_bucket.bucket-versioning.bucket
+  acl    = "private"
 }

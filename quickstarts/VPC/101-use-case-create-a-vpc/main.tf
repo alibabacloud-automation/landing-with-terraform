@@ -5,7 +5,7 @@ provider "alicloud" {
 
 resource "alicloud_vpc" "main" {
   # VPC name
-  name = "alicloud"
+  vpc_name = "alicloud"
   # CIDR block of the VPC
   cidr_block = "10.1.0.0/21"
 }
@@ -16,7 +16,7 @@ resource "alicloud_vswitch" "main" {
   # CIDR block of the VSwitch
   cidr_block = "10.1.0.0/24"
   # Zone
-  availability_zone = "cn-hangzhou-b"
+  zone_id = "cn-hangzhou-b"
   # Dependent resource (this dependent resource will be created first)
   depends_on = [alicloud_vpc.main]
 }

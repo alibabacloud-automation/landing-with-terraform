@@ -5,7 +5,6 @@ resource "random_integer" "default" {
 
 resource "alicloud_oss_bucket" "bucket-lifecycle1" {
   bucket = "example-lifecycle1-${random_integer.default.result}"
-  acl    = "public-read"
 
   lifecycle_rule {
     id      = "rule-days"
@@ -27,9 +26,14 @@ resource "alicloud_oss_bucket" "bucket-lifecycle1" {
   }
 }
 
+resource "alicloud_oss_bucket_acl" "bucket-lifecycle1" {
+  bucket = alicloud_oss_bucket.bucket-lifecycle1.bucket
+  acl    = "public-read"
+}
+
+
 resource "alicloud_oss_bucket" "bucket-lifecycle2" {
   bucket = "example-lifecycle2-${random_integer.default.result}"
-  acl    = "public-read"
 
   lifecycle_rule {
     id      = "rule-days-transition"
@@ -47,9 +51,14 @@ resource "alicloud_oss_bucket" "bucket-lifecycle2" {
   }
 }
 
+resource "alicloud_oss_bucket_acl" "bucket-lifecycle2" {
+  bucket = alicloud_oss_bucket.bucket-lifecycle2.bucket
+  acl    = "public-read"
+}
+
+
 resource "alicloud_oss_bucket" "bucket-lifecycle3" {
   bucket = "example-lifecycle3-${random_integer.default.result}"
-  acl    = "public-read"
 
   lifecycle_rule {
     id      = "rule-days-transition"
@@ -67,9 +76,14 @@ resource "alicloud_oss_bucket" "bucket-lifecycle3" {
   }
 }
 
+resource "alicloud_oss_bucket_acl" "bucket-lifecycle3" {
+  bucket = alicloud_oss_bucket.bucket-lifecycle3.bucket
+  acl    = "public-read"
+}
+
+
 resource "alicloud_oss_bucket" "bucket-lifecycle4" {
   bucket = "example-lifecycle4-${random_integer.default.result}"
-  acl    = "public-read"
 
   lifecycle_rule {
     id      = "rule-abort-multipart-upload"
@@ -82,9 +96,14 @@ resource "alicloud_oss_bucket" "bucket-lifecycle4" {
   }
 }
 
+resource "alicloud_oss_bucket_acl" "bucket-lifecycle4" {
+  bucket = alicloud_oss_bucket.bucket-lifecycle4.bucket
+  acl    = "public-read"
+}
+
+
 resource "alicloud_oss_bucket" "bucket-versioning-lifecycle" {
   bucket = "example-lifecycle5-${random_integer.default.result}"
-  acl    = "private"
 
   versioning {
     status = "Enabled"
@@ -115,9 +134,14 @@ resource "alicloud_oss_bucket" "bucket-versioning-lifecycle" {
   }
 }
 
+resource "alicloud_oss_bucket_acl" "bucket-versioning-lifecycle" {
+  bucket = alicloud_oss_bucket.bucket-versioning-lifecycle.bucket
+  acl    = "private"
+}
+
+
 resource "alicloud_oss_bucket" "bucket-access-monitor-lifecycle" {
   bucket = format("example-lifecycle6-%s", random_integer.default.result)
-  acl    = "private"
 
   access_monitor {
     status = "Enabled"
@@ -137,9 +161,14 @@ resource "alicloud_oss_bucket" "bucket-access-monitor-lifecycle" {
   }
 }
 
+resource "alicloud_oss_bucket_acl" "bucket-access-monitor-lifecycle" {
+  bucket = alicloud_oss_bucket.bucket-access-monitor-lifecycle.bucket
+  acl    = "private"
+}
+
+
 resource "alicloud_oss_bucket" "bucket-tag-lifecycle" {
   bucket = format("example-lifecycle7-%s", random_integer.default.result)
-  acl    = "private"
 
   lifecycle_rule {
     id      = "rule-days-transition"
@@ -155,4 +184,9 @@ resource "alicloud_oss_bucket" "bucket-tag-lifecycle" {
     Created = "TF",
     For     = "example",
   }
+}
+
+resource "alicloud_oss_bucket_acl" "bucket-tag-lifecycle" {
+  bucket = alicloud_oss_bucket.bucket-tag-lifecycle.bucket
+  acl    = "private"
 }

@@ -13,6 +13,8 @@ resource "alicloud_oss_bucket" "bucket-new" {
 }
 
 resource "alicloud_oss_bucket_acl" "bucket-new" {
+  provider = alicloud.bj-prod
+
   bucket = alicloud_oss_bucket.bucket-new.bucket
   acl    = "public-read"
 }

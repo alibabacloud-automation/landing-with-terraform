@@ -11,7 +11,7 @@ resource "alicloud_oss_bucket" "bucket-sserule" {
   }
 }
 
-resource "alicloud_oss_bucket_acl" "bucket-kms" {
+resource "alicloud_oss_bucket_acl" "bucket-sserule" {
   bucket = alicloud_oss_bucket.bucket-sserule.bucket
   acl    = "private"
 }

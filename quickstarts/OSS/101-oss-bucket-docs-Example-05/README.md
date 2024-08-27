@@ -25,6 +25,13 @@ No modules.
 | [alicloud_oss_bucket.bucket-lifecycle4](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
 | [alicloud_oss_bucket.bucket-tag-lifecycle](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
 | [alicloud_oss_bucket.bucket-versioning-lifecycle](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
+| [alicloud_oss_bucket_acl.bucket-access-monitor-lifecycle](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
+| [alicloud_oss_bucket_acl.bucket-lifecycle1](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
+| [alicloud_oss_bucket_acl.bucket-lifecycle2](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
+| [alicloud_oss_bucket_acl.bucket-lifecycle3](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
+| [alicloud_oss_bucket_acl.bucket-lifecycle4](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
+| [alicloud_oss_bucket_acl.bucket-tag-lifecycle](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
+| [alicloud_oss_bucket_acl.bucket-versioning-lifecycle](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs

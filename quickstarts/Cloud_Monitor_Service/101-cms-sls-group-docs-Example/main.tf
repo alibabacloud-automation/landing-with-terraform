@@ -26,7 +26,7 @@ resource "alicloud_cms_sls_group" "default" {
     sls_logstore = alicloud_log_store.default.logstore_name
     sls_project  = alicloud_log_project.default.project_name
     sls_region   = data.alicloud_regions.default.regions.0.id
-}
+  }
   sls_group_description = var.name
   sls_group_name        = var.name
 }

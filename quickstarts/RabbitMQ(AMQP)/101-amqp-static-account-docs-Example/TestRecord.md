@@ -1,3 +1,16 @@
+## 31 Aug 2024 04:46 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.229.1
+
+### Error
+
+Destroy: running terraform destroy failed.
 ## 24 Aug 2024 04:31 UTC
 
 success: false

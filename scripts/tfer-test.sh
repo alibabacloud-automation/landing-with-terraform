@@ -26,7 +26,7 @@ if [ -n "$region" ]; then
 fi
 terraformer import alicloud $params > ${importCheckLog}
 importResult=$?
-notSupported=$(cat ${importCheckLog} | grep "not supported service") 
+notSupported=$(cat ${importCheckLog} | grep "resources are not supported") 
 haveNoResource=$(cat ${importCheckLog} | grep "Number of resources is zero")
 if [[ $notSupported ]];then
   exitCode=1

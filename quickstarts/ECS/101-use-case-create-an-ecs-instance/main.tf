@@ -1,10 +1,23 @@
+variable "region" {
+  default = "cn-beijing"
+}
+
+variable "instance_type" {
+  default = "ecs.n4.tiny"
+}
+
+variable "image_id" {
+  default = "ubuntu_18_04_64_20G_alibase_20190624.vhd"
+}
+
 provider "alicloud" {
-  region = "cn-beijing"
+  region = var.region
 }
 
 data "alicloud_zones" "default" {
   available_disk_category     = "cloud_efficiency"
   available_resource_creation = "VSwitch"
+  available_instance_type     = var.instance_type
 }
 
 resource "alicloud_vpc" "vpc" {
@@ -28,9 +41,9 @@ resource "alicloud_instance" "instance" {
   availability_zone = data.alicloud_zones.default.zones.0.id
   security_groups   = alicloud_security_group.default.*.id
   # series III
-  instance_type              = "ecs.n4.large"
+  instance_type              = var.instance_type
   system_disk_category       = "cloud_efficiency"
-  image_id                   = "ubuntu_18_04_64_20G_alibase_20190624.vhd"
+  image_id                   = var.image_id
   instance_name              = "test_foo"
   vswitch_id                 = alicloud_vswitch.vsw.id
   internet_max_bandwidth_out = 10

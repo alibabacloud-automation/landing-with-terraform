@@ -1,3 +1,7 @@
+provider "alicloud" {
+  region = "cn-shanghai"
+}
+
 resource "alicloud_amqp_instance" "default" {
   instance_type  = "enterprise"
   max_tps        = 3000

@@ -8,6 +8,7 @@ This example is used to create a `alicloud_cr_chart_namespace` resource.
 | Name | Version |
 |------|---------|
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+| <a name="provider_random"></a> [random](#provider\_random) | n/a |
 
 ## Modules
 
@@ -19,10 +20,11 @@ No modules.
 |------|------|
 | [alicloud_cr_chart_namespace.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cr_chart_namespace) | resource |
 | [alicloud_cr_ee_instance.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cr_ee_instance) | resource |
+| [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"example-name"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->

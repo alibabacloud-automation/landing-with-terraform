@@ -1,3 +1,6 @@
+provider "alicloud" {
+  region = "cn-shanghai"
+}
 variable "access_key" {
   default = "access_key"
 }

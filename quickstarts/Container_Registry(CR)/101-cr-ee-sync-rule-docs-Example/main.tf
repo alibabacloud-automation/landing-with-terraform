@@ -31,14 +31,14 @@ resource "alicloud_cr_ee_instance" "target" {
 
 resource "alicloud_cr_ee_namespace" "source" {
   instance_id        = alicloud_cr_ee_instance.source.id
-  name               = var.name
+  name               = "${var.name}-${random_integer.default.result}"
   auto_create        = false
   default_visibility = "PUBLIC"
 }
 
 resource "alicloud_cr_ee_namespace" "target" {
   instance_id        = alicloud_cr_ee_instance.target.id
-  name               = var.name
+  name               = "${var.name}-${random_integer.default.result}"
   auto_create        = false
   default_visibility = "PUBLIC"
 }
@@ -46,7 +46,7 @@ resource "alicloud_cr_ee_namespace" "target" {
 resource "alicloud_cr_ee_repo" "source" {
   instance_id = alicloud_cr_ee_instance.source.id
   namespace   = alicloud_cr_ee_namespace.source.name
-  name        = var.name
+  name        = "${var.name}-${random_integer.default.result}"
   summary     = "this is summary of my new repo"
   repo_type   = "PUBLIC"
 }
@@ -54,7 +54,7 @@ resource "alicloud_cr_ee_repo" "source" {
 resource "alicloud_cr_ee_repo" "target" {
   instance_id = alicloud_cr_ee_instance.target.id
   namespace   = alicloud_cr_ee_namespace.target.name
-  name        = var.name
+  name        = "${var.name}-${random_integer.default.result}"
   summary     = "this is summary of my new repo"
   repo_type   = "PUBLIC"
 }
@@ -62,7 +62,7 @@ resource "alicloud_cr_ee_repo" "target" {
 resource "alicloud_cr_ee_sync_rule" "default" {
   instance_id           = alicloud_cr_ee_instance.source.id
   namespace_name        = alicloud_cr_ee_namespace.source.name
-  name                  = var.name
+  name                  = "${var.name}-${random_integer.default.result}"
   target_instance_id    = alicloud_cr_ee_instance.target.id
   target_namespace_name = alicloud_cr_ee_namespace.target.name
   target_region_id      = data.alicloud_regions.default.regions.0.id

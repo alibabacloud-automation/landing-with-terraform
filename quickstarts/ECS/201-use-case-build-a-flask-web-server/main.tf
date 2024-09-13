@@ -1,5 +1,5 @@
 variable "region" {
-  default = "cn-qingdao"
+  default = "cn-shanghai"
 }
 
 variable "web_content" {

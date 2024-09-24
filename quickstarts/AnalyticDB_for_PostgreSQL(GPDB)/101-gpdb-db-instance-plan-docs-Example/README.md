@@ -8,6 +8,7 @@ This example is used to create a `alicloud_gpdb_db_instance_plan` resource.
 | Name | Version |
 |------|---------|
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+| <a name="provider_time"></a> [time](#provider\_time) | n/a |
 
 ## Modules
 
@@ -19,6 +20,7 @@ No modules.
 |------|------|
 | [alicloud_gpdb_db_instance_plan.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/gpdb_db_instance_plan) | resource |
 | [alicloud_gpdb_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/gpdb_instance) | resource |
+| [time_static.example](https://registry.terraform.io/providers/hashicorp/time/latest/docs/resources/static) | resource |
 | [alicloud_gpdb_zones.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/gpdb_zones) | data source |
 | [alicloud_resource_manager_resource_groups.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/resource_manager_resource_groups) | data source |
 | [alicloud_vpcs.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/vpcs) | data source |

@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -9,6 +10,7 @@ import (
 	"os/exec"
 	"regexp"
 	"strings"
+	"time"
 )
 
 func main() {
@@ -20,9 +22,25 @@ func main() {
 
 	getResourceInfo()
 
-	excuteImportTest()
+	timeout := time.Minute * 20
+	ctx, cancel := context.WithTimeout(context.Background(), time.Duration(timeout))
 
-	excuteTferTest()
+	go func() {
+		defer cancel()
+
+		excuteImportTest()
+
+		excuteTferTest()
+
+	}()
+
+	<-ctx.Done()
+
+	err := ctx.Err()
+	if err != nil {
+		log.Println(err.Error())
+	}
+
 }
 
 func getProviderInfo() {

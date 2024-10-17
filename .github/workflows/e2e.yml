@@ -11,7 +11,51 @@ on:
       - 'quickstarts/**'
 
 jobs:
+  terraform-fmt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: terraform-fmt
+        run: |
+          if [ ! -f /usr/local/bin/terraform ]; then
+            wget -q https://releases.hashicorp.com/terraform/1.6.0/terraform_1.6.0_linux_amd64.zip
+            unzip terraform_1.6.0_linux_amd64.zip -d /usr/local/bin/
+          fi
+          error=false
+          echo "===> Terraform fmt -diff checking in quickstarts"
+          (terraform -chdir=quickstarts fmt -check -recursive -list=false) || error=true
+          terraform -chdir=quickstarts fmt -diff -recursive
+          if ${error}; then
+            echo -e "\033[31m[ERROR]\033[0m: Some quickstarts codes has not been formatted, and please running terraform fmt --recursive command before pushing."
+            exit 1
+          fi
+
+  terraform-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Get changed files
+        id: changed-files
+        uses: tj-actions/changed-files@v34
+        with:
+          dir_names: "true"
+          separator: ","
+          files: "quickstarts/*"
+          dir_names_max_depth: 2
+      - name: pr-check
+        run: |
+          bash scripts/terraform-install.sh
+          CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
+          if [ -z "${{ github.event.number }}" ]; then
+            CHANGED_FOLDERS=$(find ./quickstarts -maxdepth 1 -mindepth 1 -type d | tr '\n' ',')
+          fi
+          bash scripts/terraform-validate.sh ${CHANGED_FOLDERS}
+
+
   e2e-check:
+    needs: [terraform-fmt, terraform-validate]
     runs-on: ubuntu-latest
     name: 'e2e check'
     steps:

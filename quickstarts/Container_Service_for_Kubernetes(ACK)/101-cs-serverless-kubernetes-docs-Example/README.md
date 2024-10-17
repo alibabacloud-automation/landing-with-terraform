@@ -26,5 +26,5 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"ask-example"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"ask-example-pro"` | no |
 <!-- END_TF_DOCS -->    

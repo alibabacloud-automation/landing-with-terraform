@@ -18,7 +18,6 @@ resource "alicloud_express_connect_physical_connection" "domestic" {
   port_type                = "1000Base-LX"
   bandwidth                = 100
   provider                 = alicloud.hz
-
 }
 
 resource "alicloud_express_connect_physical_connection" "international" {

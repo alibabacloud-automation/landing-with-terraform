@@ -1,13 +1,18 @@
 variable "name" {
-  default = "tf_example"
+  default = "terraform-example"
 }
-data "alicloud_alb_zones" "default" {}
-data "alicloud_resource_manager_resource_groups" "default" {}
+
+data "alicloud_resource_manager_resource_groups" "default" {
+}
+
+data "alicloud_alb_zones" "default" {
+}
 
 resource "alicloud_vpc" "default" {
   vpc_name   = var.name
   cidr_block = "10.4.0.0/16"
 }
+
 resource "alicloud_vswitch" "default" {
   count        = 2
   vpc_id       = alicloud_vpc.default.id
@@ -17,17 +22,17 @@ resource "alicloud_vswitch" "default" {
 }
 
 resource "alicloud_alb_load_balancer" "default" {
-  vpc_id                 = alicloud_vpc.default.id
-  address_type           = "Internet"
-  address_allocated_mode = "Fixed"
-  load_balancer_name     = var.name
   load_balancer_edition  = "Basic"
+  address_type           = "Internet"
+  vpc_id                 = alicloud_vpc.default.id
+  address_allocated_mode = "Fixed"
   resource_group_id      = data.alicloud_resource_manager_resource_groups.default.groups.0.id
+  load_balancer_name     = var.name
   load_balancer_billing_config {
     pay_type = "PayAsYouGo"
   }
-  tags = {
-    Created = "TF"
+  modification_protection_config {
+    status = "NonProtection"
   }
   zone_mappings {
     vswitch_id = alicloud_vswitch.default.0.id
@@ -37,7 +42,7 @@ resource "alicloud_alb_load_balancer" "default" {
     vswitch_id = alicloud_vswitch.default.1.id
     zone_id    = data.alicloud_alb_zones.default.zones.1.id
   }
-  modification_protection_config {
-    status = "NonProtection"
+  tags = {
+    Created = "TF"
   }
 }

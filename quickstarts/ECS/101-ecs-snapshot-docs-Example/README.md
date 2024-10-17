@@ -17,12 +17,11 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_disk.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/disk) | resource |
-| [alicloud_disk_attachment.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/disk_attachment) | resource |
+| [alicloud_ecs_disk.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ecs_disk) | resource |
+| [alicloud_ecs_disk_attachment.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ecs_disk_attachment) | resource |
 | [alicloud_ecs_snapshot.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ecs_snapshot) | resource |
 | [alicloud_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/instance) | resource |
 | [alicloud_security_group.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/security_group) | resource |
-| [alicloud_security_group_rule.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/security_group_rule) | resource |
 | [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 | [alicloud_vswitch.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
 | [alicloud_images.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/images) | data source |
@@ -33,5 +32,5 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->    

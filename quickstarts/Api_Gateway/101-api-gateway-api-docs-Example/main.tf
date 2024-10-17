@@ -5,6 +5,7 @@ provider "alicloud" {
 resource "alicloud_api_gateway_group" "example" {
   name        = "tf-example"
   description = "tf-example"
+  base_path   = "/"
 }
 
 resource "alicloud_api_gateway_api" "example" {

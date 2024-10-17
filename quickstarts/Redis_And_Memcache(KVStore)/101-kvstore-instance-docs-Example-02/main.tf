@@ -1,17 +1,20 @@
 variable "name" {
   default = "tf-example-prepaid"
 }
-data "alicloud_kvstore_zones" "default" {
-  instance_charge_type = "PrePaid"
-}
+
 data "alicloud_resource_manager_resource_groups" "default" {
   status = "OK"
+}
+
+data "alicloud_kvstore_zones" "default" {
+  instance_charge_type = "PrePaid"
 }
 
 // PrePaid instance can not deleted and there suggests using an existing vpc and vswitch, like default vpc.
 data "alicloud_vpcs" "default" {
   is_default = true
 }
+
 data "alicloud_vswitches" "default" {
   zone_id = data.alicloud_kvstore_zones.default.zones.0.id
   vpc_id  = data.alicloud_vpcs.default.ids.0

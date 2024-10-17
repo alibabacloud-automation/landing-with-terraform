@@ -48,7 +48,7 @@ resource "alicloud_nlb_load_balancer" "default" {
 
 resource "alicloud_common_bandwidth_package" "default" {
   bandwidth              = 2
-  internet_charge_type   = "PayByBandwidth"
+  internet_charge_type   = "PayByTraffic"
   bandwidth_package_name = var.name
   description            = var.name
 }

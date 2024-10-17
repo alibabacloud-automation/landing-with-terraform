@@ -4,7 +4,7 @@ resource "random_integer" "default" {
 }
 
 resource "alicloud_ssl_certificates_service_certificate" "default" {
-  certificate_name = "tf-example-${random_integer.default.result}"
+  certificate_name = "terraform-example-${random_integer.default.result}"
   cert             = <<EOF
 -----BEGIN CERTIFICATE-----
 MIIDeDCCAmCgAwIBAgIEN3ZT6zANBgkqhkiG9w0BAQsFADBVMQswCQYDVQQGEwJD

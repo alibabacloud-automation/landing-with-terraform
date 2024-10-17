@@ -17,9 +17,11 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_cloud_firewall_control_policy.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_firewall_control_policy) | resource |
+| [alicloud_cloud_firewall_control_policy.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_firewall_control_policy) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->    

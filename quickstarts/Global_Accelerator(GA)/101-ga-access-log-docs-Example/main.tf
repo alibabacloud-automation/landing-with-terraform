@@ -13,12 +13,12 @@ resource "random_integer" "default" {
 }
 
 resource "alicloud_log_project" "default" {
-  project_name = "terraform-example-${random_integer.default.result}"
+  name = "terraform-example-${random_integer.default.result}"
 }
 
 resource "alicloud_log_store" "default" {
-  project_name  = alicloud_log_project.default.project_name
-  logstore_name = "terraform-example"
+  project = alicloud_log_project.default.name
+  name    = "terraform-example"
 }
 
 resource "alicloud_ga_accelerator" "default" {
@@ -74,7 +74,7 @@ resource "alicloud_ga_access_log" "default" {
   accelerator_id     = alicloud_ga_accelerator.default.id
   listener_id        = alicloud_ga_listener.default.id
   endpoint_group_id  = alicloud_ga_endpoint_group.default.id
-  sls_project_name   = alicloud_log_project.default.project_name
-  sls_log_store_name = alicloud_log_store.default.logstore_name
+  sls_project_name   = alicloud_log_project.default.name
+  sls_log_store_name = alicloud_log_store.default.name
   sls_region_id      = var.region
 }

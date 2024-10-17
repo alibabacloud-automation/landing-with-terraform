@@ -20,6 +20,7 @@ No modules.
 | [alicloud_log_project.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/log_project) | resource |
 | [alicloud_oos_service_setting.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oos_service_setting) | resource |
 | [alicloud_oss_bucket.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
+| [alicloud_oss_bucket_acl.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
 
 ## Inputs
 

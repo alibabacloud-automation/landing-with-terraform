@@ -2,12 +2,12 @@ variable "name" {
   default = "tf-example-with-connection"
 }
 
-data "alicloud_kvstore_zones" "default" {
-  product_type = "OnECS"
-}
-
 data "alicloud_resource_manager_resource_groups" "default" {
   status = "OK"
+}
+
+data "alicloud_kvstore_zones" "default" {
+  product_type = "OnECS"
 }
 
 resource "alicloud_vpc" "default" {

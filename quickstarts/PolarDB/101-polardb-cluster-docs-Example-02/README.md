@@ -17,7 +17,10 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [alicloud_ram_role.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ram_role) | resource |
+| [alicloud_resource_manager_policy_attachment.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_policy_attachment) | resource |
 | [alicloud_account.current](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/account) | data source |
+| [alicloud_ram_roles.roles](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/ram_roles) | data source |
 
 ## Inputs
 

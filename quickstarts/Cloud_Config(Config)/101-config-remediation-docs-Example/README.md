@@ -21,6 +21,7 @@ No modules.
 | [alicloud_config_remediation.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/config_remediation) | resource |
 | [alicloud_config_rule.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/config_rule) | resource |
 | [alicloud_oss_bucket.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
+| [alicloud_oss_bucket_acl.name](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 | [alicloud_regions.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/regions) | data source |
 

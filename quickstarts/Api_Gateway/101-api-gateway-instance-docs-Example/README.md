@@ -18,7 +18,6 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_api_gateway_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/api_gateway_instance) | resource |
-| [alicloud_vpc.vpc](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 
 ## Inputs
 

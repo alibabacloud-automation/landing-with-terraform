@@ -1,21 +1,26 @@
 provider "alicloud" {
   region = "cn-beijing"
 }
+
 variable "name" {
   default = "tf-example"
 }
 
-data "alicloud_eci_zones" "default" {}
+data "alicloud_eci_zones" "default" {
+}
+
 resource "alicloud_vpc" "default" {
   vpc_name   = var.name
   cidr_block = "10.0.0.0/8"
 }
+
 resource "alicloud_vswitch" "default" {
   vswitch_name = var.name
   cidr_block   = "10.1.0.0/16"
   vpc_id       = alicloud_vpc.default.id
   zone_id      = data.alicloud_eci_zones.default.zones.0.zone_ids.0
 }
+
 resource "alicloud_security_group" "default" {
   name   = var.name
   vpc_id = alicloud_vpc.default.id
@@ -33,7 +38,6 @@ resource "alicloud_eci_container_group" "default" {
     Created = "TF",
     For     = "example",
   }
-
   containers {
     image             = "registry.cn-beijing.aliyuncs.com/eci_open/nginx:alpine"
     name              = "nginx"

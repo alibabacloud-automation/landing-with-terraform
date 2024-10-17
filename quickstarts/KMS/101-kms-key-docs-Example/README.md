@@ -17,7 +17,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_kms_key.key](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/kms_key) | resource |
+| [alicloud_kms_key.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/kms_key) | resource |
 
 ## Inputs
 

@@ -1,3 +1,14 @@
+## Introduction
+
+<!-- DOCS_DESCRIPTION_CN -->
+本示例用于创建一个阿里云RAM用户，为其设置登录密码和访问密钥，并将其添加到一个阿里云RAM用户组中。
+详情可查看[使用Terraform创建一个RAM用户](https://help.aliyun.com/document_detail/146286.html)。
+<!-- DOCS_DESCRIPTION_CN -->
+
+<!-- DOCS_DESCRIPTION_EN -->
+This example is used to create a RAM user on Alibaba Cloud, set a login password and access key for it, and add it to a RAM user group.
+More details in [Create a RAM user](https://help.aliyun.com/document_detail/146286.html).
+<!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers

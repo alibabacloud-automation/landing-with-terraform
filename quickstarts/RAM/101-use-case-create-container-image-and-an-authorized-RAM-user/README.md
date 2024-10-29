@@ -1,3 +1,14 @@
+## Introduction
+
+<!-- DOCS_DESCRIPTION_CN -->
+本示例用于在阿里云上创建一台ECS实例，涉及到专有网络VPC、虚拟交换机vSwitch、安全组、弹性计算实例等资源的创建和部署。
+详情可查看[创建一台ECS实例](https://help.aliyun.com/document_detail/95829.html)。
+<!-- DOCS_DESCRIPTION_CN -->
+
+<!-- DOCS_DESCRIPTION_EN -->
+This example is used to create an ECS instance on Alibaba Cloud, which involves the creation and deployment of resources such as Virtual Private Cloud, virtual Switches, security groups, and Elastic Compute Service instances.
+More details in [Create an ECS instance](https://help.aliyun.com/document_detail/95829.html).
+<!-- DOCS_DESCRIPTION_EN -->
 
 ## Introduction
 

@@ -1,3 +1,14 @@
+## Introduction
+
+<!-- DOCS_DESCRIPTION_CN -->
+本示例用于在阿里云上创建一个存储空间，并将其设置为公共读权限。
+详情可查看[通过Terraform管理Bucket](https://help.aliyun.com/document_detail/111911.html)。
+<!-- DOCS_DESCRIPTION_CN -->
+
+<!-- DOCS_DESCRIPTION_EN -->
+This example is used to create an Object Storage Service(OSS) bucket on Alibaba Cloud and set it to public-read access.
+More details in [Manage a Bucket](https://help.aliyun.com/document_detail/111911.html).
+<!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers

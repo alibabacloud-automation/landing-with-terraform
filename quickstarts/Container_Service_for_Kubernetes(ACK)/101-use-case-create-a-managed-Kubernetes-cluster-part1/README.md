@@ -1,3 +1,14 @@
+## Introduction
+
+<!-- DOCS_DESCRIPTION_CN -->
+本示例用于在阿里云上部署一个托管版的Kubernetes集群。涉及到专有网络VPC、虚拟交换机vSwitch、托管版集群以及节点池等资源的创建。
+详情可查看[使用Terraform创建托管版Kubernetes](https://help.aliyun.com/document_detail/146138.html)。
+<!-- DOCS_DESCRIPTION_CN -->
+
+<!-- DOCS_DESCRIPTION_EN -->
+This example is used to create a managed Kubernetes cluster on Alibaba Cloud, which involves the creation and deployment of resources such as Virtual Private Cloud, virtual Switches, ACK managed clusters, and node pools.
+More details in [Create a managed Kubernetes cluster](https://help.aliyun.com/document_detail/146138.html).
+<!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers

@@ -1,3 +1,15 @@
+## Introduction
+
+<!-- DOCS_DESCRIPTION_CN -->
+本示例用于在阿里云上开通ACK并授权服务角色，涉及到ACK相关服务角色的创建。
+详情可查看[使用Terraform首次开通ACK并授权服务角色](http://help.aliyun.com/document_detail/606722.html)。
+<!-- DOCS_DESCRIPTION_CN -->
+
+<!-- DOCS_DESCRIPTION_EN -->
+This example is used to enable ACK and authorize service-linked roles on Alibaba Cloud, which involves the creation of ACK-related service-linked roles.
+More details in [Enable ACK and assign role](https://help.aliyun.com/document_detail/606722.html).
+<!-- DOCS_DESCRIPTION_EN -->
+
 <!-- BEGIN_TF_DOCS -->
 ## Providers
 

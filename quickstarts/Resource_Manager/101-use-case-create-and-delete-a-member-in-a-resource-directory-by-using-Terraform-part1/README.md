@@ -1,3 +1,14 @@
+## Introduction
+
+<!-- DOCS_DESCRIPTION_CN -->
+本示例用于在阿里云上创建和删除资源目录的成员。
+详情可查看[创建和删除资源目录的成员](https://help.aliyun.com/document_detail/2510323.html)。
+<!-- DOCS_DESCRIPTION_CN -->
+
+<!-- DOCS_DESCRIPTION_EN -->
+This example is used to create and delete a member in a resource directory.
+More details in [Create and delete a member in a resource directory](https://help.aliyun.com/document_detail/2510323.html).
+<!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers

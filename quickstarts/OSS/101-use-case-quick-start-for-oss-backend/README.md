@@ -1,3 +1,15 @@
+## Introduction
+
+<!-- DOCS_DESCRIPTION_CN -->
+本示例用于通过 Terraform Module 快速生成 Terraform Backend 模板，涉及到表格存储服务（Tablestore）和对象存储服务（OSS）资源的创建。
+详情可查看[五分钟入门阿里云Terraform OSS Backend](https://help.aliyun.com/document_detail/145541.html)。
+<!-- DOCS_DESCRIPTION_CN -->
+
+<!-- DOCS_DESCRIPTION_EN -->
+This example is used to generate a Terraform Backend template through Terraform Module, which involves the creation of Table Storage Service and Object Storage Service resources.
+More details in [Quick start for Alibaba Cloud OSS Backend for Terraform](https://help.aliyun.com/document_detail/145541.html).
+<!-- DOCS_DESCRIPTION_EN -->
+
 <!-- BEGIN_TF_DOCS -->
 ## Providers
 

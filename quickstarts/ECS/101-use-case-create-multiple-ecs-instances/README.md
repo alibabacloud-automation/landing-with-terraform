@@ -1,3 +1,15 @@
+## Introduction
+
+<!-- DOCS_DESCRIPTION_CN -->
+本示例用于在阿里云上创建多台ECS实例，涉及到 Terraform Module 的使用。
+详情可查看[创建多台ECS实例](https://help.aliyun.com/document_detail/95830.html)。
+<!-- DOCS_DESCRIPTION_CN -->
+
+<!-- DOCS_DESCRIPTION_EN -->
+This example is used to create multiple ECS instances on Alibaba Cloud and involves the use of Terraform Module.
+More details in [Create multiple ECS instances](https://help.aliyun.com/document_detail/95830.html).
+<!-- DOCS_DESCRIPTION_EN -->
+
 <!-- BEGIN_TF_DOCS -->
 ## Providers
 

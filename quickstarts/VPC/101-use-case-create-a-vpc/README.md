@@ -1,3 +1,14 @@
+## Introduction
+
+<!-- DOCS_DESCRIPTION_CN -->
+本示例用于在阿里云上创建自定义私有网络，涉及到专有网络VPC、虚拟交换机vSwitch、NAT网关等资源的创建和配置。
+详情可查看[创建VPC](https://help.aliyun.com/document_detail/111768.html)。
+<!-- DOCS_DESCRIPTION_CN -->
+
+<!-- DOCS_DESCRIPTION_EN -->
+This example is used to create a custom private network on Alibaba Cloud, which involves the creation and deployment of resources such as Virtual Private Cloud, virtual Switches, and NAT gateway.
+More details in [Create a VPC](https://help.aliyun.com/document_detail/111768.html).
+<!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers

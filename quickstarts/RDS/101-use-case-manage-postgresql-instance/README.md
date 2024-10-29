@@ -1,3 +1,15 @@
+## Introduction
+
+<!-- DOCS_DESCRIPTION_CN -->
+本示例用于在阿里云上创建一台RDS PostgreSQL实例，并对其相关配置进行设置。
+详情可查看[管理Postgresql实例](https://help.aliyun.com/document_detail/456025.html)。
+<!-- DOCS_DESCRIPTION_CN -->
+
+<!-- DOCS_DESCRIPTION_EN -->
+This example is used to create a RDS postgresql instance on Alibaba Cloud and set up its related configuration.
+More details in [Manage postgresql instance](https://help.aliyun.com/document_detail/456025.html).
+<!-- DOCS_DESCRIPTION_EN -->
+
 <!-- BEGIN_TF_DOCS -->
 ## Providers
 

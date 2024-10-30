@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上配置CDN加速域名与加速域名的IP白名单。
-本示例来自[通过Terraform添加并配置CDN域名](http://help.aliyun.com/document_detail/434131.htm)。
+详情可查看[通过Terraform添加并配置CDN域名](http://help.aliyun.com/document_detail/434131.htm)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to add and configure CDN domian names on Alibaba Cloud.
-This example is from [Use Terraform to add and configure a CDN domain name](http://help.aliyun.com/document_detail/434131.htm).
+More details in [Use Terraform to add and configure a CDN domain name](http://help.aliyun.com/document_detail/434131.htm).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->

@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建RDS的服务关联角色。
-本示例来自[通过 Terraform 管理RDS服务关联角色](http://help.aliyun.com/document_detail/461381.htm)。
+详情可查看[通过 Terraform 管理RDS服务关联角色](http://help.aliyun.com/document_detail/461381.htm)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create service-linked role for ApsaraDB RDS for PostgreSQL on Alibaba Cloud.
-This example is from [Manage RDS service-linked roles](http://help.aliyun.com/document_detail/461381.htm).
+More details in [Manage RDS service-linked roles](http://help.aliyun.com/document_detail/461381.htm).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->

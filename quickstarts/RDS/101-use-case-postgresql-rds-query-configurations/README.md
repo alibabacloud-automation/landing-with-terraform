@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云查询RDS PostgreSQL实例的相关配置，展示了对实例可用区资源，可购买的实例规格，实例地域信息，实例列表等资源的查询。
-本示例来自[通过 Terraform 查询RDS实例相关配置](http://help.aliyun.com/document_detail/456026.htm)。
+详情可查看[通过 Terraform 查询RDS实例相关配置](http://help.aliyun.com/document_detail/456026.htm)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to to query the configurations of an ApsaraDB RDS for PostgreSQL instance on Alibaba Cloud, which involves the query of instance resources such as instance zones resources, purchasable instance specifications, instance region information, instance lists, etc.
-This example is from [Query RDS instance configurations](http://help.aliyun.com/document_detail/456026.htm).
+More details in [Query RDS instance configurations](http://help.aliyun.com/document_detail/456026.htm).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->

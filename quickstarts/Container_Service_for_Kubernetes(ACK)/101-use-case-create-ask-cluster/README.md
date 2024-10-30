@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建ACK Serverless集群。
-本示例来自[创建ACK Serverless集群](http://help.aliyun.com/document_detail/2391966.htm)。
+详情可查看[创建ACK Serverless集群](http://help.aliyun.com/document_detail/2391966.htm)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create ACK Serverless cluster on Alibaba Cloud.
-This example is from [Create an ACK Serverless cluster](http://help.aliyun.com/document_detail/2391966.htm).
+More details in [Create an ACK Serverless cluster](http://help.aliyun.com/document_detail/2391966.htm).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->

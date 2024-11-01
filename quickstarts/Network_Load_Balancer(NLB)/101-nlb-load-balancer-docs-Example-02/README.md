@@ -27,5 +27,5 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
-| <a name="input_zone"></a> [zone](#input\_zone) | n/a | `list` | <pre>[<br>  "cn-beijing-i",<br>  "cn-beijing-k",<br>  "cn-beijing-l"<br>]</pre> | no |
+| <a name="input_zone"></a> [zone](#input\_zone) | n/a | `list` | <pre>[<br/>  "cn-beijing-i",<br/>  "cn-beijing-k",<br/>  "cn-beijing-l"<br/>]</pre> | no |
 <!-- END_TF_DOCS -->

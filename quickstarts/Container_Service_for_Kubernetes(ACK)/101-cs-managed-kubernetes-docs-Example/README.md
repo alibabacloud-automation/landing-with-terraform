@@ -31,10 +31,10 @@ No modules.
 | <a name="input_node_cidr_mask"></a> [node\_cidr\_mask](#input\_node\_cidr\_mask) | The node cidr block to specific how many pods can run on single node. | `number` | `24` | no |
 | <a name="input_proxy_mode"></a> [proxy\_mode](#input\_proxy\_mode) | Proxy mode is option of kube-proxy. | `string` | `"ipvs"` | no |
 | <a name="input_service_cidr"></a> [service\_cidr](#input\_service\_cidr) | The kubernetes service cidr block. It cannot be equals to vpc's or vswitch's or pod's and cannot be in them. | `string` | `"192.168.0.0/16"` | no |
-| <a name="input_terway_vswitch_cidrs"></a> [terway\_vswitch\_cidrs](#input\_terway\_vswitch\_cidrs) | List of cidr blocks used to create several new vswitches when 'terway\_vswitch\_cidrs' is not specified. | `list(string)` | <pre>[<br>  "10.4.0.0/16",<br>  "10.5.0.0/16"<br>]</pre> | no |
+| <a name="input_terway_vswitch_cidrs"></a> [terway\_vswitch\_cidrs](#input\_terway\_vswitch\_cidrs) | List of cidr blocks used to create several new vswitches when 'terway\_vswitch\_cidrs' is not specified. | `list(string)` | <pre>[<br/>  "10.4.0.0/16",<br/>  "10.5.0.0/16"<br/>]</pre> | no |
 | <a name="input_terway_vswitch_ids"></a> [terway\_vswitch\_ids](#input\_terway\_vswitch\_ids) | List of existing vswitch ids for terway. | `list(string)` | `[]` | no |
 | <a name="input_vpc_cidr"></a> [vpc\_cidr](#input\_vpc\_cidr) | The cidr block used to launch a new vpc when 'vpc\_id' is not specified. | `string` | `"10.0.0.0/8"` | no |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | Existing vpc id used to create several vswitches and other resources. | `string` | `""` | no |
-| <a name="input_vswitch_cidrs"></a> [vswitch\_cidrs](#input\_vswitch\_cidrs) | List of cidr blocks used to create several new vswitches when 'vswitch\_ids' is not specified. | `list(string)` | <pre>[<br>  "10.1.0.0/16",<br>  "10.2.0.0/16"<br>]</pre> | no |
+| <a name="input_vswitch_cidrs"></a> [vswitch\_cidrs](#input\_vswitch\_cidrs) | List of cidr blocks used to create several new vswitches when 'vswitch\_ids' is not specified. | `list(string)` | <pre>[<br/>  "10.1.0.0/16",<br/>  "10.2.0.0/16"<br/>]</pre> | no |
 | <a name="input_vswitch_ids"></a> [vswitch\_ids](#input\_vswitch\_ids) | List of existing vswitch id. | `list(string)` | `[]` | no |
 <!-- END_TF_DOCS -->    

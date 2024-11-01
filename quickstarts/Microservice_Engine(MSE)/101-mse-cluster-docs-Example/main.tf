@@ -1,6 +1,4 @@
-provider "alicloud" {
-  region = "cn-hangzhou"
-}
+# Create resource
 data "alicloud_zones" "example" {
   available_resource_creation = "VSwitch"
 }
@@ -21,12 +19,12 @@ resource "alicloud_mse_cluster" "example" {
   cluster_specification = "MSE_SC_1_2_60_c"
   cluster_type          = "Nacos-Ans"
   cluster_version       = "NACOS_2_0_0"
-  instance_count        = 1
+  instance_count        = 3
   net_type              = "privatenet"
   pub_network_flow      = "1"
   connection_type       = "slb"
   cluster_alias_name    = "terraform-example"
-  mse_version           = "mse_dev"
+  mse_version           = "mse_pro"
   vswitch_id            = alicloud_vswitch.example.id
   vpc_id                = alicloud_vpc.example.id
 }

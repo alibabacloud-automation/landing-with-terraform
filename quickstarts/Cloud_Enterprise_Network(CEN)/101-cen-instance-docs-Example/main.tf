@@ -1,4 +1,8 @@
-resource "alicloud_cen_instance" "example" {
-  cen_instance_name = "tf_example"
-  description       = "an example for cen"
+variable "name" {
+  default = "terraform-example"
+}
+
+resource "alicloud_cen_instance" "default" {
+  cen_instance_name = var.name
+  description       = var.name
 }

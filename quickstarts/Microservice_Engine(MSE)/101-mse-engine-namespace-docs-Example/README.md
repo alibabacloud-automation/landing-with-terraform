@@ -17,7 +17,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_mse_cluster.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/mse_cluster) | resource |
+| [alicloud_mse_cluster.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/mse_cluster) | resource |
 | [alicloud_mse_engine_namespace.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/mse_engine_namespace) | resource |
 | [alicloud_vpc.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 | [alicloud_vswitch.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
@@ -25,7 +25,5 @@ No modules.
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
+No inputs.
 <!-- END_TF_DOCS -->    

@@ -1,11 +1,3 @@
-provider "alicloud" {
-  region = "cn-hangzhou"
-}
-
-variable "name" {
-  default = "tf-example"
-}
-
 data "alicloud_zones" "example" {
   available_resource_creation = "VSwitch"
 }
@@ -22,21 +14,23 @@ resource "alicloud_vswitch" "example" {
   zone_id      = data.alicloud_zones.example.zones.0.id
 }
 
-resource "alicloud_mse_cluster" "default" {
-  connection_type       = "slb"
-  net_type              = "privatenet"
-  vswitch_id            = alicloud_vswitch.example.id
+resource "alicloud_mse_cluster" "example" {
   cluster_specification = "MSE_SC_1_2_60_c"
-  cluster_version       = "NACOS_2_0_0"
-  instance_count        = "1"
-  pub_network_flow      = "1"
-  cluster_alias_name    = var.name
-  mse_version           = "mse_dev"
   cluster_type          = "Nacos-Ans"
+  cluster_version       = "NACOS_2_0_0"
+  instance_count        = 3
+  net_type              = "privatenet"
+  pub_network_flow      = "1"
+  connection_type       = "slb"
+  cluster_alias_name    = "terraform-example"
+  mse_version           = "mse_pro"
+  vswitch_id            = alicloud_vswitch.example.id
+  vpc_id                = alicloud_vpc.example.id
 }
 
 resource "alicloud_mse_engine_namespace" "example" {
-  cluster_id          = alicloud_mse_cluster.default.id
-  namespace_show_name = var.name
-  namespace_id        = var.name
+  instance_id         = alicloud_mse_cluster.example.id
+  namespace_show_name = "terraform-example"
+  namespace_id        = "terraform-example"
+  namespace_desc      = "description"
 }

@@ -1,0 +1,53 @@
+variable "region" {
+  default = "cn-heyuan"
+}
+
+variable "zone_id" {
+  default = "cn-heyuan-a"
+}
+
+variable "instance_type" {
+  default = "pg.n2.2c.2m"
+}
+
+provider "alicloud" {
+  region = var.region
+}
+
+# 创建VPC
+resource "alicloud_vpc" "main" {
+  vpc_name   = "alicloud"
+  cidr_block = "172.16.0.0/16"
+}
+
+# 创建交换机
+resource "alicloud_vswitch" "main" {
+  vpc_id     = alicloud_vpc.main.id
+  cidr_block = "172.16.192.0/20"
+  zone_id    = var.zone_id
+  depends_on = [alicloud_vpc.main]
+}
+
+# 创建RDS PostgreSQL实例
+resource "alicloud_db_instance" "instance" {
+  engine               = "PostgreSQL"
+  engine_version       = "13.0"
+  instance_type        = var.instance_type
+  instance_storage     = "30"
+  instance_charge_type = "Postpaid"
+  vswitch_id           = alicloud_vswitch.main.id
+  # 修改参数,修改完参数后需再次运行terraform apply
+  parameters {
+    name  = "authentication_timeout"
+    value = "120"
+  }
+}
+# 获取当前时间
+resource "time_static" "example" {}
+
+# 查询参数修改日志
+data "alicloud_rds_modify_parameter_logs" "querylogs" {
+  db_instance_id = alicloud_db_instance.instance.id
+  start_time     = formatdate("YYYY-MM-DD'T'hh:mm'Z'", timeadd(time_static.example.rfc3339, "-12h"))
+  end_time       = formatdate("YYYY-MM-DD'T'hh:mm'Z'", timeadd(time_static.example.rfc3339, "12h"))
+}

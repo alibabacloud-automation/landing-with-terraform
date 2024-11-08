@@ -1,36 +1,39 @@
 variable "name" {
-  default = "tf-example"
+  default = "terraform-example"
 }
 
-resource "random_uuid" "default" {
+data "alicloud_zones" "default" {
 }
+
+resource "random_integer" "default" {
+  min = 10000
+  max = 99999
+}
+
 resource "alicloud_cloud_storage_gateway_storage_bundle" "default" {
-  storage_bundle_name = substr("tf-example-${replace(random_uuid.default.result, "-", "")}", 0, 16)
+  storage_bundle_name = "${var.name}-${random_integer.default.result}"
 }
 
 resource "alicloud_vpc" "default" {
-  vpc_name   = var.name
-  cidr_block = "172.16.0.0/12"
+  vpc_name   = "${var.name}-${random_integer.default.result}"
+  cidr_block = "192.168.0.0/16"
 }
-data "alicloud_zones" "default" {
-  available_resource_creation = "VSwitch"
-}
+
 resource "alicloud_vswitch" "default" {
+  vswitch_name = "${var.name}-${random_integer.default.result}"
   vpc_id       = alicloud_vpc.default.id
-  cidr_block   = "172.16.0.0/21"
-  zone_id      = data.alicloud_zones.default.zones[0].id
-  vswitch_name = var.name
+  cidr_block   = "192.168.192.0/24"
+  zone_id      = data.alicloud_zones.default.zones.0.id
 }
 
 resource "alicloud_cloud_storage_gateway_gateway" "default" {
-  gateway_name             = var.name
-  description              = var.name
-  gateway_class            = "Standard"
-  type                     = "File"
-  payment_type             = "PayAsYouGo"
-  vswitch_id               = alicloud_vswitch.default.id
-  release_after_expiration = false
-  public_network_bandwidth = 40
   storage_bundle_id        = alicloud_cloud_storage_gateway_storage_bundle.default.id
+  type                     = "File"
   location                 = "Cloud"
+  gateway_name             = var.name
+  gateway_class            = "Standard"
+  vswitch_id               = alicloud_vswitch.default.id
+  public_network_bandwidth = 50
+  payment_type             = "PayAsYouGo"
+  description              = var.name
 }

@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_cloud_sso_access_configuration` resource.
+This example is used to create a `alicloud_vpc_ipam_ipam_scope` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -17,12 +17,12 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_cloud_sso_access_configuration.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_sso_access_configuration) | resource |
-| [alicloud_cloud_sso_directories.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/cloud_sso_directories) | data source |
+| [alicloud_vpc_ipam_ipam.defaultIpam](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc_ipam_ipam) | resource |
+| [alicloud_vpc_ipam_ipam_scope.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc_ipam_ipam_scope) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
-<!-- END_TF_DOCS -->    
+<!-- END_TF_DOCS -->

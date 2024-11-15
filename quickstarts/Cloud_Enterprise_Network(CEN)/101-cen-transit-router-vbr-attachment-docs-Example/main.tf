@@ -1,9 +1,13 @@
+variable "name" {
+  default = "terraform-example"
+}
+
 provider "alicloud" {
   region = "cn-hangzhou"
 }
 
-variable "name" {
-  default = "terraform-example"
+data "alicloud_express_connect_physical_connections" "nameRegex" {
+  name_regex = "^preserved-NODELETING"
 }
 
 resource "alicloud_cen_instance" "default" {
@@ -13,10 +17,6 @@ resource "alicloud_cen_instance" "default" {
 
 resource "alicloud_cen_transit_router" "default" {
   cen_id = alicloud_cen_instance.default.id
-}
-
-data "alicloud_express_connect_physical_connections" "nameRegex" {
-  name_regex = "^preserved-NODELETING"
 }
 
 resource "alicloud_express_connect_virtual_border_router" "default" {
@@ -32,9 +32,9 @@ resource "alicloud_express_connect_virtual_border_router" "default" {
 }
 
 resource "alicloud_cen_transit_router_vbr_attachment" "default" {
-  transit_router_id                     = alicloud_cen_transit_router.default.transit_router_id
-  transit_router_attachment_name        = "example"
-  transit_router_attachment_description = "example"
-  vbr_id                                = alicloud_express_connect_virtual_border_router.default.id
   cen_id                                = alicloud_cen_instance.default.id
+  vbr_id                                = alicloud_express_connect_virtual_border_router.default.id
+  transit_router_id                     = alicloud_cen_transit_router.default.transit_router_id
+  transit_router_attachment_name        = var.name
+  transit_router_attachment_description = var.name
 }

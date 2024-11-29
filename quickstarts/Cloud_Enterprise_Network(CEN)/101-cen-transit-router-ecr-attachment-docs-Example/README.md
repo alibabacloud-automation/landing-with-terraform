@@ -28,6 +28,6 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_asn"></a> [asn](#input\_asn) | n/a | `string` | `"4200000666"` | no |
+| <a name="input_asn"></a> [asn](#input\_asn) | n/a | `string` | `"4200000667"` | no |
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->

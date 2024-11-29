@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_oss_bucket_cname_token` resource.
+This example is used to create a `alicloud_rds_custom_deployment_set` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -17,8 +17,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_oss_bucket.CreateBucket](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
-| [alicloud_oss_bucket_cname_token.defaultZaWJfG](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_cname_token) | resource |
+| [alicloud_rds_custom_deployment_set.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/rds_custom_deployment_set) | resource |
 
 ## Inputs
 

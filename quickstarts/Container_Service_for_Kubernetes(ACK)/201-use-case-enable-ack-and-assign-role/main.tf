@@ -37,8 +37,20 @@ variable "roles" {
     {
       name            = "AliyunCSManagedCsiRole"
       policy_document = "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"cs.aliyuncs.com\"]}}],\"Version\":\"1\"}"
-      description     = "集群的存储插件使用此角色来访问您在其他云产品中的资源。"
+      description     = "集群的存储组件使用此角色来访问您在其他云产品中的资源。"
       policy_name     = "AliyunCSManagedCsiRolePolicy"
+    },
+    {
+      name            = "AliyunCSManagedCsiPluginRole"
+      policy_document = "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"cs.aliyuncs.com\"]}}],\"Version\":\"1\"}"
+      description     = "集群的存储组件使用此角色来访问您在其他云产品中的资源。"
+      policy_name     = "AliyunCSManagedCsiPluginRolePolicy"
+    },
+    {
+      name            = "AliyunCSManagedCsiProvisionerRole"
+      policy_document = "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"cs.aliyuncs.com\"]}}],\"Version\":\"1\"}"
+      description     = "集群的存储组件使用此角色来访问您在其他云产品中的资源。"
+      policy_name     = "AliyunCSManagedCsiProvisionerRolePolicy"
     },
     {
       name            = "AliyunCSManagedVKRole"
@@ -93,6 +105,12 @@ variable "roles" {
       policy_document = "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"oos.aliyuncs.com\"]}}],\"Version\":\"1\"}"
       description     = "集群扩缩容节点池依赖OOS服务，OOS使用此角色来访问您在其他云产品中的资源。"
       policy_name     = "AliyunOOSLifecycleHook4CSRolePolicy"
+    },
+    {
+      name            = "AliyunCSManagedAutoScalerRole"
+      policy_document = "{\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":[\"cs.aliyuncs.com\"]}}],\"Version\":\"1\"}"
+      description     = "集群的弹性伸缩组件使用此角色来访问您在其他云产品中的资源。"
+      policy_name     = "AliyunCSManagedAutoScalerRolePolicy"
     }
   ]
 }

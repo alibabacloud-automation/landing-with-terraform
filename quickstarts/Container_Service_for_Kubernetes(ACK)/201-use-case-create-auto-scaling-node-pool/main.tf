@@ -13,12 +13,6 @@ variable "cluster_spec" {
   default     = "ack.pro.small"
 }
 
-variable "ack_version" {
-  type        = string
-  description = "Desired Kubernetes version. "
-  default     = "1.28.9-aliyun.1"
-}
-
 # 指定虚拟交换机（vSwitches）的可用区。
 variable "availability_zone" {
   description = "The availability zones of vswitches."
@@ -53,14 +47,6 @@ variable "password" {
 variable "k8s_name_prefix" {
   description = "The name prefix used to create managed kubernetes cluster."
   default     = "tf-ack-shenzhen"
-}
-
-variable "vpc_name" {
-  default = "tf-vpc"
-}
-
-variable "autoscale_nodepool_name" {
-  default = "autoscale-node-pool"
 }
 
 # 指定ACK集群安装的组件。包括Terway（网络组件）、csi-plugin（存储组件）、csi-provisioner（存储组件）、logtail-ds（日志组件）、Nginx Ingress Controller、ack-arms-prometheus（监控组件）以及ack-node-problem-detector（节点诊断组件）。
@@ -104,7 +90,9 @@ variable "cluster_addons" {
 
 # 默认资源名称。
 locals {
-  k8s_name_terway = substr(join("-", [var.k8s_name_prefix, "terway"]), 0, 63)
+  k8s_name_terway         = "k8s_name_terway_${random_integer.default.result}"
+  vpc_name                = "vpc_name_${random_integer.default.result}"
+  autoscale_nodepool_name = "autoscale-node-pool-${random_integer.default.result}"
 }
 
 # 节点ECS实例配置。将查询满足CPU、Memory要求的ECS实例类型。
@@ -115,9 +103,14 @@ data "alicloud_instance_types" "default" {
   kubernetes_node_role = "Worker"
 }
 
+resource "random_integer" "default" {
+  min = 10000
+  max = 99999
+}
+
 # 专有网络。
 resource "alicloud_vpc" "default" {
-  vpc_name   = var.vpc_name
+  vpc_name   = local.vpc_name
   cidr_block = "172.16.0.0/12"
 }
 
@@ -139,9 +132,8 @@ resource "alicloud_vswitch" "terway_vswitches" {
 
 # Kubernetes托管版。
 resource "alicloud_cs_managed_kubernetes" "default" {
-  name                         = local.k8s_name_terway # Kubernetes集群名称。
-  cluster_spec                 = var.cluster_spec      # 创建Pro版集群。
-  version                      = var.ack_version
+  name                         = local.k8s_name_terway                                         # Kubernetes集群名称。
+  cluster_spec                 = var.cluster_spec                                              # 创建Pro版集群。
   worker_vswitch_ids           = split(",", join(",", alicloud_vswitch.vswitches.*.id))        # 节点池所在的vSwitch。指定一个或多个vSwitch的ID，必须在availability_zone指定的区域中。
   pod_vswitch_ids              = split(",", join(",", alicloud_vswitch.terway_vswitches.*.id)) # Pod虚拟交换机。
   new_nat_gateway              = true                                                          # 是否在创建Kubernetes集群时创建新的NAT网关。默认为true。
@@ -161,7 +153,7 @@ resource "alicloud_cs_managed_kubernetes" "default" {
 # 创建自动伸缩节点池，节点池最多可以扩展到 10 个节点，最少保持 1 个节点。
 resource "alicloud_cs_kubernetes_node_pool" "autoscale_node_pool" {
   cluster_id     = alicloud_cs_managed_kubernetes.default.id
-  node_pool_name = var.autoscale_nodepool_name
+  node_pool_name = local.autoscale_nodepool_name
   vswitch_ids    = split(",", join(",", alicloud_vswitch.vswitches.*.id))
 
   scaling_config {
@@ -170,8 +162,6 @@ resource "alicloud_cs_kubernetes_node_pool" "autoscale_node_pool" {
   }
 
   instance_types        = var.worker_instance_types
-  runtime_name          = "containerd"
-  runtime_version       = "1.6.20"
   password              = var.password # SSH登录集群节点的密码。
   install_cloud_monitor = true         # 是否为kubernetes的节点安装云监控。
   system_disk_category  = "cloud_efficiency"

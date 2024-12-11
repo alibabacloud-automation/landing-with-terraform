@@ -22,12 +22,6 @@ variable "cluster_spec" {
   default     = "ack.pro.small"
 }
 
-variable "ack_version" {
-  type        = string
-  description = "Desired Kubernetes version. "
-  default     = "1.28.9-aliyun.1"
-}
-
 # 指定虚拟交换机（vSwitches）的可用区。
 variable "availability_zone" {
   description = "The availability zones of vswitches."
@@ -148,9 +142,8 @@ resource "alicloud_ecs_deployment_set" "default" {
 
 # Kubernetes托管版。
 resource "alicloud_cs_managed_kubernetes" "default" {
-  name                         = local.k8s_name_terway # Kubernetes集群名称。
-  cluster_spec                 = var.cluster_spec      # 创建Pro版集群。
-  version                      = var.ack_version
+  name                         = local.k8s_name_terway                                         # Kubernetes集群名称。
+  cluster_spec                 = var.cluster_spec                                              # 创建Pro版集群。
   worker_vswitch_ids           = split(",", join(",", alicloud_vswitch.vswitches.*.id))        # 节点池所在的vSwitch。指定一个或多个vSwitch的ID，必须在availability_zone指定的区域中。
   pod_vswitch_ids              = split(",", join(",", alicloud_vswitch.terway_vswitches.*.id)) # Pod虚拟交换机。
   new_nat_gateway              = true                                                          # 是否在创建Kubernetes集群时创建新的NAT网关。默认为true。
@@ -176,7 +169,6 @@ resource "alicloud_cs_kubernetes_node_pool" "default" {
   instance_types        = var.worker_instance_types
   instance_charge_type  = "PostPaid"
   runtime_name          = "containerd"
-  runtime_version       = "1.6.20"
   desired_size          = 2            # 节点池的期望节点数。
   password              = var.password # SSH登录集群节点的密码。
   install_cloud_monitor = true         # 是否为Kubernetes的节点安装云监控。

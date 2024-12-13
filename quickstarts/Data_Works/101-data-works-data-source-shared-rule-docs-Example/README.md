@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_data_works_project` resource.
+This example is used to create a `alicloud_data_works_data_source_shared_rule` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -18,7 +18,9 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_data_works_project.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/data_works_project) | resource |
+| [alicloud_data_works_data_source.defaultvzu0wG](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/data_works_data_source) | resource |
+| [alicloud_data_works_data_source_shared_rule.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/data_works_data_source_shared_rule) | resource |
+| [alicloud_data_works_project.defaultQeRfvU](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/data_works_project) | resource |
 | [random_integer.randint](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 | [alicloud_resource_manager_resource_groups.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/resource_manager_resource_groups) | data source |
 

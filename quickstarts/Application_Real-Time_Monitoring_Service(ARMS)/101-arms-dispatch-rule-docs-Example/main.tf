@@ -38,6 +38,8 @@ resource "alicloud_arms_dispatch_rule" "default" {
       notify_type      = "ARMS_CONTACT_GROUP"
       name             = "example_value"
     }
-    notify_channels = ["dingTalk", "wechat"]
+    notify_channels   = ["dingTalk", "wechat"]
+    notify_start_time = "10:00"
+    notify_end_time   = "23:00"
   }
 }

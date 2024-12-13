@@ -43,4 +43,5 @@ resource "alicloud_cs_autoscaling_config" "default" {
   min_replica_count             = 0
   recycle_node_deletion_enabled = false
   scale_up_from_zero            = true
+  scaler_type                   = "goatscaler"
 }

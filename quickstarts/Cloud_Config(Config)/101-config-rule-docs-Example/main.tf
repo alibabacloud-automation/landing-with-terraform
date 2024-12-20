@@ -17,6 +17,6 @@ resource "alicloud_config_rule" "default" {
   rule_name = "contains-tag"
   input_parameters = {
     key1 = "value1"
-    key2 = "key2"
+    key2 = "value2"
   }
 }

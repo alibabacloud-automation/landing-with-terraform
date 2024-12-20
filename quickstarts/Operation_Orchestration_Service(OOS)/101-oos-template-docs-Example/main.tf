@@ -1,3 +1,8 @@
+resource "random_integer" "default" {
+  min = 10000
+  max = 99999
+}
+
 resource "alicloud_oos_template" "example" {
   content       = <<EOF
   {
@@ -23,8 +28,8 @@ resource "alicloud_oos_template" "example" {
       }]
   }
   EOF
-  template_name = "test-name"
-  version_name  = "test"
+  template_name = "tf-example-name-${random_integer.default.result}"
+  version_name  = "example"
   tags = {
     "Created" = "TF",
     "For"     = "acceptance Test"

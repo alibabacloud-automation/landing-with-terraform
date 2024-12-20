@@ -14,8 +14,7 @@ resource "alicloud_arms_dispatch_rule" "default" {
     group_wait_time = 5
     group_interval  = 15
     repeat_interval = 100
-    grouping_fields = [
-    "alertname"]
+    grouping_fields = ["alertname"]
   }
   label_match_expression_grid {
     label_match_expression_groups {
@@ -41,5 +40,17 @@ resource "alicloud_arms_dispatch_rule" "default" {
     notify_channels   = ["dingTalk", "wechat"]
     notify_start_time = "10:00"
     notify_end_time   = "23:00"
+  }
+
+  notify_template {
+    email_title           = "example_email_title"
+    email_content         = "example_email_content"
+    email_recover_title   = "example_email_recover_title"
+    email_recover_content = "example_email_recover_content"
+    sms_content           = "example_sms_content"
+    sms_recover_content   = "example_sms_recover_content"
+    tts_content           = "example_tts_content"
+    tts_recover_content   = "example_tts_recover_content"
+    robot_content         = "example_robot_content"
   }
 }

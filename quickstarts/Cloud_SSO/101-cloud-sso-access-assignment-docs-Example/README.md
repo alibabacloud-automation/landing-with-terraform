@@ -8,6 +8,7 @@ This example is used to create a `alicloud_cloud_sso_access_assignment` resource
 | Name | Version |
 |------|---------|
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+| <a name="provider_random"></a> [random](#provider\_random) | n/a |
 
 ## Modules
 
@@ -22,6 +23,7 @@ No modules.
 | [alicloud_cloud_sso_access_configuration_provisioning.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_sso_access_configuration_provisioning) | resource |
 | [alicloud_cloud_sso_directory.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_sso_directory) | resource |
 | [alicloud_cloud_sso_user.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_sso_user) | resource |
+| [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 | [alicloud_cloud_sso_directories.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/cloud_sso_directories) | data source |
 | [alicloud_resource_manager_resource_directories.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/resource_manager_resource_directories) | data source |
 

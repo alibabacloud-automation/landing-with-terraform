@@ -1,9 +1,9 @@
-resource "alicloud_vpc" "vpc" {
+resource "alicloud_vpc" "default" {
   vpc_name   = "terraform-example"
-  cidr_block = "10.1.0.0/21"
+  cidr_block = "172.16.0.0/16"
 }
 
-resource "alicloud_security_group" "group" {
-  name   = "terraform-example"
-  vpc_id = alicloud_vpc.vpc.id
+resource "alicloud_security_group" "default" {
+  security_group_name = "terraform-example"
+  vpc_id              = alicloud_vpc.default.id
 }

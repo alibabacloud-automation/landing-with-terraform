@@ -1,5 +1,5 @@
 provider "alicloud" {
-  region = "cn-zhangjiakou"
+  region = "cn-beijing"
 }
 
 data "alicloud_nas_zones" "example" {

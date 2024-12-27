@@ -47,6 +47,9 @@ jobs:
       - name: pr-check
         run: |
           bash scripts/terraform-install.sh
+          echo "hhaa"
+          ls /root
+          echo "debg"
           CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
           if [ -z "${{ github.event.number }}" ]; then
             CHANGED_FOLDERS=$(find ./quickstarts -maxdepth 1 -mindepth 1 -type d | tr '\n' ',')

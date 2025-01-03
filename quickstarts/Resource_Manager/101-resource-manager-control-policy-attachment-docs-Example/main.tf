@@ -1,5 +1,5 @@
 variable "name" {
-  default = "tf-example"
+  default = "terraform-example"
 }
 
 resource "random_integer" "default" {
@@ -7,7 +7,7 @@ resource "random_integer" "default" {
   max = 99999
 }
 
-resource "alicloud_resource_manager_control_policy" "example" {
+resource "alicloud_resource_manager_control_policy" "default" {
   control_policy_name = var.name
   description         = var.name
   effect_scope        = "RAM"
@@ -30,11 +30,11 @@ resource "alicloud_resource_manager_control_policy" "example" {
   EOF
 }
 
-resource "alicloud_resource_manager_folder" "example" {
+resource "alicloud_resource_manager_folder" "default" {
   folder_name = "${var.name}-${random_integer.default.result}"
 }
 
-resource "alicloud_resource_manager_control_policy_attachment" "example" {
-  policy_id = alicloud_resource_manager_control_policy.example.id
-  target_id = alicloud_resource_manager_folder.example.id
+resource "alicloud_resource_manager_control_policy_attachment" "default" {
+  policy_id = alicloud_resource_manager_control_policy.default.id
+  target_id = alicloud_resource_manager_folder.default.id
 }

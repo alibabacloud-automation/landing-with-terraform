@@ -18,14 +18,14 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_resource_manager_control_policy.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_control_policy) | resource |
-| [alicloud_resource_manager_control_policy_attachment.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_control_policy_attachment) | resource |
-| [alicloud_resource_manager_folder.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_folder) | resource |
+| [alicloud_resource_manager_control_policy.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_control_policy) | resource |
+| [alicloud_resource_manager_control_policy_attachment.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_control_policy_attachment) | resource |
+| [alicloud_resource_manager_folder.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_folder) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->    

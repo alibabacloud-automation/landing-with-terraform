@@ -62,7 +62,7 @@ resource "alicloud_cr_ee_repo" "target" {
 resource "alicloud_cr_ee_sync_rule" "default" {
   instance_id           = alicloud_cr_ee_instance.source.id
   namespace_name        = alicloud_cr_ee_namespace.source.name
-  name                  = "${var.name}-${random_integer.default.result}"
+  sync_rule_name        = "${var.name}-${random_integer.default.result}"
   target_instance_id    = alicloud_cr_ee_instance.target.id
   target_namespace_name = alicloud_cr_ee_namespace.target.name
   target_region_id      = data.alicloud_regions.default.regions.0.id

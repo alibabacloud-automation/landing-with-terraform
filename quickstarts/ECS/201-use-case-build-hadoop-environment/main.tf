@@ -18,9 +18,8 @@ variable "region" {
   default = "cn-beijing"
 }
 
-// 可用区
-variable "zone_id" {
-  default = "cn-beijing-c"
+provider "alicloud" {
+  region = var.region
 }
 
 variable "create_instance" {

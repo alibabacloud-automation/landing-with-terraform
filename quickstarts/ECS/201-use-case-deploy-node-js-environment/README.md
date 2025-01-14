@@ -48,7 +48,6 @@ No modules.
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | 实例规格 | `string` | `"ecs.e-c1m2.large"` | no |
 | <a name="input_name"></a> [name](#input\_name) | 实例名称 | `string` | `"terraform-example"` | no |
 | <a name="input_region"></a> [region](#input\_region) | 地域 | `string` | `"cn-heyuan"` | no |
-| <a name="input_zone_id"></a> [zone\_id](#input\_zone\_id) | 可用区 | `string` | `"cn-heyuan-a"` | no |
 <!-- END_TF_DOCS -->
 
 ## Documentation

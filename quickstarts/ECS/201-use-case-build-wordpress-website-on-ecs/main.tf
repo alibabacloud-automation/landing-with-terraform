@@ -38,13 +38,13 @@ variable "image_id" {
 
 // 创建VPC
 resource "alicloud_vpc" "vpc" {
-  count      = local.create_instance ? 1 : 0
+  count      = var.create_instance ? 1 : 0
   cidr_block = "192.168.0.0/16"
 }
 
 // 创建交换机
 resource "alicloud_vswitch" "vswitch" {
-  count        = local.create_instance ? 1 : 0
+  count        = var.create_instance ? 1 : 0
   vpc_id       = alicloud_vpc.vpc[0].id
   cidr_block   = "192.168.0.0/16"
   zone_id      = data.alicloud_zones.default.zones.0.id
@@ -53,41 +53,45 @@ resource "alicloud_vswitch" "vswitch" {
 
 //创建安全组
 resource "alicloud_security_group" "group" {
+  count               = var.create_instance ? 1 : 0
   security_group_name = var.name
   description         = "foo"
-  vpc_id              = local.vpc_id
+  vpc_id              = alicloud_vpc.vpc[0].id
 }
 
 //创建安全组规则（此处仅作示例参考，请您按照自身安全策略设置）
 resource "alicloud_security_group_rule" "allow_all_tcp" {
-  type              = "ingress"                        # 规则类型：入站
-  ip_protocol       = "tcp"                            # 协议类型：TCP
-  policy            = "accept"                         # 策略：接受
-  port_range        = "22/22"                          # 端口范围：仅22端口
-  priority          = 1                                # 优先级：1
-  security_group_id = alicloud_security_group.group.id # 关联到之前创建的安全组
-  cidr_ip           = "0.0.0.0/0"                      # 允许所有IP地址访问
+  count             = var.create_instance ? 1 : 0
+  type              = "ingress"                           # 规则类型：入站
+  ip_protocol       = "tcp"                               # 协议类型：TCP
+  policy            = "accept"                            # 策略：接受
+  port_range        = "22/22"                             # 端口范围：仅22端口
+  priority          = 1                                   # 优先级：1
+  security_group_id = alicloud_security_group.group[0].id # 关联到之前创建的安全组
+  cidr_ip           = "0.0.0.0/0"                         # 允许所有IP地址访问
 }
 
 resource "alicloud_security_group_rule" "allow_tcp_80" {
+  count             = var.create_instance ? 1 : 0
   type              = "ingress"
   ip_protocol       = "tcp"
   nic_type          = "intranet"
   policy            = "accept"
   port_range        = "80/80"
   priority          = 1
-  security_group_id = alicloud_security_group.group.id
+  security_group_id = alicloud_security_group.group[0].id
   cidr_ip           = "0.0.0.0/0"
 }
 
 resource "alicloud_security_group_rule" "allow_icmp_all" {
+  count             = var.create_instance ? 1 : 0
   type              = "ingress"
   ip_protocol       = "icmp"
   nic_type          = "intranet"
   policy            = "accept"
   port_range        = "-1/-1"
   priority          = 1
-  security_group_id = alicloud_security_group.group.id
+  security_group_id = alicloud_security_group.group[0].id
   cidr_ip           = "0.0.0.0/0"
 }
 
@@ -131,15 +135,13 @@ resource "alicloud_ecs_invocation" "invocation" {
 }
 
 data "alicloud_instances" "default" {
-  count = local.create_instance ? 0 : 1
+  count = var.create_instance ? 0 : 1
   ids   = [var.instance_id]
 }
 
 locals {
-  create_instance    = var.instance_id == ""
-  instanceId         = local.create_instance ? alicloud_instance.instance[0].id : var.instance_id
-  instance_public_ip = local.create_instance ? element(alicloud_instance.instance.*.public_ip, 0) : lookup(data.alicloud_instances.default[0].instances.0, "public_ip")
-  vpc_id             = local.create_instance ? alicloud_vpc.vpc[0].id : lookup(data.alicloud_instances.default[0].instances.0, "vpc_id")
+  instanceId         = var.create_instance ? alicloud_instance.instance[0].id : var.instance_id
+  instance_public_ip = var.create_instance ? element(alicloud_instance.instance.*.public_ip, 0) : lookup(data.alicloud_instances.default[0].instances.0, "public_ip")
   command_content    = <<SHELL
 
       #!/bin/bash

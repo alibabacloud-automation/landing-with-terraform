@@ -33,7 +33,7 @@ variable "instance_id" {
 
 // 镜像ID
 variable "image_id" {
-  default = "centos_7_9_x64_20G_alibase_20240628.vhd"
+  default = "ubuntu_22_04_x64_20G_alibase_20241224.vhd"
 }
 
 // 创建VPC
@@ -78,6 +78,18 @@ resource "alicloud_security_group_rule" "allow_tcp_80" {
   nic_type          = "intranet"
   policy            = "accept"
   port_range        = "80/80"
+  priority          = 1
+  security_group_id = alicloud_security_group.group[0].id
+  cidr_ip           = "0.0.0.0/0"
+}
+
+resource "alicloud_security_group_rule" "allow_tcp_443" {
+  count             = var.create_instance ? 1 : 0
+  type              = "ingress"
+  ip_protocol       = "tcp"
+  nic_type          = "intranet"
+  policy            = "accept"
+  port_range        = "443/443"
   priority          = 1
   security_group_id = alicloud_security_group.group[0].id
   cidr_ip           = "0.0.0.0/0"
@@ -143,48 +155,100 @@ locals {
   instanceId         = var.create_instance ? alicloud_instance.instance[0].id : var.instance_id
   instance_public_ip = var.create_instance ? element(alicloud_instance.instance.*.public_ip, 0) : lookup(data.alicloud_instances.default[0].instances.0, "public_ip")
   command_content    = <<SHELL
+#!/bin/bash
 
-      #!/bin/bash
+if [ -f /etc/os-release ]; then
+    source /etc/os-release || { echo "无法读取 /etc/os-release 文件"; exit 1; }
 
-      # 更新系统并安装必要的软件包
+    if [ -z "$${ID:-}" ] || [ -z "$${VERSION_ID:-}" ]; then
+        echo "/etc/os-release 文件格式不符合预期或缺少必要信息"
+        exit 1
+    fi
+
+    OS=$ID
+    VER=$VERSION_ID
+    echo "操作系统: $OS 版本: $VER"
+else
+    echo "无法检测操作系统版本，/etc/os-release 文件不存在"
+    exit 1
+fi
+echo "Updating system and installing necessary packages..."
+if [[ $OS == "alinux" ]]; then
+sudo yum update -y
+sudo yum install -y httpd mariadb-server mariadb php php-mysqlnd php-fpm php-xml php-gd
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+sudo mysql_secure_installation <<EOF
+
+y
+Test@12345
+Test@12345
+y
+y
+y
+y
+EOF
+DB_NAME="wordpress"
+DB_USER="wordpressuser"
+DB_PASSWORD="Test@12345" # 替换为实际密码
+mysql -u root -pYourRootPassword <<EOF
+CREATE DATABASE wordpress;
+CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'Test@12345';
+GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'localhost';
+FLUSH PRIVILEGES;
+EOF
+cd /var/www/html
+sudo wget https://wordpress.org/latest.tar.gz
+sudo tar -xzvf latest.tar.gz
+sudo rm latest.tar.gz
+sudo chown -R apache:apache /var/www/html/wordpress
+sudo chmod -R 755 /var/www/html/wordpress
+sudo cat <<'EOF' > /etc/httpd/conf.d/wordpress.conf
+<VirtualHost *:80>
+    ServerAdmin webmaster@yourdomain.com
+    DocumentRoot "/var/www/html/wordpress"
+    ServerName yourdomain.com
+    ServerAlias www.yourdomain.com
+    <Directory "/var/www/html/wordpress">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ErrorLog "/var/log/httpd/wordpress-error.log"
+    CustomLog "/var/log/httpd/wordpress-access.log" combined
+</VirtualHost>
+EOF
+
+sudo systemctl restart httpd
+elif [[ $OS == "centos" ]]; then
       yum -y update
       yum -y install epel-release
+      if [[ $VER == "7" ]]; then
       yum -y install http://rpms.remirepo.net/enterprise/remi-release-7.rpm  # 对于 CentOS 7
-      # yum -y install http://rpms.remirepo.net/enterprise/remi-release-8.rpm  # 对于 CentOS 8
-
-      # 安装并启用 PHP 8.0
+      elif [[ $VER == "8" ]]; then
+      yum -y install http://rpms.remirepo.net/enterprise/remi-release-8.rpm  # 对于 CentOS 8
+       else
+        echo "不支持的CentOS版本"
+        exit 1
+      fi
       yum-config-manager --enable remi-php80
       yum -y install httpd mariadb-server mariadb php php-mysqlnd php-fpm
-
-      # 启动并启用服务
       systemctl start httpd
       systemctl enable httpd
       systemctl start mariadb
       systemctl enable mariadb
-
-      # 配置MariaDB
-      # 注意：在生产环境中，强烈建议设置数据库密码并进行安全配置
-
-      # 安全配置（这里跳过设置root密码步骤，仅用于测试环境）
-      # mysql_secure_installation  # 通常这一步需要手动交互，这里跳过
-
-      # 使用MySQL命令行工具创建数据库和用户
       echo "CREATE DATABASE wordpress;" | mysql -u root
       echo "CREATE USER 'wordpressuser'@'localhost' IDENTIFIED BY 'Test@12345';" | mysql -u root
       echo "GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpressuser'@'localhost';" | mysql -u root
       echo "FLUSH PRIVILEGES;" | mysql -u root
-
-      # 下载并解压WordPress
       cd /var/www/html
       curl -O https://wordpress.org/latest.tar.gz
       tar -xzvf latest.tar.gz
       rm latest.tar.gz
-
-      # 设置目录权限
       chown -R apache:apache /var/www/html/wordpress
       chmod -R 755 /var/www/html/wordpress
-
-      # 配置Apache以支持WordPress,此处代码需按如下格式否则会出现格式错误
 cat << 'EOF' > /etc/httpd/conf.d/wordpress.conf
 <VirtualHost *:80>
     ServerAdmin admin@example.com
@@ -200,13 +264,67 @@ cat << 'EOF' > /etc/httpd/conf.d/wordpress.conf
     </Directory>
 </VirtualHost>
 EOF
-
-      # 重启Apache服务
       systemctl restart httpd
+elif [[ $OS == "ubuntu" ]]; then
+    #!/bin/bash
 
-      echo "WordPress installation complete. Please complete the web-based setup by navigating to your server's IP or domain."
+# 更新系统并安装必要的软件包
+sudo apt update
+sudo apt install -y apache2 mariadb-server php libapache2-mod-php php-mysql php-xml php-gd
+sudo systemctl start apache2
+sudo systemctl enable apache2
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+sudo mysql_secure_installation <<EOF
+
+y
+Test@12345
+Test@12345
+y
+y
+y
+y
+EOF
+DB_NAME="wordpress"
+DB_USER="wordpressuser"
+DB_PASSWORD="Test@12345"
+mysql -u root -pYourRootPassword <<EOF
+CREATE DATABASE $DB_NAME;
+CREATE USER '$DB_USER'@'localhost' IDENTIFIED BY '$DB_PASSWORD';
+GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$DB_USER'@'localhost';
+FLUSH PRIVILEGES;
+EOF
+cd /var/www/html
+sudo wget https://wordpress.org/latest.tar.gz
+sudo tar -xzvf latest.tar.gz
+sudo rm latest.tar.gz
+sudo chown -R www-data:www-data /var/www/html/wordpress
+sudo chmod -R 755 /var/www/html/wordpress
+sudo cat <<'EOF' > /etc/apache2/sites-available/wordpress.conf
+<VirtualHost *:80>
+    ServerAdmin webmaster@yourdomain.com
+    DocumentRoot "/var/www/html/wordpress"
+    ServerName yourdomain.com
+    ServerAlias www.yourdomain.com
+    <Directory "/var/www/html/wordpress">
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+    ErrorLog $${APACHE_LOG_DIR}/wordpress-error.log
+    CustomLog $${APACHE_LOG_DIR}/wordpress-access.log combined
+</VirtualHost>
+EOF
+sudo a2ensite wordpress.conf
+sudo a2dissite 000-default.conf
+sudo systemctl restart apache2
+fi
 
   SHELL
+}
+
+output "instance_public_ip" {
+  value = local.instance_public_ip
 }
 
 output "ecs_login_address" {

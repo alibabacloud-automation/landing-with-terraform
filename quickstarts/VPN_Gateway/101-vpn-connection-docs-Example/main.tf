@@ -10,29 +10,31 @@ data "alicloud_vpn_gateway_zones" "default" {
   spec = "5M"
 }
 
-data "alicloud_vpcs" "default" {
-  name_regex = "^default-NODELETING$"
+resource "alicloud_vpc" "default" {
   cidr_block = "172.16.0.0/16"
+  vpc_name   = var.name
 }
 
-data "alicloud_vswitches" "default0" {
-  vpc_id  = data.alicloud_vpcs.default.ids.0
-  zone_id = data.alicloud_vpn_gateway_zones.default.ids.0
+resource "alicloud_vswitch" "default0" {
+  cidr_block = "172.16.0.0/24"
+  vpc_id     = alicloud_vpc.default.id
+  zone_id    = data.alicloud_vpn_gateway_zones.default.ids.0
 }
 
-data "alicloud_vswitches" "default1" {
-  vpc_id  = data.alicloud_vpcs.default.ids.0
-  zone_id = data.alicloud_vpn_gateway_zones.default.ids.1
+resource "alicloud_vswitch" "default1" {
+  cidr_block = "172.16.1.0/24"
+  vpc_id     = alicloud_vpc.default.id
+  zone_id    = data.alicloud_vpn_gateway_zones.default.ids.1
 }
 
 resource "alicloud_vpn_gateway" "HA-VPN" {
   vpn_type                     = "Normal"
-  disaster_recovery_vswitch_id = data.alicloud_vswitches.default1.ids.0
+  disaster_recovery_vswitch_id = alicloud_vswitch.default1.id
   vpn_gateway_name             = var.name
 
-  vswitch_id   = data.alicloud_vswitches.default0.ids.0
+  vswitch_id   = alicloud_vswitch.default0.id
   auto_pay     = true
-  vpc_id       = data.alicloud_vpcs.default.ids.0
+  vpc_id       = alicloud_vpc.default.id
   network_type = "public"
   payment_type = "Subscription"
   enable_ipsec = true

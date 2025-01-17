@@ -32,12 +32,20 @@ resource "alicloud_log_resource" "example" {
 
 resource "alicloud_log_resource_record" "example" {
   resource_name = alicloud_log_resource.example.id
-  record_id     = "user_tf_resource_1"
-  tag           = "resource tag"
+  record_id     = "tf_user_example"
+  tag           = "tf example"
   value         = <<EOF
-    {
-      "col1": "this is col1 value",
-      "col2": "col2   value"
-    }
-  EOF
+{
+  "user_name": "tf example",
+  "sms_enabled": true,
+  "phone": "18888888889",
+  "voice_enabled": false,
+  "email": [
+    "test@qq.com"
+  ],
+  "enabled": true,
+  "user_id": "tf_user",
+  "country_code": "86"
+}
+EOF
 }

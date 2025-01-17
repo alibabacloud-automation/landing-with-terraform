@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_message_service_topic` resource.
+This example is used to create a `alicloud_data_works_di_job` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -17,11 +17,12 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_message_service_topic.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/message_service_topic) | resource |
+| [alicloud_data_works_di_job.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/data_works_di_job) | resource |
+| [alicloud_data_works_project.defaultMMHL8U](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/data_works_project) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
-<!-- END_TF_DOCS -->    
+<!-- END_TF_DOCS -->

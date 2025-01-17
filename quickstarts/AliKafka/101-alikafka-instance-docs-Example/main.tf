@@ -1,5 +1,5 @@
 variable "instance_name" {
-  default = "tf-example"
+  default = "terraform-example"
 }
 
 resource "random_integer" "default" {

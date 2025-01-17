@@ -29,5 +29,5 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_instance_name"></a> [instance\_name](#input\_instance\_name) | n/a | `string` | `"tf-example"` | no |
+| <a name="input_instance_name"></a> [instance\_name](#input\_instance\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->    

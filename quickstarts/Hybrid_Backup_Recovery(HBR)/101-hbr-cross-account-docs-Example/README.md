@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_message_service_topic` resource.
+This example is used to create a `alicloud_hbr_cross_account` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -17,11 +17,11 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_message_service_topic.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/message_service_topic) | resource |
+| [alicloud_hbr_cross_account.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/hbr_cross_account) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
-<!-- END_TF_DOCS -->    
+<!-- END_TF_DOCS -->

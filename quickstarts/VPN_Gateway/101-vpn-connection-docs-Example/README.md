@@ -17,14 +17,14 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 | [alicloud_vpn_connection.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpn_connection) | resource |
 | [alicloud_vpn_customer_gateway.changeCustomerGateway](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpn_customer_gateway) | resource |
 | [alicloud_vpn_customer_gateway.defaultCustomerGateway](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpn_customer_gateway) | resource |
 | [alicloud_vpn_gateway.HA-VPN](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpn_gateway) | resource |
-| [alicloud_vpcs.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/vpcs) | data source |
+| [alicloud_vswitch.default0](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
+| [alicloud_vswitch.default1](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
 | [alicloud_vpn_gateway_zones.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/vpn_gateway_zones) | data source |
-| [alicloud_vswitches.default0](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/vswitches) | data source |
-| [alicloud_vswitches.default1](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/vswitches) | data source |
 
 ## Inputs
 

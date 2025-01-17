@@ -1,8 +1,9 @@
 variable "name" {
-  default = "tf-example"
+  default = "terraform-example"
 }
+
 resource "alicloud_message_service_topic" "default" {
   topic_name       = var.name
-  max_message_size = 12357
-  logging_enabled  = true
+  max_message_size = 16888
+  enable_logging   = true
 }

@@ -1,3 +1,16 @@
+## 18 Jan 2025 12:11 UTC
+
+success: true
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.241.0
++ provider registry.terraform.io/hashicorp/time v0.12.1
+
+### Error
+
 ## 11 Jan 2025 12:33 UTC
 
 success: true

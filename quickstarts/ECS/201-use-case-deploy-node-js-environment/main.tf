@@ -84,6 +84,18 @@ resource "alicloud_security_group_rule" "allow_tcp_80" {
   cidr_ip           = "0.0.0.0/0"
 }
 
+resource "alicloud_security_group_rule" "allow_tcp_443" {
+  count             = var.create_instance ? 1 : 0
+  type              = "ingress"
+  ip_protocol       = "tcp"
+  nic_type          = "intranet"
+  policy            = "accept"
+  port_range        = "443/443"
+  priority          = 1
+  security_group_id = alicloud_security_group.group[0].id
+  cidr_ip           = "0.0.0.0/0"
+}
+
 resource "alicloud_security_group_rule" "allow_icmp_all" {
   count             = var.create_instance ? 1 : 0
   type              = "ingress"
@@ -170,7 +182,6 @@ locals {
   EOF
 }
 
-output "instance_public_ip" {
-  value = local.instance_public_ip
+output "ecs_login_address" {
+  value = "https://ecs-workbench.aliyun.com/?from=EcsConsole&instanceType=ecs&regionId=${var.region}&instanceId=${local.instanceId}"
 }
-

@@ -22,7 +22,6 @@ No modules.
 | [alicloud_dfs_mount_point.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/dfs_mount_point) | resource |
 | [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 | [alicloud_vswitch.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
-| [alicloud_dfs_zones.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/dfs_zones) | data source |
 
 ## Inputs
 

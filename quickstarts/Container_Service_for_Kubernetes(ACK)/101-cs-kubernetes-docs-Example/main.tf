@@ -126,7 +126,6 @@ resource "alicloud_cs_kubernetes" "default" {
   master_disk_category  = "cloud_essd"
   password              = "Yourpassword1234"
   service_cidr          = "172.18.0.0/16"
-  load_balancer_spec    = "slb.s1.small"
   install_cloud_monitor = "true"
   resource_group_id     = data.alicloud_resource_manager_resource_groups.default.groups.0.id
   deletion_protection   = "false"

@@ -6,12 +6,10 @@ variable "name" {
   default = "tf-example"
 }
 
-data "alicloud_dfs_zones" "default" {}
-
 resource "alicloud_dfs_file_system" "default" {
-  storage_type                     = data.alicloud_dfs_zones.default.zones.0.options.0.storage_type
-  zone_id                          = data.alicloud_dfs_zones.default.zones.0.zone_id
-  protocol_type                    = "HDFS"
+  storage_type                     = "PERFORMANCE"
+  zone_id                          = "cn-hangzhou-b"
+  protocol_type                    = "PANGU"
   description                      = var.name
   file_system_name                 = var.name
   throughput_mode                  = "Provisioned"

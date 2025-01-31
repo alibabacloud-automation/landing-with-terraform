@@ -19,9 +19,11 @@ No modules.
 |------|------|
 | [alicloud_cen_instance.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_instance) | resource |
 | [alicloud_cen_transit_router.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_transit_router) | resource |
-| [alicloud_cen_transit_router_multicast_domain.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_transit_router_multicast_domain) | resource |
+| [alicloud_cen_transit_router_multicast_domain.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_transit_router_multicast_domain) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->    

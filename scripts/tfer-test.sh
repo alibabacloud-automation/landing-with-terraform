@@ -20,11 +20,11 @@ export TF_DATA_TFER_DIR="$(pwd)/${root}/.terraform"
 
 mkdir -p $output
 importCheckLog=$output/import-pre-check.log
-params="-o=${output} -r=${resourceType} --terraform-version=1.6.0 --path-pattern=${output} --filter=${filter}"
+params="-o="${output}" -r="${resourceType}" --terraform-version=1.6.0 --path-pattern="${output}" --filter="${filter}""
 if [ -n "$region" ]; then
     params="$params --regions=${region}"
 fi
-terraformer import alicloud $params > ${importCheckLog}
+terraformer import alicloud $params > ${importCheckLog} 2>&1
 importResult=$?
 notSupported=$(cat ${importCheckLog} | grep "resources are not supported") 
 haveNoResource=$(cat ${importCheckLog} | grep "Number of resources is zero")

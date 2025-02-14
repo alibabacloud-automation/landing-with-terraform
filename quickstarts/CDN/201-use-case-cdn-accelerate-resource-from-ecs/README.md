@@ -41,9 +41,9 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_creater_ecs"></a> [creater\_ecs](#input\_creater\_ecs) | Do you want to create a ECS instance | `bool` | `true` | no |
-| <a name="input_domain_home"></a> [domain\_home](#input\_domain\_home) | your domain name | `string` | `"Change to your domain name"` | no |
-| <a name="input_existed_ecs_address"></a> [existed\_ecs\_address](#input\_existed\_ecs\_address) | The address of your existed ecs | `string` | `""` | no |
-| <a name="input_existed_ecs_port"></a> [existed\_ecs\_port](#input\_existed\_ecs\_port) | The port of your existed ecs | `string` | `""` | no |
+| <a name="input_domain_home"></a> [domain\_home](#input\_domain\_home) | your domain name | `string` | `"tf-example.com"` | no |
+| <a name="input_existed_ecs_ip"></a> [existed\_ecs\_ip](#input\_existed\_ecs\_ip) | The ip of your existed ecs | `string` | `""` | no |
+| <a name="input_host_record"></a> [host\_record](#input\_host\_record) | Host Record,like image | `string` | `"image"` | no |
 | <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"cn-beijing"` | no |
 <!-- END_TF_DOCS -->
 

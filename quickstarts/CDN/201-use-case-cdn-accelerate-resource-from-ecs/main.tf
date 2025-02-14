@@ -4,8 +4,15 @@ variable "region" {
 
 # 域名(改为您的域名)
 variable "domain_home" {
-  default     = "Change to your domain name"
+  default     = "tf-example.com"
   description = "your domain name"
+}
+
+# 主机记录
+variable "host_record" {
+  type        = string
+  default     = "image"
+  description = "Host Record,like image"
 }
 
 # 是否创建ECS
@@ -15,18 +22,11 @@ variable "creater_ecs" {
   description = "Do you want to create a ECS instance"
 }
 
-# ECS地址
-variable "existed_ecs_address" {
+# 已有ECS地址
+variable "existed_ecs_ip" {
   default     = ""
   type        = string
-  description = "The address of your existed ecs "
-}
-
-# ECS端口
-variable "existed_ecs_port" {
-  default     = ""
-  type        = string
-  description = "The port of your existed ecs "
+  description = "The ip of your existed ecs "
 }
 
 locals {
@@ -61,7 +61,7 @@ resource "alicloud_vpc" "vpc" {
 
 resource "alicloud_security_group" "group" {
   count               = var.creater_ecs ? 1 : 0
-  security_group_name = "test_${random_integer.default.result}"
+  security_group_name = "tf_test_${random_integer.default.result}"
   vpc_id              = alicloud_vpc.vpc.0.id
 }
 
@@ -109,7 +109,7 @@ resource "alicloud_cdn_domain_new" "example" {
   cdn_type    = "web"
   scope       = "overseas"
   sources {
-    content  = var.creater_ecs ? alicloud_instance.instance.0.public_ip : var.existed_ecs_address
+    content  = var.creater_ecs ? alicloud_instance.instance.0.public_ip : var.existed_ecs_ip
     type     = "ipaddr"
     priority = "20"
     port     = 80
@@ -120,7 +120,7 @@ resource "alicloud_cdn_domain_new" "example" {
 resource "alicloud_alidns_record" "example" {
   domain_name = var.domain_home
   type        = "CNAME"
-  rr          = "image"
+  rr          = var.host_record
   value       = alicloud_cdn_domain_new.example.cname
   ttl         = 600
 }

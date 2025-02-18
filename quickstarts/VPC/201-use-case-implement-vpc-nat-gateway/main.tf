@@ -1,4 +1,3 @@
-// VPC NAT 网关有默认的 NAT IP；  公网NAT实例 绑定的是EIP
 variable "region" {
   default = "cn-beijing"
 }
@@ -10,6 +9,12 @@ variable "name" {
 }
 variable "password" {
   default = "Test123@"
+}
+variable "master_zone" {
+  default = "cn-beijing-h"
+}
+variable "slave_zone" {
+  default = "cn-beijing-k"
 }
 // 查询ECS镜像
 data "alicloud_images" "default" {
@@ -33,9 +38,7 @@ data "alicloud_vpc_nat_ips" "nat_ips_b" {
   nat_gateway_id = alicloud_nat_gateway.b.id
 }
 locals {
-  master_zone = "cn-beijing-h"
-  slave_zone  = "cn-beijing-k"
-  image_id    = "aliyun_3_x64_20G_alibase_20241103.vhd"
+  image_id = "aliyun_3_x64_20G_alibase_20241103.vhd"
   // 筛选出默认的 NAT IP
   default_nat_ip_a = [for ip in data.alicloud_vpc_nat_ips.nat_ips_a.ips : ip if ip.is_default][0]
   default_nat_ip_b = [for ip in data.alicloud_vpc_nat_ips.nat_ips_b.ips : ip if ip.is_default][0]
@@ -60,14 +63,14 @@ resource "alicloud_vpc_ipv4_cidr_block" "a" {
 resource "alicloud_vswitch" "a1" {
   vpc_id       = alicloud_vpc.a.id
   cidr_block   = "192.168.10.0/24"
-  zone_id      = local.master_zone
+  zone_id      = var.master_zone
   vswitch_name = "VS_A1"
 }
 // 创建Vswitch_A2 CIDR 块为 172.16.20.0/24
 resource "alicloud_vswitch" "a2" {
   vpc_id       = alicloud_vpc_ipv4_cidr_block.a.vpc_id
   cidr_block   = "172.16.20.0/24"
-  zone_id      = local.slave_zone
+  zone_id      = var.slave_zone
   vswitch_name = "VS_A2"
 }
 // 创建 VPC_B 主网段
@@ -84,14 +87,14 @@ resource "alicloud_vpc_ipv4_cidr_block" "b" {
 resource "alicloud_vswitch" "b1" {
   vpc_id       = alicloud_vpc.b.id
   cidr_block   = "192.168.10.0/24"
-  zone_id      = local.master_zone
+  zone_id      = var.master_zone
   vswitch_name = "VS_B1"
 }
 // 创建Vswitch_B2 CIDR 块为 10.0.20.0/24
 resource "alicloud_vswitch" "b2" {
   vpc_id       = alicloud_vpc_ipv4_cidr_block.b.vpc_id
   cidr_block   = "10.0.20.0/24"
-  zone_id      = local.slave_zone
+  zone_id      = var.slave_zone
   vswitch_name = "VS_B2"
 }
 // 安全组 VPC_A
@@ -141,7 +144,7 @@ resource "alicloud_instance" "a" {
   internet_max_bandwidth_out = "0"
   # 启动实例的可用区
   // availability_zone          = data.alicloud_instance_types.default.instance_types.0.availability_zones.0
-  availability_zone = local.master_zone
+  availability_zone = var.master_zone
   # 有效值为 PrePaid、PostPaid，默认值为 PostPaid。
   instance_charge_type = "PostPaid"
   # 仅对一些非 I/O 优化实例使用。
@@ -170,7 +173,7 @@ resource "alicloud_instance" "b" {
   internet_max_bandwidth_out = "0"
   # 启动实例的可用区
   // availability_zone          = data.alicloud_instance_types.default.instance_types.0.availability_zones.0
-  availability_zone = local.master_zone
+  availability_zone = var.master_zone
   # 有效值为 PrePaid、PostPaid，默认值为 PostPaid。
   instance_charge_type = "PostPaid"
   # 仅对一些非 I/O 优化实例使用。
@@ -209,11 +212,11 @@ resource "alicloud_cen_transit_router_vpc_attachment" "a" {
   auto_publish_route_enabled = true
   # 交换机
   zone_mappings {
-    zone_id    = local.master_zone
+    zone_id    = var.master_zone
     vswitch_id = alicloud_vswitch.a1.id
   }
   zone_mappings {
-    zone_id    = local.slave_zone
+    zone_id    = var.slave_zone
     vswitch_id = alicloud_vswitch.a2.id
   }
   # 是否强制删除
@@ -232,11 +235,11 @@ resource "alicloud_cen_transit_router_vpc_attachment" "b" {
   auto_publish_route_enabled = true
   # 交换机
   zone_mappings {
-    zone_id    = local.master_zone
+    zone_id    = var.master_zone
     vswitch_id = alicloud_vswitch.b1.id
   }
   zone_mappings {
-    zone_id    = local.slave_zone
+    zone_id    = var.slave_zone
     vswitch_id = alicloud_vswitch.b2.id
   }
   # 是否强制删除
@@ -326,7 +329,7 @@ resource "alicloud_forward_entry" "default" {
   external_port = "22"
   # IP协议，有效值为tcp、udp或其他。
   ip_protocol = "tcp"
-  # 内部IP，必须是私有IP。ECS_B 的私有ip 
+  # 内部IP，必须是私有IP。ECS_B 的私有ip
   internal_ip = alicloud_instance.b.private_ip
   # 内部端口，有效值为1~65535或其他。
   internal_port = "22"
@@ -384,7 +387,7 @@ resource "alicloud_route_entry" "aa" {
   destination_cidrblock = "10.0.20.0/24"
   # 下一跳类型 NAT网关
   nexthop_type = "NatGateway"
-  # 下一跳 ID 
+  # 下一跳 ID
   nexthop_id = alicloud_nat_gateway.a.id
 }
 // 配置自定义路由表 路由条目 VPC_B

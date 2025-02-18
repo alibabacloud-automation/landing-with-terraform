@@ -70,9 +70,11 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_master_zone"></a> [master\_zone](#input\_master\_zone) | n/a | `string` | `"cn-beijing-h"` | no |
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"nat-test"` | no |
 | <a name="input_password"></a> [password](#input\_password) | n/a | `string` | `"Test123@"` | no |
-| <a name="input_region"></a> [region](#input\_region) | VPC NAT 网关有默认的 NAT IP；  公网NAT实例 绑定的是EIP | `string` | `"cn-beijing"` | no |
+| <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"cn-beijing"` | no |
+| <a name="input_slave_zone"></a> [slave\_zone](#input\_slave\_zone) | n/a | `string` | `"cn-beijing-k"` | no |
 <!-- END_TF_DOCS -->
 
 ## Documentation

@@ -3,13 +3,13 @@ variable "region" {
 }
 
 # 域名(改为您的域名)
-variable "domain_home" {
+variable "domain_name" {
   default     = "tf-example.com"
   description = "your domain name"
 }
 
 # 主机记录
-variable "host_record" {
+variable "host_name" {
   type        = string
   default     = "image"
   description = "Host Record,like image"
@@ -65,14 +65,14 @@ resource "alicloud_security_group" "group" {
   vpc_id              = alicloud_vpc.vpc.0.id
 }
 
-# 添加允许TCP 80端口出方向流量的规则
-resource "alicloud_security_group_rule" "egress" {
+# 添加允许TCP 80端口入方向流量的规则
+resource "alicloud_security_group_rule" "ingress" {
   count             = var.creater_ecs ? 1 : 0
-  type              = "egress"                           # 出方向规则
+  type              = "ingress"                          # 入方向规则
   ip_protocol       = "tcp"                              # TCP协议
   nic_type          = "intranet"                         # 内网网卡类型（VPC环境）
   policy            = "accept"                           # 允许策略
-  port_range        = "8/80"                             # 允许80端口
+  port_range        = "80/80"                            # 允许80端口
   priority          = 1                                  # 优先级设置
   security_group_id = alicloud_security_group.group.0.id # 关联的安全组ID
   cidr_ip           = "10.0.0.0/8"                       # 允许的IP地址范围，示例为10.0.0.0/8
@@ -105,7 +105,7 @@ resource "alicloud_instance" "instance" {
 
 # 添加一个加速域名
 resource "alicloud_cdn_domain_new" "example" {
-  domain_name = var.domain_home
+  domain_name = format("%s.%s", var.host_name, var.domain_name)
   cdn_type    = "web"
   scope       = "overseas"
   sources {
@@ -118,9 +118,9 @@ resource "alicloud_cdn_domain_new" "example" {
 
 # 域名解析
 resource "alicloud_alidns_record" "example" {
-  domain_name = var.domain_home
+  domain_name = var.domain_name
   type        = "CNAME"
-  rr          = var.host_record
+  rr          = var.host_name
   value       = alicloud_cdn_domain_new.example.cname
   ttl         = 600
 }

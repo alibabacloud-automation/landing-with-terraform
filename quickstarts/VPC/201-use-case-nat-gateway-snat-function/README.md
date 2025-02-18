@@ -45,7 +45,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"nat-test"` | no |
 | <a name="input_password"></a> [password](#input\_password) | n/a | `string` | `"Test123@"` | no |
-| <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"cn-beijing"` | no |
+| <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"cn-shanghai"` | no |
 <!-- END_TF_DOCS -->
 
 ## Documentation

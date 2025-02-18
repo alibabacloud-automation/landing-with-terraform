@@ -1,5 +1,5 @@
 variable "region" {
-  default = "cn-beijing"
+  default = "cn-shanghai"
 }
 provider "alicloud" {
   region = var.region
@@ -21,9 +21,11 @@ data "alicloud_instance_types" "default" {
   image_id          = data.alicloud_images.default.images.0.id
 }
 # 可用区
-data "alicloud_zones" "default" {}
+data "alicloud_zones" "default" {
+  available_resource_creation = "VSwitch"
+  available_disk_category     = "cloud_efficiency"
+}
 locals {
-  zone_id  = "cn-beijing-h"
   image_id = "aliyun_3_x64_20G_alibase_20241103.vhd"
 }
 # 创建VPC
@@ -35,7 +37,7 @@ resource "alicloud_vpc" "vpc" {
 resource "alicloud_vswitch" "vsw" {
   vpc_id       = alicloud_vpc.vpc.id
   cidr_block   = "192.168.20.0/24"
-  zone_id      = local.zone_id
+  zone_id      = data.alicloud_zones.default.zones.0.id
   vswitch_name = var.name
 }
 # 安全组
@@ -69,7 +71,7 @@ resource "alicloud_instance" "example" {
   internet_max_bandwidth_out = "0"
   # 启动实例的可用区
   // availability_zone          = data.alicloud_instance_types.default.instance_types.0.availability_zones.0
-  availability_zone = local.zone_id
+  availability_zone = data.alicloud_zones.default.zones.0.id
   # 有效值为 PrePaid、PostPaid，默认值为 PostPaid。
   instance_charge_type = "PostPaid"
   # 仅对一些非 I/O 优化实例使用。

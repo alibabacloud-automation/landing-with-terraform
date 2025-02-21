@@ -1,9 +1,11 @@
 variable "name" {
   default = "terraform-example"
 }
+
 provider "alicloud" {
   region = "cn-shanghai"
 }
+
 resource "alicloud_tag_policy" "example" {
   policy_name    = var.name
   policy_desc    = var.name

@@ -1,3 +1,7 @@
+provider "alicloud" {
+  region = "cn-hangzhou"
+}
+
 variable "name" {
   default = "terraform-example"
 }

@@ -1,3 +1,7 @@
+provider "alicloud" {
+  region = "cn-beijing"
+}
+
 variable "name" {
   default = "terraform-example"
 }
@@ -38,6 +42,7 @@ resource "alicloud_ecd_policy_group" "default" {
 
 data "alicloud_ecd_bundles" "default" {
   bundle_type = "SYSTEM"
+  bundle_id   = ["bundle_eds_enterprise_office_4c8g_s8d2_win2019_edu", "bundle_eds_enterprise_office_8c16g_s8d2_win2019_edu"]
 }
 
 resource "alicloud_ecd_desktop" "default" {

@@ -12,9 +12,9 @@ variable "image_id" {
 
 # Create a new ECS instance for a VPC
 resource "alicloud_security_group" "group" {
-  name        = var.name
-  description = "foo"
-  vpc_id      = alicloud_vpc.vpc.id
+  security_group_name = var.name
+  description         = "foo"
+  vpc_id              = alicloud_vpc.vpc.id
 }
 
 resource "alicloud_kms_key" "key" {

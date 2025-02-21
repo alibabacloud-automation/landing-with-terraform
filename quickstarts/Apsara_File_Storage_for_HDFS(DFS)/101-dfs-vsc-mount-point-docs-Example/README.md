@@ -19,8 +19,8 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_dfs_file_system.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/dfs_file_system) | resource |
+| [alicloud_dfs_vsc_mount_point.DefaultFsForRMCVscMp](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/dfs_vsc_mount_point) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
-| [alicloud_dfs_zones.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/dfs_zones) | data source |
 
 ## Inputs
 

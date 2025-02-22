@@ -1,3 +1,15 @@
+## 22 Feb 2025 06:51 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
+
+### Error
+
+Init: running terraform init failed.
 ## 15 Feb 2025 06:28 UTC
 
 success: true

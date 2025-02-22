@@ -1,3 +1,17 @@
+## 22 Feb 2025 05:17 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.243.0
++ provider registry.terraform.io/hashicorp/local v2.5.2
+
+### Error
+
+Apply: running terraform apply failed.
 ## 15 Feb 2025 05:12 UTC
 
 success: true

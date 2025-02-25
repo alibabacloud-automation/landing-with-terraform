@@ -18,8 +18,8 @@ resource "alicloud_vswitch" "vsw" {
 }
 
 resource "alicloud_security_group" "default" {
-  name   = "default"
-  vpc_id = alicloud_vpc.vpc.id
+  security_group_name = "default"
+  vpc_id              = alicloud_vpc.vpc.id
 }
 
 resource "alicloud_security_group_rule" "allow_all_tcp" {

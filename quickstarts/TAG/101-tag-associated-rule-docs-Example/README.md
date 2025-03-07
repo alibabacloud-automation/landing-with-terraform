@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_message_service_subscription` resource.
+This example is used to create a `alicloud_tag_associated_rule` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -17,12 +17,11 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_message_service_subscription.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/message_service_subscription) | resource |
-| [alicloud_message_service_topic.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/message_service_topic) | resource |
+| [alicloud_tag_associated_rule.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/tag_associated_rule) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
-<!-- END_TF_DOCS -->    
+<!-- END_TF_DOCS -->

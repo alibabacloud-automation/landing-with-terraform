@@ -26,8 +26,8 @@ resource "alicloud_vswitch" "vswitch_2" {
 }
 
 resource "alicloud_security_group" "security_group" {
-  vpc_id = alicloud_vpc.vpc.id
-  name   = var.name
+  vpc_id              = alicloud_vpc.vpc.id
+  security_group_name = var.name
 }
 
 resource "alicloud_api_gateway_instance" "vpc_integration_instance" {

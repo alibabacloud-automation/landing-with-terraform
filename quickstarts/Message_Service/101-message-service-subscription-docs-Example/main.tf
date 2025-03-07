@@ -1,10 +1,11 @@
 variable "name" {
-  default = "tf-example"
+  default = "terraform-example"
 }
+
 resource "alicloud_message_service_topic" "default" {
   topic_name       = var.name
-  max_message_size = 12357
-  logging_enabled  = true
+  max_message_size = 16888
+  enable_logging   = true
 }
 
 resource "alicloud_message_service_subscription" "default" {
@@ -12,7 +13,7 @@ resource "alicloud_message_service_subscription" "default" {
   subscription_name     = var.name
   endpoint              = "http://example.com"
   push_type             = "http"
-  filter_tag            = "tf-example"
+  filter_tag            = var.name
   notify_content_format = "XML"
   notify_strategy       = "BACKOFF_RETRY"
 }

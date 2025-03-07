@@ -12,7 +12,7 @@ resource "alicloud_api_gateway_instance" "default" {
 
   instance_spec = "api.s1.small"
   https_policy  = "HTTPS2_TLS1_0"
-  zone_id       = "cn-hangzhou-MAZ6"
+  zone_id       = "cn-hangzhou-MAZ6(i,j,k)"
   payment_type  = "PayAsYouGo"
   instance_type = "normal"
 }

@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上为ACK节点池指定部署集，涉及到ACK专有集群，部署集，节点池等资源的创建。
-详情可查看[使用Terraform为ACK节点池指定部署集](http://help.aliyun.com/document_detail/391261.htm)。
+详情可查看[使用Terraform为ACK节点池指定部署集](https://help.aliyun.com/document_detail/391261.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to associate a deployment set with a node pool on Alibaba Cloud, which involves the creation of resources such as ACK dedicated cluster, deployment set and node pool.
-More details in [Use Terraform to associate a deployment set with a ACK node pool](http://help.aliyun.com/document_detail/391261.htm).
+More details in [Use Terraform to associate a deployment set with a ACK node pool](https://help.aliyun.com/document_detail/391261.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -54,6 +54,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Associate deployment set with ACK node pool](http://help.aliyun.com/document_detail/391261.htm) 
+The template is based on Aliyun document: [Associate deployment set with ACK node pool](https://help.aliyun.com/document_detail/391261.html) 
 
 <!-- docs-link --> 

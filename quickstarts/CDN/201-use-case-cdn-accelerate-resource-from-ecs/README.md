@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上使用CDN加速ECS上的静态资源。
-详情可查看[CDN加速ECS资源](https://help.aliyun.com/zh/cdn/use-cases/use-alibaba-cloud-cdn-to-accelerate-the-retrieval-of-resources-from-an-ecs-instance)。
+详情可查看[CDN加速ECS资源](https://help.aliyun.com/document_detail/124293.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to use CDN to accelerate the retrieval of resources from an Elastic Compute Service (ECS) instance on Alibaba Cloud.
-More details in [Use Alibaba Cloud CDN to accelerate the retrieval of resources from an ECS instance](https://help.aliyun.com/zh/cdn/use-cases/use-alibaba-cloud-cdn-to-accelerate-the-retrieval-of-resources-from-an-ecs-instance).
+More details in [Use Alibaba Cloud CDN to accelerate the retrieval of resources from an ECS instance](https://help.aliyun.com/document_detail/124293.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -50,6 +50,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use Alibaba Cloud CDN to accelerate the retrieval of resources from an ECS instance](https://help.aliyun.com/zh/cdn/use-cases/use-alibaba-cloud-cdn-to-accelerate-the-retrieval-of-resources-from-an-ecs-instance) 
+The template is based on Aliyun document: [Use Alibaba Cloud CDN to accelerate the retrieval of resources from an ECS instance](https://help.aliyun.com/document_detail/124293.html) 
 
 <!-- docs-link --> 

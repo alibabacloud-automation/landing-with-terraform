@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例介绍如何通过转发路由器实现ECS私网访问跨地域的对象存储OSS。
-详情可查看[通过企业版转发路由器实现ECS私网访问跨地域的OSS服务](https://help.aliyun.com/zh/cen/use-cases/use-enterprise-edition-transit-routers-to-enable-ecs-instances-to-access-oss-across-regions-over-vpc-connections)。
+详情可查看[通过企业版转发路由器实现ECS私网访问跨地域的OSS服务](https://help.aliyun.com/document_detail/478724.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 The example use transit routers to enable Elastic Compute Service (ECS) instances that are deployed in virtual private clouds (VPCs) to access Object Storage Service (OSS) across regions over VPC connections.
-More details in [Use Enterprise Edition transit routers to enable ECS instances to access OSS across regions over VPC connections](https://www.alibabacloud.com/help/en/cen/use-cases/use-enterprise-edition-transit-routers-to-enable-ecs-instances-to-access-oss-across-regions-over-vpc-connections).
+More details in [Use Enterprise Edition transit routers to enable ECS instances to access OSS across regions over VPC connections](https://help.aliyun.com/document_detail/478724.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -79,6 +79,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use Enterprise Edition transit routers to enable ECS instances to access OSS across regions over VPC connections](https://www.alibabacloud.com/help/en/cen/use-cases/use-enterprise-edition-transit-routers-to-enable-ecs-instances-to-access-oss-across-regions-over-vpc-connections)
+The template is based on Aliyun document: [Use Enterprise Edition transit routers to enable ECS instances to access OSS across regions over VPC connections](https://help.aliyun.com/document_detail/478724.html)
 
 <!-- docs-link --> 

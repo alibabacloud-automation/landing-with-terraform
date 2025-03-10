@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上的Linux系统的ECS实例上安装并配置vsftpd。
-详情可查看[搭建FTP站点（Linux）](https://help.aliyun.com/zh/ecs/use-cases/manually-build-an-ftp-site-on-a-linux-instance)。
+详情可查看[搭建FTP站点（Linux）](https://help.aliyun.com/document_detail/92048.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to install and configure vsftpd on a Linux Elastic Compute Service (ECS) instance on Alibaba Cloud.
-More details in [Build an FTP site on a Linux instance](https://help.aliyun.com/zh/ecs/use-cases/manually-build-an-ftp-site-on-a-linux-instance).
+More details in [Build an FTP site on a Linux instance](https://help.aliyun.com/document_detail/92048.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -53,6 +53,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Build an FTP site on a Linux instance](https://help.aliyun.com/zh/ecs/use-cases/manually-build-an-ftp-site-on-a-linux-instance) 
+The template is based on Aliyun document: [Build an FTP site on a Linux instance](https://help.aliyun.com/document_detail/92048.html) 
 
 <!-- docs-link --> 

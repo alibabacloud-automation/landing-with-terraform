@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上通过CDN控制台实现OSS加速。
-详情可查看[CDN加速OSS资源](https://help.aliyun.com/zh/cdn/use-cases/accelerate-the-retrieval-of-resources-from-an-oss-bucket-in-the-alibaba-cloud-cdn-console)。
+详情可查看[CDN加速OSS资源](https://help.aliyun.com/document_detail/123226.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to accelerate the retrieval of resources from an OSS bucket by using the Alibaba Cloud CDN console.
-More details in [Accelerate the retrieval of resources from an OSS bucket](https://help.aliyun.com/zh/cdn/use-cases/accelerate-the-retrieval-of-resources-from-an-oss-bucket-in-the-alibaba-cloud-cdn-console).
+More details in [Accelerate the retrieval of resources from an OSS bucket](https://help.aliyun.com/document_detail/123226.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -43,6 +43,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Accelerate the retrieval of resources from an OSS bucket](https://help.aliyun.com/zh/cdn/use-cases/accelerate-the-retrieval-of-resources-from-an-oss-bucket-in-the-alibaba-cloud-cdn-console) 
+The template is based on Aliyun document: [Accelerate the retrieval of resources from an OSS bucket](https://help.aliyun.com/document_detail/123226.html) 
 
 <!-- docs-link --> 

@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建和管理Kafka SASL用户。
-详情可查看[通过 Terraform 管理Kafka SASL用户](https://help.aliyun.com/zh/apsaramq-for-kafka/cloud-message-queue-for-kafka/developer-reference/use-terraform-to-manage-sasl-users)。
+详情可查看[通过 Terraform 管理Kafka SASL用户](https://help.aliyun.com/document_detail/2618411.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create and manage SASL users in ApsaraMQ for Kafka on Alibaba Cloud.
-More details in [Manage Kafka SASL users](https://help.aliyun.com/zh/apsaramq-for-kafka/cloud-message-queue-for-kafka/developer-reference/use-terraform-to-manage-sasl-users).
+More details in [Manage Kafka SASL users](https://help.aliyun.com/document_detail/2618411.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -45,6 +45,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage Kafka SASL users](https://help.aliyun.com/zh/apsaramq-for-kafka/cloud-message-queue-for-kafka/developer-reference/use-terraform-to-manage-sasl-users) 
+The template is based on Aliyun document: [Manage Kafka SASL users](https://help.aliyun.com/document_detail/2618411.html) 
 
 <!-- docs-link --> 

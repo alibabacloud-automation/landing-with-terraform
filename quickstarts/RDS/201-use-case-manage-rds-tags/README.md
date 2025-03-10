@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上RDS PostgreSQL实例绑定标签以及解绑标签，涉及到RDS PostgreSQL实例与标签等资源的创建与配置。
-详情可查看[通过 Terraform 管理 RDS PostgreSQL 实例标签](http://help.aliyun.com/document_detail/456037.htm)。
+详情可查看[通过 Terraform 管理 RDS PostgreSQL 实例标签](https://help.aliyun.com/document_detail/456037.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to add tags and remove tags from an ApsaraDB RDS for PostgreSQL instance on Alibaba Cloud, which involves the creation and configuration of resources such as ApsaraDB RDS for PostgreSQL instance and tags.
-More details in [Manage RDS tags](http://help.aliyun.com/document_detail/456037.htm).
+More details in [Manage RDS tags](https://help.aliyun.com/document_detail/456037.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -41,6 +41,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage RDS tags](http://help.aliyun.com/document_detail/456037.htm) 
+The template is based on Aliyun document: [Manage RDS tags](https://help.aliyun.com/document_detail/456037.html) 
 
 <!-- docs-link --> 

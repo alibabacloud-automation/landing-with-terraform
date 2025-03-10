@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上一个操作审计的跟踪，并将事件内容投递到日志服务（SLS）。
-详情可查看[通过Terraform创建操作审计跟踪](https://help.aliyun.com/zh/actiontrail/developer-reference/terraform-integration-example)。
+详情可查看[通过Terraform创建操作审计跟踪](https://help.aliyun.com/document_detail/2807775.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create ActionTrail trail on Alibaba Cloud, then ship the log content to SLS.
-More details in [Create ActionTrail trail](https://help.aliyun.com/zh/actiontrail/developer-reference/terraform-integration-example).
+More details in [Create ActionTrail trail](https://help.aliyun.com/document_detail/2807775.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -44,6 +44,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create ActionTrail trail](https://help.aliyun.com/zh/actiontrail/developer-reference/terraform-integration-example) 
+The template is based on Aliyun document: [Create ActionTrail trail](https://help.aliyun.com/document_detail/2807775.html) 
 
 <!-- docs-link --> 

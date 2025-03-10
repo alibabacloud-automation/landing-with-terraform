@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建云SSO用户。
-详情可查看[创建云SSO用户](https://help.aliyun.com/zh/cloudsso/developer-reference/terraform-integration-example)。
+详情可查看[创建云SSO用户](https://help.aliyun.com/document_detail/2833154.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create CloudSSO user on Alibaba Cloud.
-More details in [Create CloudSSO user](https://help.aliyun.com/zh/cloudsso/developer-reference/terraform-integration-example).
+More details in [Create CloudSSO user](https://help.aliyun.com/document_detail/2833154.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -41,6 +41,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create CloudSSO user](https://help.aliyun.com/zh/cloudsso/developer-reference/terraform-integration-example) 
+The template is based on Aliyun document: [Create CloudSSO user](https://help.aliyun.com/document_detail/2833154.html) 
 
 <!-- docs-link --> 

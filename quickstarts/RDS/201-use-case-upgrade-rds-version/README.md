@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上升级RDS PostgreSQL实例的版本。
-详情可查看[通过 Terraform 升级 RDS PostgreSQL 版本](http://help.aliyun.com/document_detail/456039.htm)。
+详情可查看[通过 Terraform 升级 RDS PostgreSQL 版本](https://help.aliyun.com/document_detail/456039.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to upgrade the database version of an ApsaraDB RDS for PostgreSQL instance on Alibaba Cloud.
-More details in [Upgrade RDS database version](http://help.aliyun.com/document_detail/456039.htm).
+More details in [Upgrade RDS database version](https://help.aliyun.com/document_detail/456039.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -42,6 +42,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Upgrade RDS version](http://help.aliyun.com/document_detail/456039.htm) 
+The template is based on Aliyun document: [Upgrade RDS version](https://help.aliyun.com/document_detail/456039.html) 
 
 <!-- docs-link --> 

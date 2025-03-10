@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上配置公网NAT网关的SNAT条目,使多个ECS实例可以通过同一弹性公网IP访问互联网。
-详情可查看[统一公网出口IP](https://help.aliyun.com/zh/nat-gateway/use-cases/configure-ecs-instances-that-are-assigned-static-public-ip-addresses-to-use-the-same-eip-to-access-the-internet)。
+详情可查看[统一公网出口IP](https://help.aliyun.com/document_detail/122217.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to configure SNAT entry of NAT gateway on Alibaba Cloud.
-More details in [Unified public network export IPs using NAT gateway](https://help.aliyun.com/zh/nat-gateway/use-cases/configure-ecs-instances-that-are-assigned-static-public-ip-addresses-to-use-the-same-eip-to-access-the-internet).
+More details in [Unified public network export IPs using NAT gateway](https://help.aliyun.com/document_detail/122217.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -71,6 +71,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Unified public network export IPs using NAT gateway](https://help.aliyun.com/zh/nat-gateway/use-cases/configure-ecs-instances-that-are-assigned-static-public-ip-addresses-to-use-the-same-eip-to-access-the-internet) 
+The template is based on Aliyun document: [Unified public network export IPs using NAT gateway](https://help.aliyun.com/document_detail/122217.html) 
 
 <!-- docs-link --> 

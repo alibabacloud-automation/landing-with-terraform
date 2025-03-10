@@ -2,7 +2,7 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上开通ACK并授权服务角色，涉及到ACK相关服务角色的创建。
-详情可查看[使用Terraform首次开通ACK并授权服务角色](http://help.aliyun.com/document_detail/606722.html)。
+详情可查看[使用Terraform首次开通ACK并授权服务角色](https://help.aliyun.com/document_detail/606722.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
@@ -40,6 +40,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Enable ACK and assign role](http://help.aliyun.com/document_detail/606722.htm) 
+The template is based on Aliyun document: [Enable ACK and assign role](https://help.aliyun.com/document_detail/606722.html) 
 
 <!-- docs-link --> 

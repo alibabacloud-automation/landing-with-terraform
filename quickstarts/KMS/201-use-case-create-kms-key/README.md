@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建并管理KMS密钥，涉及到KMS软件密钥管理实例,应用身份凭据，密钥别名等资源的创建与管理。
-详情可查看[通过Terraform创建KMS密钥](http://help.aliyun.com/document_detail/2572879.htm)。
+详情可查看[通过Terraform创建KMS密钥](https://help.aliyun.com/document_detail/2572879.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create and manage KMS keys on Alibaba Cloud, which involves the creation and management of resources such as KMS instance, key and key alias.
-More details in [Create KMS key](http://help.aliyun.com/document_detail/2572879.htm).
+More details in [Create KMS key](https://help.aliyun.com/document_detail/2572879.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -47,6 +47,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create KMS key](http://help.aliyun.com/document_detail/2572879.htm) 
+The template is based on Aliyun document: [Create KMS key](https://help.aliyun.com/document_detail/2572879.html) 
 
 <!-- docs-link --> 

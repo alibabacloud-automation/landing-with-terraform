@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上恢复RDS PostgreSQL实例，涉及到备份的创建以及按时间点和备份集恢复RDS PostgreSQL实例。
-详情可查看[通过 Terraform 恢复 RDS PostgreSQL 实例](http://help.aliyun.com/document_detail/456035.htm)。
+详情可查看[通过 Terraform 恢复 RDS PostgreSQL 实例](https://help.aliyun.com/document_detail/456035.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to restore RDS PostgreSQL instance on Alibaba Cloud, which involves the creation of backup and restoration by backup and time.
-More details in [Restore RDS instance data](http://help.aliyun.com/document_detail/456035.htm).
+More details in [Restore RDS instance data](https://help.aliyun.com/document_detail/456035.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -45,6 +45,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Restore RDS instance](http://help.aliyun.com/document_detail/456035.htm) 
+The template is based on Aliyun document: [Restore RDS instance](https://help.aliyun.com/document_detail/456035.html) 
 
 <!-- docs-link --> 

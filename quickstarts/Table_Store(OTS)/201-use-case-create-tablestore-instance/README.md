@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建表格存储实例。
-详情可查看[通过Terraform创建表格存储实例](https://help.aliyun.com/zh/tablestore/developer-reference/terraform-integration-example-of-tablestore)。
+详情可查看[通过Terraform创建表格存储实例](https://help.aliyun.com/document_detail/2843007.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create TableStore instance on Alibaba Cloud.
-More details in [Create TableStore instance](https://help.aliyun.com/zh/tablestore/developer-reference/terraform-integration-example-of-tablestore).
+More details in [Create TableStore instance](https://help.aliyun.com/document_detail/2843007.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -40,6 +40,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create TableStore instance](https://help.aliyun.com/zh/tablestore/developer-reference/terraform-integration-example-of-tablestore) 
+The template is based on Aliyun document: [Create TableStore instance](https://help.aliyun.com/document_detail/2843007.html) 
 
 <!-- docs-link --> 

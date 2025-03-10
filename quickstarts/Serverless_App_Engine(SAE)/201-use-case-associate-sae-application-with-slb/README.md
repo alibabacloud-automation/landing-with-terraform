@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上为SAE应用绑定和解绑公网SLB，涉及到SAE应用与SLB的配置。
-详情可查看[使用Terraform为SAE应用绑定SLB](http://help.aliyun.com/document_detail/424337.htm)。
+详情可查看[使用Terraform为SAE应用绑定SLB](https://help.aliyun.com/document_detail/424337.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to associate an Internet-facing SLB instance with an SAE application and how to disassociate the SLB instance on Alibaba Cloud, which involves the configuration of SAE application and SLB.
-More details in [Use Terraform to associate an SAE application with an SLB instance](http://help.aliyun.com/document_detail/424337.htm).
+More details in [Use Terraform to associate an SAE application with an SLB instance](https://help.aliyun.com/document_detail/424337.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -60,6 +60,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use Terraform to associate an SAE application with an SLB instance](http://help.aliyun.com/document_detail/424337.htm) 
+The template is based on Aliyun document: [Use Terraform to associate an SAE application with an SLB instance](https://help.aliyun.com/document_detail/424337.html) 
 
 <!-- docs-link --> 

@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上自动创建SAE应用，使用自动配置的方式。
-详情可查看[使用Terraform管理SAE应用](http://help.aliyun.com/document_detail/424335.htm)。
+详情可查看[使用Terraform管理SAE应用](https://help.aliyun.com/document_detail/424335.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create SAE application on Alibaba Cloud, using the automatic configuration way.
-More details in [Use Terraform to manage SAE applications](http://help.aliyun.com/document_detail/424335.htm).
+More details in [Use Terraform to manage SAE applications](https://help.aliyun.com/document_detail/424335.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -46,6 +46,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage SAE applications](http://help.aliyun.com/document_detail/424335.htm) 
+The template is based on Aliyun document: [Manage SAE applications](https://help.aliyun.com/document_detail/424335.html) 
 
 <!-- docs-link --> 

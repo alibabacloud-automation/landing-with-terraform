@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上的云消息队列 Kafka 版的专业版实例使用访问控制列表（ACL）来管理SASL用户对主题和消费组的访问权限，涉及到SASL用户及权限的创建及查询。
-详情可查看[通过 Terraform 为Kafka SASL用户授权](https://help.aliyun.com/zh/apsaramq-for-kafka/use-terraform-to-authorize-sasl-users)。
+详情可查看[通过 Terraform 为Kafka SASL用户授权](https://help.aliyun.com/document_detail/2618406.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to use ApsaraMQ for Kafka Professional Edition instances access control lists (ACLs) to manage the permissions of Simple Authentication and Security Layer (SASL) users on topics and consumer groups on Alibaba Cloud, which involves the creation and query of SASL users and permissions.
-More details in [Kafka authorize SASL users](https://help.aliyun.com/zh/apsaramq-for-kafka/use-terraform-to-authorize-sasl-users).
+More details in [Kafka authorize SASL users](https://help.aliyun.com/document_detail/2618406.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -49,6 +49,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Kafka authorize SASL users](https://help.aliyun.com/zh/apsaramq-for-kafka/use-terraform-to-authorize-sasl-users) 
+The template is based on Aliyun document: [Kafka authorize SASL users](https://help.aliyun.com/document_detail/2618406.html) 
 
 <!-- docs-link --> 

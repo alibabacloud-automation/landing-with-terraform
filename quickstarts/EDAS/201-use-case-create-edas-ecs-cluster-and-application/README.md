@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建ECS集群、部署应用、绑定SLB、创建应用分组及扩容等操作，涉及到ECS集群，EDAS ECS应用，应用分组，负载均衡实例等资源的创建。
-详情可查看[通过Terraform创建ECS集群并部署应用](http://help.aliyun.com/document_detail/171493.htm)。
+详情可查看[通过Terraform创建ECS集群并部署应用](https://help.aliyun.com/document_detail/171493.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create Elastic Compute Service (ECS) clusters and deploy applications in Enterprise Distributed Application Service (EDAS), bind Server Load Balancer (SLB) to the applications, create application groups, and scale out the applications on Alibaba Cloud.
-More details in [Use Terraform to create an ECS cluster and deploy an application](hhttp://help.aliyun.com/document_detail/171493.htm).
+More details in [Use Terraform to create an ECS cluster and deploy an application](https://help.aliyun.com/document_detail/171493.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -58,6 +58,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create EDAS ECS clusters and application](http://help.aliyun.com/document_detail/171493.htm) 
+The template is based on Aliyun document: [Create EDAS ECS clusters and application](https://help.aliyun.com/document_detail/171493.html) 
 
 <!-- docs-link --> 

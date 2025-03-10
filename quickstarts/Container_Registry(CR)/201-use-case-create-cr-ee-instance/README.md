@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建容器镜像企业版实例。
-详情可查看[使用Terraform创建容器镜像企业版实例](https://help.aliyun.com/zh/acr/developer-reference/terraform-integration-example)。
+详情可查看[使用Terraform创建容器镜像企业版实例](https://help.aliyun.com/document_detail/2804815.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create a Container Registry Enterprise Edition image on Alibaba Cloud.
-More details in [Create ACR enterprise edition instance](https://help.aliyun.com/zh/acr/developer-reference/terraform-integration-example).
+More details in [Create ACR enterprise edition instance](https://help.aliyun.com/document_detail/2804815.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -38,6 +38,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create ACR enterprise edition instance](https://help.aliyun.com/zh/acr/developer-reference/terraform-integration-example) 
+The template is based on Aliyun document: [Create ACR enterprise edition instance](https://help.aliyun.com/document_detail/2804815.html) 
 
 <!-- docs-link --> 

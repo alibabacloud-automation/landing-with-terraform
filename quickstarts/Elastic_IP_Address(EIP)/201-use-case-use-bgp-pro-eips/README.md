@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上使用BGP（多线）_精品线路EIP，实现中国内地终端用户到中国香港或其他海外地域服务的低时延访问。
-详情可查看[使用BGP（多线）精品线路EIP低时延访问Web服务](https://help.aliyun.com/zh/eip/use-cases/use-bgp-pro-eips-to-access-web-services-with-low-network-latency)。
+详情可查看[使用BGP（多线）精品线路EIP低时延访问Web服务](https://help.aliyun.com/document_detail/171278.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to use BGP (Multi-ISP) Pro elastic IP addresses (EIPs) to optimize data transmission to the Chinese mainland.
-More details in [Use BGP (Multi-ISP) Pro EIPs to access web services with low network latency](https://help.aliyun.com/zh/eip/use-cases/use-bgp-pro-eips-to-access-web-services-with-low-network-latency).
+More details in [Use BGP (Multi-ISP) Pro EIPs to access web services with low network latency](https://help.aliyun.com/document_detail/171278.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -53,6 +53,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use BGP (Multi-ISP) Pro EIPs to access web services with low network latency](https://help.aliyun.com/zh/eip/use-cases/use-bgp-pro-eips-to-access-web-services-with-low-network-latency) 
+The template is based on Aliyun document: [Use BGP (Multi-ISP) Pro EIPs to access web services with low network latency](https://help.aliyun.com/document_detail/171278.html) 
 
 <!-- docs-link --> 

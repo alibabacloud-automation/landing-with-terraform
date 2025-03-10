@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建ACK专有集群。
-详情可查看[通过Terraform创建ACK专有集群](http://help.aliyun.com/document_detail/2674339.htm)。
+详情可查看[通过Terraform创建ACK专有集群](https://help.aliyun.com/document_detail/2674339.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create an ACK dedicated cluster on Alibaba Cloud.
-More details in [Use Terraform to create an ACK dedicated cluster](http://help.aliyun.com/document_detail/2674339.htm).
+More details in [Use Terraform to create an ACK dedicated cluster](https://help.aliyun.com/document_detail/2674339.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -52,6 +52,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create ACK proprietary cluster](http://help.aliyun.com/document_detail/2674339.htm) 
+The template is based on Aliyun document: [Create ACK proprietary cluster](https://help.aliyun.com/document_detail/2674339.html) 
 
 <!-- docs-link --> 

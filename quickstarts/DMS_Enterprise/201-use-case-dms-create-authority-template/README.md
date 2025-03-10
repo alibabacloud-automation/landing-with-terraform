@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建一个DMS权限模板。
-详情可查看[使用Terraform创建一个DMS权限模板](https://help.aliyun.com/zh/dms/developer-reference/terraform-integration-example)。
+详情可查看[使用Terraform创建一个DMS权限模板](https://help.aliyun.com/document_detail/2834453.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create a DMS authority template on Alibaba Cloud.
-More details in [Create DMS authority template](https://help.aliyun.com/zh/dms/developer-reference/terraform-integration-example).
+More details in [Create DMS authority template](https://help.aliyun.com/document_detail/2834453.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -40,6 +40,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create DMS authority template](https://help.aliyun.com/zh/dms/developer-reference/terraform-integration-example) 
+The template is based on Aliyun document: [Create DMS authority template](https://help.aliyun.com/document_detail/2834453.html) 
 
 <!-- docs-link --> 

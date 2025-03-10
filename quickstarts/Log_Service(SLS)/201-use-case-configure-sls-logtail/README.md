@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上配置Logtail采集，涉及到Logtail配置与应用Logtail采集配置到机器组。
-详情可查看[通过Terraform配置SLS Logtail采集](https://help.aliyun.com/zh/sls/developer-reference/use-terraform-to-configure-logtail-configuration)。
+详情可查看[通过Terraform配置SLS Logtail采集](https://help.aliyun.com/document_detail/2713316.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create a Logtail configuration on Alibaba Cloud, which involves the Logtail configuration and attachment.
-More details in [Use Terraform to create a SLS Logtail configuration](https://help.aliyun.com/zh/sls/developer-reference/use-terraform-to-configure-logtail-configuration).
+More details in [Use Terraform to create a SLS Logtail configuration](https://help.aliyun.com/document_detail/2713316.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -44,6 +44,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Configure SLS Logtail](https://help.aliyun.com/zh/sls/developer-reference/use-terraform-to-configure-logtail-configuration) 
+The template is based on Aliyun document: [Configure SLS Logtail](https://help.aliyun.com/document_detail/2713316.html) 
 
 <!-- docs-link --> 

@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上的云服务器ECS中部署开源的RabbitMQ。。
-详情可查看[部署开源的RabbitMQ](https://help.aliyun.com/zh/ecs/use-cases/deploy-rabbitmq)。
+详情可查看[部署开源的RabbitMQ](https://help.aliyun.com/document_detail/53100.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to deploy open source RabbitMQ on an Elastic Compute Service (ECS) instance on Alibaba Cloud.
-More details in [Deploy open source RabbitMQ](https://help.aliyun.com/zh/ecs/use-cases/deploy-rabbitmq).
+More details in [Deploy open source RabbitMQ](https://help.aliyun.com/document_detail/53100.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -55,6 +55,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Deploy open source RabbitMQ](https://help.aliyun.com/zh/ecs/use-cases/deploy-rabbitmq) 
+The template is based on Aliyun document: [Deploy open source RabbitMQ](https://help.aliyun.com/document_detail/53100.html) 
 
 <!-- docs-link --> 

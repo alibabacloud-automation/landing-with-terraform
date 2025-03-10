@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建一个ClickHouse集群，并为其创建一个数据库账号。
-详情可查看[通过Terraform新建ClickHouse集群并为其创建数据库账号](https://help.aliyun.com/zh/clickhouse/developer-reference/integrate-with-terraform)。
+详情可查看[通过Terraform新建ClickHouse集群并为其创建数据库账号](https://help.aliyun.com/document_detail/2835286.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create an ApsaraDB ClickHouse cluster and database account on Alibaba Cloud.
-More details in [Create an ApsaraDB ClickHouse cluster and database account](https://help.aliyun.com/zh/clickhouse/developer-reference/integrate-with-terraform).
+More details in [Create an ApsaraDB ClickHouse cluster and database account](https://help.aliyun.com/document_detail/2835286.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -47,6 +47,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create an ApsaraDB ClickHouse cluster and database account](https://help.aliyun.com/zh/clickhouse/developer-reference/integrate-with-terraform) 
+The template is based on Aliyun document: [Create an ApsaraDB ClickHouse cluster and database account](https://help.aliyun.com/document_detail/2835286.html) 
 
 <!-- docs-link --> 

@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上的Linux系统的ECS实例上部署GitLab。
-详情可查看[部署GitLab代码托管平台](https://help.aliyun.com/zh/ecs/use-cases/deploy-and-use-gitlab)。
+详情可查看[部署GitLab代码托管平台](https://help.aliyun.com/document_detail/52857.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to deploy GitLab on a Linux Elastic Compute Service (ECS) instance to build a code hosting platform on Alibaba Cloud.
-More details in [Deploy a GitLab code hosting platform](https://help.aliyun.com/zh/ecs/use-cases/deploy-and-use-gitlab).
+More details in [Deploy a GitLab code hosting platform](https://help.aliyun.com/document_detail/52857.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -53,6 +53,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Deploy a GitLab code hosting platform](https://help.aliyun.com/zh/ecs/use-cases/deploy-and-use-gitlab) 
+The template is based on Aliyun document: [Deploy a GitLab code hosting platform](https://help.aliyun.com/document_detail/52857.html) 
 
 <!-- docs-link --> 

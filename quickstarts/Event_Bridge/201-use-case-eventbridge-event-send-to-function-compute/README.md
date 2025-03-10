@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上使用事件总线EventBridge将事件的状态变更投递到函数计算，涉及到在事件总线中定义规则。
-详情可查看[通过Terraform实现IaC自动化部署事件总线，事件发送至函数计算](http://help.aliyun.com/document_detail/424947.htm)。
+详情可查看[通过Terraform实现IaC自动化部署事件总线，事件发送至函数计算](https://help.aliyun.com/document_detail/424947.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to use EventBridge and send event to Function Compute on Alibaba Cloud, which involves creation of EventBridge rules.
-More details in [EventBridge event send to Function Compute](http://help.aliyun.com/document_detail/424947.htm).
+More details in [EventBridge event send to Function Compute](https://help.aliyun.com/document_detail/424947.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -50,6 +50,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [EventBridge event send to Function Compute](http://help.aliyun.com/document_detail/424947.htm) 
+The template is based on Aliyun document: [EventBridge event send to Function Compute](https://help.aliyun.com/document_detail/424947.html) 
 
 <!-- docs-link --> 

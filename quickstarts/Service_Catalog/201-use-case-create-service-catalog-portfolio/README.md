@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建服务目录产品组合。
-详情可查看[管理服务目录产品组合](https://help.aliyun.com/zh/service-catalog/developer-reference/terraform-integration-example)。
+详情可查看[管理服务目录产品组合](https://help.aliyun.com/document_detail/2807911.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create Service Catalog portfolio on Alibaba Cloud.
-More details in [Create Service Catalog portfolio](https://help.aliyun.com/zh/service-catalog/developer-reference/terraform-integration-example).
+More details in [Create Service Catalog portfolio](https://help.aliyun.com/document_detail/2807911.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -38,6 +38,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create Service Catalog portfolio](https://help.aliyun.com/zh/service-catalog/developer-reference/terraform-integration-example) 
+The template is based on Aliyun document: [Create Service Catalog portfolio](https://help.aliyun.com/document_detail/2807911.html) 
 
 <!-- docs-link --> 

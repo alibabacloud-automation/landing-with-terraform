@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上的Linux操作系统的ECS实例上快速搭建Hadoop分布式和伪分布式环境。
-详情可查看[搭建Hadoop环境](https://help.aliyun.com/zh/ecs/use-cases/build-a-hadoop-environment)。
+详情可查看[搭建Hadoop环境](https://help.aliyun.com/document_detail/424731.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to build a Hadoop distributed environment on an Elastic Compute Service (ECS) instance that runs a Linux operating system on Alibaba Cloud.
-More details in [Build a Hadoop environment](https://help.aliyun.com/zh/ecs/use-cases/build-a-hadoop-environment).
+More details in [Build a Hadoop environment](https://help.aliyun.com/document_detail/424731.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -59,6 +59,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Build a Hadoop environment](https://help.aliyun.com/zh/ecs/use-cases/build-a-hadoop-environment) 
+The template is based on Aliyun document: [Build a Hadoop environment](https://help.aliyun.com/document_detail/424731.html) 
 
 <!-- docs-link --> 

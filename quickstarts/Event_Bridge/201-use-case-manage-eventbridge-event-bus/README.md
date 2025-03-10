@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上管理事件总线，涉及到创建事件总线、事件源、连接配置、API 端点与事件规则等操作
-详情可查看[通过Terraform管理事件总线](http://help.aliyun.com/document_detail/2579930.htm)。
+详情可查看[通过Terraform管理事件总线](https://help.aliyun.com/document_detail/2579930.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to manage EventBridge on Alibaba Cloud, which involves the creation of resources such as event bus, event source, connection, API destination and rules.
-More details in [Manage EventBridge event bus](http://help.aliyun.com/document_detail/2579930.htm).
+More details in [Manage EventBridge event bus](https://help.aliyun.com/document_detail/2579930.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -48,6 +48,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage EventBridge event bus](http://help.aliyun.com/document_detail/2579930.htm) 
+The template is based on Aliyun document: [Manage EventBridge event bus](https://help.aliyun.com/document_detail/2579930.html) 
 
 <!-- docs-link --> 

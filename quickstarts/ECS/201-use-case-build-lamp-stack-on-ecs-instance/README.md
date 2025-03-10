@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上ECS实例内部署LAMP环境。
-详情可查看[手动部署LAMP环境](https://help.aliyun.com/zh/ecs/use-cases/build-a-lamp-stack-on-a-centos-7-instance)。
+详情可查看[手动部署LAMP环境](https://help.aliyun.com/document_detail/50774.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to build a LAMP stack on an Elastic Compute Service (ECS) instance on Alibaba Cloud.
-More details in [Build a LAMP stack on an Alibaba Cloud Linux or CentOS 7.x instance](https://help.aliyun.com/zh/ecs/use-cases/build-a-lamp-stack-on-a-centos-7-instance).
+More details in [Build a LAMP stack on an Alibaba Cloud Linux or CentOS 7.x instance](https://help.aliyun.com/document_detail/50774.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -54,6 +54,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Build a LAMP stack on an Alibaba Cloud Linux or CentOS 7.x instance](https://help.aliyun.com/zh/ecs/use-cases/build-a-lamp-stack-on-a-centos-7-instance) 
+The template is based on Aliyun document: [Build a LAMP stack on an Alibaba Cloud Linux or CentOS 7.x instance](https://help.aliyun.com/document_detail/50774.html) 
 
 <!-- docs-link --> 

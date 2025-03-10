@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上修改RDS参数以及查询参数修改日志，涉及到RDS PostgreSQL实例的创建，参数的修改和参数修改日志的查询。
-详情可查看[通过 Terraform 管理 RDS PostgreSQL 实例参数](http://help.aliyun.com/document_detail/456036.htm)。
+详情可查看[通过 Terraform 管理 RDS PostgreSQL 实例参数](https://help.aliyun.com/document_detail/456036.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to modify parameters and query parameter modification logs of an ApsaraDB RDS for PostgreSQL instance on Alibaba Cloud, which involves the creation of ApsaraDB RDS for PostgreSQL instance, the modification of parameters and query for modification logs.
-More details in [Manage RDS parameters](http://help.aliyun.com/document_detail/456036.htm).
+More details in [Manage RDS parameters](https://help.aliyun.com/document_detail/456036.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -44,6 +44,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage RDS parameters](http://help.aliyun.com/document_detail/456036.htm) 
+The template is based on Aliyun document: [Manage RDS parameters](https://help.aliyun.com/document_detail/456036.html) 
 
 <!-- docs-link --> 

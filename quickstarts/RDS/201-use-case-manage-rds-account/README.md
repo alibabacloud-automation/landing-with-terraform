@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建、修改、查询和删除RDS PostgreSQL实例账号。
-详情可查看[通过 Terraform 管理RDS账号](http://help.aliyun.com/document_detail/456029.htm)。
+详情可查看[通过 Terraform 管理RDS账号](https://help.aliyun.com/document_detail/456029.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create, modify, query, and delete an account for an ApsaraDB RDS for PostgreSQL instance on Alibaba Cloud.
-More details in [Manage an RDS account](http://help.aliyun.com/document_detail/456029.htm).
+More details in [Manage an RDS account](https://help.aliyun.com/document_detail/456029.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -42,6 +42,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage RDS account](http://help.aliyun.com/document_detail/456029.htm) 
+The template is based on Aliyun document: [Manage RDS account](https://help.aliyun.com/document_detail/456029.html) 
 
 <!-- docs-link --> 

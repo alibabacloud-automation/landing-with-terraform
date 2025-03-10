@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上利用Web应用防火墙（Web Application Firewall，简称WAF）3.0的自定义防护功能来防御异常用户代理（UA）对源站的攻击。
-详情可查看[通过WAF自定义防护功能抵御异常UA攻击](http://help.aliyun.com/document_detail/2804234.htm)。
+详情可查看[通过WAF自定义防护功能抵御异常UA攻击](https://help.aliyun.com/document_detail/2804234.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to use the custom rule module of Web Application Firewall (WAF) 3.0 to defend against UA attacks.
-More details in [Use the custom rule module of WAF to defend against UA attacks](http://help.aliyun.com/document_detail/2804234.htm).
+More details in [Use the custom rule module of WAF to defend against UA attacks](https://help.aliyun.com/document_detail/2804234.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -60,6 +60,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use the custom rule module of WAF to defend against UA attacks](http://help.aliyun.com/document_detail/2804234.htm) 
+The template is based on Aliyun document: [Use the custom rule module of WAF to defend against UA attacks](https://help.aliyun.com/document_detail/2804234.html) 
 
 <!-- docs-link --> 

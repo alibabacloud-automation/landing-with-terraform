@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建开启自动伸缩功能的节点池，涉及到ACK托管版集群与其节点池等资源的创建。
-详情可查看[使用Terraform创建具备自动伸缩功能的节点池](http://help.aliyun.com/document_detail/197717.htm)。
+详情可查看[使用Terraform创建具备自动伸缩功能的节点池](https://help.aliyun.com/document_detail/197717.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create a node pool that has auto scaling enabled on Alibaba Cloud, which involves the creation of resources such as ACK managed cluster and its node pool.
-More details in [Use Terraform to create a node pool that has auto scaling enabled](http://help.aliyun.com/document_detail/197717.htm).
+More details in [Use Terraform to create a node pool that has auto scaling enabled](https://help.aliyun.com/document_detail/197717.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -52,6 +52,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create ACK auto scaling node pool](http://help.aliyun.com/document_detail/197717.htm) 
+The template is based on Aliyun document: [Create ACK auto scaling node pool](https://help.aliyun.com/document_detail/197717.html) 
 
 <!-- docs-link --> 

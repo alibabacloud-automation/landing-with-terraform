@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上为Kafka实例添加以及删除白名单。
-详情可查看[通过 Terraform 管理Kafka IP白名单](https://help.aliyun.com/zh/apsaramq-for-kafka/cloud-message-queue-for-kafka/developer-reference/use-terraform-to-manage-ip-address-whitelists)。
+详情可查看[通过 Terraform 管理Kafka IP白名单](https://help.aliyun.com/document_detail/2618302.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to add IP addresses or CIDR blocks to or remove IP addresses or CIDR blocks from IP address whitelists for Kafka instance on Alibaba Cloud.
-More details in [Manage Kafka IP whitelists](https://help.aliyun.com/zh/apsaramq-for-kafka/cloud-message-queue-for-kafka/developer-reference/use-terraform-to-manage-ip-address-whitelists).
+More details in [Manage Kafka IP whitelists](https://help.aliyun.com/document_detail/2618302.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -43,6 +43,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage Kafka IP whitelists](https://help.aliyun.com/zh/apsaramq-for-kafka/cloud-message-queue-for-kafka/developer-reference/use-terraform-to-manage-ip-address-whitelists) 
+The template is based on Aliyun document: [Manage Kafka IP whitelists](https://help.aliyun.com/document_detail/2618302.html) 
 
 <!-- docs-link --> 

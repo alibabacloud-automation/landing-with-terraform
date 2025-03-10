@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云ECS实例中部署Java Web环境。
-详情可查看[手动部署Java Web环境（Tomcat）](https://help.aliyun.com/zh/ecs/use-cases/manually-deploy-a-java-web-environment-on-an-instance-that-runs-alibaba-cloud-linux)。
+详情可查看[手动部署Java Web环境（Tomcat）](https://help.aliyun.com/document_detail/460788.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to deploy a Java web environment on an Elastic Compute Service (ECS) instance.
-More details in [Deploy a Java web environment (Apache Tomcat)](https://help.aliyun.com/zh/ecs/use-cases/manually-deploy-a-java-web-environment-on-an-instance-that-runs-alibaba-cloud-linux).
+More details in [Deploy a Java web environment (Apache Tomcat)](https://help.aliyun.com/document_detail/460788.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -52,6 +52,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Deploy Java Web environment](https://help.aliyun.com/zh/ecs/use-cases/manually-deploy-a-java-web-environment-on-an-instance-that-runs-alibaba-cloud-linux) 
+The template is based on Aliyun document: [Deploy Java Web environment](https://help.aliyun.com/document_detail/460788.html) 
 
 <!-- docs-link --> 

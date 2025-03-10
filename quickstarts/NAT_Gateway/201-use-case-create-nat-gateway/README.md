@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建NAT网关实例。
-详情可查看[使用Terraform创建NAT网关实例](https://help.aliyun.com/zh/nat-gateway/developer-reference/terraform-resource-list)。
+详情可查看[使用Terraform创建NAT网关实例](https://help.aliyun.com/document_detail/2844821.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create NAT gateway instance on Alibaba Cloud.
-More details in [Create NAT Gateway](https://help.aliyun.com/zh/nat-gateway/developer-reference/terraform-resource-list).
+More details in [Create NAT Gateway](https://help.aliyun.com/document_detail/2844821.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -41,6 +41,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create NAT Gateway](https://help.aliyun.com/zh/nat-gateway/developer-reference/terraform-resource-list) 
+The template is based on Aliyun document: [Create NAT Gateway](https://help.aliyun.com/document_detail/2844821.html) 
 
 <!-- docs-link --> 

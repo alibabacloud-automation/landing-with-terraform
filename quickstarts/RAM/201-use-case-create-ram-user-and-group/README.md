@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建RAM用户与RAM用户组，并将RAM用户添加到RAM用户组，涉及到RAM用户，RAM用户AccessKey和RAM用户组的创建。
-详情可查看[通过Terraform创建RAM用户与RAM用户组](https://help.aliyun.com/zh/ram/developer-reference/create-a-ram-user)。
+详情可查看[通过Terraform创建RAM用户与RAM用户组](https://help.aliyun.com/document_detail/2841105.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create a Resource Access Management (RAM) user on Alibaba Cloud, which involves the creation of resources such as RAM user, RAM AccessKey and RAM group.
-More details in [Create RAM user and group](https://help.aliyun.com/zh/ram/developer-reference/create-a-ram-user).
+More details in [Create RAM user and group](https://help.aliyun.com/document_detail/2841105.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -44,6 +44,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create RAM user and group](https://help.aliyun.com/zh/ram/developer-reference/create-a-ram-user) 
+The template is based on Aliyun document: [Create RAM user and group](https://help.aliyun.com/document_detail/2841105.html) 
 
 <!-- docs-link --> 

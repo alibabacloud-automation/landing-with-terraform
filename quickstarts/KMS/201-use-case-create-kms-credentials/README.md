@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建凭据，涉及到KMS软件密钥管理实例,密钥,凭据等资源的创建。
-详情可查看[通过Terraform创建凭据](http://help.aliyun.com/document_detail/2572881.htm)。
+详情可查看[通过Terraform创建凭据](https://help.aliyun.com/document_detail/2572881.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create a secret on Alibaba Cloud, which involves the creation of resources such as KMS instance of the software key management type, key and secret.
-More details in [Create a secret](http://help.aliyun.com/document_detail/2572881.htm).
+More details in [Create a secret](https://help.aliyun.com/document_detail/2572881.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -45,6 +45,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create credentials](http://help.aliyun.com/document_detail/2572881.htm) 
+The template is based on Aliyun document: [Create credentials](https://help.aliyun.com/document_detail/2572881.html) 
 
 <!-- docs-link --> 

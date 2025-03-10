@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于通过钉钉群接收报警通知。
-详情可查看[通过钉钉群接收报警通知](https://help.aliyun.com/zh/cms/use-cases/enable-an-alert-contact-to-receive-alert-notifications-in-a-dingtalk-group)。
+详情可查看[通过钉钉群接收报警通知](https://help.aliyun.com/document_detail/52872.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to enable an alert contact to receive alert notifications in a DingTalk group.
-More details in [Enable an alert contact to receive alert notifications in a DingTalk group](https://help.aliyun.com/zh/cms/use-cases/enable-an-alert-contact-to-receive-alert-notifications-in-a-dingtalk-group).
+More details in [Enable an alert contact to receive alert notifications in a DingTalk group](https://help.aliyun.com/document_detail/52872.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -41,6 +41,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Enable an alert contact to receive alert notifications in a DingTalk group](https://help.aliyun.com/zh/cms/use-cases/enable-an-alert-contact-to-receive-alert-notifications-in-a-dingtalk-group) 
+The template is based on Aliyun document: [Enable an alert contact to receive alert notifications in a DingTalk group](https://help.aliyun.com/document_detail/52872.html) 
 
 <!-- docs-link --> 

@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建VPC边界防火墙（防护通过高速通道连接的两个VPC之间的流量）。
-详情可查看[通过 Terraform 创建VPC边界防火墙来防护通过高速通道连接的两个VPC之间的流量](http://help.aliyun.com/document_detail/2245589.htm)。
+详情可查看[通过 Terraform 创建VPC边界防火墙来防护通过高速通道连接的两个VPC之间的流量](https://help.aliyun.com/document_detail/2245589.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create a virtual private cloud (VPC) firewall to protect traffic between two VPCs that are connected by using an Express Connect circuit.
-More details in [Create a VPC firewall to protect traffic between two VPCs that are connected by using an Express Connect circuit](http://help.aliyun.com/document_detail/2245589.htm).
+More details in [Create a VPC firewall to protect traffic between two VPCs that are connected by using an Express Connect circuit](https://help.aliyun.com/document_detail/2245589.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -52,6 +52,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [protect traffic between two VPCs](http://help.aliyun.com/document_detail/2245589.htm) 
+The template is based on Aliyun document: [protect traffic between two VPCs](https://help.aliyun.com/document_detail/2245589.html) 
 
 <!-- docs-link --> 

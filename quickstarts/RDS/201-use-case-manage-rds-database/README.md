@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建和删除RDS PostgreSQL数据库以及修改或添加数据库备注信息，涉及到RDS PostgreSQL实例与数据库的创建。
-详情可查看[通过 Terraform 管理RDS数据库](http://help.aliyun.com/document_detail/456027.htm)。
+详情可查看[通过 Terraform 管理RDS数据库](https://help.aliyun.com/document_detail/456027.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create and delete a database for an ApsaraDB RDS for PostgreSQL instance on Alibaba Cloud, which involves the creation of ApsaraDB RDS for PostgreSQL instance and database.
-More details in [Manage RDS database](http://help.aliyun.com/document_detail/456027.htm).
+More details in [Manage RDS database](https://help.aliyun.com/document_detail/456027.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -42,6 +42,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage RDS database](http://help.aliyun.com/document_detail/456027.htm) 
+The template is based on Aliyun document: [Manage RDS database](https://help.aliyun.com/document_detail/456027.html) 
 
 <!-- docs-link --> 

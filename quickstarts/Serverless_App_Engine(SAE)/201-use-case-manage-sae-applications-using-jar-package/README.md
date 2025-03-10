@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建SAE应用，使用JAR包部署。
-详情可查看[使用Terraform管理SAE应用](http://help.aliyun.com/document_detail/424335.htm)。
+详情可查看[使用Terraform管理SAE应用](https://help.aliyun.com/document_detail/424335.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create SAE application on Alibaba Cloud, using the JAR package to deploy.
-More details in [Use Terraform to manage SAE applications](http://help.aliyun.com/document_detail/424335.htm).
+More details in [Use Terraform to manage SAE applications](https://help.aliyun.com/document_detail/424335.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->

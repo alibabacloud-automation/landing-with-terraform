@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上使用Anycast EIP提升用户的公网访问体验，涉及到Anycast EIP实例的创建。
-详情可查看[任播弹性公网IP快速入门](https://help.aliyun.com/zh/anycast-eip/getting-started)。
+详情可查看[任播弹性公网IP快速入门](https://help.aliyun.com/document_detail/171864.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to use Anycast EIPs to accelerate access to Alibaba Cloud, which involves the creation of Anycast EIP instance.
-More details in [Anycast elastic IP addresses Qickstart](https://help.aliyun.com/zh/anycast-eip/getting-started).
+More details in [Anycast elastic IP addresses Qickstart](https://help.aliyun.com/document_detail/171864.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -60,6 +60,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Anycast elastic IP addresses Qickstart](https://help.aliyun.com/zh/anycast-eip/getting-started) 
+The template is based on Aliyun document: [Anycast elastic IP addresses Qickstart](https://help.aliyun.com/document_detail/171864.html) 
 
 <!-- docs-link --> 

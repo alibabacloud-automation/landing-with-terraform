@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上临时关闭高可用RDS PostgreSQL实例的主备自动切换，涉及到RDS PostgreSQL实例资源的创建和主备自动切换功能的配置。
-详情可查看[通过 Terraform 临时关闭RDS主备自动切换](http://help.aliyun.com/document_detail/456031.htm)。
+详情可查看[通过 Terraform 临时关闭RDS主备自动切换](https://help.aliyun.com/document_detail/456031.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to disable the automatic primary/secondary switchover feature for an ApsaraDB RDS for PostgreSQL instance that runs RDS High-availability Edition for a short period of time on Alibaba Cloud, which involves the creation of ApsaraDB RDS for PostgreSQL instance and configuration of the switchover feature.
-More details in [Disable the RDS automatic primary/secondary switchover feature for a short period of time](http://help.aliyun.com/document_detail/456031.htm).
+More details in [Disable the RDS automatic primary/secondary switchover feature for a short period of time](https://help.aliyun.com/document_detail/456031.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -43,6 +43,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Disable the automatic primary/secondary switchover feature for a short period of time](http://help.aliyun.com/document_detail/456031.htm) 
+The template is based on Aliyun document: [Disable the automatic primary/secondary switchover feature for a short period of time](https://help.aliyun.com/document_detail/456031.html) 
 
 <!-- docs-link --> 

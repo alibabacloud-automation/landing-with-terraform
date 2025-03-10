@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上购买DDoS高防实例。
-详情可查看[通过Terraform购买并管理DDoS高防实例](http://help.aliyun.com/document_detail/2527816.htm)。
+详情可查看[通过Terraform购买并管理DDoS高防实例](https://help.aliyun.com/document_detail/2527816.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to purchase and manage an Anti-DDoS Pro or Anti-DDoS Premium instance on Alibaba Cloud.
-More details in [Manage an Anti-DDoS instance](http://help.aliyun.com/document_detail/2527816.htm).
+More details in [Manage an Anti-DDoS instance](https://help.aliyun.com/document_detail/2527816.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -47,6 +47,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Anti DDoS instance management](http://help.aliyun.com/document_detail/2527816.htm) 
+The template is based on Aliyun document: [Anti DDoS instance management](https://help.aliyun.com/document_detail/2527816.html) 
 
 <!-- docs-link --> 

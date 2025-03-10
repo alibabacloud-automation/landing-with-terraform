@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例使用转发路由器实现跨地域VPC间的IPv6网络通信。
-详情可查看[使用企业版转发路由器实现跨地域VPC间的IPv6网络通信](https://help.aliyun.com/zh/cen/use-cases/use-the-enterprise-edition-transit-router-to-enable-ipv6-network-communication-between-vpcs-in-different-regions)。
+详情可查看[使用企业版转发路由器实现跨地域VPC间的IPv6网络通信](https://help.aliyun.com/document_detail/2773851.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 The example use Enterprise Edition transit routers to establish IPv6 communication among VPCs in different regions.
-More details in [Use Enterprise Edition transit routers to establish IPv6 communication among VPCs in different regions](https://www.alibabacloud.com/help/en/cen/use-cases/use-the-enterprise-edition-transit-router-to-enable-ipv6-network-communication-between-vpcs-in-different-regions).
+More details in [Use Enterprise Edition transit routers to establish IPv6 communication among VPCs in different regions](https://help.aliyun.com/document_detail/2773851.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 
@@ -80,6 +80,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use Enterprise Edition transit routers to establish IPv6 communication among VPCs in different regions](https://www.alibabacloud.com/help/en/cen/use-cases/use-the-enterprise-edition-transit-router-to-enable-ipv6-network-communication-between-vpcs-in-different-regions)
+The template is based on Aliyun document: [Use Enterprise Edition transit routers to establish IPv6 communication among VPCs in different regions](https://help.aliyun.com/document_detail/2773851.html)
 
 <!-- docs-link --> 

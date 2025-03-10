@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 云命令行（Cloud Shell）中预装了Terraform。Terraform是一种开源工具，用于安全高效地预配和管理云基础结构。您可以通过Terraform管理阿里云资源。本示例用于在阿里云上创建ECS。
-详情可查看[云命令行中使用Terraform管理ECS实例](http://help.aliyun.com/document_detail/102418.htm)。
+详情可查看[云命令行中使用Terraform管理ECS实例](https://help.aliyun.com/document_detail/102418.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 Terraform is preinstalled in Cloud Shell. Terraform is an open source tool that allows you to preconfigure and manage your cloud infrastructure in a secure and efficient manner. In Cloud Shell, you can use Terraform to manage your Alibaba Cloud resources. This example is used to create ECS instance on Alibaba Cloud. 
-More details in [Use Terraform to manage Alibaba Cloud resources in Cloud Shell](http://help.aliyun.com/document_detail/102418.htm).
+More details in [Use Terraform to manage Alibaba Cloud resources in Cloud Shell](https://help.aliyun.com/document_detail/102418.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -55,6 +55,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use Terraform to manage Alibaba Cloud resources in Cloud Shell](http://help.aliyun.com/document_detail/102418.htm) 
+The template is based on Aliyun document: [Use Terraform to manage Alibaba Cloud resources in Cloud Shell](https://help.aliyun.com/document_detail/102418.html) 
 
 <!-- docs-link --> 

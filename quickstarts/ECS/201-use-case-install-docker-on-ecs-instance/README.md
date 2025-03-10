@@ -2,13 +2,13 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例基于OOS模板在阿里云ECS实例上快速安装Docker。支持在新建的ECS实例上进行安装和在一个已有的ECS实例安装两种场景。
-详情可查看[安装Docker](https://help.aliyun.com/zh/ecs/use-cases/install-and-use-docker-on-a-linux-ecs-instance)。
+详情可查看[安装Docker](https://help.aliyun.com/document_detail/51853.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example quickly installs Docker on an Alibaba Cloud ECS instance based on the OOS template. 
 It supports two scenarios: installing on a newly created ECS instance and installing on an existing ECS instance.
-More details in [Install Docker](https://www.alibabacloud.com/help/zh/ecs/use-cases/install-and-use-docker-on-a-linux-ecs-instance).
+More details in [Install Docker](https://help.aliyun.com/document_detail/51853.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 ## Providers
@@ -59,6 +59,6 @@ No modules.
 ## Documentation
 <!-- docs-link -->
 
-The template is based on Aliyun document: [Install Docker on Ecs with Terraform](https://help.aliyun.com/zh/ecs/use-cases/install-and-use-docker-on-a-linux-ecs-instance)
+The template is based on Aliyun document: [Install Docker on Ecs with Terraform](https://help.aliyun.com/document_detail/51853.html)
 
 <!-- docs-link -->

@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上的Linux实例上，手动搭建WordPress网站。
-详情可查看[手动搭建WordPress（Linux）](https://help.aliyun.com/zh/ecs/use-cases/manually-build-a-wordpress-website-on-a-centos-7-ecs-instance)。
+详情可查看[手动搭建WordPress（Linux）](https://help.aliyun.com/document_detail/151691.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to build a WordPress website on Elastic Compute Service (ECS) instances with Linux operating systems on Alibaba Cloud.
-More details in [Build a WordPress website on a Linux instance](https://help.aliyun.com/zh/ecs/use-cases/manually-build-a-wordpress-website-on-a-centos-7-ecs-instance).
+More details in [Build a WordPress website on a Linux instance](https://help.aliyun.com/document_detail/151691.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -54,6 +54,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Build a WordPress website on a Linux instance](https://help.aliyun.com/zh/ecs/use-cases/manually-build-a-wordpress-website-on-a-centos-7-ecs-instance) 
+The template is based on Aliyun document: [Build a WordPress website on a Linux instance](https://help.aliyun.com/document_detail/151691.html) 
 
 <!-- docs-link --> 

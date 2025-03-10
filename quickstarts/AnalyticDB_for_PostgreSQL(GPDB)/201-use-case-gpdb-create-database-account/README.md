@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建一个 AnalyticDB PostgreSQL 实例及数据库账号。
-详情可查看[通过 Terraform 创建 AnalyticDB PostgreSQL 数据库账号](https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/developer-reference/terraform-integration-example)。
+详情可查看[通过 Terraform 创建 AnalyticDB PostgreSQL 数据库账号](https://help.aliyun.com/document_detail/2842793.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create database account for AnalyticDB PostgreSQL on Alibaba Cloud.
-More details in [Create database account for AnalyticDB PostgreSQL instance](https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/developer-reference/terraform-integration-example).
+More details in [Create database account for AnalyticDB PostgreSQL instance](https://help.aliyun.com/document_detail/2842793.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -44,6 +44,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create database account for AnalyticDB PostgreSQL instance](https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/developer-reference/terraform-integration-example) 
+The template is based on Aliyun document: [Create database account for AnalyticDB PostgreSQL instance](https://help.aliyun.com/document_detail/2842793.html) 
 
 <!-- docs-link --> 

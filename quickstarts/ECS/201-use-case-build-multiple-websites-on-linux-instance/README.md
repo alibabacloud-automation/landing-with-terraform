@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上Linux系统的ECS实例上使用Nginx搭建多个Web站点。
-详情可查看[Nginx服务配置多站点](https://help.aliyun.com/zh/ecs/use-cases/build-multiple-websites-on-a-linux-instance)。
+详情可查看[Nginx服务配置多站点](https://help.aliyun.com/document_detail/171730.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to use NGINX to build multiple websites on a Linux ECS instance on Alibaba Cloud.
-More details in [Use NGINX to configure multiple websites](https://help.aliyun.com/zh/ecs/use-cases/build-multiple-websites-on-a-linux-instance).
+More details in [Use NGINX to configure multiple websites](https://help.aliyun.com/document_detail/171730.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -50,6 +50,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use NGINX to configure multiple websites](https://help.aliyun.com/zh/ecs/use-cases/build-multiple-websites-on-a-linux-instance) 
+The template is based on Aliyun document: [Use NGINX to configure multiple websites](https://help.aliyun.com/document_detail/171730.html) 
 
 <!-- docs-link --> 

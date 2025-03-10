@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上使用阿里云提供的Docker应用镜像在轻量应用服务器上快速部署Docker环境。
-详情可查看[快速部署Docker（使用应用镜像）](https://help.aliyun.com/zh/simple-application-server/use-cases/deploy-and-use-docker)。
+详情可查看[快速部署Docker（使用应用镜像）](https://help.aliyun.com/document_detail/209483.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to deploy a Docker environment on a simple application server by using a Docker application image provided by Alibaba Cloud.
-More details in [Deploy Docker by using a Docker application image](https://help.aliyun.com/zh/simple-application-server/use-cases/deploy-and-use-docker).
+More details in [Deploy Docker by using a Docker application image](https://help.aliyun.com/document_detail/209483.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -54,6 +54,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Deploy Docker by using a Docker application image](https://help.aliyun.com/zh/simple-application-server/use-cases/deploy-and-use-docker) 
+The template is based on Aliyun document: [Deploy Docker by using a Docker application image](https://help.aliyun.com/document_detail/209483.html) 
 
 <!-- docs-link --> 

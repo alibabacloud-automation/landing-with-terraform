@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上通过Terraform创建Bucket，涉及到OSS存储空间的创建与存储空间访问权限的配置。
-详情可查看[通过Terraform创建Bucket](http://help.aliyun.com/document_detail/98855.htm)。
+详情可查看[通过Terraform创建Bucket](https://help.aliyun.com/document_detail/98855.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to manage Object Storage Service on Alibaba Cloud, which involves the creation of OSS bucket and configuration of OSS bucket ACL.
-More details in [Use Terraform to manage OSS](http://help.aliyun.com/document_detail/98855.htm).
+More details in [Use Terraform to manage OSS](https://help.aliyun.com/document_detail/98855.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -40,6 +40,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage OSS](http://help.aliyun.com/document_detail/98855.htm) 
+The template is based on Aliyun document: [Manage OSS](https://help.aliyun.com/document_detail/98855.html) 
 
 <!-- docs-link --> 

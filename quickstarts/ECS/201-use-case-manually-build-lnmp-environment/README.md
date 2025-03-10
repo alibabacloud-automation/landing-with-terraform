@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云的ECS实例上手动部署LNMP环境。
-详情可查看[手动部署LNMP环境](https://help.aliyun.com/zh/ecs/use-cases/manually-build-an-lnmp-environment-on-a-centos-instance)。
+详情可查看[手动部署LNMP环境](https://help.aliyun.com/document_detail/97251.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to deploy an LNMP stack (Linux, NGINX, MySQL, and PHP) on an Elastic Compute Service (ECS) instance on Alibaba Cloud.
-More details in [Deploy an LNMP stack](https://help.aliyun.com/zh/ecs/use-cases/manually-build-an-lnmp-environment-on-a-centos-instance).
+More details in [Deploy an LNMP stack](https://help.aliyun.com/document_detail/97251.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -50,6 +50,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Deploy an LNMP stack](https://help.aliyun.com/zh/ecs/use-cases/manually-build-an-lnmp-environment-on-a-centos-instance) 
+The template is based on Aliyun document: [Deploy an LNMP stack](https://help.aliyun.com/document_detail/97251.html) 
 
 <!-- docs-link --> 

@@ -38,6 +38,6 @@ More details in [Quick start for Alibaba Cloud OSS Backend for Terraform](https:
 ## Documentation
 <!-- docs-link -->
 
-The template creates a bucket basing on Aliyun document: [Quick start for Alibaba Cloud OSS Backend for Terraform](http://help.aliyun.com/document_detail/145541.html)
+The template creates a bucket basing on Aliyun document: [Quick start for Alibaba Cloud OSS Backend for Terraform](https://help.aliyun.com/document_detail/145541.html)
 
 <!-- docs-link -->

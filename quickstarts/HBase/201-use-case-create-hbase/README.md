@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建一个HBase集群。
-详情可查看[通过Terraform创建HBase集群](https://help.aliyun.com/zh/hbase/developer-reference/terraform-integration-example)。
+详情可查看[通过Terraform创建HBase集群](https://help.aliyun.com/document_detail/2841890.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create HBase instance on Alibaba Cloud.
-More details in [Create HBase instance](https://help.aliyun.com/zh/hbase/developer-reference/terraform-integration-example).
+More details in [Create HBase instance](https://help.aliyun.com/document_detail/2841890.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -42,6 +42,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create HBase instance](https://help.aliyun.com/zh/hbase/developer-reference/terraform-integration-example) 
+The template is based on Aliyun document: [Create HBase instance](https://help.aliyun.com/document_detail/2841890.html) 
 
 <!-- docs-link --> 

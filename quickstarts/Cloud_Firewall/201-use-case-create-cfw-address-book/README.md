@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建云防火墙的地址簿。
-详情可查看[通过Terraform创建云防火墙地址簿](https://icms.alibaba-inc.com/content/cfw/cloud-firewall?l=1&m=26522&n=4114948)。
+详情可查看[通过Terraform创建云防火墙地址簿](https://help.aliyun.com/document_detail/2245587.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create Cloud Firewall address book on Alibaba Cloud.
-More details in [Create Cloud Firewall address book](https://icms.alibaba-inc.com/content/cfw/cloud-firewall?l=1&m=26522&n=4114948).
+More details in [Create Cloud Firewall address book](https://help.aliyun.com/document_detail/2245587.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -35,6 +35,6 @@ No inputs.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create Cloud Firewall address book](http://help.aliyun.com/document_detail/2245587.htm) 
+The template is based on Aliyun document: [Create Cloud Firewall address book](https://help.aliyun.com/document_detail/2245587.html) 
 
 <!-- docs-link --> 

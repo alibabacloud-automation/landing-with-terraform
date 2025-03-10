@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上配置DDoS高防流量调度器规则。
-详情可查看[通过Terraform配置流量调度器规则](http://help.aliyun.com/document_detail/2536225.htm)。
+详情可查看[通过Terraform配置流量调度器规则](https://help.aliyun.com/document_detail/2536225.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to configure Sec-Traffic Manager rule on Alibaba Cloud.
-More details in [Configure Anti DDoS Sec-Traffic Manager](http://help.aliyun.com/document_detail/2536225.htm).
+More details in [Configure Anti DDoS Sec-Traffic Manager](https://help.aliyun.com/document_detail/2536225.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -40,6 +40,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Anti DDoS traffic scheduler configuration](http://help.aliyun.com/document_detail/2536225.htm) 
+The template is based on Aliyun document: [Anti DDoS traffic scheduler configuration](https://help.aliyun.com/document_detail/2536225.html) 
 
 <!-- docs-link --> 

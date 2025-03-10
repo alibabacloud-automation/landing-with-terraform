@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上实现公网NAT网关的SNAT功能以访问互联网。
-详情可查看[通过Terraform实现公网NAT网关的SNAT功能以访问互联网](https://help.aliyun.com/zh/nat-gateway/getting-started/use-the-snat-feature-of-an-internet-nat-gateway-to-access-the-internet)。
+详情可查看[通过Terraform实现公网NAT网关的SNAT功能以访问互联网](https://help.aliyun.com/document_detail/181972.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to implement the SNAT function of the public network NAT gateway to access the Internet on Alibaba Cloud.
-More details in [NAT gateway SNAT function](https://help.aliyun.com/zh/nat-gateway/getting-started/use-the-snat-feature-of-an-internet-nat-gateway-to-access-the-internet).
+More details in [NAT gateway SNAT function](https://help.aliyun.com/document_detail/181972.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 
@@ -51,6 +51,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [NAT gateway SNAT function](https://help.aliyun.com/zh/nat-gateway/getting-started/use-the-snat-feature-of-an-internet-nat-gateway-to-access-the-internet) 
+The template is based on Aliyun document: [NAT gateway SNAT function](https://help.aliyun.com/document_detail/181972.html) 
 
 <!-- docs-link --> 

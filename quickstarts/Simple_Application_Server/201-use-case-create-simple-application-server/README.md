@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建一个轻量应用服务器实例。
-详情可查看[使用Terraform创建轻量应用服务器实例](https://help.aliyun.com/zh/simple-application-server/developer-reference/using-terraform-to-use-simple-application-server)。
+详情可查看[使用Terraform创建轻量应用服务器实例](https://help.aliyun.com/document_detail/2797640.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create a Simple Application Server instance on Alibaba Cloud.
-More details in [Create Simple Application Server](https://help.aliyun.com/zh/simple-application-server/developer-reference/using-terraform-to-use-simple-application-server).
+More details in [Create Simple Application Server](https://help.aliyun.com/document_detail/2797640.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -40,6 +40,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create Simple Application Server](https://help.aliyun.com/zh/simple-application-server/developer-reference/using-terraform-to-use-simple-application-server) 
+The template is based on Aliyun document: [Create Simple Application Server](https://help.aliyun.com/document_detail/2797640.html) 
 
 <!-- docs-link --> 

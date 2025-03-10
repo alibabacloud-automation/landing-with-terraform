@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上的Linux服务器中使用Nginx+uWSGI部署Django项目。
-详情可查看[使用Nginx+uWSGI部署Django项目](https://help.aliyun.com/zh/ecs/use-cases/use-nginx-and-uwsgi-to-deploy-a-django-project)。
+详情可查看[使用Nginx+uWSGI部署Django项目](https://help.aliyun.com/document_detail/612366.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to use NGINX and uWSGI to deploy a Django project on a Linux Elastic Compute Service (ECS) instance.
-More details in [Use NGINX and uWSGI to deploy a Django project](https://help.aliyun.com/zh/ecs/use-cases/use-nginx-and-uwsgi-to-deploy-a-django-project).
+More details in [Use NGINX and uWSGI to deploy a Django project](https://help.aliyun.com/document_detail/612366.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -52,6 +52,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use NGINX and uWSGI to deploy a Django project](https://help.aliyun.com/zh/ecs/use-cases/use-nginx-and-uwsgi-to-deploy-a-django-project) 
+The template is based on Aliyun document: [Use NGINX and uWSGI to deploy a Django project](https://help.aliyun.com/document_detail/612366.html) 
 
 <!-- docs-link --> 

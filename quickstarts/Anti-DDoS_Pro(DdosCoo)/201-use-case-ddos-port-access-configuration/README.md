@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上配置DDoS高防端口接入，涉及到DDoS高防实例的端口配置管理。
-详情可查看[通过Terraform配置DDoS高防端口接入](http://help.aliyun.com/document_detail/2527859.htm)。
+详情可查看[通过Terraform配置DDoS高防端口接入](https://help.aliyun.com/document_detail/2527859.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to add a port to Anti-DDoS Pro or Anti-DDoS Premium on Alibaba Cloud, which involves the management of port configuration of Anti-DDoS instance.
-More details in [Add a port to Anti-DDoS Pro or Anti-DDoS Premium](http://help.aliyun.com/document_detail/2527859.htm).
+More details in [Add a port to Anti-DDoS Pro or Anti-DDoS Premium](https://help.aliyun.com/document_detail/2527859.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -51,6 +51,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [DDoS port access configuration](http://help.aliyun.com/document_detail/2527859.htm) 
+The template is based on Aliyun document: [DDoS port access configuration](https://help.aliyun.com/document_detail/2527859.html) 
 
 <!-- docs-link --> 

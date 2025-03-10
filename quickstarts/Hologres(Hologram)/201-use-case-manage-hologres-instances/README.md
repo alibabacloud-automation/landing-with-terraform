@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上管理Hologres资源，涉及到Hologres实例的创建。
-详情可查看[通过 Terraform 管理 Hologres 实例](https://help.aliyun.com/zh/hologres/user-guide/use-terraform-to-manage-hologres-instances)。
+详情可查看[通过 Terraform 管理 Hologres 实例](https://help.aliyun.com/document_detail/2640310.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to manage Hologres resources on Alibaba Cloud, which involves the creation of Hologres instances.
-More details in [Manage Hologres instances](https://help.aliyun.com/zh/hologres/user-guide/use-terraform-to-manage-hologres-instances).
+More details in [Manage Hologres instances](https://help.aliyun.com/document_detail/2640310.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -40,6 +40,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage Hologres instances](https://help.aliyun.com/zh/hologres/user-guide/use-terraform-to-manage-hologres-instances) 
+The template is based on Aliyun document: [Manage Hologres instances](https://help.aliyun.com/document_detail/2640310.html) 
 
 <!-- docs-link --> 

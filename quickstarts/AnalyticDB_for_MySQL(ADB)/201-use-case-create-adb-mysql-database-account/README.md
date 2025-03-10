@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建 AnalyticDB MySQL 湖仓版集群以及数据库高权限账号。
-详情可查看[通过 Terraform 创建ADB MySQL数据库账号](https://help.aliyun.com/zh/analyticdb/analyticdb-for-mysql/developer-reference/resource-integration-by-using-terraform)。
+详情可查看[通过 Terraform 创建ADB MySQL数据库账号](https://help.aliyun.com/document_detail/2842815.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create AnalyticDB MySQL database account on Alibaba Cloud.
-More details in [Create ADB MySQL database account](https://help.aliyun.com/zh/analyticdb/analyticdb-for-mysql/developer-reference/resource-integration-by-using-terraform).
+More details in [Create ADB MySQL database account](https://help.aliyun.com/document_detail/2842815.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -42,6 +42,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create ADB MySQL database account](https://help.aliyun.com/zh/analyticdb/analyticdb-for-mysql/developer-reference/resource-integration-by-using-terraform) 
+The template is based on Aliyun document: [Create ADB MySQL database account](https://help.aliyun.com/document_detail/2842815.html) 
 
 <!-- docs-link --> 

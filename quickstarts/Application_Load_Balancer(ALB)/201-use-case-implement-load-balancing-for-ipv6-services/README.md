@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上为双栈ALB实例开启IPv6挂载，即ALB实例同时支持挂载IPv4和IPv6的云服务器ECS。
-详情可查看[ALB快速实现IPv6服务的负载均衡](https://help.aliyun.com/zh/slb/application-load-balancer/getting-started/implement-load-balancing-for-ipv6-services)。
+详情可查看[ALB快速实现IPv6服务的负载均衡](https://help.aliyun.com/document_detail/444034.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to configure a dual-stack server group that contains IPv4 and IPv6 Elastic Compute Service (ECS) instances for a dual-stack ALB instance on Alibaba Cloud.
-More details in [Use ALB to balance loads for IPv6 services](https://help.aliyun.com/zh/slb/application-load-balancer/getting-started/implement-load-balancing-for-ipv6-services).
+More details in [Use ALB to balance loads for IPv6 services](https://help.aliyun.com/document_detail/444034.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -57,6 +57,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use ALB to balance loads for IPv6 services](https://help.aliyun.com/zh/slb/application-load-balancer/getting-started/implement-load-balancing-for-ipv6-services) 
+The template is based on Aliyun document: [Use ALB to balance loads for IPv6 services](https://help.aliyun.com/document_detail/444034.html) 
 
 <!-- docs-link --> 

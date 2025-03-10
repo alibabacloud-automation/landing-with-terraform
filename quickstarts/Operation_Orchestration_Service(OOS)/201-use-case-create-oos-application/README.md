@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上的系统运维管理中创建一个应用。
-详情可查看[使用Terraform编排系统运维管理](https://help.aliyun.com/zh/oos/developer-reference/terraform-integration-example)。
+详情可查看[使用Terraform编排系统运维管理](https://help.aliyun.com/document_detail/2841267.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create an application in Operation Orchestration Service on Alibaba Cloud.
-More details in [Use Terraform to arrange Operation Orchestration Service](https://help.aliyun.com/zh/oos/developer-reference/terraform-integration-example).
+More details in [Use Terraform to arrange Operation Orchestration Service](https://help.aliyun.com/document_detail/2841267.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -41,6 +41,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage OOS applicaiton](https://help.aliyun.com/zh/oos/developer-reference/terraform-integration-example) 
+The template is based on Aliyun document: [Manage OOS applicaiton](https://help.aliyun.com/document_detail/2841267.html) 
 
 <!-- docs-link --> 

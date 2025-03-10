@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建一个云备份的备份库。
-详情可查看[使用Terraform管理云备份资源](https://help.aliyun.com/zh/cloud-backup/developer-reference/using-terraform)。
+详情可查看[使用Terraform管理云备份资源](https://help.aliyun.com/document_detail/2786629.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create a HBR vault on Alibaba Cloud.
-More details in [Create HBR Vault](https://help.aliyun.com/zh/cloud-backup/developer-reference/using-terraform).
+More details in [Create HBR Vault](https://help.aliyun.com/document_detail/2786629.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -39,6 +39,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create HBR Vault](https://help.aliyun.com/zh/cloud-backup/developer-reference/using-terraform) 
+The template is based on Aliyun document: [Create HBR Vault](https://help.aliyun.com/document_detail/2786629.html) 
 
 <!-- docs-link --> 

@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上为SAE应用启停弹性策略，涉及到安全组，SAE应用及弹性伸缩策略等资源的创建。
-详情可查看[使用Terraform实现SAE应用自动弹性](http://help.aliyun.com/document_detail/424336.htm)。
+详情可查看[使用Terraform实现SAE应用自动弹性](https://help.aliyun.com/document_detail/424336.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to enable and disable an auto scaling policy for an SAE application on Alibaba Cloud, which involves the creation  of resources such as security group, SAE application and auto scaling policy.
-More details in [Use Terraform to manage an auto scaling policy for an SAE application](http://help.aliyun.com/document_detail/424336.htm).
+More details in [Use Terraform to manage an auto scaling policy for an SAE application](https://help.aliyun.com/document_detail/424336.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -59,6 +59,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use Terraform to manage an auto scaling policy for an SAE application](http://help.aliyun.com/document_detail/424336.htm) 
+The template is based on Aliyun document: [Use Terraform to manage an auto scaling policy for an SAE application](https://help.aliyun.com/document_detail/424336.html) 
 
 <!-- docs-link --> 

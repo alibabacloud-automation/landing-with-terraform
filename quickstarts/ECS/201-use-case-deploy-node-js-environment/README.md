@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云ECS实例上手动部署Node.js环境。
-详情可查看[手动部署Node.js环境](https://help.aliyun.com/zh/ecs/use-cases/deploy-a-node-js-environment-on-a-centos-7-instance)。
+详情可查看[手动部署Node.js环境](https://help.aliyun.com/document_detail/50775.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to manually deploy a Node.js environment on an Elastic Compute Service (ECS) instance on Alibaba Cloud.
-More details in [Manually deploy a Node.js environment](https://help.aliyun.com/zh/ecs/use-cases/deploy-a-node-js-environment-on-a-centos-7-instance).
+More details in [Manually deploy a Node.js environment](https://help.aliyun.com/document_detail/50775.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -54,6 +54,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manually deploy a Node.js environment](https://help.aliyun.com/zh/ecs/use-cases/deploy-a-node-js-environment-on-a-centos-7-instance) 
+The template is based on Aliyun document: [Manually deploy a Node.js environment](https://help.aliyun.com/document_detail/50775.html) 
 
 <!-- docs-link --> 

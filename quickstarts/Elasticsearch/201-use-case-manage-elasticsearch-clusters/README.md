@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建Elasticsearch实例。
-详情可查看[通过Terraform管理阿里云Elasticsearch](http://help.aliyun.com/document_detail/146476.htm)。
+详情可查看[通过Terraform管理阿里云Elasticsearch](https://help.aliyun.com/document_detail/146476.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create Elasticsearch instance on Alibaba Cloud.
-More details in [Use Terraform to manage Alibaba Cloud Elasticsearch clusters](http://help.aliyun.com/document_detail/146476.htm).
+More details in [Use Terraform to manage Alibaba Cloud Elasticsearch clusters](https://help.aliyun.com/document_detail/146476.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -46,6 +46,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage Elasticsearch clusters](http://help.aliyun.com/document_detail/146476.htm) 
+The template is based on Aliyun document: [Manage Elasticsearch clusters](https://help.aliyun.com/document_detail/146476.html) 
 
 <!-- docs-link --> 

@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上通过Terraform实现VPC NAT网关，以解决VPC地址冲突时的私网访问问题。
-详情可查看[通过Terraform实现VPC NAT网关，以解决VPC地址冲突时的私网访问问题](https://help.aliyun.com/zh/nat-gateway/getting-started/access-when-vpc-addresses-conflict-through-vpc-nat-gateway?spm=a2c4g.11186623.help-menu-44413.d_1_1.7eacdf64ZDZMdt)。
+详情可查看[通过Terraform实现VPC NAT网关，以解决VPC地址冲突时的私网访问问题](https://help.aliyun.com/document_detail/2767182.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to implement the VPC NAT gateway to solve the problem of private network access when VPC addresses conflict on Alibaba Cloud.
-More details in [Implement VPC NAT Gateway](https://help.aliyun.com/zh/nat-gateway/getting-started/access-when-vpc-addresses-conflict-through-vpc-nat-gateway?spm=a2c4g.11186623.help-menu-44413.d_1_1.7eacdf64ZDZMdt).
+More details in [Implement VPC NAT Gateway](https://help.aliyun.com/document_detail/2767182.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -80,6 +80,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Implement VPC NAT Gateway](https://help.aliyun.com/zh/nat-gateway/getting-started/access-when-vpc-addresses-conflict-through-vpc-nat-gateway?spm=a2c4g.11186623.help-menu-44413.d_1_1.7eacdf64ZDZMdt) 
+The template is based on Aliyun document: [Implement VPC NAT Gateway](https://help.aliyun.com/document_detail/2767182.html) 
 
 <!-- docs-link --> 

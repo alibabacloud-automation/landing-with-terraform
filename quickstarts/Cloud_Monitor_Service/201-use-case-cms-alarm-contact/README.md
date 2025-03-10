@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建一个云监控的报警联系人。
-详情可查看[使用Terraform创建报警联系人](https://help.aliyun.com/zh/cms/developer-reference/terraform-integration-example)。
+详情可查看[使用Terraform创建报警联系人](https://help.aliyun.com/document_detail/2807110.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create a CMS alarm contact on Alibaba Cloud.
-More details in [Create CMS alarm contact](https://help.aliyun.com/zh/cms/developer-reference/terraform-integration-example).
+More details in [Create CMS alarm contact](https://help.aliyun.com/document_detail/2807110.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -40,6 +40,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create CMS alarm contact](https://help.aliyun.com/zh/cms/developer-reference/terraform-integration-example) 
+The template is based on Aliyun document: [Create CMS alarm contact](https://help.aliyun.com/document_detail/2807110.html) 
 
 <!-- docs-link --> 

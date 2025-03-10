@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上将接入全球加速网络的加速IP配置为IPv6协议类型，实现IPv6转换服务。
-详情可查看[全球加速加速IPv6客户端访问IPv4服务](https://help.aliyun.com/zh/ga/use-cases/accelerate-an-ipv4-service-for-ipv6-clients)。
+详情可查看[全球加速加速IPv6客户端访问IPv4服务](https://help.aliyun.com/document_detail/176428.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to set the protocol type of the accelerated IP addresses of your Global Accelerator (GA) instance to IPv6 on Alibaba Cloud.
-More details in [GA accelerate access from IPv6 clients to IPv4 services](https://help.aliyun.com/zh/ga/use-cases/accelerate-an-ipv4-service-for-ipv6-clients).
+More details in [GA accelerate access from IPv6 clients to IPv4 services](https://help.aliyun.com/document_detail/176428.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -55,6 +55,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Accelerate access from IPv6 clients to IPv4 services](https://help.aliyun.com/zh/ga/use-cases/accelerate-an-ipv4-service-for-ipv6-clients) 
+The template is based on Aliyun document: [Accelerate access from IPv6 clients to IPv4 services](https://help.aliyun.com/document_detail/176428.html) 
 
 <!-- docs-link --> 

@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建角色并绑定权限策略。
-详情可查看[创建角色并绑定自定义权限策略](https://help.aliyun.com/zh/ram/developer-reference/create-a-role-and-bind-a-custom-permission-policy-to-the-role)。
+详情可查看[创建角色并绑定自定义权限策略](https://help.aliyun.com/document_detail/2841104.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create a RAM role on Alibaba Cloud and grant custom permissions to the role.
-More details in [Create a role and bind a custom permission policy to the role](https://help.aliyun.com/zh/ram/developer-reference/create-a-role-and-bind-a-custom-permission-policy-to-the-role).
+More details in [Create a role and bind a custom permission policy to the role](https://help.aliyun.com/document_detail/2841104.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -38,6 +38,6 @@ No inputs.
 ## Documentation
 <!-- docs-link -->
 
-The template is based on Aliyun document: [Create a role and bind a custom permission policy to the role](https://help.aliyun.com/zh/ram/developer-reference/create-a-role-and-bind-a-custom-permission-policy-to-the-role)
+The template is based on Aliyun document: [Create a role and bind a custom permission policy to the role](https://help.aliyun.com/document_detail/2841104.html)
 
 <!-- docs-link -->

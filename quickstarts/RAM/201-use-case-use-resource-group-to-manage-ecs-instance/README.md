@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上使用阿里云RAM和资源组对ECS实例进行分组并授权，限制RAM用户只能查看和管理被授权ECS实例。
-详情可查看[使用资源组限制RAM用户管理指定的ECS实例](https://help.aliyun.com/zh/ram/use-cases/use-a-resource-group-to-manage-an-ecs-instance)。
+详情可查看[使用资源组限制RAM用户管理指定的ECS实例](https://help.aliyun.com/document_detail/306216.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to add an Elastic Compute Service (ECS) instance to a resource group and grant a Resource Access Management (RAM) user the permissions to view and manage the ECS instance in the resource group on Alibaba Cloud.
-More details in [Use a resource group to grant a RAM user the permissions to manage a specific ECS instance](https://help.aliyun.com/zh/ram/use-cases/use-a-resource-group-to-manage-an-ecs-instance).
+More details in [Use a resource group to grant a RAM user the permissions to manage a specific ECS instance](https://help.aliyun.com/document_detail/306216.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -54,6 +54,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use a resource group to grant a RAM user the permissions to manage a specific ECS instance](https://help.aliyun.com/zh/ram/use-cases/use-a-resource-group-to-manage-an-ecs-instance) 
+The template is based on Aliyun document: [Use a resource group to grant a RAM user the permissions to manage a specific ECS instance](https://help.aliyun.com/document_detail/306216.html) 
 
 <!-- docs-link --> 

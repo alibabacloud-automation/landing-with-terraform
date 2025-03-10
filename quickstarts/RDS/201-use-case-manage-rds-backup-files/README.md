@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上管理 RDS PostgreSQL 备份，涉及到备份的创建，查看，修改与删除。
-详情可查看[通过 Terraform 管理 RDS PostgreSQL 备份](http://help.aliyun.com/document_detail/456034.htm)。
+详情可查看[通过 Terraform 管理 RDS PostgreSQL 备份](https://help.aliyun.com/document_detail/456034.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to manage backup files for an ApsaraDB RDS for PostgreSQL instance on Alibaba Cloud, which involves the creation, query, modification and deletion of backup files.
-More details in [Manage RDS backup files](http://help.aliyun.com/document_detail/456034.htm).
+More details in [Manage RDS backup files](https://help.aliyun.com/document_detail/456034.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -44,6 +44,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage RDS backup files](http://help.aliyun.com/document_detail/456034.htm) 
+The template is based on Aliyun document: [Manage RDS backup files](https://help.aliyun.com/document_detail/456034.html) 
 
 <!-- docs-link --> 

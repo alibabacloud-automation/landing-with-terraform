@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上使用Terraform提供的alicloud_alikafka_consumer_group资源来创建和管理阿里云Kafka消费者组（Consumer Group）。
-详情可查看[通过 Terraform 管理 Kafka Consumer Group](https://help.aliyun.com/zh/apsaramq-for-kafka/cloud-message-queue-for-kafka/developer-reference/use-terraform-to-manage-kafka-consumer-groups)。
+详情可查看[通过 Terraform 管理 Kafka Consumer Group](https://help.aliyun.com/document_detail/2609593.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to use the alicloud_alikafka_consumer_group resource provided by Terraform to create and manage consumer groups in ApsaraMQ for Kafka. 
-More details in [Manage Kafka consumer groups](https://help.aliyun.com/zh/apsaramq-for-kafka/cloud-message-queue-for-kafka/developer-reference/use-terraform-to-manage-kafka-consumer-groups).
+More details in [Manage Kafka consumer groups](https://help.aliyun.com/document_detail/2609593.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -45,6 +45,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage Kafka consumer groups](https://help.aliyun.com/zh/apsaramq-for-kafka/cloud-message-queue-for-kafka/developer-reference/use-terraform-to-manage-kafka-consumer-groups) 
+The template is based on Aliyun document: [Manage Kafka consumer groups](https://help.aliyun.com/document_detail/2609593.html) 
 
 <!-- docs-link --> 

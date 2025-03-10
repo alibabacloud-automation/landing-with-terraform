@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建一个IPv4版本的ALB实例，并将来自IPv4客户端的访问请求转发至后端服务器。
-详情可查看[ALB快速实现IPv4服务的负载均衡](https://help.aliyun.com/zh/slb/application-load-balancer/getting-started/use-an-alb-instance-to-provide-ipv4-services)。
+详情可查看[ALB快速实现IPv4服务的负载均衡](https://help.aliyun.com/document_detail/210822.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create an ALB instance that supports IPv4 to forward requests from IPv4 clients to backend servers on Alibaba Cloud.
-More details in [Use an ALB instance to balance loads for IPv4 services](https://help.aliyun.com/zh/slb/application-load-balancer/getting-started/use-an-alb-instance-to-provide-ipv4-services).
+More details in [Use an ALB instance to balance loads for IPv4 services](https://help.aliyun.com/document_detail/210822.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -57,6 +57,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use an ALB instance to balance loads for IPv4 services](https://help.aliyun.com/zh/slb/application-load-balancer/getting-started/use-an-alb-instance-to-provide-ipv4-services) 
+The template is based on Aliyun document: [Use an ALB instance to balance loads for IPv4 services](https://help.aliyun.com/document_detail/210822.html) 
 
 <!-- docs-link --> 

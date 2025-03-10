@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建ACK Serverless集群。
-详情可查看[创建ACK Serverless集群](http://help.aliyun.com/document_detail/2391966.htm)。
+详情可查看[创建ACK Serverless集群](https://help.aliyun.com/document_detail/2391966.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create ACK Serverless cluster on Alibaba Cloud.
-More details in [Create an ACK Serverless cluster](http://help.aliyun.com/document_detail/2391966.htm).
+More details in [Create an ACK Serverless cluster](https://help.aliyun.com/document_detail/2391966.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -43,6 +43,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create ASK cluster](http://help.aliyun.com/document_detail/2391966.htm) 
+The template is based on Aliyun document: [Create ASK cluster](https://help.aliyun.com/document_detail/2391966.html) 
 
 <!-- docs-link --> 

@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上申请、修改和释放RDS PostgreSQL实例的外网地址，以及查询和切换交换机，涉及到RDS PostgreSQL实例的创建,外网地址的申请与交换机详情的查询等。
-详情可查看[通过 Terraform 管理数据库连接的网络配置](http://help.aliyun.com/document_detail/456030.htm)。
+详情可查看[通过 Terraform 管理数据库连接的网络配置](https://help.aliyun.com/document_detail/456030.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to apply for a public endpoint for an ApsaraDB RDS for PostgreSQL instance and how to modify and release the public endpoint. This topic also describes how to query and change the vSwitch of an ApsaraDB RDS for PostgreSQL instance. 
-More details in [Manage RDS network settings](http://help.aliyun.com/document_detail/456030.htm).
+More details in [Manage RDS network settings](https://help.aliyun.com/document_detail/456030.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -42,6 +42,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage RDS network settings](http://help.aliyun.com/document_detail/456030.htm) 
+The template is based on Aliyun document: [Manage RDS network settings](http://helps.aliyun.com/document_detail/456030.html) 
 
 <!-- docs-link --> 

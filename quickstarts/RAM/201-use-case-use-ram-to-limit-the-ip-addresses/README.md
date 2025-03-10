@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上通过RAM限制用户只能通过指定的IP地址访问企业的云资源。
-详情可查看[通过RAM限制用户的访问IP地址](https://help.aliyun.com/zh/ram/use-cases/use-ram-to-limit-the-ip-addresses-that-are-allowed-to-access-alibaba-cloud-resources)。
+详情可查看[通过RAM限制用户的访问IP地址](https://help.aliyun.com/document_detail/129718.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to use Resource Access Management (RAM) to limit the IP addresses that are allowed to access Alibaba Cloud resources on Alibaba Cloud.
-More details in [Use RAM to limit the IP addresses that are allowed to access Alibaba Cloud resources](https://help.aliyun.com/zh/ram/use-cases/use-ram-to-limit-the-ip-addresses-that-are-allowed-to-access-alibaba-cloud-resources).
+More details in [Use RAM to limit the IP addresses that are allowed to access Alibaba Cloud resources](https://help.aliyun.com/document_detail/129718.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -39,6 +39,6 @@ No inputs.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use RAM to limit the IP addresses that are allowed to access Alibaba Cloud resources](https://help.aliyun.com/zh/ram/use-cases/use-ram-to-limit-the-ip-addresses-that-are-allowed-to-access-alibaba-cloud-resources) 
+The template is based on Aliyun document: [Use RAM to limit the IP addresses that are allowed to access Alibaba Cloud resources](https://help.aliyun.com/document_detail/129718.html) 
 
 <!-- docs-link --> 

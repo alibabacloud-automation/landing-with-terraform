@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建VPC边界防火墙（防护云企业网基础版的网络实例和指定VPC之间的互访流量）。
-详情可查看[通过Terraform创建VPC边界防火墙（防护云企业网基础版的网络实例和指定VPC之间的互访流量）](http://help.aliyun.com/document_detail/2245588.htm)。
+详情可查看[通过Terraform创建VPC边界防火墙（防护云企业网基础版的网络实例和指定VPC之间的互访流量）](https://help.aliyun.com/document_detail/2245588.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create a virtual private cloud (VPC) firewall by using Terraform. The firewall protects access traffic between a VPC and a network instance that is attached to a Basic Edition transit router of a Cloud Enterprise Network (CEN) instance.
-More details in [Create a VPC firewall to protect access traffic between a VPC and a network instance that is attached to a Basic Edition transit router of a CEN instance](http://help.aliyun.com/document_detail/2245588.htm).
+More details in [Create a VPC firewall to protect access traffic between a VPC and a network instance that is attached to a Basic Edition transit router of a CEN instance](https://help.aliyun.com/document_detail/2245588.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -51,6 +51,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [The firewall protects access traffic between a VPC and a network instance that is attached to a Basic Edition transit router of a Cloud Enterprise Network (CEN) instance](http://help.aliyun.com/document_detail/2245588.htm) 
+The template is based on Aliyun document: [The firewall protects access traffic between a VPC and a network instance that is attached to a Basic Edition transit router of a Cloud Enterprise Network (CEN) instance](https://help.aliyun.com/document_detail/2245588.html) 
 
 <!-- docs-link --> 

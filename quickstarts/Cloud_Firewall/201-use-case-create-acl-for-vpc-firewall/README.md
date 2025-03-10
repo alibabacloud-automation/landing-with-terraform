@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上为指定VPC防火墙策略组添加访问控制策略。
-详情可查看[通过Terraform为指定VPC防火墙策略组添加访问控制策略](http://help.aliyun.com/document_detail/2245579.htm)。
+详情可查看[通过Terraform为指定VPC防火墙策略组添加访问控制策略](https://help.aliyun.com/document_detail/2245579.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create an access control policy in a specific policy group for a virtual private cloud (VPC) firewall on Alibaba Cloud.
-More details in [Create an access control policy in a specific policy group for a VPC firewall](http://help.aliyun.com/document_detail/2245579.htm).
+More details in [Create an access control policy in a specific policy group for a VPC firewall](https://help.aliyun.com/document_detail/2245579.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -53,6 +53,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create ACL for VPC firewall](http://help.aliyun.com/document_detail/2245579.htm) 
+The template is based on Aliyun document: [Create ACL for VPC firewall](https://help.aliyun.com/document_detail/2245579.html) 
 
 <!-- docs-link --> 

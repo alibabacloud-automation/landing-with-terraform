@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建ACK Edge集群。
-详情可查看[使用Terraform创建ACK Edge集群](http://help.aliyun.com/document_detail/2392138.htm)。
+详情可查看[使用Terraform创建ACK Edge集群](https://help.aliyun.com/document_detail/2392138.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create ACK Edge cluster on Alibaba Cloud.
-More details in [Use Terraform to create an ACK Edge cluster](http://help.aliyun.com/document_detail/2392138.htm).
+More details in [Use Terraform to create an ACK Edge cluster](https://help.aliyun.com/document_detail/2392138.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -50,6 +50,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create ACK edge cluster](http://help.aliyun.com/document_detail/2392138.htm) 
+The template is based on Aliyun document: [Create ACK edge cluster](https://help.aliyun.com/document_detail/2392138.html) 
 
 <!-- docs-link --> 

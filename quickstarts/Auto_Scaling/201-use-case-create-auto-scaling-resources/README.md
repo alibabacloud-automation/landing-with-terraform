@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建创建伸缩组、伸缩配置、伸缩规则等弹性伸缩资源。
-详情可查看[通过Terraform创建弹性伸缩资源](http://help.aliyun.com/document_detail/452290.htm)。
+详情可查看[通过Terraform创建弹性伸缩资源](https://help.aliyun.com/document_detail/452290.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create Auto Scaling resources, such as scaling groups, scaling configurations, and scaling rules on Alibaba Cloud.
-More details in [Use Terraform to create Auto Scaling resources](http://help.aliyun.com/document_detail/452290.htm).
+More details in [Use Terraform to create Auto Scaling resources](https://help.aliyun.com/document_detail/452290.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -45,6 +45,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create auto scaling resources](http://help.aliyun.com/document_detail/452290.htm) 
+The template is based on Aliyun document: [Create auto scaling resources](https://help.aliyun.com/document_detail/452290.html) 
 
 <!-- docs-link --> 

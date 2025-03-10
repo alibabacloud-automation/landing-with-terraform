@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上针对RDS PostgreSQL实例修改安全组、修改IP白名单、修改SSL配置以及切换高安全模式，涉及到RDS PostgreSQL资源的创建与白名单，安全组，SSL等资源的配置。
-详情可查看[通过 Terraform 增加 RDS 示例的数据安全性](http://help.aliyun.com/document_detail/456032.htm)。
+详情可查看[通过 Terraform 增加 RDS 示例的数据安全性](https://help.aliyun.com/document_detail/456032.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to change security groups, IP address whitelists, and secure sockets layer (SSL) encryption settings of an ApsaraDB RDS for PostgreSQL instance on Alibaba Cloud, which involves the creation  of ApsaraDB RDS for PostgreSQL instance and configuration of resources such as security groups, IP address whitelists and SSL.
-More details in [Ensure RDS data security](http://help.aliyun.com/document_detail/456032.htm).
+More details in [Ensure RDS data security](https://help.aliyun.com/document_detail/456032.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -44,6 +44,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Ensure RDS data security](http://help.aliyun.com/document_detail/456032.htm) 
+The template is based on Aliyun document: [Ensure RDS data security](https://help.aliyun.com/document_detail/456032.html) 
 
 <!-- docs-link --> 

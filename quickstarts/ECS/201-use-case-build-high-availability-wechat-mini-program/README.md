@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云云服务器ECS上基于Alibaba Cloud Linux 3操作系统搭建高可用的微信小程序服务端，并在本地开发一个名为ECS小助手的简单微信小程序。
-详情可查看[搭建高可用的微信小程序服务（Alibaba Cloud Linux 3）](https://help.aliyun.com/zh/ecs/use-cases/build-a-high-availability-wechat-mini-program-service-on-an-alibaba-cloud-linux-3-instance)。
+详情可查看[搭建高可用的微信小程序服务（Alibaba Cloud Linux 3）](https://help.aliyun.com/document_detail/2412552.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to build high availability Wechat mini program on Alibaba Cloud ECS based on Alibaba Cloud Linux 3 operating system.
-More details in [Build high availability Wechat mini program](https://help.aliyun.com/zh/ecs/use-cases/build-a-high-availability-wechat-mini-program-service-on-an-alibaba-cloud-linux-3-instance).
+More details in [Build high availability Wechat mini program](https://help.aliyun.com/document_detail/2412552.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -61,6 +61,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Build high availability Wechat mini program](https://help.aliyun.com/zh/ecs/use-cases/build-a-high-availability-wechat-mini-program-service-on-an-alibaba-cloud-linux-3-instance) 
+The template is based on Aliyun document: [Build high availability Wechat mini program](https://help.aliyun.com/document_detail/2412552.html) 
 
 <!-- docs-link --> 

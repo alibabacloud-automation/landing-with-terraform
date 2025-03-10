@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上购买并启用KMS软件密钥管理实例。
-详情可查看[通过Terraform购买并启用软件密钥管理实例](http://help.aliyun.com/document_detail/2572877.htm)。
+详情可查看[通过Terraform购买并启用软件密钥管理实例](https://help.aliyun.com/document_detail/2572877.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to purchase and enable an instance of the software key management type on Alibaba Cloud.
-More details in [Purchase and enable an instance of the software key management type](http://help.aliyun.com/document_detail/2572877.htm).
+More details in [Purchase and enable an instance of the software key management type](https://help.aliyun.com/document_detail/2572877.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -44,6 +44,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Enable software key management](http://help.aliyun.com/document_detail/2572877.htm) 
+The template is based on Aliyun document: [Enable software key management](https://help.aliyun.com/document_detail/2572877.html) 
 
 <!-- docs-link --> 

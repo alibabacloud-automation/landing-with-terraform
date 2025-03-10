@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建ECS抢占式实例。
-[创建ECS抢占式实例](http://help.aliyun.com/document_detail/58613.htm)。
+[创建ECS抢占式实例](https://help.aliyun.com/document_detail/58613.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create ECS preemptible instance on Alibaba Cloud.
-More details in [Create ECS preemptible instance](http://help.aliyun.com/document_detail/58613.htm).
+More details in [Create ECS preemptible instance](https://help.aliyun.com/document_detail/58613.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -57,6 +57,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create ECS preemptible instance](http://help.aliyun.com/document_detail/58613.htm) 
+The template is based on Aliyun document: [Create ECS preemptible instance](https://help.aliyun.com/document_detail/58613.html) 
 
 <!-- docs-link --> 

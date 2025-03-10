@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建一个NLB实例，并将来自客户端的访问请求转发至后端服务器，实现IPv4服务的负载均衡。
-详情可查看[NLB快速实现IPv4服务的负载均衡](https://help.aliyun.com/zh/slb/network-load-balancer/getting-started/nlb-quickly-implements-load-balancing-for-ipv4-services)。
+详情可查看[NLB快速实现IPv4服务的负载均衡](https://help.aliyun.com/document_detail/439124.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create an NLB instance to forward client requests to backend IPv4 services on Alibaba Cloud.
-More details in [Use NLB to balance loads for IPv4 services](https://help.aliyun.com/zh/slb/network-load-balancer/getting-started/nlb-quickly-implements-load-balancing-for-ipv4-services).
+More details in [Use NLB to balance loads for IPv4 services](https://help.aliyun.com/document_detail/439124.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -59,6 +59,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use NLB to balance loads for IPv4 services](https://help.aliyun.com/zh/slb/network-load-balancer/getting-started/nlb-quickly-implements-load-balancing-for-ipv4-services) 
+The template is based on Aliyun document: [Use NLB to balance loads for IPv4 services](https://help.aliyun.com/document_detail/439124.html) 
 
 <!-- docs-link --> 

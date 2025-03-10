@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上开通云安全中心资源。
-详情可查看[通过Terraform快速开通云安全中心](https://help.aliyun.com/zh/security-center/use-cases/activate-security-center-in-a-quick-manner-by-using-terraform)。
+详情可查看[通过Terraform快速开通云安全中心](https://help.aliyun.com/document_detail/2506427.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to activate Security Center on Alibaba Cloud.
-More details in [Activate Security Center](https://help.aliyun.com/zh/security-center/use-cases/activate-security-center-in-a-quick-manner-by-using-terraform).
+More details in [Activate Security Center](https://help.aliyun.com/document_detail/2506427.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -52,6 +52,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Activate Security Center](https://help.aliyun.com/zh/security-center/use-cases/activate-security-center-in-a-quick-manner-by-using-terraform) 
+The template is based on Aliyun document: [Activate Security Center](https://help.aliyun.com/document_detail/2506427.html) 
 
 <!-- docs-link --> 

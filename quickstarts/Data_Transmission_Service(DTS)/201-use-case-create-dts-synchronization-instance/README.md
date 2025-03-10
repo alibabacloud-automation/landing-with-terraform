@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建DTS同步实例。
-详情可查看[通过Terraform创建DTS同步实例](https://help.aliyun.com/zh/dts/developer-reference/terraform-integration-example)。
+详情可查看[通过Terraform创建DTS同步实例](https://help.aliyun.com/document_detail/2835112.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create DTS synchronization instance on Alibaba Cloud.
-More details in [Create DTS synchronization instance](https://help.aliyun.com/zh/dts/developer-reference/terraform-integration-example).
+More details in [Create DTS synchronization instance](https://help.aliyun.com/document_detail/2835112.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -37,6 +37,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create DTS synchronization instance](https://help.aliyun.com/zh/dts/developer-reference/terraform-integration-example) 
+The template is based on Aliyun document: [Create DTS synchronization instance](https://help.aliyun.com/document_detail/2835112.html) 
 
 <!-- docs-link --> 

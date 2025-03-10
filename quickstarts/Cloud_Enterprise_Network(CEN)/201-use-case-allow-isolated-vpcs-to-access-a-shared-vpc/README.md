@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例会在阿里云上创建3个VPC：VPC1、VPC2、VPC3，其中VPC3为共享VPC。通过转发路由器，实现VPC1和VPC2均能访问VPC3使用共享服务，而VPC1和VPC2之间不互通。
-详情可查看[隔离VPC使用共享服务](https://help.aliyun.com/zh/cen/use-cases/allow-isolated-vpcs-to-access-a-shared-vpc)。
+详情可查看[隔离VPC使用共享服务](https://help.aliyun.com/document_detail/208592.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 The example will create 3 VPCs on Alibaba Cloud: VPC1, VPC2, and VPC3, with VPC3 being a shared VPC. By using a transit router, both VPC1 and VPC2 can access shared services in VPC3, while VPC1 and VPC2 remain isolated from each other in terms of network connectivity.
-More details in [Allow isolated VPCs to access a shared VPC](https://www.alibabacloud.com/help/en/cen/use-cases/allow-isolated-vpcs-to-access-a-shared-vpc).
+More details in [Allow isolated VPCs to access a shared VPC](https://help.aliyun.com/document_detail/208592.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 
@@ -60,6 +60,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Allow isolated VPCs to access a shared VPC](https://www.alibabacloud.com/help/en/cen/use-cases/allow-isolated-vpcs-to-access-a-shared-vpc) 
+The template is based on Aliyun document: [Allow isolated VPCs to access a shared VPC](https://help.aliyun.com/document_detail/208592.html) 
 
 <!-- docs-link --> 

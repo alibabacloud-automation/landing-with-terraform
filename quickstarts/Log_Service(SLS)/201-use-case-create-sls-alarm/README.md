@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建日志服务告警，涉及到SLS项目，日志库，告警规则等资源的创建。
-详情可查看[通过Terraform创建SLS告警](https://help.aliyun.com/zh/sls/developer-reference/use-terraform-to-manage-log-service-alerts)。
+详情可查看[通过Terraform创建SLS告警](https://help.aliyun.com/document_detail/460336.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create SLS alert on Alibaba Cloud, which involves the creation of resources such as SLS project, logstore and alert.
-More details in [Create SLS alarm](https://help.aliyun.com/zh/sls/developer-reference/use-terraform-to-manage-log-service-alerts).
+More details in [Create SLS alarm](https://help.aliyun.com/document_detail/460336.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -42,6 +42,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create SLS alarm](https://help.aliyun.com/zh/sls/developer-reference/use-terraform-to-manage-log-service-alerts) 
+The template is based on Aliyun document: [Create SLS alarm](https://help.aliyun.com/document_detail/460336.html) 
 
 <!-- docs-link --> 

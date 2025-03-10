@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建IPv4版本的传统型负载均衡CLB（Classic Load Balancer），将流量分发到多台后端服务器。
-详情可查看[CLB快速实现IPv4的负载均衡](https://help.aliyun.com/zh/slb/classic-load-balancer/getting-started/overview-1)。
+详情可查看[CLB快速实现IPv4的负载均衡](https://help.aliyun.com/document_detail/86456.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create an SLB instance that supports IPv4 to forward requests from IPv4 clients to backend servers on Alibaba Cloud.
-More details in [CLB quickly implements load balancing for IPv4 service](https://help.aliyun.com/zh/slb/classic-load-balancer/getting-started/overview-1).
+More details in [CLB quickly implements load balancing for IPv4 service](https://help.aliyun.com/document_detail/86456.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -61,6 +61,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [CLB quickly implements load balancing for IPv4 service](https://help.aliyun.com/zh/slb/classic-load-balancer/getting-started/overview-1) 
+The template is based on Aliyun document: [CLB quickly implements load balancing for IPv4 service](https://help.aliyun.com/document_detail/86456.html) 
 
 <!-- docs-link --> 

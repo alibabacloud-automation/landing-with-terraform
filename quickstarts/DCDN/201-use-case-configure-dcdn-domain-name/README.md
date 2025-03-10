@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上配置DCDN加速域名与加速域名的IP白名单。
-详情可查看[通过Terraform添加并配置DCDN域名](http://help.aliyun.com/document_detail/434131.htm)。
+详情可查看[通过Terraform添加并配置DCDN域名](https://help.aliyun.com/document_detail/434131.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to add and configure DCDN domian names on Alibaba Cloud.
-More details in [Use Terraform to add and configure a DCDN domain name](http://help.aliyun.com/document_detail/434131.htm).
+More details in [Use Terraform to add and configure a DCDN domain name](https://help.aliyun.com/document_detail/434131.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -37,6 +37,6 @@ No inputs.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Configure DCDN domain name](http://help.aliyun.com/document_detail/434131.htm) 
+The template is based on Aliyun document: [Configure DCDN domain name](https://help.aliyun.com/document_detail/434131.html) 
 
 <!-- docs-link --> 

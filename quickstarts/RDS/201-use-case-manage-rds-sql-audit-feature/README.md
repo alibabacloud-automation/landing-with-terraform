@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上开启和关闭RDS SQL审计。
-详情可查看[通过 Terraform 开启和关闭RDS PostgreSQL的SQL审计](http://help.aliyun.com/document_detail/456033.htm)。
+详情可查看[通过 Terraform 开启和关闭RDS PostgreSQL的SQL审计](https://help.aliyun.com/document_detail/456033.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to enable and disable the SQL Audit feature for an RDS instance on Alibaba Cloud.
-More details in [Use the RDS SQL Audit feature](http://help.aliyun.com/document_detail/456033.htm).
+More details in [Use the RDS SQL Audit feature](https://help.aliyun.com/document_detail/456033.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -42,6 +42,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage RDS SQL audit feature](http://help.aliyun.com/document_detail/456033.htm) 
+The template is based on Aliyun document: [Manage RDS SQL audit feature](https://help.aliyun.com/document_detail/456033.html) 
 
 <!-- docs-link --> 

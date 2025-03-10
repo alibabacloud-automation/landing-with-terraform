@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建一台ECS实例，涉及到专有网络VPC、虚拟交换机vSwitch、安全组、弹性计算实例等资源的创建和部署。
-详情可查看[通过Terraform创建并使用ECS实例](https://help.aliyun.com/zh/ecs/create-and-use-an-ecs-instance-by-using-terraform)。
+详情可查看[通过Terraform创建并使用ECS实例](https://help.aliyun.com/document_detail/2859928.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create an ECS instance on Alibaba Cloud, which involves the creation and deployment of resources such as Virtual Private Cloud, virtual Switches, security groups, and Elastic Compute Service instances.
-More details in [Create ECS instance quickstart](https://help.aliyun.com/zh/ecs/create-and-use-an-ecs-instance-by-using-terraform).
+More details in [Create ECS instance quickstart](https://help.aliyun.com/document_detail/2859928.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -48,6 +48,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create ECS instance quickstart](https://help.aliyun.com/zh/ecs/create-and-use-an-ecs-instance-by-using-terraform) 
+The template is based on Aliyun document: [Create ECS instance quickstart](https://help.aliyun.com/document_detail/2859928.html) 
 
 <!-- docs-link --> 

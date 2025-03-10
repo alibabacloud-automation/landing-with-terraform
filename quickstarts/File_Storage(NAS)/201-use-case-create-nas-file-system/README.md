@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上通过Terraform创建一个NAS文件系统。
-详情可查看[通过Terraform创建文件系统](https://help.aliyun.com/zh/nas/developer-reference/terraform-integration-example)。
+详情可查看[通过Terraform创建文件系统](https://help.aliyun.com/document_detail/2797185.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used create a NAS file system on Alibaba Cloud.
-More details in [Create NAS file system](https://help.aliyun.com/zh/nas/developer-reference/terraform-integration-example).
+More details in [Create NAS file system](https://help.aliyun.com/document_detail/2797185.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -40,6 +40,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create NAS file system](https://help.aliyun.com/zh/nas/developer-reference/terraform-integration-example) 
+The template is based on Aliyun document: [Create NAS file system](https://help.aliyun.com/document_detail/2797185.html) 
 
 <!-- docs-link --> 

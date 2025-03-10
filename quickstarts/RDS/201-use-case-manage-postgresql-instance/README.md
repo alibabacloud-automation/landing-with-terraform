@@ -41,6 +41,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage postgresql instance](http://help.aliyun.com/document_detail/456025.htm) 
+The template is based on Aliyun document: [Manage postgresql instance](https://help.aliyun.com/document_detail/456025.html) 
 
 <!-- docs-link --> 

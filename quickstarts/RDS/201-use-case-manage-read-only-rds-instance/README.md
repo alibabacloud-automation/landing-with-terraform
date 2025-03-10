@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建RDS PostgreSQL 只读实例。
-详情可查看[通过 Terraform 管理 RDS PostgreSQL 只读实例](http://help.aliyun.com/document_detail/456038.htm)。
+详情可查看[通过 Terraform 管理 RDS PostgreSQL 只读实例](https://help.aliyun.com/document_detail/456038.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create a read-only ApsaraDB RDS for PostgreSQL instance on Alibaba Cloud.
-More details in [Manage a RDS read-only instance](http://help.aliyun.com/document_detail/456038.htm).
+More details in [Manage a RDS read-only instance](https://help.aliyun.com/document_detail/456038.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -43,6 +43,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage read only RDS instance](http://help.aliyun.com/document_detail/456038.htm) 
+The template is based on Aliyun document: [Manage read only RDS instance](https://help.aliyun.com/document_detail/456038.html) 
 
 <!-- docs-link --> 

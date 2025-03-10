@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建、更新和删除SAE命名空间。
-详情可查看[使用Terraform管理SAE命名空间](http://help.aliyun.com/document_detail/424334.htm)。
+详情可查看[使用Terraform管理SAE命名空间](https://help.aliyun.com/document_detail/424334.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create, update, and delete an SAE namespace on Alibaba Cloud.
-More details in [Use Terraform to manage SAE namespaces](http://help.aliyun.com/document_detail/424334.htm).
+More details in [Use Terraform to manage SAE namespaces](https://help.aliyun.com/document_detail/424334.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -40,6 +40,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage SAE Namespaces](http://help.aliyun.com/document_detail/424334.htm) 
+The template is based on Aliyun document: [Manage SAE Namespaces](https://help.aliyun.com/document_detail/424334.html) 
 
 <!-- docs-link --> 

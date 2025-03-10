@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建ENS实例。
-详情可查看[在Cloud Shell中使用Terraform创建ENS实例](https://help.aliyun.com/zh/ens/use-cases/use-terraform-to-create-an-ens-instance-in-the-cloud-shell)。
+详情可查看[在Cloud Shell中使用Terraform创建ENS实例](https://help.aliyun.com/document_detail/2771531.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create ENS instance on Alibaba Cloud.
-More details in [Use Terraform in Cloud Shell to create an ENS instance](https://help.aliyun.com/zh/ens/use-cases/use-terraform-to-create-an-ens-instance-in-the-cloud-shell).
+More details in [Use Terraform in Cloud Shell to create an ENS instance](https://help.aliyun.com/document_detail/2771531.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -40,6 +40,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create ENS instance in Cloud Shell](https://help.aliyun.com/zh/ens/use-cases/use-terraform-to-create-an-ens-instance-in-the-cloud-shell) 
+The template is based on Aliyun document: [Create ENS instance in Cloud Shell](https://help.aliyun.com/document_detail/2771531.html) 
 
 <!-- docs-link --> 

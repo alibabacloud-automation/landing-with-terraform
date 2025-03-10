@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上基于ECS部署和使用SVN。
-详情可查看[部署和使用SVN](https://help.aliyun.com/zh/ecs/use-cases/deploying-and-using-svn)。
+详情可查看[部署和使用SVN](https://help.aliyun.com/document_detail/129357.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to deploy and use SVN on Elastic Compute Service (ECS) on Alibaba Cloud.
-More details in [Deploy and use SVN](https://help.aliyun.com/zh/ecs/use-cases/deploying-and-using-svn).
+More details in [Deploy and use SVN](https://help.aliyun.com/document_detail/129357.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -50,6 +50,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Deploy and use SVN](https://help.aliyun.com/zh/ecs/use-cases/deploying-and-using-svn) 
+The template is based on Aliyun document: [Deploy and use SVN](https://help.aliyun.com/document_detail/129357.html) 
 
 <!-- docs-link --> 

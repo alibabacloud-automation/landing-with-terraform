@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上为双栈NLB实例开启IPv6挂载，即NLB实例同时支持挂载IPv4和IPv6的云服务器ECS（Elastic Compute Service）。
-详情可查看[NLB快速实现IPv6服务的负载均衡](https://help.aliyun.com/zh/slb/network-load-balancer/getting-started/nlb-quickly-implements-load-balancing-for-ipv6-services)。
+详情可查看[NLB快速实现IPv6服务的负载均衡](https://help.aliyun.com/document_detail/2569277.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to add IPv4 and IPv6 Elastic Compute Service (ECS) instances to a dual-stack NLB instance on Alibaba Cloud.
-More details in [Use NLB to balance loads for IPv6 services](https://help.aliyun.com/zh/slb/network-load-balancer/getting-started/nlb-quickly-implements-load-balancing-for-ipv6-services).
+More details in [Use NLB to balance loads for IPv6 services](https://help.aliyun.com/document_detail/2569277.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -60,6 +60,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Use NLB to balance loads for IPv6 services](https://help.aliyun.com/zh/slb/network-load-balancer/getting-started/nlb-quickly-implements-load-balancing-for-ipv6-services) 
+The template is based on Aliyun document: [Use NLB to balance loads for IPv6 services](https://help.aliyun.com/document_detail/2569277.html) 
 
 <!-- docs-link --> 

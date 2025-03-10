@@ -2,13 +2,13 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例会在阿里云上创建3个VPC：VPC1、VPC2、VPC3，其中VPC2和VPC3之间的互访流量通过转发路由器引导至VPC1进行过滤。
-详情可查看[使用企业版转发路由器实现流量安全互访](https://help.aliyun.com/zh/cen/use-cases/use-an-enterprise-edition-transit-router-to-enable-and-secure-network-communication)。
+详情可查看[使用企业版转发路由器实现流量安全互访](https://help.aliyun.com/document_detail/214139.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 The example will create 3 VPCs on Alibaba Cloud: VPC1, VPC2, and VPC3, where the traffic between VPC2 and VPC3 is routed through transit router to VPC1 for filtering.
 More details in [Use an Enterprise Edition transit router to establish and secure network communication
-](https://www.alibabacloud.com/help/en/cen/use-cases/use-an-enterprise-edition-transit-router-to-enable-and-secure-network-communication).
+](https://help.aliyun.com/document_detail/214139.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -68,6 +68,6 @@ No modules.
 <!-- docs-link --> 
 
 The template is based on Aliyun document: [Use an Enterprise Edition transit router to establish and secure network communication
-](https://www.alibabacloud.com/help/en/cen/use-cases/use-an-enterprise-edition-transit-router-to-enable-and-secure-network-communication) 
+](https://help.aliyun.com/document_detail/214139.html) 
 
 <!-- docs-link --> 

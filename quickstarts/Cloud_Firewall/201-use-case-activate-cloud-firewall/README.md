@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建创建互联网防火墙实例。
-详情可查看[通过Terraform创建云防火墙实例](http://help.aliyun.com/document_detail/2245586.htm)。
+详情可查看[通过Terraform创建云防火墙实例](https://help.aliyun.com/document_detail/2245586.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to activate Cloud Firewall on Alibaba Cloud.
-More details in [Activate Cloud Firewall](http://help.aliyun.com/document_detail/2245586.htm).
+More details in [Activate Cloud Firewall](https://help.aliyun.com/document_detail/2245586.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -34,6 +34,6 @@ No inputs.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Activate Cloud Firewall](http://help.aliyun.com/document_detail/2245586.htm) 
+The template is based on Aliyun document: [Activate Cloud Firewall](https://help.aliyun.com/document_detail/2245586.html) 
 
 <!-- docs-link --> 

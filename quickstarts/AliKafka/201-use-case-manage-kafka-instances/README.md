@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上使用Terraform的alicloud_alikafka_instance资源提供一系列的参数来管理Kafka实例，涉及到 Kafka实例的创建与查询。
-详情可查看[通过 Terraform 管理 Kafka 实例](https://help.aliyun.com/zh/apsaramq-for-kafka/use-terraform-to-manage-instances)。
+详情可查看[通过 Terraform 管理 Kafka 实例](https://help.aliyun.com/document_detail/2618253.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to manage ApsaraMQ for Kafka instances on Alibaba Cloud, which involves the creation and query of Kafka instance.
-More details in [Manage Kafka instance](https://help.aliyun.com/zh/apsaramq-for-kafka/use-terraform-to-manage-instances).
+More details in [Manage Kafka instance](https://help.aliyun.com/document_detail/2618253.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -43,6 +43,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Manage Kafka instance](https://help.aliyun.com/zh/apsaramq-for-kafka/use-terraform-to-manage-instances) 
+The template is based on Aliyun document: [Manage Kafka instance](https://help.aliyun.com/document_detail/2618253.html) 
 
 <!-- docs-link --> 

@@ -2,12 +2,12 @@
 
 <!-- DOCS_DESCRIPTION_CN -->
 本示例用于在阿里云上创建ACK托管集群。
-详情可查看[通过Terraform创建ACK托管集群](http://help.aliyun.com/document_detail/197780.htm)。
+详情可查看[通过Terraform创建ACK托管集群](https://help.aliyun.com/document_detail/197780.html)。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->
 This example is used to create ACK managed cluster on Alibaba Cloud.
-More details in [Create an ACK managed cluster](http://help.aliyun.com/document_detail/197780.htm).
+More details in [Create an ACK managed cluster](https://help.aliyun.com/document_detail/197780.html).
 <!-- DOCS_DESCRIPTION_EN -->
 
 <!-- BEGIN_TF_DOCS -->
@@ -54,6 +54,6 @@ No modules.
 ## Documentation
 <!-- docs-link --> 
 
-The template is based on Aliyun document: [Create ACK managed cluster](http://help.aliyun.com/document_detail/197780.htm) 
+The template is based on Aliyun document: [Create ACK managed cluster](https://help.aliyun.com/document_detail/197780.html) 
 
 <!-- docs-link --> 

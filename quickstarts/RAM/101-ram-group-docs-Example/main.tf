@@ -1,5 +1,9 @@
-# Create a new RAM Group.
+variable "name" {
+  default = "terraform-example"
+}
+
 resource "alicloud_ram_group" "group" {
-  name     = "groupName"
-  comments = "this is a group comments."
+  group_name = var.name
+  comments   = var.name
+  force      = true
 }

@@ -3,7 +3,11 @@ variable "name" {
 }
 
 provider "alicloud" {
-  region = "cn-chengdu"
+  region = "cn-hangzhou"
+}
+
+data "alicloud_resource_manager_resource_groups" "default" {
+  status = "OK"
 }
 
 data "alicloud_zones" "default" {
@@ -21,12 +25,7 @@ resource "alicloud_vswitch" "createVSwitch" {
   vpc_id       = alicloud_vpc.createVPC.id
   cidr_block   = "172.16.0.0/24"
   vswitch_name = var.name
-
-  zone_id = data.alicloud_zones.default.zones.0.id
-}
-
-data "alicloud_resource_manager_resource_groups" "default" {
-  status = "OK"
+  zone_id      = data.alicloud_zones.default.zones.0.id
 }
 
 resource "alicloud_rocketmq_instance" "default" {
@@ -35,17 +34,16 @@ resource "alicloud_rocketmq_instance" "default" {
     send_receive_ratio     = "0.3"
     message_retention_time = "70"
   }
-
   service_code      = "rmq"
   payment_type      = "PayAsYouGo"
   instance_name     = var.name
   sub_series_code   = "cluster_ha"
   resource_group_id = data.alicloud_resource_manager_resource_groups.default.ids.0
   remark            = "example"
+  ip_whitelist      = ["192.168.0.0/16", "10.10.0.0/16", "172.168.0.0/16"]
   software {
     maintain_time = "02:00-06:00"
   }
-
   tags = {
     Created = "TF"
     For     = "example"
@@ -53,19 +51,15 @@ resource "alicloud_rocketmq_instance" "default" {
   series_code = "ultimate"
   network_info {
     vpc_info {
-      vpc_id     = alicloud_vpc.createVPC.id
-      vswitch_id = alicloud_vswitch.createVSwitch.id
+      vpc_id = alicloud_vpc.createVPC.id
+      vswitches {
+        vswitch_id = alicloud_vswitch.createVSwitch.id
+      }
     }
-
     internet_info {
       internet_spec      = "enable"
       flow_out_type      = "payByBandwidth"
       flow_out_bandwidth = "30"
-      ip_whitelist = [
-        "192.168.0.0/16",
-        "10.10.0.0/16",
-        "172.168.0.0/16"
-      ]
     }
   }
 }

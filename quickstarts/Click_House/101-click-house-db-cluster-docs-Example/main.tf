@@ -10,6 +10,9 @@ provider "alicloud" {
   region = var.region
 }
 
+data "alicloud_resource_manager_resource_groups" "default" {
+}
+
 data "alicloud_click_house_regions" "default" {
   region_id = var.region
 }
@@ -37,4 +40,5 @@ resource "alicloud_click_house_db_cluster" "default" {
   storage_type            = "cloud_essd"
   vswitch_id              = alicloud_vswitch.default.id
   vpc_id                  = alicloud_vpc.default.id
+  resource_group_id       = data.alicloud_resource_manager_resource_groups.default.groups.0.id
 }

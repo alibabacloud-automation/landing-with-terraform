@@ -2,6 +2,7 @@ data "alicloud_zones" "default" {
   available_disk_category     = "cloud_efficiency"
   available_resource_creation = "VSwitch"
 }
+
 data "alicloud_instance_types" "default" {
   availability_zone = data.alicloud_zones.default.zones.0.id
 }
@@ -24,8 +25,8 @@ resource "alicloud_vswitch" "default" {
 }
 
 resource "alicloud_security_group" "default" {
-  name   = "terraform-example"
-  vpc_id = alicloud_vpc.default.id
+  security_group_name = "terraform-example"
+  vpc_id              = alicloud_vpc.default.id
 }
 
 resource "alicloud_ecs_launch_template" "default" {

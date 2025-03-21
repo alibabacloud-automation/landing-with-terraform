@@ -21,6 +21,7 @@ No modules.
 | [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 | [alicloud_vswitch.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
 | [alicloud_click_house_regions.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/click_house_regions) | data source |
+| [alicloud_resource_manager_resource_groups.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/resource_manager_resource_groups) | data source |
 
 ## Inputs
 

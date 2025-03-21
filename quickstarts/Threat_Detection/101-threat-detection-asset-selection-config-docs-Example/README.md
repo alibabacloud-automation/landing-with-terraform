@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_ram_group` resource.
+This example is used to create a `alicloud_threat_detection_asset_selection_config` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -17,11 +17,11 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_ram_group.group](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ram_group) | resource |
+| [alicloud_threat_detection_asset_selection_config.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/threat_detection_asset_selection_config) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
-<!-- END_TF_DOCS -->    
+<!-- END_TF_DOCS -->

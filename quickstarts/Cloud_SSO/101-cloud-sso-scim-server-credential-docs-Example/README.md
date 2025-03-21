@@ -17,7 +17,6 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_cloud_sso_directory.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_sso_directory) | resource |
 | [alicloud_cloud_sso_scim_server_credential.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_sso_scim_server_credential) | resource |
 | [alicloud_cloud_sso_directories.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/cloud_sso_directories) | data source |
 
@@ -25,5 +24,5 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->    

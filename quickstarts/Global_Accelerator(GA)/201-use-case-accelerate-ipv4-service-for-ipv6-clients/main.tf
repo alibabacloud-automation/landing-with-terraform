@@ -1,10 +1,7 @@
-
+# 选择地区
 variable "region" {
-  default = "cn-hangzhou"
-}
-
-provider "alicloud" {
-  region = var.region
+  default     = "cn-hangzhou"
+  description = "Choice a region"
 }
 
 # 是否创建部署在ECS的ipv4服务
@@ -14,6 +11,19 @@ variable "create_ecs_service" {
   description = "Do you want to create a service on ecs"
 }
 
+# 域名
+variable "domain_name" {
+  type        = string
+  default     = "tf-example.com"
+  description = "Change to your domain name"
+}
+
+# 主机记录
+variable "host_record" {
+  type    = string
+  default = "image"
+}
+
 # 服务地址
 variable "service_endpoint" {
   type        = string
@@ -21,11 +31,15 @@ variable "service_endpoint" {
   description = "your service endpoint"
 }
 
-# 域名(改为您的域名)
-variable "domain_name" {
-  type        = string
-  default     = "tf-example.com"
-  description = "Change to your domain name"
+provider "alicloud" {
+  region = var.region
+}
+
+# 查询可用区
+data "alicloud_zones" "example" {
+  available_resource_creation = "VSwitch"
+  available_disk_category     = local.available_disk_category
+  available_instance_type     = local.instance_type
 }
 
 locals {
@@ -34,26 +48,17 @@ locals {
   vsw_cidr_block          = "172.16.0.0/24"
   instance_type           = "ecs.e-c1m1.large"
   image_id                = "aliyun_2_1903_x64_20G_alibase_20240628.vhd"
-  password                = "Terraform@Example"
-  # ECS中部署服务脚本
+  ecs_password            = "Terraform@Example"
+  # ECS中部署服务脚本 
   ecs_command = <<EOS
     yum install -y nginx
     systemctl start nginx.service
     cd /usr/share/nginx/html/
-    echo "Hello World ! This is  ECS." > index.html
+    echo "Hello World ! This is ECS." > index.html
     EOS
 }
 
-# 可用区
-data "alicloud_zones" "example" {
-  available_resource_creation      = "VSwitch"
-  available_disk_category          = local.available_disk_category
-  available_instance_type          = local.instance_type
-  available_slb_address_ip_version = "ipv4"
-  available_slb_address_type       = "classic_internet"
-}
-
-# 随机数，取值${random_integer.example.result}
+# 随机数
 resource "random_integer" "example" {
   min = 10000
   max = 99999
@@ -82,6 +87,18 @@ resource "alicloud_security_group" "example" {
   vpc_id              = alicloud_vpc.example.0.id
 }
 
+# 添加允许TCP 80端口入方向流量的规则
+resource "alicloud_security_group_rule" "ingress" {
+  type              = "ingress"                            # 入方向规则
+  ip_protocol       = "tcp"                                # TCP协议
+  nic_type          = "intranet"                           # 内网网卡类型（VPC环境）
+  policy            = "accept"                             # 允许策略
+  port_range        = "80/80"                              # 允许80端口
+  priority          = 1                                    # 优先级设置
+  security_group_id = alicloud_security_group.example.0.id # 关联的安全组ID
+  cidr_ip           = "10.0.0.0/8"                         # 允许的IP地址范围，示例为10.0.0.0/8
+}
+
 # 添加允许TCP 80端口出方向流量的规则
 resource "alicloud_security_group_rule" "egress" {
   count             = var.create_ecs_service ? 1 : 0
@@ -89,7 +106,7 @@ resource "alicloud_security_group_rule" "egress" {
   ip_protocol       = "tcp"                                # TCP协议
   nic_type          = "intranet"                           # 内网网卡类型（VPC环境）
   policy            = "accept"                             # 允许策略
-  port_range        = "8/80"                               # 允许80端口
+  port_range        = "80/80"                              # 允许80端口
   priority          = 1                                    # 优先级设置
   security_group_id = alicloud_security_group.example.0.id # 关联的安全组ID
   cidr_ip           = "10.0.0.0/8"                         # 允许的IP地址范围，示例为10.0.0.0/8
@@ -108,7 +125,7 @@ resource "alicloud_instance" "example" {
   instance_name              = "instance_name_${random_integer.example.result}"
   vswitch_id                 = alicloud_vswitch.example.0.id
   internet_max_bandwidth_out = 10
-  password                   = local.password
+  password                   = local.ecs_password
 }
 
 # ECS命令
@@ -145,6 +162,7 @@ resource "alicloud_ga_accelerator" "example" {
   auto_use_coupon        = true
 }
 
+# 获取全球加速实例的CNAME
 data "alicloud_ga_accelerators" "example" {
   ids = [alicloud_ga_accelerator.example.id]
 }
@@ -185,7 +203,7 @@ resource "alicloud_ga_endpoint_group" "example" {
 resource "alicloud_alidns_record" "example" {
   domain_name = var.domain_name
   type        = "CNAME"
-  rr          = "@"
+  rr          = var.host_record
   value       = data.alicloud_ga_accelerators.example.accelerators[0].dns_name
   ttl         = 600
 }

@@ -36,6 +36,7 @@ No modules.
 | [alicloud_instance.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/instance) | resource |
 | [alicloud_security_group.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/security_group) | resource |
 | [alicloud_security_group_rule.egress](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/security_group_rule) | resource |
+| [alicloud_security_group_rule.ingress](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/security_group_rule) | resource |
 | [alicloud_vpc.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 | [alicloud_vswitch.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
 | [random_integer.example](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
@@ -48,7 +49,8 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_create_ecs_service"></a> [create\_ecs\_service](#input\_create\_ecs\_service) | Do you want to create a service on ecs | `bool` | `true` | no |
 | <a name="input_domain_name"></a> [domain\_name](#input\_domain\_name) | Change to your domain name | `string` | `"tf-example.com"` | no |
-| <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"cn-hangzhou"` | no |
+| <a name="input_host_record"></a> [host\_record](#input\_host\_record) | 主机记录 | `string` | `"image"` | no |
+| <a name="input_region"></a> [region](#input\_region) | Choice a region | `string` | `"cn-hangzhou"` | no |
 | <a name="input_service_endpoint"></a> [service\_endpoint](#input\_service\_endpoint) | your service endpoint | `string` | `null` | no |
 <!-- END_TF_DOCS -->
 

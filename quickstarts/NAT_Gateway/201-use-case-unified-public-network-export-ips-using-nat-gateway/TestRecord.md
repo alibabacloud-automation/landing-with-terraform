@@ -1,3 +1,16 @@
+## 22 Mar 2025 05:58 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.245.0
+
+### Error
+
+Plan: running terraform plan failed.
 ## 15 Mar 2025 06:22 UTC
 
 success: true

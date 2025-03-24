@@ -2,20 +2,8 @@ variable "region" {
   default = "cn-beijing"
 }
 
-provider "alicloud" {
-  region = var.region
-}
-
-# 可用区
-data "alicloud_zones" "example" {
-  available_resource_creation      = "VSwitch"
-  available_disk_category          = local.available_disk_category
-  available_slb_address_ip_version = "ipv4"
-  available_slb_address_type       = "classic_internet"
-}
-
 # ECS登录密码
-variable "password" {
+variable "ecs_password" {
   type    = string
   default = "Terraform@Example"
 }
@@ -27,6 +15,26 @@ variable "host_name" {
   description = "your domain name"
 }
 
+# 主机记录
+variable "host_record" {
+  type        = string
+  default     = "image"
+  description = "Host Record,like image"
+}
+
+provider "alicloud" {
+  region = var.region
+}
+
+# 查询支持NLB的可用区
+data "alicloud_nlb_zones" "example" {}
+
+# 可用区
+data "alicloud_zones" "example" {
+  available_resource_creation = "VSwitch"
+  available_disk_category     = local.available_disk_category
+}
+
 locals {
   # 专有网络VPC网段
   vpc_cidr_block = "172.16.0.0/16"
@@ -35,10 +43,13 @@ locals {
   # backup交换机网段
   backup_vsw_cidr_block = "172.16.2.0/24"
   # ECS规格
-  instance_type = "ecs.e-c1m1.large"
+  ecs_instance_type = "ecs.e-c1m1.large"
   # ECS系统镜像
-  image_id                = "aliyun_2_1903_x64_20G_alibase_20240628.vhd"
+  image_id = "aliyun_2_1903_x64_20G_alibase_20240628.vhd"
+  # 磁盘类型
   available_disk_category = "cloud_essd"
+  # 提取地区交集
+  intersection_zones = tolist(setintersection(data.alicloud_nlb_zones.example.ids, data.alicloud_zones.example.ids))
   # ECS中部署服务脚本
   master_ecs_command = <<EOS
     yum install -y nginx
@@ -70,7 +81,7 @@ resource "alicloud_vpc" "example" {
 resource "alicloud_vswitch" "master_vswitch" {
   vpc_id       = alicloud_vpc.example.id
   cidr_block   = local.master_vsw_cidr_block
-  zone_id      = data.alicloud_zones.example.zones[0].id
+  zone_id      = local.intersection_zones[0]
   vswitch_name = "master_vswitch_test_${random_integer.example.result}"
 }
 
@@ -78,7 +89,7 @@ resource "alicloud_vswitch" "master_vswitch" {
 resource "alicloud_vswitch" "backup_vswitch" {
   vpc_id       = alicloud_vpc.example.id
   cidr_block   = local.backup_vsw_cidr_block
-  zone_id      = data.alicloud_zones.example.zones[1].id
+  zone_id      = local.intersection_zones[1]
   vswitch_name = "backup_vswitch_test_${random_integer.example.result}"
 }
 
@@ -114,9 +125,9 @@ resource "alicloud_security_group_rule" "egress" {
 
 # mster ECS实例
 resource "alicloud_instance" "master_example" {
-  availability_zone          = data.alicloud_zones.example.zones[0].id
+  availability_zone          = local.intersection_zones[0]
   security_groups            = alicloud_security_group.example.*.id
-  instance_type              = local.instance_type
+  instance_type              = local.ecs_instance_type
   system_disk_category       = local.available_disk_category
   system_disk_name           = "master_system_disk_name_${random_integer.example.result}"
   system_disk_description    = "master_system_disk_description_${random_integer.example.result}"
@@ -124,14 +135,14 @@ resource "alicloud_instance" "master_example" {
   instance_name              = "master_instance_name_${random_integer.example.result}"
   vswitch_id                 = alicloud_vswitch.master_vswitch.id
   internet_max_bandwidth_out = 10
-  password                   = var.password
+  password                   = var.ecs_password
 }
 
 # backup ECS实例
 resource "alicloud_instance" "backup_example" {
-  availability_zone          = data.alicloud_zones.example.zones[1].id
+  availability_zone          = local.intersection_zones[1]
   security_groups            = alicloud_security_group.example.*.id
-  instance_type              = local.instance_type
+  instance_type              = local.ecs_instance_type
   system_disk_category       = local.available_disk_category
   system_disk_name           = "backup_system_disk_name_${random_integer.example.result}"
   system_disk_description    = "backup_system_disk_description_${random_integer.example.result}"
@@ -139,7 +150,7 @@ resource "alicloud_instance" "backup_example" {
   instance_name              = "backup_instance_name_${random_integer.example.result}"
   vswitch_id                 = alicloud_vswitch.backup_vswitch.id
   internet_max_bandwidth_out = 10
-  password                   = var.password
+  password                   = var.ecs_password
 }
 
 # master ECS命令
@@ -151,6 +162,9 @@ resource "alicloud_ecs_command" "master_ecs_command" {
   command_content  = base64encode(local.master_ecs_command)
   timeout          = 3600
   working_dir      = "/root"
+  lifecycle {
+    ignore_changes = [command_content]
+  }
 }
 
 # 在master ECS中执行命令
@@ -171,6 +185,9 @@ resource "alicloud_ecs_command" "backup_ecs_command" {
   command_content  = base64encode(local.backup_ecs_command)
   timeout          = 3600
   working_dir      = "/root"
+  lifecycle {
+    ignore_changes = [command_content]
+  }
 }
 
 # 在backup ECS中执行命令
@@ -179,6 +196,23 @@ resource "alicloud_ecs_invocation" "backup_invocation" {
   command_id  = alicloud_ecs_command.backup_ecs_command.id
   timeouts {
     create = "5m"
+  }
+}
+
+# nlb 实例
+resource "alicloud_nlb_load_balancer" "example" {
+  load_balancer_name = "load_balancer_name_${random_integer.example.result}"
+  load_balancer_type = "Network"
+  address_type       = "Internet"
+  address_ip_version = "Ipv4"
+  vpc_id             = alicloud_vpc.example.id
+  zone_mappings {
+    vswitch_id = alicloud_vswitch.master_vswitch.id
+    zone_id    = alicloud_vswitch.master_vswitch.zone_id
+  }
+  zone_mappings {
+    vswitch_id = alicloud_vswitch.backup_vswitch.id
+    zone_id    = alicloud_vswitch.backup_vswitch.zone_id
   }
 }
 
@@ -228,23 +262,6 @@ resource "alicloud_nlb_server_group_server_attachment" "attachment_backup_ecs" {
   weight          = 100
 }
 
-# nlb 实例
-resource "alicloud_nlb_load_balancer" "example" {
-  load_balancer_name = "load_balancer_name_${random_integer.example.result}"
-  load_balancer_type = "Network"
-  address_type       = "Internet"
-  address_ip_version = "Ipv4"
-  vpc_id             = alicloud_vpc.example.id
-  zone_mappings {
-    vswitch_id = alicloud_vswitch.master_vswitch.id
-    zone_id    = alicloud_vswitch.master_vswitch.zone_id
-  }
-  zone_mappings {
-    vswitch_id = alicloud_vswitch.backup_vswitch.id
-    zone_id    = alicloud_vswitch.backup_vswitch.zone_id
-  }
-}
-
 # nlb监听
 resource "alicloud_nlb_listener" "default" {
   listener_protocol      = "TCP"
@@ -262,7 +279,7 @@ resource "alicloud_nlb_listener" "default" {
 resource "alicloud_dns_record" "example" {
   name        = var.host_name
   type        = "CNAME"
-  host_record = "@"
+  host_record = var.host_record
   value       = alicloud_nlb_load_balancer.example.dns_name
   ttl         = 600
 }

@@ -45,14 +45,16 @@ No modules.
 | [alicloud_vswitch.backup_vswitch](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
 | [alicloud_vswitch.master_vswitch](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
 | [random_integer.example](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
+| [alicloud_nlb_zones.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/nlb_zones) | data source |
 | [alicloud_zones.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/zones) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_ecs_password"></a> [ecs\_password](#input\_ecs\_password) | ECS登录密码 | `string` | `"Terraform@Example"` | no |
 | <a name="input_host_name"></a> [host\_name](#input\_host\_name) | your domain name | `string` | `"tf-example.com"` | no |
-| <a name="input_password"></a> [password](#input\_password) | ECS登录密码 | `string` | `"Terraform@Example"` | no |
+| <a name="input_host_record"></a> [host\_record](#input\_host\_record) | Host Record,like image | `string` | `"image"` | no |
 | <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"cn-beijing"` | no |
 <!-- END_TF_DOCS -->
 

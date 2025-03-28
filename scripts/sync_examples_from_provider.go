@@ -159,6 +159,9 @@ func getNewResource(version string) (map[string]struct{}, error) {
 	changelog := string(content)
 
 	logStart := strings.Index(changelog, strings.TrimPrefix(version, "v"))
+	if logStart == -1 {
+		return nil, fmt.Errorf("cannot find the changelog of version %s", version)
+	}
 	logEnd := strings.Index(changelog[logStart:], "##")
 
 	latestLog := changelog[logStart : logStart+logEnd]

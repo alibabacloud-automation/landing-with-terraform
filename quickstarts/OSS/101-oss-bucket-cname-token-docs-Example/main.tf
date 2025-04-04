@@ -13,5 +13,5 @@ resource "alicloud_oss_bucket" "CreateBucket" {
 
 resource "alicloud_oss_bucket_cname_token" "defaultZaWJfG" {
   bucket = alicloud_oss_bucket.CreateBucket.bucket
-  domain = "tftestacc.com"
+  domain = "terraform-example.com"
 }

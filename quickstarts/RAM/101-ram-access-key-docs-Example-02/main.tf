@@ -45,6 +45,6 @@ OIu60YPNE4+h7u2CfYyFPu3AlUaGNMBlvy6PEpU=
 	  EOF
 }
 
-output "secret" {
+output "encrypted_secret" {
   value = alicloud_ram_access_key.encrypt.encrypted_secret
 }

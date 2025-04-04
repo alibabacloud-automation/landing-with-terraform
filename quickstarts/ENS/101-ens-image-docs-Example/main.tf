@@ -23,10 +23,8 @@ resource "alicloud_ens_instance" "default" {
   status                     = "Stopped"
 }
 
-
 resource "alicloud_ens_image" "default" {
-  image_name = var.name
-
+  image_name                = var.name
   instance_id               = alicloud_ens_instance.default.id
   delete_after_image_upload = "false"
 }

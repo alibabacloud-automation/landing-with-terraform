@@ -1,7 +1,7 @@
 # Create a RAM Group Policy attachment.
 resource "alicloud_ram_group" "group" {
-  name     = "groupName"
-  comments = "this is a group comments."
+  group_name = "groupName"
+  comments   = "this is a group comments."
 }
 
 resource "random_integer" "default" {

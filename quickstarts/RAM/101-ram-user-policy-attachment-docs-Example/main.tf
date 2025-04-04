@@ -6,6 +6,7 @@ resource "alicloud_ram_user" "user" {
   email        = "hello.uuu@aaa.com"
   comments     = "yoyoyo"
 }
+
 resource "random_integer" "default" {
   min = 10000
   max = 99999

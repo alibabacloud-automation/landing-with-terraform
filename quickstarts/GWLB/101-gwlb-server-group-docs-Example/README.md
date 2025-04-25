@@ -18,10 +18,11 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_gwlb_server_group.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/gwlb_server_group) | resource |
-| [alicloud_instance.default5DqP8f](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/instance) | resource |
-| [alicloud_security_group.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/security_group) | resource |
+| [alicloud_instance.defaultH6McvC](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/instance) | resource |
+| [alicloud_security_group.default7NNxRl](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/security_group) | resource |
 | [alicloud_vpc.defaultEaxcvb](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 | [alicloud_vswitch.defaultc3uVID](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
+| [alicloud_resource_manager_resource_groups.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/resource_manager_resource_groups) | data source |
 
 ## Inputs
 

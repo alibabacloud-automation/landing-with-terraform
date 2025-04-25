@@ -7,12 +7,14 @@ resource "alicloud_vpc" "default" {
   cidr_block = "10.4.0.0/16"
 }
 resource "alicloud_nlb_server_group" "default" {
-  resource_group_id = data.alicloud_resource_manager_resource_groups.default.ids.0
-  server_group_name = var.name
-  server_group_type = "Ip"
-  vpc_id            = alicloud_vpc.default.id
-  scheduler         = "Wrr"
-  protocol          = "TCP"
+  resource_group_id        = data.alicloud_resource_manager_resource_groups.default.ids.0
+  server_group_name        = var.name
+  server_group_type        = "Ip"
+  connection_drain_timeout = 10
+  connection_drain_enabled = true
+  vpc_id                   = alicloud_vpc.default.id
+  scheduler                = "Wrr"
+  protocol                 = "TCP"
   health_check {
     health_check_enabled = false
   }

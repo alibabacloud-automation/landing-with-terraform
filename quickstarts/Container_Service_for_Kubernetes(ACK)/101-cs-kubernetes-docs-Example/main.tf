@@ -120,22 +120,23 @@ data "alicloud_instance_types" "cloud_essd" {
 }
 
 resource "alicloud_cs_kubernetes" "default" {
-  master_vswitch_ids    = length(var.vswitch_ids) > 0 ? split(",", join(",", var.vswitch_ids)) : length(var.vswitch_cidrs) < 1 ? [] : split(",", join(",", alicloud_vswitch.vswitches.*.id))
-  pod_vswitch_ids       = length(var.terway_vswitch_ids) > 0 ? split(",", join(",", var.terway_vswitch_ids)) : length(var.terway_vswitch_cidrs) < 1 ? [] : split(",", join(",", alicloud_vswitch.terway_vswitches.*.id))
-  master_instance_types = [data.alicloud_instance_types.cloud_essd.0.instance_types.0.id, data.alicloud_instance_types.cloud_essd.1.instance_types.0.id, data.alicloud_instance_types.cloud_essd.2.instance_types.0.id]
-  master_disk_category  = "cloud_essd"
-  password              = "Yourpassword1234"
-  service_cidr          = "172.18.0.0/16"
-  install_cloud_monitor = "true"
-  resource_group_id     = data.alicloud_resource_manager_resource_groups.default.groups.0.id
-  deletion_protection   = "false"
-  timezone              = "Asia/Shanghai"
-  os_type               = "Linux"
-  platform              = "AliyunLinux3"
-  cluster_domain        = "cluster.local"
-  proxy_mode            = "ipvs"
-  custom_san            = "www.terraform.io"
-  new_nat_gateway       = "true"
+  master_vswitch_ids             = length(var.vswitch_ids) > 0 ? split(",", join(",", var.vswitch_ids)) : length(var.vswitch_cidrs) < 1 ? [] : split(",", join(",", alicloud_vswitch.vswitches.*.id))
+  pod_vswitch_ids                = length(var.terway_vswitch_ids) > 0 ? split(",", join(",", var.terway_vswitch_ids)) : length(var.terway_vswitch_cidrs) < 1 ? [] : split(",", join(",", alicloud_vswitch.terway_vswitches.*.id))
+  master_instance_types          = [data.alicloud_instance_types.cloud_essd.0.instance_types.0.id, data.alicloud_instance_types.cloud_essd.1.instance_types.0.id, data.alicloud_instance_types.cloud_essd.2.instance_types.0.id]
+  master_disk_category           = "cloud_essd"
+  password                       = "Yourpassword1234"
+  service_cidr                   = "172.18.0.0/16"
+  install_cloud_monitor          = true
+  resource_group_id              = data.alicloud_resource_manager_resource_groups.default.groups.0.id
+  deletion_protection            = false
+  timezone                       = "Asia/Shanghai"
+  os_type                        = "Linux"
+  platform                       = "AliyunLinux3"
+  cluster_domain                 = "cluster.local"
+  proxy_mode                     = "ipvs"
+  custom_san                     = "www.terraform.io"
+  new_nat_gateway                = true
+  skip_set_certificate_authority = true
   dynamic "addons" {
     for_each = var.cluster_addons
     content {

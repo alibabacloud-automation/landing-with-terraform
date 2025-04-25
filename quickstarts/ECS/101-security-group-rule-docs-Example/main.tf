@@ -1,10 +1,10 @@
 resource "alicloud_security_group" "default" {
-  name = "default"
+  security_group_name = "default"
 }
 resource "alicloud_security_group_rule" "allow_all_tcp" {
   type              = "ingress"
   ip_protocol       = "tcp"
-  nic_type          = "internet"
+  nic_type          = "intranet"
   policy            = "accept"
   port_range        = "1/65535"
   priority          = 1

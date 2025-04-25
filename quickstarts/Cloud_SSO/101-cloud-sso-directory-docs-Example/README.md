@@ -18,7 +18,6 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_cloud_sso_directory.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_sso_directory) | resource |
-| [alicloud_cloud_sso_directories.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/cloud_sso_directories) | data source |
 
 ## Inputs
 

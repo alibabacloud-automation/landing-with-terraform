@@ -84,13 +84,14 @@ resource "alicloud_cs_managed_kubernetes" "k8s" {
   name         = var.name
   cluster_spec = "ack.pro.small"
   # version can not be defined in variables.tf.
-  # version            = "1.26.3-aliyun.1"
-  vswitch_ids     = length(var.vswitch_ids) > 0 ? split(",", join(",", var.vswitch_ids)) : length(var.vswitch_cidrs) < 1 ? [] : split(",", join(",", alicloud_vswitch.vswitches.*.id))
-  pod_vswitch_ids = length(var.terway_vswitch_ids) > 0 ? split(",", join(",", var.terway_vswitch_ids)) : length(var.terway_vswitch_cidrs) < 1 ? [] : split(",", join(",", alicloud_vswitch.terway_vswitches.*.id))
-  new_nat_gateway = true
-  node_cidr_mask  = var.node_cidr_mask
-  proxy_mode      = var.proxy_mode
-  service_cidr    = var.service_cidr
+  # version                        = "1.26.3-aliyun.1"
+  vswitch_ids                    = length(var.vswitch_ids) > 0 ? split(",", join(",", var.vswitch_ids)) : length(var.vswitch_cidrs) < 1 ? [] : split(",", join(",", alicloud_vswitch.vswitches.*.id))
+  pod_vswitch_ids                = length(var.terway_vswitch_ids) > 0 ? split(",", join(",", var.terway_vswitch_ids)) : length(var.terway_vswitch_cidrs) < 1 ? [] : split(",", join(",", alicloud_vswitch.terway_vswitches.*.id))
+  new_nat_gateway                = true
+  node_cidr_mask                 = var.node_cidr_mask
+  proxy_mode                     = var.proxy_mode
+  service_cidr                   = var.service_cidr
+  skip_set_certificate_authority = true
 
   addons {
     name = "terway-eniip"

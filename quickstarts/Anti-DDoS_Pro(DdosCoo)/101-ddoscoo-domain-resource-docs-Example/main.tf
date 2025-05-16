@@ -25,7 +25,13 @@ resource "alicloud_ddoscoo_domain_resource" "default" {
   rs_type      = 0
   instance_ids = [alicloud_ddoscoo_instance.default.id]
   real_servers = ["177.167.32.11"]
-  https_ext    = "{\"Http2\":1,\"Http2https\":0,\"Https2http\":0}"
+  https_ext    = <<EOF
+    {
+    "Http2": 1,
+    "Http2https": 0,
+    "Https2http": 0
+  }
+  EOF
   proxy_types {
     proxy_ports = [443]
     proxy_type  = "https"

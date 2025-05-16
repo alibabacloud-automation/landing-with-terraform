@@ -18,10 +18,12 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_amqp_exchange.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/amqp_exchange) | resource |
-| [alicloud_amqp_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/amqp_instance) | resource |
-| [alicloud_amqp_virtual_host.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/amqp_virtual_host) | resource |
+| [alicloud_amqp_instance.CreateInstance](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/amqp_instance) | resource |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
+| <a name="input_virtual_host_name"></a> [virtual\_host\_name](#input\_virtual\_host\_name) | n/a | `string` | `"/"` | no |
 <!-- END_TF_DOCS -->    

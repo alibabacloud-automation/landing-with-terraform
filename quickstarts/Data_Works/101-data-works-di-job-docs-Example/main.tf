@@ -1,5 +1,5 @@
 variable "name" {
-  default = "terraform-example"
+  default = "terraform_example"
 }
 
 provider "alicloud" {
@@ -7,9 +7,10 @@ provider "alicloud" {
 }
 
 resource "alicloud_data_works_project" "defaultMMHL8U" {
-  description  = var.name
-  project_name = var.name
-  display_name = var.name
+  project_name     = var.name
+  display_name     = var.name
+  description      = var.name
+  pai_task_enabled = true
 }
 
 

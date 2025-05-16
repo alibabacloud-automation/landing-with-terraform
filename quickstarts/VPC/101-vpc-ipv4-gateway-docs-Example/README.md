@@ -18,7 +18,6 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_resource_manager_resource_group.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_resource_group) | resource |
-| [alicloud_resource_manager_resource_group.modify](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_resource_group) | resource |
 | [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 | [alicloud_vpc_ipv4_gateway.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc_ipv4_gateway) | resource |
 
@@ -26,5 +25,5 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-testacc-example"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
 <!-- END_TF_DOCS -->    

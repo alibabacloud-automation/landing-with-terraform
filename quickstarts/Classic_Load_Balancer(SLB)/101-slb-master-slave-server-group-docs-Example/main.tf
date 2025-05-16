@@ -4,8 +4,10 @@ data "alicloud_zones" "ms_server_group" {
 }
 
 data "alicloud_instance_types" "ms_server_group" {
-  availability_zone = data.alicloud_zones.ms_server_group.zones[0].id
-  eni_amount        = 2
+  availability_zone    = data.alicloud_zones.ms_server_group.zones[0].id
+  cpu_core_count       = 2
+  memory_size          = 8
+  instance_type_family = "ecs.g6"
 }
 
 data "alicloud_images" "image" {
@@ -31,8 +33,8 @@ resource "alicloud_vswitch" "main" {
 }
 
 resource "alicloud_security_group" "group" {
-  name   = var.slb_master_slave_server_group
-  vpc_id = alicloud_vpc.main.id
+  security_group_name = var.slb_master_slave_server_group
+  vpc_id              = alicloud_vpc.main.id
 }
 
 resource "alicloud_instance" "ms_server_group" {

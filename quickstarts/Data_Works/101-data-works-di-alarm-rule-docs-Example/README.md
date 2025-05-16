@@ -25,5 +25,5 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform_example"` | no |
 <!-- END_TF_DOCS -->

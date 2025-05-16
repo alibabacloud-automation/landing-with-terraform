@@ -39,7 +39,7 @@ resource "alicloud_slb_listener" "listener" {
   }
   acl_status      = "on"
   acl_type        = "white"
-  acl_id          = alicloud_slb_acl.listener.id
+  acl_ids         = [alicloud_slb_acl.listener.id]
   request_timeout = 80
   idle_timeout    = 30
 }

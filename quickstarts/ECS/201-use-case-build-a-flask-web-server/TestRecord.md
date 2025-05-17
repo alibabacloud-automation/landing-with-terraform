@@ -1,3 +1,16 @@
+## 17 May 2025 05:41 UTC
+
+success: true
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.249.0
++ provider registry.terraform.io/hashicorp/null v3.2.4
+
+### Error
+
 ## 10 May 2025 05:17 UTC
 
 success: true

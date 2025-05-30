@@ -64,8 +64,4 @@ resource "alicloud_max_compute_quota" "default" {
     }
 
   }
-  tags = {
-    "tf"    = "created"
-    "valid" = "true"
-  }
 }

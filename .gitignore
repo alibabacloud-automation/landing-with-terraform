@@ -18,6 +18,7 @@ TestRecordImport
 TestRecordTfer
 terraform.tfstate
 terraform.tfstate.backup
+**/terraform.tfvars
 quickstarts/**/header.md
 quickstarts/**/footer.md
 quickstarts/**/plan.tftest.hcl

@@ -17,7 +17,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_event_bridge_service_linked_role.service_linked_role](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/event_bridge_service_linked_role) | resource |
+| [alicloud_event_bridge_service_linked_role.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/event_bridge_service_linked_role) | resource |
 
 ## Inputs
 

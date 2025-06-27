@@ -7,7 +7,7 @@ variable "region" {
 }
 
 variable "name" {
-  default = "tf-example"
+  default = "terraform-example"
 }
 
 data "alicloud_regions" "default" {

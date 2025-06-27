@@ -1,7 +1,11 @@
-# Create a new RAM Role.
-resource "alicloud_ram_role" "role" {
-  name        = "terraform-example"
-  document    = <<EOF
+resource "random_integer" "default" {
+  min = 10000
+  max = 99999
+}
+
+resource "alicloud_ram_role" "default" {
+  role_name                   = "terraform-example-${random_integer.default.result}"
+  assume_role_policy_document = <<EOF
   {
     "Statement": [
       {
@@ -9,7 +13,7 @@ resource "alicloud_ram_role" "role" {
         "Effect": "Allow",
         "Principal": {
           "Service": [
-            "apigateway.aliyuncs.com", 
+            "apigateway.aliyuncs.com",
             "ecs.aliyuncs.com"
           ]
         }
@@ -18,5 +22,5 @@ resource "alicloud_ram_role" "role" {
     "Version": "1"
   }
   EOF
-  description = "this is a role test."
+  description                 = "this is a role test."
 }

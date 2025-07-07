@@ -7,42 +7,42 @@ on:
     types: [ 'opened', 'synchronize' ]
     paths:
       - '.github/**'
-      - '.github/workflows/**'
       - 'quickstarts/**'
+      - 'tech-solution/**'
 
 jobs:
   terraform-fmt:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: hashicorp/setup-terraform@v3
-
       - name: Terraform fmt
         id: fmt
-        run: terraform -chdir=quickstarts fmt -check -recursive
+        run: |
+          terraform -chdir=quickstarts fmt -check -recursive
+          terraform -chdir=tech-solution fmt -check -recursive
 
 
   terraform-validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - uses: hashicorp/setup-terraform@v3
-        
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v34
         with:
           dir_names: "true"
           separator: ","
-          files: "quickstarts/*"
+          files: |
+            quickstarts/*
+            tech-solution/*
           dir_names_max_depth: 3
-      - name: pr-check
+      - name: Terraform validate
         run: |
           CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
           if [ -z "$CHANGED_FOLDERS" ]; then
-            echo "No changed quickstarts found"
+            echo "No changed terraform code found"
             exit 0
           fi
 
@@ -54,7 +54,7 @@ jobs:
             terraform -chdir=$f init -upgrade
             terraform -chdir=$f validate
             if [[ $? -ne 0 ]]; then
-              echo -e "\033[31m[ERROR]\033[0m: Some quickstarts codes contain errors, and please running terraform validate command before pushing."
+              echo -e "\033[31m[ERROR]\033[0m: Some terraform codes contain errors, and please running terraform validate command before pushing."
               exit 1
             fi
           done
@@ -63,7 +63,7 @@ jobs:
   e2e-check:
     needs: [terraform-fmt, terraform-validate]
     runs-on: ubuntu-latest
-    name: 'e2e check'
+    name: e2e check
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -80,7 +80,9 @@ jobs:
         with:
           dir_names: "true"
           separator: ","
-          files: "quickstarts/*"
+          files: |
+            quickstarts/*
+            tech-solution/*
           dir_names_max_depth: 3
       - name: set id
         id: set-job-id
@@ -98,7 +100,7 @@ jobs:
         run: |
           CHANGED_FOLDERS="${{ steps.changed-files.outputs.all_changed_files }}"
           if [ -z "$CHANGED_FOLDERS" ]; then
-            echo "No changed quickstarts found"
+            echo "No changed terraform code found"
             exit 0
           fi
           objectPath="github-action/${{github.repository}}/e2e/Action-${{github.run_number}}-${{github.run_id}}-${{ steps.set-job-id.outputs.jobId }}"

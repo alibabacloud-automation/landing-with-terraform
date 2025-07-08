@@ -6,9 +6,8 @@ on:
       - main
     types: [ 'opened', 'synchronize' ]
     paths:
-      - '.github/**'
       - 'quickstarts/**'
-      - 'tech-solution/**'
+      - 'solution/**'
 
 jobs:
   terraform-fmt:
@@ -20,7 +19,7 @@ jobs:
         id: fmt
         run: |
           terraform -chdir=quickstarts fmt -check -recursive
-          terraform -chdir=tech-solution fmt -check -recursive
+          terraform -chdir=solution fmt -check -recursive
 
 
   terraform-validate:
@@ -36,7 +35,7 @@ jobs:
           separator: ","
           files: |
             quickstarts/*
-            tech-solution/*
+            solution/*
           dir_names_max_depth: 3
       - name: Terraform validate
         run: |
@@ -82,7 +81,7 @@ jobs:
           separator: ","
           files: |
             quickstarts/*
-            tech-solution/*
+            solution/*
           dir_names_max_depth: 3
       - name: set id
         id: set-job-id

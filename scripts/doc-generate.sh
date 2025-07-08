@@ -2,7 +2,7 @@
 
 if [ $# -eq 0 ];then
     exampleDir=$(find ./quickstarts -maxdepth 2 -mindepth 2 -type d)
-    techSolutionDir=$(find ./tech-solution -maxdepth 1 -mindepth 1 -type d)
+    techSolutionDir=$(find ./solution -maxdepth 2 -mindepth 2 -type d)
     all_dirs="$exampleDir $techSolutionDir"
     # echo $all_dirs
     for file in $all_dirs;do

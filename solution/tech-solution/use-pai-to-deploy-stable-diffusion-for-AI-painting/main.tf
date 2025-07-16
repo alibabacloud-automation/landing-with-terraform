@@ -1,4 +1,5 @@
 provider "alicloud" {
+  region = var.region
 }
 
 # 生成随机字符串
@@ -18,10 +19,10 @@ resource "alicloud_vpc" "vpc" {
 
 # VSwitch
 resource "alicloud_vswitch" "vswitch" {
-  vpc_id     = alicloud_vpc.vpc.id
+  vpc_id            = alicloud_vpc.vpc.id
   availability_zone = var.zone_id
-  cidr_block = "192.168.0.0/18"
-  vswitch_name = "vswitch_SDWebUI"
+  cidr_block        = "192.168.0.0/18"
+  vswitch_name      = "vswitch_SDWebUI"
 }
 
 # NAT网关
@@ -33,7 +34,7 @@ resource "alicloud_nat_gateway" "nat_gateway" {
   internet_charge_type = "PayByLcu"
   nat_type             = "Enhanced"
   network_type         = "internet"
-  
+
   tags = {
     WebUI = "SD_WebUI"
   }
@@ -41,9 +42,9 @@ resource "alicloud_nat_gateway" "nat_gateway" {
 
 # EIP
 resource "alicloud_eip" "eip" {
-  name                  = "eip_SDWebUI"
-  bandwidth             = 200
-  internet_charge_type  = "PayByTraffic"
+  name                 = "eip_SDWebUI"
+  bandwidth            = 200
+  internet_charge_type = "PayByTraffic"
 }
 
 # EIP关联到NAT网关
@@ -55,9 +56,9 @@ resource "alicloud_eip_association" "eip_association" {
 # SNAT条目
 resource "alicloud_snat_entry" "snat_entry" {
   snat_table_id = alicloud_nat_gateway.nat_gateway.snat_table_ids
-  snat_ip        = alicloud_eip.eip.ip_address
-  source_cidr    = "192.168.0.0/18"
-  
+  snat_ip       = alicloud_eip.eip.ip_address
+  source_cidr   = "192.168.0.0/18"
+
   depends_on = [alicloud_eip_association.eip_association]
 }
 
@@ -95,9 +96,9 @@ resource "alicloud_security_group_rule" "allow_https" {
 # NAS文件系统
 resource "alicloud_nas_file_system" "nas" {
   file_system_type = "standard"
-  storage_type   = "Performance"
-  protocol_type  = "NFS"
-  encrypt_type   = 0
+  storage_type     = "Performance"
+  protocol_type    = "NFS"
+  encrypt_type     = 0
 }
 
 # NAS访问组
@@ -119,14 +120,14 @@ resource "alicloud_nas_access_rule" "nas_access_rule" {
 
 # NAS挂载点
 resource "alicloud_nas_mount_target" "nas_mount_target" {
-  vpc_id           = alicloud_vpc.vpc.id
-  vswitch_id       = alicloud_vswitch.vswitch.id
+  vpc_id            = alicloud_vpc.vpc.id
+  vswitch_id        = alicloud_vswitch.vswitch.id
   security_group_id = alicloud_security_group.security_group.id
-  status           = "Active"
-  file_system_id   = alicloud_nas_file_system.nas.id
-  network_type     = "Vpc"
+  status            = "Active"
+  file_system_id    = alicloud_nas_file_system.nas.id
+  network_type      = "Vpc"
   access_group_name = alicloud_nas_access_group.nas_access_group.access_group_name
-  
+
   depends_on = [alicloud_nas_access_rule.nas_access_rule]
 }
 
@@ -134,26 +135,26 @@ resource "alicloud_nas_mount_target" "nas_mount_target" {
 resource "alicloud_pai_service" "pai_eas" {
   service_config = jsonencode({
     metadata = {
-      name = "sdwebui_${random_string.random_string.result}"
-      instance = 1
-      type = "SDCluster"
+      name              = "sdwebui_${random_string.random_string.result}"
+      instance          = 1
+      type              = "SDCluster"
       enable_webservice = "true"
     }
     cloud = {
       computing = {
         instance_type = var.instance_type
-        instances = null
+        instances     = null
       }
       networking = {
-        vpc_id = alicloud_vpc.vpc.id
-        vswitch_id = alicloud_vswitch.vswitch.id
+        vpc_id            = alicloud_vpc.vpc.id
+        vswitch_id        = alicloud_vswitch.vswitch.id
         security_group_id = alicloud_security_group.security_group.id
       }
     }
     storage = [
       {
         nfs = {
-          path = "/"
+          path   = "/"
           server = alicloud_nas_mount_target.nas_mount_target.mount_target_domain
         }
         properties = {
@@ -164,9 +165,9 @@ resource "alicloud_pai_service" "pai_eas" {
     ]
     containers = [
       {
-        image = "eas-registry-vpc.ap-southeast-1.cr.aliyuncs.com/pai-eas/stable-diffusion-webui:4.1"
+        image  = "eas-registry-vpc.ap-southeast-1.cr.aliyuncs.com/pai-eas/stable-diffusion-webui:4.1"
         script = "./webui.sh --listen --port 8000 --skip-version-check --no-hashing --no-download-sd-model --skip-install --api --filebrowser --cluster-status --sd-dynamic-cache --data-dir /code/stable-diffusion-webui/data-nas"
-        port = 8000
+        port   = 8000
       }
     ]
     meta = {

@@ -1,8 +1,7 @@
-<!-- BEGIN_TF_DOCS -->
 ## Introduction
 
 <!-- DOCS_DESCRIPTION_CN -->
-本示例用于实现解决方案[PAI 部署多形态的 Stable Diffusion WebUI 服务部署须知](https://www.aliyun.com/solution/tech-solution-deploy/2509703), 涉及到 PAI、NAS、NAT网关 等资源的创建/添加/挂载/关联/部署。
+本示例用于实现解决方案[PAI 部署多形态的 Stable Diffusion WebUI 服务部署须知](https://www.aliyun.com/solution/tech-solution-deploy/2509703), 涉及到 PAI、NAS、NAT网关 等资源的创建。
 <!-- DOCS_DESCRIPTION_CN -->
 
 <!-- DOCS_DESCRIPTION_EN -->

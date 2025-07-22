@@ -46,5 +46,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_instance_type"></a> [instance\_type](#input\_instance\_type) | PAI-EAS实例规格 | `string` | `"ecs.gn6i-c16g1.4xlarge"` | no |
+| <a name="input_region"></a> [region](#input\_region) | 地域，由于在新加坡地域开通弹性公网 IP 服务后，访问 Civitai 和Github 的网速高效稳定，此处选择新加坡 | `string` | `"ap-southeast-1"` | no |
 | <a name="input_zone_id"></a> [zone\_id](#input\_zone\_id) | 可用区ID | `string` | `"ap-southeast-1c"` | no |
 <!-- END_TF_DOCS -->

@@ -1,0 +1,25 @@
+name: Pull Request
+on:
+  pull_request:
+    branches:
+      - master
+      - main
+    types: ["opened", "synchronize"]
+    paths:
+      - "quickstarts/**"
+      - "solution/**"
+
+jobs:
+  commit-check:
+    runs-on: ubuntu-latest
+    name: commit check
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: Checking the max commits number
+        run: |
+          commitNum=${{ github.event.pull_request.commits }}
+          if [[ ${commitNum} -gt 1 ]]; then
+            echo -e "\nERROR: The PR has ${commitNum} commits, and please rebase it to 1.\n"
+            exit 1
+          fi

@@ -20,7 +20,6 @@ No modules.
 |------|------|
 | [alicloud_cloud_sso_access_assignment.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_sso_access_assignment) | resource |
 | [alicloud_cloud_sso_access_configuration.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_sso_access_configuration) | resource |
-| [alicloud_cloud_sso_access_configuration_provisioning.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_sso_access_configuration_provisioning) | resource |
 | [alicloud_cloud_sso_directory.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_sso_directory) | resource |
 | [alicloud_cloud_sso_user.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cloud_sso_user) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
@@ -31,5 +30,5 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->    

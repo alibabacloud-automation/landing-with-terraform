@@ -32,5 +32,4 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_azone"></a> [azone](#input\_azone) | n/a | `string` | `"cn-hangzhou-g"` | no |
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
-| <a name="input_region_id"></a> [region\_id](#input\_region\_id) | n/a | `string` | `"cn-hangzhou"` | no |
 <!-- END_TF_DOCS -->

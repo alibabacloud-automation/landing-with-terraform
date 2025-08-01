@@ -18,7 +18,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_instance.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/instance) | resource |
-| [alicloud_route_entry.foo](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/route_entry) | resource |
+| [alicloud_route_entry.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/route_entry) | resource |
 | [alicloud_security_group.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/security_group) | resource |
 | [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 | [alicloud_vswitch.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |

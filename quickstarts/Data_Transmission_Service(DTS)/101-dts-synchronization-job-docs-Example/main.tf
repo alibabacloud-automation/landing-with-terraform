@@ -34,8 +34,8 @@ resource "alicloud_vswitch" "example" {
 }
 
 resource "alicloud_security_group" "example" {
-  name   = var.name
-  vpc_id = alicloud_vpc.example.id
+  security_group_name = var.name
+  vpc_id              = alicloud_vpc.example.id
 }
 
 resource "alicloud_db_instance" "example" {

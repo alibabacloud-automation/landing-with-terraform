@@ -49,7 +49,7 @@ resource "alicloud_instance" "default" {
   instance_name              = var.name
 }
 
-resource "alicloud_route_entry" "foo" {
+resource "alicloud_route_entry" "default" {
   route_table_id        = alicloud_vpc.default.route_table_id
   destination_cidrblock = "172.11.1.1/32"
   nexthop_type          = "Instance"

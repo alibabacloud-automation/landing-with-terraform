@@ -6,7 +6,6 @@ provider "alicloud" {
   region = "cn-hangzhou"
 }
 
-
 resource "alicloud_threat_detection_image_event_operation" "default" {
   event_type     = "maliciousFile"
   operation_code = "whitelist"

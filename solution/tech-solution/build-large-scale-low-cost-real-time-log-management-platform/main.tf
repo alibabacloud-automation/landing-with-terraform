@@ -73,6 +73,7 @@ resource "alicloud_instance" "ecs_instance" {
   vswitch_id                 = alicloud_vswitch.vswitch.id
   password                   = var.ecs_instance_password
   internet_max_bandwidth_out = 5
+  depends_on                 = [alicloud_log_store_index.sls_index]
 }
 
 resource "alicloud_ecs_command" "run_command" {
@@ -85,15 +86,19 @@ export ALIBABA_CLOUD_ACCESS_KEY_SECRET=${alicloud_ram_access_key.ramak.secret}
 EOT
 
 source ~/.bash_profile
-curl -fsSL https://help-static-aliyun-doc.aliyuncs.com/tech-solution/install-log-monitoring-alarming-0.1.sh|bash
+sleep 60
+# Install loongcollector
 wget http://aliyun-observability-release-${var.region}.oss-${var.region}.aliyuncs.com/loongcollector/linux64/latest/loongcollector.sh -O loongcollector.sh
 chmod +x loongcollector.sh
 ./loongcollector.sh install ${var.region}-internet
+# Generate log
+curl -fsSL https://help-static-aliyun-doc.aliyuncs.com/tech-solution/install-log-monitoring-alarming-0.1.sh|bash
 EOF
   )
   working_dir = "/root"
   type        = "RunShellScript"
   timeout     = 3600
+  depends_on  = [alicloud_instance.ecs_instance]
 }
 
 resource "alicloud_ecs_invocation" "invoke_script" {
@@ -151,11 +156,15 @@ resource "alicloud_logtail_attachment" "this" {
 resource "alicloud_log_store_index" "sls_index" {
   project  = alicloud_log_project.sls_project.project_name
   logstore = alicloud_log_store.sls_log_store.logstore_name
-  full_text {}
-  field_search {
-    name = "content"
-    type = "text"
+  full_text {
+    token = " :#$^*\r\n\t"
   }
+  field_search {
+    name  = "content"
+    type  = "text"
+    token = " :#$^*\r\n\t"
+  }
+  depends_on = [alicloud_log_store.sls_log_store]
 }
 
 resource "alicloud_security_group" "security_group_kibana" {

@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_eflo_node_group_attachment` resource.
+This example is used to create a `alicloud_mongodb_global_security_ip_group` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -17,11 +17,11 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_eflo_node_group_attachment.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/eflo_node_group_attachment) | resource |
+| [alicloud_mongodb_global_security_ip_group.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/mongodb_global_security_ip_group) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraformexample"` | no |
 <!-- END_TF_DOCS -->

@@ -1,3 +1,4 @@
+0
 resource "random_integer" "default" {
   max = 99999
   min = 10000

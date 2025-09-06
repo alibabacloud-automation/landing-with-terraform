@@ -1,3 +1,16 @@
+## 06 Sep 2025 09:31 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/hashicorp/alicloud v1.258.0
+
+### Error
+
+Plan: running terraform plan failed.
 ## 23 Aug 2025 04:18 UTC
 
 success: false

@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_ddosbgp_instance` resource.
+This example is used to create a `alicloud_resource_manager_message_contact` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -17,11 +17,11 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_ddosbgp_instance.instance](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ddosbgp_instance) | resource |
+| [alicloud_resource_manager_message_contact.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_message_contact) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
-<!-- END_TF_DOCS -->    
+<!-- END_TF_DOCS -->

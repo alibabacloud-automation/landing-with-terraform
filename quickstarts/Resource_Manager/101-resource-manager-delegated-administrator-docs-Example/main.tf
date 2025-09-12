@@ -1,25 +1,8 @@
-variable "name" {
-  default = "tf-example"
-}
-variable "display_name" {
-  default = "EAccount"
+data "alicloud_resource_manager_accounts" "default" {
+  status = "CreateSuccess"
 }
 
-resource "random_integer" "default" {
-  min = 10000
-  max = 99999
-}
-
-data "alicloud_resource_manager_folders" "example" {
-
-}
-
-resource "alicloud_resource_manager_account" "example" {
-  display_name = "${var.display_name}-${random_integer.default.result}"
-  folder_id    = data.alicloud_resource_manager_folders.example.ids.0
-}
-
-resource "alicloud_resource_manager_delegated_administrator" "example" {
-  account_id        = alicloud_resource_manager_account.example.id
+resource "alicloud_resource_manager_delegated_administrator" "default" {
+  account_id        = data.alicloud_resource_manager_accounts.default.accounts.0.account_id
   service_principal = "cloudfw.aliyuncs.com"
 }

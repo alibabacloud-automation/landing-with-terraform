@@ -1,6 +1,6 @@
 ## Introduction
 
-This example is used to create a `alicloud_resource_manager_folder` resource.
+This example is used to create a `alicloud_dms_enterprise_workspace` resource.
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers
@@ -18,12 +18,13 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_resource_manager_folder.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_folder) | resource |
+| [alicloud_dms_enterprise_workspace.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/dms_enterprise_workspace) | resource |
+| [alicloud_vpc.vpc_create](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
-<!-- END_TF_DOCS -->    
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform_example"` | no |
+<!-- END_TF_DOCS -->

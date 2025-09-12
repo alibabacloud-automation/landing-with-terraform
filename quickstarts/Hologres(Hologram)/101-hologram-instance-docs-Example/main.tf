@@ -21,7 +21,7 @@ resource "alicloud_vswitch" "defaultVSwitch" {
 resource "alicloud_hologram_instance" "default" {
   instance_type = "Standard"
   pricing_cycle = "Hour"
-  cpu           = "8"
+  cpu           = "32"
   endpoints {
     type = "Intranet"
   }

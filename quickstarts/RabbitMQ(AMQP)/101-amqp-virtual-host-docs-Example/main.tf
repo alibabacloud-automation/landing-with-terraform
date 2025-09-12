@@ -1,18 +1,26 @@
-provider "alicloud" {
-  region = "cn-shanghai"
+variable "name" {
+  default = "terraform-example"
+}
+
+resource "random_integer" "default" {
+  min = 10000
+  max = 99999
 }
 
 resource "alicloud_amqp_instance" "default" {
-  instance_type  = "professional"
-  max_tps        = 1000
-  queue_capacity = 50
-  support_eip    = true
-  max_eip_tps    = 128
-  payment_type   = "Subscription"
-  period         = 1
+  instance_name         = "${var.name}-${random_integer.default.result}"
+  instance_type         = "enterprise"
+  max_tps               = 3000
+  max_connections       = 2000
+  queue_capacity        = 200
+  payment_type          = "Subscription"
+  renewal_status        = "AutoRenewal"
+  renewal_duration      = 1
+  renewal_duration_unit = "Year"
+  support_eip           = true
 }
 
 resource "alicloud_amqp_virtual_host" "default" {
   instance_id       = alicloud_amqp_instance.default.id
-  virtual_host_name = "tf-example"
+  virtual_host_name = "${var.name}-${random_integer.default.result}"
 }

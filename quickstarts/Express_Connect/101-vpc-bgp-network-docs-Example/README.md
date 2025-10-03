@@ -18,14 +18,14 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_express_connect_virtual_border_router.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/express_connect_virtual_border_router) | resource |
-| [alicloud_vpc_bgp_network.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc_bgp_network) | resource |
-| [random_integer.vlan_id](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
-| [alicloud_express_connect_physical_connections.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/express_connect_physical_connections) | data source |
+| [alicloud_express_connect_virtual_border_router.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/express_connect_virtual_border_router) | resource |
+| [alicloud_vpc_bgp_network.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc_bgp_network) | resource |
+| [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
+| [alicloud_express_connect_physical_connections.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/express_connect_physical_connections) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->    

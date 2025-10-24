@@ -1,5 +1,5 @@
 variable "name" {
-  default = "tf_example"
+  default = "terraform-example"
 }
 
 data "alicloud_adb_zones" "default" {

@@ -18,14 +18,14 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_event_bridge_event_bus.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/event_bridge_event_bus) | resource |
-| [alicloud_event_bridge_event_source.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/event_bridge_event_source) | resource |
-| [alicloud_mns_queue.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/mns_queue) | resource |
+| [alicloud_event_bridge_event_bus.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/event_bridge_event_bus) | resource |
+| [alicloud_event_bridge_event_source.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/event_bridge_event_source) | resource |
+| [alicloud_mns_queue.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/mns_queue) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->    

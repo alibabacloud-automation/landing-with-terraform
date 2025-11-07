@@ -8,7 +8,6 @@ This example is used to create a `alicloud_oss_bucket_logging` resource.
 | Name | Version |
 |------|---------|
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
-| <a name="provider_random"></a> [random](#provider\_random) | n/a |
 
 ## Modules
 
@@ -19,8 +18,8 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_oss_bucket.CreateBucket](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
+| [alicloud_oss_bucket.CreateLoggingBucket](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
 | [alicloud_oss_bucket_logging.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_logging) | resource |
-| [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs
 

@@ -1,3 +1,7 @@
+provider "alicloud" {
+  region = "ap-southeast-5"
+}
+
 variable "name" {
   default = "terraform-example"
 }

@@ -75,3 +75,41 @@ resource "alicloud_instance" "ecs_instance" {
   password                   = var.ecs_instance_password
   internet_max_bandwidth_out = 5
 }
+
+
+# 创建一个RocketMQ实例
+resource "alicloud_rocketmq_instance" "rocketmq" {
+  product_info {
+    msg_process_spec       = "rmq.s2.2xlarge"
+    message_retention_time = "70"
+  }
+
+  sub_series_code = "cluster_ha"
+  series_code     = "standard"
+  payment_type    = "PayAsYouGo"
+  instance_name   = "ROCKETMQ5-${local.common_name}"
+  service_code    = "rmq"
+
+  network_info {
+    vpc_info {
+      vpc_id = alicloud_vpc.vpc.id
+      vswitches {
+        vswitch_id = alicloud_vswitch.ecs_vswitch.id
+      }
+    }
+    internet_info {
+      internet_spec = "disable"
+      flow_out_type = "uninvolved"
+    }
+  }
+
+  acl_info {
+    acl_types             = ["default", "apache_acl"]
+    default_vpc_auth_free = false
+  }
+
+  tags = {
+    version_capability = "lite-topic"
+  }
+
+}

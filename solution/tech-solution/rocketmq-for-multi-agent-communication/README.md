@@ -26,6 +26,7 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_instance.ecs_instance](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/instance) | resource |
+| [alicloud_rocketmq_instance.rocketmq](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/rocketmq_instance) | resource |
 | [alicloud_security_group.security_group](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/security_group) | resource |
 | [alicloud_vpc.vpc](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/vpc) | resource |
 | [alicloud_vswitch.ecs_vswitch](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/vswitch) | resource |

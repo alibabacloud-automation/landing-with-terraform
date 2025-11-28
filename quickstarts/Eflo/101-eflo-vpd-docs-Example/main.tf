@@ -1,11 +1,9 @@
 variable "name" {
-  default = "tf-example"
+  default = "terraform-example"
 }
 
-provider "alicloud" {
-  region = "cn-wulanchabu"
+data "alicloud_resource_manager_resource_groups" "default" {
 }
-data "alicloud_resource_manager_resource_groups" "default" {}
 
 resource "alicloud_eflo_vpd" "default" {
   cidr              = "10.0.0.0/8"

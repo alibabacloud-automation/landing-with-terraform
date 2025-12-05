@@ -36,7 +36,7 @@ resource "alicloud_esa_site_delivery_task" "default" {
     max_batch_size    = "1000"
   }
 
-  data_center   = "oversea"
+  data_center   = "global"
   discard_rate  = "0.0"
   task_name     = "dcdn-example-task"
   business_type = "dcdn_log_access_l1"

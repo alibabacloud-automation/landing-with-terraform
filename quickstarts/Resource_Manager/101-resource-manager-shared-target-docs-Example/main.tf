@@ -1,13 +1,20 @@
 variable "name" {
-  default = "tfexample"
-}
-data "alicloud_resource_manager_accounts" "default" {}
-
-resource "alicloud_resource_manager_resource_share" "example" {
-  resource_share_name = var.name
+  default = "terraform-example"
 }
 
-resource "alicloud_resource_manager_shared_target" "example" {
-  resource_share_id = alicloud_resource_manager_resource_share.example.id
+data "alicloud_resource_manager_accounts" "default" {
+}
+
+resource "random_integer" "default" {
+  min = 10000
+  max = 99999
+}
+
+resource "alicloud_resource_manager_resource_share" "default" {
+  resource_share_name = "${var.name}-${random_integer.default.result}"
+}
+
+resource "alicloud_resource_manager_shared_target" "default" {
+  resource_share_id = alicloud_resource_manager_resource_share.default.id
   target_id         = data.alicloud_resource_manager_accounts.default.ids.0
 }

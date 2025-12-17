@@ -1,3 +1,177 @@
+## 13 Dec 2025 05:38 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.265.0
+
+### Error
+
+Apply: running terraform apply failed.
+## 06 Dec 2025 05:42 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.264.0
+
+### Error
+
+Apply: running terraform apply failed.
+## 29 Nov 2025 06:21 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.263.0
+
+### Error
+
+Apply: running terraform apply failed.
+## 22 Nov 2025 06:39 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.263.0
+
+### Error
+
+Apply: running terraform apply failed.
+## 15 Nov 2025 06:22 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.262.1
+
+### Error
+
+Apply: running terraform apply failed.
+## 08 Nov 2025 06:18 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.262.1
+
+### Error
+
+Apply: running terraform apply failed.
+## 01 Nov 2025 06:18 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.262.0
+
+### Error
+
+Apply: running terraform apply failed.
+## 18 Oct 2025 05:35 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.261.0
+
+### Error
+
+Apply: running terraform apply failed.
+## 11 Oct 2025 07:22 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.260.1
+
+### Error
+
+Apply: running terraform apply failed.
+## 04 Oct 2025 05:34 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.260.1
+
+### Error
+
+Apply: running terraform apply failed.
+## 13 Sep 2025 04:58 UTC
+
+success: true
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
+
+### Error
+
+## 06 Sep 2025 12:26 UTC
+
+success: true
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
+
+### Error
+
+## 23 Aug 2025 05:37 UTC
+
+success: true
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
+
+### Error
+
+## 09 Aug 2025 06:27 UTC
+
+success: true
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
+
+### Error
+
 ## 02 Aug 2025 07:58 UTC
 
 success: true

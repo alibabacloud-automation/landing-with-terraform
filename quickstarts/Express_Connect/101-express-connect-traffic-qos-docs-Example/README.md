@@ -18,7 +18,6 @@ No modules.
 | Name | Type |
 |------|------|
 | [alicloud_express_connect_traffic_qos.createQos](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/express_connect_traffic_qos) | resource |
-| [alicloud_express_connect_physical_connections.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/express_connect_physical_connections) | data source |
 
 ## Inputs
 

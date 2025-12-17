@@ -1,3 +1,53 @@
+## 06 Dec 2025 06:13 UTC
+
+success: true
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
+
+### Error
+
+## 01 Nov 2025 06:41 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.262.0
+
+### Error
+
+Plan: running terraform plan failed.
+## 04 Oct 2025 05:20 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.260.1
+
+### Error
+
+Plan: running terraform plan failed.
+## 06 Sep 2025 11:38 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.258.0
+
+### Error
+
+Plan: running terraform plan failed.
 ## 02 Aug 2025 07:48 UTC
 
 success: false

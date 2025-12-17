@@ -1,3 +1,196 @@
+## 13 Dec 2025 03:31 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.265.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Plan: running terraform plan failed.
+## 06 Dec 2025 03:50 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.264.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Plan: running terraform plan failed.
+## 29 Nov 2025 04:09 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.263.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Plan: running terraform plan failed.
+## 22 Nov 2025 04:13 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.263.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Plan: running terraform plan failed.
+## 15 Nov 2025 04:00 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.262.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Plan: running terraform plan failed.
+## 08 Nov 2025 03:54 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.262.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Plan: running terraform plan failed.
+## 01 Nov 2025 04:11 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.262.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Plan: running terraform plan failed.
+## 18 Oct 2025 03:25 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.261.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Plan: running terraform plan failed.
+## 11 Oct 2025 04:25 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.260.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Plan: running terraform plan failed.
+## 04 Oct 2025 03:31 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.260.1
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Plan: running terraform plan failed.
+## 13 Sep 2025 02:52 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.259.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Plan: running terraform plan failed.
+## 06 Sep 2025 08:48 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.258.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Apply: running terraform apply failed.
+## 23 Aug 2025 04:02 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.258.0
++ provider registry.terraform.io/hashicorp/random v3.7.2
+
+### Error
+
+Apply: running terraform apply failed.
+## 09 Aug 2025 05:08 UTC
+
+success: true
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
+
+### Error
+
 ## 02 Aug 2025 05:38 UTC
 
 success: true

@@ -32,6 +32,13 @@ resource "alicloud_alikafka_instance" "default" {
   disk_size      = 500
   deploy_type    = 5
   io_max         = 20
+  spec_type      = "professional"
   vswitch_id     = alicloud_vswitch.default.id
   security_group = alicloud_security_group.default.id
+  config = jsonencode(
+    {
+      "kafka.log.retention.hours" : "96",
+      "kafka.message.max.bytes" : "1048576"
+    }
+  )
 }

@@ -1,12 +1,15 @@
 provider "alicloud" {
-  region = "cn-beijing"
+  region = "cn-hangzhou"
 }
 
 variable "name" {
-  default = "tf-example"
+  default = "terraform-example"
 }
-data "alicloud_resource_manager_resource_groups" "default" {}
-resource "alicloud_ddosbgp_instance" "instance" {
+
+data "alicloud_account" "default" {
+}
+
+resource "alicloud_ddosbgp_instance" "default" {
   name             = var.name
   base_bandwidth   = 20
   bandwidth        = -1
@@ -21,7 +24,7 @@ resource "alicloud_eip_address" "default" {
 }
 
 resource "alicloud_ddosbgp_ip" "default" {
-  instance_id       = alicloud_ddosbgp_instance.instance.id
-  ip                = alicloud_eip_address.default.ip_address
-  resource_group_id = data.alicloud_resource_manager_resource_groups.default.groups.0.id
+  instance_id = alicloud_ddosbgp_instance.default.id
+  ip          = alicloud_eip_address.default.ip_address
+  member_uid  = data.alicloud_account.default.id
 }

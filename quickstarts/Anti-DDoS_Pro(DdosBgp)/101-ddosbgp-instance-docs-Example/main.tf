@@ -1,9 +1,9 @@
 provider "alicloud" {
-  region = "cn-beijing"
+  region = "cn-hangzhou"
 }
 
 variable "name" {
-  default = "tf-example"
+  default = "terraform-example"
 }
 
 resource "alicloud_ddosbgp_instance" "instance" {

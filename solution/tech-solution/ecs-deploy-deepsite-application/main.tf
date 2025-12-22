@@ -1,5 +1,5 @@
 provider "alicloud" {
-  region = "cn-shanghai"
+  region = var.region
 }
 
 resource "random_id" "suffix" {
@@ -75,7 +75,7 @@ resource "alicloud_security_group_rule" "allow_tcp_443" {
 # ECS实例资源
 resource "alicloud_instance" "ecs_instance" {
   instance_name              = "${local.common_name}-ecs"
-  system_disk_category       = "cloud_essd_entry"
+  system_disk_category       = "cloud_essd"
   image_id                   = "aliyun_3_x64_20G_alibase_20251030.vhd"
   vswitch_id                 = alicloud_vswitch.vswitch.id
   password                   = var.ecs_instance_password
@@ -83,6 +83,11 @@ resource "alicloud_instance" "ecs_instance" {
   internet_max_bandwidth_out = 5
   security_groups            = [alicloud_security_group.security_group.id]
 }
+
+resource "alicloud_ram_user" "user" {
+  name = "create_by_solution-${local.common_name}"
+}
+
 
 # ECS命令资源 - 安装 DeepSite 应用脚本
 resource "alicloud_ecs_command" "install_app" {
@@ -99,11 +104,11 @@ EOF
 }
 
 # 调用命令资源
-resource "alicloud_ecs_invocation" "run_install" {
+resource "alicloud_ecs_invocation" "invoke_script" {
   instance_id = [alicloud_instance.ecs_instance.id]
   command_id  = alicloud_ecs_command.install_app.id
   timeouts {
-    create = "60m"
+    create = "15m"
   }
 }
 

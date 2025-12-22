@@ -1,6 +1,12 @@
+variable "region" {
+  type        = string
+  default     = "cn-hangzhou"
+  description = "地域，例如：cn-hangzhou。所有地域及可用区请参见文档：https://help.aliyun.com/document_detail/40654.html#09f1dc16b0uke"
+}
+
 variable "zone_id" {
   type        = string
-  default     = "cn-shanghai-b"
+  default     = "cn-hangzhou-f"
   description = <<EOT
   {
     "Label": {
@@ -9,7 +15,7 @@ variable "zone_id" {
     },
     "AssociationProperty": "ALIYUN::ECS::Instance::ZoneId",
     "AssociationPropertyMetadata": {
-      "RegionId": "cn-shanghai",
+      "RegionId": "$${region}",
       "AutoSelectFirst": true
     }
   }
@@ -29,7 +35,7 @@ variable "instance_type" {
     "AssociationPropertyMetadata": {
       "ZoneId": "$${zone_id}",
       "InstanceChargeType": "PostPaid",
-      "SystemDiskCategory": "cloud_essd_entry",
+      "SystemDiskCategory": "cloud_essd",
       "Constraints": {
         "Architecture": ["X86"],
         "vCPU": [2],

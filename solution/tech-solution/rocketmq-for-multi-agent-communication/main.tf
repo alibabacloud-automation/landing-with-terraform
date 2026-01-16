@@ -82,6 +82,7 @@ resource "alicloud_rocketmq_instance" "rocketmq" {
   product_info {
     msg_process_spec       = "rmq.s2.2xlarge"
     message_retention_time = "70"
+    send_receive_ratio     = "0.5"
   }
 
   sub_series_code = "cluster_ha"

@@ -43,6 +43,7 @@ resource "alicloud_gpdb_account" "defaultsk1eaS" {
   db_instance_id      = alicloud_gpdb_instance.defaulttuqTmM.id
   account_name        = "example_001"
   account_password    = "example_001"
+  account_type        = "Normal"
 }
 
 resource "alicloud_gpdb_external_data_service" "defaultRXkfKL" {

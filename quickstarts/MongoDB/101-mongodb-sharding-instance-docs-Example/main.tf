@@ -5,11 +5,6 @@ variable "name" {
 data "alicloud_mongodb_zones" "default" {
 }
 
-locals {
-  index   = length(data.alicloud_mongodb_zones.default.zones) - 1
-  zone_id = data.alicloud_mongodb_zones.default.zones[local.index].id
-}
-
 resource "alicloud_vpc" "default" {
   vpc_name   = var.name
   cidr_block = "172.17.3.0/24"
@@ -19,13 +14,13 @@ resource "alicloud_vswitch" "default" {
   vswitch_name = var.name
   cidr_block   = "172.17.3.0/24"
   vpc_id       = alicloud_vpc.default.id
-  zone_id      = local.zone_id
+  zone_id      = data.alicloud_mongodb_zones.default.zones.1.id
 }
 
 resource "alicloud_mongodb_sharding_instance" "default" {
   engine_version = "4.2"
   vswitch_id     = alicloud_vswitch.default.id
-  zone_id        = local.zone_id
+  zone_id        = alicloud_vswitch.default.zone_id
   name           = var.name
   mongo_list {
     node_class = "dds.mongos.mid"

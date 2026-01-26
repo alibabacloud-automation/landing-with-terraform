@@ -180,7 +180,7 @@ resource "alicloud_security_group_rule" "allow_kibana" {
   port_range        = "5601/5601"
   priority          = 1
   security_group_id = alicloud_security_group.security_group_kibana.id
-  cidr_ip           = "0.0.0.0/0"
+  cidr_ip           = "192.168.0.0/24"
 }
 
 # the ECS instance where Kibana is deployed

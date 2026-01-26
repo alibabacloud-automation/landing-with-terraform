@@ -31,7 +31,7 @@ resource "alicloud_security_group_rule" "allow_http" {
   port_range        = "80/80"
   priority          = 1
   security_group_id = alicloud_security_group.security_group.id
-  cidr_ip           = "0.0.0.0/0"
+  cidr_ip           = "192.168.0.0/24"
 }
 
 // ECS Instance Resource

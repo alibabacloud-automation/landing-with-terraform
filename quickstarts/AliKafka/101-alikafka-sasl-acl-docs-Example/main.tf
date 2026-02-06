@@ -1,6 +1,12 @@
 variable "name" {
   default = "tf_example"
 }
+
+resource "random_integer" "default" {
+  min = 10000
+  max = 99999
+}
+
 data "alicloud_zones" "default" {
   available_resource_creation = "VSwitch"
 }
@@ -19,11 +25,6 @@ resource "alicloud_vswitch" "default" {
 
 resource "alicloud_security_group" "default" {
   vpc_id = alicloud_vpc.default.id
-}
-
-resource "random_integer" "default" {
-  min = 10000
-  max = 99999
 }
 
 resource "alicloud_alikafka_instance" "default" {

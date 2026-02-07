@@ -1,3 +1,17 @@
+## 07 Feb 2026 04:56 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.270.0
++ provider registry.terraform.io/hashicorp/random v3.8.1
+
+### Error
+
+Plan: running terraform plan failed.
 ## 31 Jan 2026 04:52 UTC
 
 success: false

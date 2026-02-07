@@ -1,3 +1,16 @@
+## 07 Feb 2026 07:06 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.6.0
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v1.270.0
+
+### Error
+
+Apply: running terraform apply failed.
 ## 31 Jan 2026 06:45 UTC
 
 success: false

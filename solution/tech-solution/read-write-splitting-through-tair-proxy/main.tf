@@ -57,7 +57,7 @@ resource "alicloud_security_group_rule" "http" {
   type              = "ingress"
   ip_protocol       = "tcp"
   port_range        = "80/80"
-  cidr_ip           = "0.0.0.0/0"
+  cidr_ip           = "192.168.0.0/16"
   security_group_id = alicloud_security_group.ecs_security_group.id
 }
 

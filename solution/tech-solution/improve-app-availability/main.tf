@@ -64,7 +64,7 @@ resource "alicloud_security_group_rule" "security_group_http" {
   type              = "ingress"
   ip_protocol       = "tcp"
   port_range        = "80/80"
-  cidr_ip           = "0.0.0.0/0"
+  cidr_ip           = "192.168.0.0/16"
 }
 
 # 添加安全组规则 - HTTPS
@@ -73,7 +73,7 @@ resource "alicloud_security_group_rule" "security_group_https" {
   type              = "ingress"
   ip_protocol       = "tcp"
   port_range        = "443/443"
-  cidr_ip           = "0.0.0.0/0"
+  cidr_ip           = "192.168.0.0/16"
 }
 
 # 创建ALB负载均衡器
@@ -218,7 +218,7 @@ resource "time_static" "example" {}
 # 创建定时任务（自动扩容）
 resource "alicloud_ess_scheduled_task" "scheduled_scale_up_task" {
   scheduled_task_name    = "${var.common_name}-scale_up_task-${random_integer.default.result}"
-  launch_time            = var.scale_up_time != null && var.scale_up_time != "" ? var.scale_up_time : formatdate("YYYY-MM-DD'T'HH:mm'Z'", timeadd(time_static.example.rfc3339, "1h"))
+  launch_time            = var.scale_up_time != null && var.scale_up_time != "" ? var.scale_up_time : format("%sZ", substr(timeadd(time_static.example.rfc3339, "1h"), 0, 16))
   scheduled_action       = alicloud_ess_scaling_rule.ess_scale_up_rule.ari
   launch_expiration_time = 10
 }
@@ -226,7 +226,7 @@ resource "alicloud_ess_scheduled_task" "scheduled_scale_up_task" {
 # 创建定时任务（自动缩容）
 resource "alicloud_ess_scheduled_task" "scheduled_scale_down_task" {
   scheduled_task_name    = "${var.common_name}-scale_down_task-${random_integer.default.result}"
-  launch_time            = var.scale_down_time != null && var.scale_down_time != "" ? var.scale_down_time : formatdate("YYYY-MM-DD'T'HH:mm'Z'", timeadd(time_static.example.rfc3339, "2h"))
+  launch_time            = var.scale_down_time != null && var.scale_down_time != "" ? var.scale_down_time : format("%sZ", substr(timeadd(time_static.example.rfc3339, "2h"), 0, 16))
   scheduled_action       = alicloud_ess_scaling_rule.ess_scale_down_rule.ari
   launch_expiration_time = 10
 }

@@ -73,7 +73,7 @@ resource "alicloud_security_group_rule" "allow_ssh" {
   port_range        = "22/22"
   priority          = 1
   security_group_id = alicloud_security_group.security_group.id
-  cidr_ip           = "0.0.0.0/0"
+  cidr_ip           = "192.168.0.0/16"
 }
 
 resource "alicloud_security_group_rule" "allow_web" {
@@ -84,7 +84,7 @@ resource "alicloud_security_group_rule" "allow_web" {
   port_range        = "80/80"
   priority          = 1
   security_group_id = alicloud_security_group.security_group.id
-  cidr_ip           = "0.0.0.0/0"
+  cidr_ip           = "192.168.0.0/16"
 }
 
 data "alicloud_images" "default" {

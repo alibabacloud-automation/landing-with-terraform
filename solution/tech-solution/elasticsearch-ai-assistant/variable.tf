@@ -21,5 +21,5 @@ variable "elasticsearch_password" {
 variable "public_ip" {
   type        = string
   description = "Kibana 公网访问白名单 IP，访问 https://ipinfo.io/ip 查看当前公网 IP，或者设置成0.0.0.0/0"
-  default     = "0.0.0.0/0"
+  default     = "127.0.0.1"
 }

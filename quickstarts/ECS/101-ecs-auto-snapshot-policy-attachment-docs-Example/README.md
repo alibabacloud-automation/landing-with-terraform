@@ -17,13 +17,14 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_ecs_auto_snapshot_policy.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ecs_auto_snapshot_policy) | resource |
-| [alicloud_ecs_auto_snapshot_policy_attachment.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ecs_auto_snapshot_policy_attachment) | resource |
-| [alicloud_ecs_disk.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ecs_disk) | resource |
-| [alicloud_kms_key.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/kms_key) | resource |
-| [alicloud_zones.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/zones) | data source |
+| [alicloud_ecs_auto_snapshot_policy.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ecs_auto_snapshot_policy) | resource |
+| [alicloud_ecs_auto_snapshot_policy_attachment.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ecs_auto_snapshot_policy_attachment) | resource |
+| [alicloud_ecs_disk.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ecs_disk) | resource |
+| [alicloud_zones.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/zones) | data source |
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 <!-- END_TF_DOCS -->    

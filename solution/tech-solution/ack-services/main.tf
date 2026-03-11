@@ -308,3 +308,4 @@ resource "alicloud_ram_role_policy_attachment" "attach" {
   role_name   = each.value.name
   depends_on  = [alicloud_ram_role.role]
 }
+

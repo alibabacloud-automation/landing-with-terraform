@@ -3,14 +3,16 @@ resource "random_integer" "default" {
   min = 10000
 }
 
-resource "alicloud_oss_bucket" "bucket-versioning" {
+resource "alicloud_oss_bucket" "bucket-tags" {
   bucket = "terraform-example-${random_integer.default.result}"
-  versioning {
-    status = "Enabled"
+
+  tags = {
+    key1 = "value1"
+    key2 = "value2"
   }
 }
 
-resource "alicloud_oss_bucket_acl" "default" {
-  bucket = alicloud_oss_bucket.bucket-versioning.bucket
+resource "alicloud_oss_bucket_acl" "bucket-tags" {
+  bucket = alicloud_oss_bucket.bucket-tags.bucket
   acl    = "private"
 }

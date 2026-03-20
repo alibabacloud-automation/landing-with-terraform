@@ -3,9 +3,14 @@ resource "random_integer" "default" {
   min = 10000
 }
 
-resource "alicloud_oss_bucket" "bucket-redundancytype" {
-  bucket          = "terraform-example-${random_integer.default.result}"
-  redundancy_type = "ZRS"
+resource "alicloud_oss_bucket" "bucket-versioning" {
+  bucket = "terraform-example-${random_integer.default.result}"
+  versioning {
+    status = "Enabled"
+  }
+}
 
-  # ... other configuration ...
+resource "alicloud_oss_bucket_acl" "default" {
+  bucket = alicloud_oss_bucket.bucket-versioning.bucket
+  acl    = "private"
 }

@@ -18,11 +18,7 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_kms_key.kms](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/kms_key) | resource |
-| [alicloud_oss_bucket.bucket-kms](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
-| [alicloud_oss_bucket.bucket-sserule](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
-| [alicloud_oss_bucket_acl.bucket-kms](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
-| [alicloud_oss_bucket_acl.bucket-sserule](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
+| [alicloud_oss_bucket.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs

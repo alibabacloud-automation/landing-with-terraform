@@ -3,16 +3,35 @@ resource "random_integer" "default" {
   min = 10000
 }
 
-resource "alicloud_oss_bucket" "bucket-tags" {
+resource "alicloud_oss_bucket" "bucket-sserule" {
   bucket = "terraform-example-${random_integer.default.result}"
 
-  tags = {
-    key1 = "value1"
-    key2 = "value2"
+  server_side_encryption_rule {
+    sse_algorithm = "AES256"
   }
 }
 
-resource "alicloud_oss_bucket_acl" "bucket-tags" {
-  bucket = alicloud_oss_bucket.bucket-tags.bucket
+resource "alicloud_oss_bucket_acl" "bucket-sserule" {
+  bucket = alicloud_oss_bucket.bucket-sserule.bucket
+  acl    = "private"
+}
+
+resource "alicloud_kms_key" "kms" {
+  description            = "terraform-example"
+  pending_window_in_days = "7"
+  status                 = "Enabled"
+}
+
+resource "alicloud_oss_bucket" "bucket-kms" {
+  bucket = "terraform-example-kms-${random_integer.default.result}"
+
+  server_side_encryption_rule {
+    sse_algorithm     = "KMS"
+    kms_master_key_id = alicloud_kms_key.kms.id
+  }
+}
+
+resource "alicloud_oss_bucket_acl" "bucket-kms" {
+  bucket = alicloud_oss_bucket.bucket-kms.bucket
   acl    = "private"
 }

@@ -19,7 +19,7 @@ resource "alicloud_elasticsearch_instance" "default" {
   vswitch_id                       = alicloud_vswitch.default.id
   password                         = "Examplw1234"
   version                          = "7.10_with_X-Pack"
-  instance_charge_type             = "PostPaid"
+  payment_type                     = "PayAsYouGo"
   data_node_amount                 = "2"
   data_node_spec                   = "elasticsearch.sn2ne.large"
   data_node_disk_size              = "20"

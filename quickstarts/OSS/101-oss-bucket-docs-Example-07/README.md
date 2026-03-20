@@ -18,7 +18,10 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_oss_bucket.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
+| [alicloud_oss_bucket.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket) | resource |
+| [alicloud_oss_bucket_acl.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_acl) | resource |
+| [alicloud_oss_bucket_logging.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_logging) | resource |
+| [alicloud_oss_bucket_policy.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/oss_bucket_policy) | resource |
 | [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
 
 ## Inputs

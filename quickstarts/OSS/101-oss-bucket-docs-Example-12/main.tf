@@ -3,10 +3,9 @@ resource "random_integer" "default" {
   min = 10000
 }
 
-resource "alicloud_oss_bucket" "bucket-accelerate" {
-  bucket = "terraform-example-${random_integer.default.result}"
+resource "alicloud_oss_bucket" "bucket-redundancytype" {
+  bucket          = "terraform-example-${random_integer.default.result}"
+  redundancy_type = "ZRS"
 
-  transfer_acceleration {
-    enabled = false
-  }
+  # ... other configuration ...
 }

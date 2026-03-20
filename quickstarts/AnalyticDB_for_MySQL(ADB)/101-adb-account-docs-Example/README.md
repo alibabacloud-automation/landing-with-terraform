@@ -27,6 +27,5 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_creation"></a> [creation](#input\_creation) | n/a | `string` | `"ADB"` | no |
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tfexample"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform_example"` | no |
 <!-- END_TF_DOCS -->    

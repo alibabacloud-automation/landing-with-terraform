@@ -1,5 +1,5 @@
 variable "name" {
-  default = "tf-example"
+  default = "terraform-example"
 }
 
 resource "alicloud_resource_manager_resource_share" "example" {

@@ -23,7 +23,6 @@ No modules.
 | [alicloud_cen_transit_router_vpn_attachment.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/cen_transit_router_vpn_attachment) | resource |
 | [alicloud_vpn_customer_gateway.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpn_customer_gateway) | resource |
 | [alicloud_vpn_gateway_vpn_attachment.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpn_gateway_vpn_attachment) | resource |
-| [alicloud_cen_transit_router_available_resources.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/cen_transit_router_available_resources) | data source |
 
 ## Inputs
 

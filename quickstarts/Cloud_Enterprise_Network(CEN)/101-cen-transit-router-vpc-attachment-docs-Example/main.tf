@@ -51,6 +51,6 @@ resource "alicloud_cen_transit_router_vpc_attachment" "example" {
     zone_id    = local.slave_zone
     vswitch_id = alicloud_vswitch.example_slave.id
   }
-  transit_router_attachment_name        = var.name
+  transit_router_vpc_attachment_name    = var.name
   transit_router_attachment_description = var.name
 }

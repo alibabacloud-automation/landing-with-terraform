@@ -42,4 +42,8 @@ resource "alicloud_oos_execution" "example" {
   parameters    = <<EOF
 				{"Status":"Running"}
 		  	EOF
+  tags = {
+    "Created" = "TF",
+    "For"     = "execution Test"
+  }
 }

@@ -33,5 +33,5 @@ resource "alicloud_mongodb_instance" "default" {
 
 resource "alicloud_mongodb_audit_policy" "default" {
   db_instance_id = alicloud_mongodb_instance.default.id
-  audit_status   = "disabled"
+  audit_status   = "enable"
 }

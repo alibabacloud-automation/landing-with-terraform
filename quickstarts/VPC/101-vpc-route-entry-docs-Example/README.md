@@ -17,9 +17,9 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_route_entry.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/route_entry) | resource |
 | [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
 | [alicloud_vpc_ipv4_gateway.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc_ipv4_gateway) | resource |
+| [alicloud_vpc_route_entry.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc_route_entry) | resource |
 
 ## Inputs
 

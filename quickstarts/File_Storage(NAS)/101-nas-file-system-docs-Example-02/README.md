@@ -17,12 +17,9 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_nas_file_system.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/nas_file_system) | resource |
-| [alicloud_nas_zones.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/nas_zones) | data source |
+| [alicloud_nas_file_system.cpfs](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/nas_file_system) | resource |
 
 ## Inputs
 
-| Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
+No inputs.
 <!-- END_TF_DOCS -->    

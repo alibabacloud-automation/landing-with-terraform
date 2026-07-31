@@ -81,4 +81,8 @@ resource "alicloud_ebs_solution_instance" "default" {
     parameter_key   = "mysqlPassword"
     parameter_value = "Ebs12345"
   }
+  tags = {
+    Created = "Terraform"
+    For     = "Example"
+  }
 }

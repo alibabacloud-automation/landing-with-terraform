@@ -1,7 +1,7 @@
 # Create a RAM Role Policy attachment.
 resource "alicloud_ram_role" "role" {
-  name        = "roleName"
-  document    = <<EOF
+  role_name                   = "roleName"
+  assume_role_policy_document = <<EOF
     {
       "Statement": [
         {
@@ -18,7 +18,7 @@ resource "alicloud_ram_role" "role" {
       "Version": "1"
     }
     EOF
-  description = "this is a role test."
+  description                 = "this is a role test."
 }
 
 resource "random_integer" "default" {
@@ -52,5 +52,5 @@ resource "alicloud_ram_policy" "policy" {
 resource "alicloud_ram_role_policy_attachment" "attach" {
   policy_name = alicloud_ram_policy.policy.policy_name
   policy_type = alicloud_ram_policy.policy.type
-  role_name   = alicloud_ram_role.role.name
+  role_name   = alicloud_ram_role.role.role_name
 }

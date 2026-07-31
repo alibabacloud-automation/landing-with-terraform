@@ -1,21 +1,10 @@
-variable "name" {
-  default = "terraform-example"
-}
-
-provider "alicloud" {
-  region = "cn-hangzhou"
-}
-
-data "alicloud_nas_zones" "default" {
-  file_system_type = "extreme"
-}
-
-resource "alicloud_nas_file_system" "default" {
-  protocol_type    = "NFS"
-  storage_type     = "standard"
-  capacity         = 100
-  description      = var.name
-  encrypt_type     = 1
-  file_system_type = "extreme"
-  zone_id          = data.alicloud_nas_zones.default.zones.0.zone_id
+resource "alicloud_nas_file_system" "cpfs" {
+  protocol_type    = "cpfs"
+  storage_type     = "advance_100"
+  file_system_type = "cpfs"
+  capacity         = 3600
+  zone_id          = "cn-hangzhou-i"
+  # vpc_id and vswitch_id are required when file_system_type = cpfs
+  vpc_id     = "vpc-xxxxxxxxxxxxxxxxxxxxx"
+  vswitch_id = "vsw-xxxxxxxxxxxxxxxxxxxxx"
 }

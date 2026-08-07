@@ -14,4 +14,8 @@ resource "alicloud_cr_ee_instance" "default" {
   renewal_status = "AutoRenewal"
   instance_type  = "Advanced"
   instance_name  = "${var.name}-${random_integer.default.result}"
+  tags = {
+    Created = "TF"
+    For     = "Test"
+  }
 }

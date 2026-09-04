@@ -23,7 +23,7 @@ resource "alicloud_ram_role" "default" {
         ],
         "Version": "1"
     }
-	DEFINITION
+DEFINITION
   description = "RDS使用此角色来访问您在其他云产品中的资源"
 }
 

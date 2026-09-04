@@ -55,8 +55,9 @@ resource "alicloud_instance" "default" {
 }
 
 resource "alicloud_api_gateway_vpc_access" "default" {
-  name        = var.name
-  vpc_id      = alicloud_vpc.default.id
-  instance_id = alicloud_instance.default.id
-  port        = 8080
+  name                 = var.name
+  vpc_id               = alicloud_vpc.default.id
+  instance_id          = alicloud_instance.default.id
+  port                 = 8080
+  vpc_target_host_name = "www.example.com"
 }

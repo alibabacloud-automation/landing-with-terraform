@@ -51,6 +51,7 @@ resource "random_integer" "example" {
   max = 99999
 }
 
+
 # 专有网络VPC
 resource "alicloud_vpc" "example" {
   count      = var.create_slb ? 1 : 0

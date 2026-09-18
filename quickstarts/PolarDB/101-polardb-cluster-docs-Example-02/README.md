@@ -17,10 +17,10 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_ram_role.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/ram_role) | resource |
-| [alicloud_resource_manager_policy_attachment.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_policy_attachment) | resource |
-| [alicloud_account.current](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/account) | data source |
-| [alicloud_ram_roles.roles](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/ram_roles) | data source |
+| [alicloud_polardb_cluster.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/polardb_cluster) | resource |
+| [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
+| [alicloud_vswitch.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
+| [alicloud_polardb_node_classes.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/polardb_node_classes) | data source |
 
 ## Inputs
 

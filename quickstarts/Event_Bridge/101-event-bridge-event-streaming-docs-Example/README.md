@@ -1,0 +1,29 @@
+## Introduction
+
+This example is used to create a `alicloud_event_bridge_event_streaming` resource.
+
+<!-- BEGIN_TF_DOCS -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [alicloud_event_bridge_event_streaming.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/event_bridge_event_streaming) | resource |
+| [alicloud_message_service_queue.sink](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/message_service_queue) | resource |
+| [alicloud_message_service_queue.source](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/message_service_queue) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
+<!-- END_TF_DOCS -->

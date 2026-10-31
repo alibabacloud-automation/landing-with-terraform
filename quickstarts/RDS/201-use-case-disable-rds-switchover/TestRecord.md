@@ -1,3 +1,17 @@
+## 31 Oct 2026 08:36 UTC
+
+success: false
+
+### Versions
+
+Terraform v1.14.3
+on linux_amd64
++ provider registry.terraform.io/aliyun/alicloud v2.1.0
++ provider registry.terraform.io/hashicorp/time v0.14.2
+
+### Error
+
+Checking diff: running terraform plan for checking diff failed.
 ## 24 Oct 2026 03:34 UTC
 
 success: false

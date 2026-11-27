@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+update_provider_links() {
+    sed -i.bak 's|https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/|https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/|g' "$1" && rm -- "$1.bak"
+}
+
 if [ $# -eq 0 ];then
     exampleDir=$(find ./quickstarts -maxdepth 2 -mindepth 2 -type d)
     techSolutionDir=$(find ./solution -maxdepth 2 -mindepth 2 -type d)
@@ -9,7 +13,7 @@ if [ $# -eq 0 ];then
         # echo $file
         if [ -f $file/"main.tf" ];then
             terraform-docs $file -c scripts/.terraform-docs.yml
-            sed -i '' 's|https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/|https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/|g' $file/README.md
+            update_provider_links "$file/README.md"
             terraform -chdir=$file fmt 
         fi
     done
@@ -18,14 +22,14 @@ else
     do  
         if [ -f $arg/"main.tf" ];then
             terraform-docs $arg -c scripts/.terraform-docs.yml
-            sed -i '' 's|https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/|https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/|g' $arg/README.md 
+            update_provider_links "$arg/README.md"
             terraform -chdir=$arg fmt 
         else
             exampleDir=$(find $arg -maxdepth 2 -mindepth 1 -type d)
             for file in $exampleDir;do
                 if [ -f $file/"main.tf" ];then
                     terraform-docs $file -c scripts/.terraform-docs.yml
-                    sed -i '' 's|https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/|https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/|g' $file/README.md
+                    update_provider_links "$file/README.md"
                     terraform -chdir=$file fmt 
                 fi
             done

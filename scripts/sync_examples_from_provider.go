@@ -9,7 +9,7 @@ import (
 )
 
 const (
-	changlogPath     = "./terraform-provider-alicloud/CHANGELOG.md"
+	changelogPath    = "./terraform-provider-alicloud/CHANGELOG.md"
 	providerDocsPath = "./terraform-provider-alicloud/website/docs/r/"
 	quickstartsPath  = "./quickstarts/"
 
@@ -35,7 +35,11 @@ func main() {
 	}
 
 	version := os.Args[1]
-	newResource, err := getNewResource(version)
+	releaseNotesPath := ""
+	if len(os.Args) > 2 {
+		releaseNotesPath = os.Args[2]
+	}
+	newResource, err := getNewResource(version, releaseNotesPath)
 	if err != nil {
 		fmt.Println(err)
 		os.Exit(1)
@@ -150,32 +154,28 @@ func main() {
 
 }
 
-func getNewResource(version string) (map[string]struct{}, error) {
-	newResource := map[string]struct{}{}
-	content, err := os.ReadFile(changlogPath)
+func getNewResource(version, releaseNotesPath string) (map[string]struct{}, error) {
+	if releaseNotesPath == "" {
+		releaseNotesPath = changelogPath
+	}
+	content, err := os.ReadFile(releaseNotesPath)
 	if err != nil {
 		return nil, err
 	}
-	changelog := string(content)
-
-	logStart := strings.Index(changelog, strings.TrimPrefix(version, "v"))
-	if logStart == -1 {
-		return nil, fmt.Errorf("cannot find the changelog of version %s", version)
-	}
-	logEnd := strings.Index(changelog[logStart:], "##")
-
-	latestLog := changelog[logStart : logStart+logEnd]
-
-	re := regexp.MustCompile("`(.*?)`")
-	parts := strings.Split(latestLog, "\n")
-	for _, v := range parts {
-		if strings.Contains(v, "**New Resource:**") {
-			matches := re.FindStringSubmatch(v)
-			if len(matches) > 1 {
-				newResource[matches[1]] = struct{}{}
-			}
+	notes := string(content)
+	if releaseNotesPath == changelogPath {
+		heading := "## " + strings.TrimPrefix(version, "v") + " "
+		_, section, found := strings.Cut("\n"+notes, "\n"+heading)
+		if !found {
+			return nil, fmt.Errorf("cannot find the changelog of version %s", version)
 		}
+		notes, _, _ = strings.Cut(section, "\n## ")
 	}
 
+	newResource := map[string]struct{}{}
+	resourceEntry := regexp.MustCompile("(?m)^[ \\t]*[-*+][ \\t]+(?:\\*\\*)?New Resource:(?:\\*\\*)?[ \\t]+`(alicloud_[a-z0-9_]+)`")
+	for _, match := range resourceEntry.FindAllStringSubmatch(notes, -1) {
+		newResource[match[1]] = struct{}{}
+	}
 	return newResource, nil
 }

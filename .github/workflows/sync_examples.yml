@@ -33,28 +33,44 @@ jobs:
 
       - name: sync examples
         id: sync_examples
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
           
-          latestVersion=$(curl -s https://api.github.com/repos/aliyun/terraform-provider-alicloud/releases/latest)
-          published_date=$(echo $latestVersion | jq '.published_at')
-          version=$(echo $latestVersion | jq '.tag_name')
-          echo "version=${version//\"/}" >> $GITHUB_OUTPUT
-          published_timestamp=$(date -d  ${published_date//\"/} +%s)
+          release=$(curl --fail --silent --show-error --retry 3 \
+              --header "Authorization: Bearer $GH_TOKEN" \
+              --header 'Accept: application/vnd.github+json' \
+              https://api.github.com/repos/aliyun/terraform-provider-alicloud/releases/latest)
+          if ! version=$(jq -er '.tag_name | strings | select(length > 0)' <<< "$release"); then
+              echo '::error::The latest Provider release is missing a valid tag_name.'
+              exit 1
+          fi
+          if ! published_date=$(jq -er '.published_at | strings | select(length > 0)' <<< "$release") ||
+              ! published_timestamp=$(date -d "$published_date" +%s); then
+              echo '::error::The latest Provider release is missing a valid published_at.'
+              exit 1
+          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
 
           current_time=$(date +%s)
           time_diff=$(( (current_time - published_timestamp) / (60*60*24) ))
 
-          if [ "$time_diff" -gt 7 ]; then
+          if [ "$GITHUB_EVENT_NAME" = schedule ] && [ "$time_diff" -gt 7 ]; then
               echo "no update"
-              echo "update=false" >> $GITHUB_OUTPUT
+              echo "update=false" >> "$GITHUB_OUTPUT"
           else
-              git clone -b ${version//\"/} https://github.com/aliyun/terraform-provider-alicloud.git terraform-provider-alicloud
-              go run scripts/sync_examples_from_provider.go ${version//\"/}
+              release_notes=$(mktemp "$RUNNER_TEMP/provider-release-notes.XXXXXX")
+              if ! jq -er '.body | strings' <<< "$release" > "$release_notes"; then
+                  echo "::error::Provider release $version is missing its release notes."
+                  exit 1
+              fi
+              git clone -b "$version" https://github.com/aliyun/terraform-provider-alicloud.git terraform-provider-alicloud
+              go run scripts/sync_examples_from_provider.go "$version" "$release_notes"
               bash scripts/doc-generate.sh quickstarts >> /dev/null
               rm -rf terraform-provider-alicloud
-              echo "update=true" >> $GITHUB_OUTPUT
+              echo "update=true" >> "$GITHUB_OUTPUT"
           fi
 
 
@@ -64,5 +80,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           message: 'sync examples from Provider ${{ steps.sync_examples.outputs.version }}'
-          branch: main
+          branch: ${{ github.ref_name }}
 

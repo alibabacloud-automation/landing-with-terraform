@@ -35,14 +35,23 @@ resource "alicloud_db_instance" "default" {
   engine_version           = "8.0"
   db_instance_storage_type = "cloud_essd"
   instance_type            = data.alicloud_db_instance_classes.default.instance_classes.0.instance_class
-  instance_storage         = data.alicloud_db_instance_classes.default.instance_classes.0.storage_range.min
+  instance_storage         = data.alicloud_db_instance_classes.default.instance_classes.0.storage_range.0.min
   vswitch_id               = alicloud_vswitch.default.id
   instance_name            = var.name
   instance_charge_type     = "Postpaid"
 }
 
+resource "alicloud_rds_account" "default" {
+  db_instance_id   = alicloud_db_instance.default.id
+  account_name     = "terraform_example"
+  account_password = "Test12345"
+}
+
 resource "alicloud_db_database" "default" {
-  instance_id    = alicloud_db_instance.default.id
-  data_base_name = var.name
-  character_set  = "utf8"
+  instance_id       = alicloud_db_instance.default.id
+  data_base_name    = var.name
+  character_set     = "gbk"
+  collation_name    = "gbk_chinese_ci"
+  account_name      = alicloud_rds_account.default.account_name
+  account_privilege = "ReadWrite"
 }

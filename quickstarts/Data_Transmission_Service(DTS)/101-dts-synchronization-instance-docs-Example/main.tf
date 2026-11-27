@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    alicloud = {
+      source = "aliyun/alicloud"
+    }
+  }
+}
+
 data "alicloud_regions" "default" {
   current = true
 }

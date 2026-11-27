@@ -1,3 +1,11 @@
+terraform {
+  required_providers {
+    alicloud = {
+      source = "aliyun/alicloud"
+    }
+  }
+}
+
 data "alicloud_polardb_node_classes" "default" {
   db_type    = "PostgreSQL"
   db_version = "16"

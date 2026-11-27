@@ -2,12 +2,21 @@ variable "name" {
   default = "terraform-example"
 }
 
+terraform {
+  required_providers {
+    alicloud = {
+      source = "aliyun/alicloud"
+    }
+  }
+}
+
 provider "alicloud" {
   region = "cn-hangzhou"
 }
 
 resource "alicloud_vpc" "default8qAtD6" {
   cidr_block = "172.16.0.0/16"
+  vpc_name   = var.name
 }
 
 resource "alicloud_express_connect_router_express_connect_router" "defaultM9YxGW" {
@@ -25,7 +34,9 @@ resource "alicloud_express_connect_router_vpc_association" "default" {
     "172.16.2.0/24",
     "172.16.1.0/24"
   ]
+  allowed_prefixes_mode = "MatchMode"
   vpc_owner_id          = data.alicloud_account.current.id
   association_region_id = "cn-hangzhou"
   vpc_id                = alicloud_vpc.default8qAtD6.id
+  description           = "test"
 }

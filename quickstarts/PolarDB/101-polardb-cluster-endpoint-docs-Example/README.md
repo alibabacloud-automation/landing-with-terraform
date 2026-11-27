@@ -17,11 +17,11 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [alicloud_polardb_cluster.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/polardb_cluster) | resource |
-| [alicloud_polardb_cluster_endpoint.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/polardb_cluster_endpoint) | resource |
-| [alicloud_vpc.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/vpc) | resource |
-| [alicloud_vswitch.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/vswitch) | resource |
-| [alicloud_polardb_node_classes.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/data-sources/polardb_node_classes) | data source |
+| [alicloud_polardb_cluster.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/polardb_cluster) | resource |
+| [alicloud_polardb_cluster_endpoint.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/polardb_cluster_endpoint) | resource |
+| [alicloud_vpc.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vpc) | resource |
+| [alicloud_vswitch.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/vswitch) | resource |
+| [alicloud_polardb_node_classes.default](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/polardb_node_classes) | data source |
 
 ## Inputs
 

@@ -49,11 +49,9 @@ resource "alicloud_alikafka_topic" "default" {
   partition_num = "18"
   configs = jsonencode(
     {
-      "message.format.version" : "2.2.0",
+      "retention.ms" : "3600000",
       "max.message.bytes" : "10485760",
-      "min.insync.replicas" : "1",
-      "replication-factor" : "2",
-      "retention.ms" : "3600000"
+      "message.timestamp.type" : "LogAppendTime"
     }
   )
   tags = {

@@ -37,12 +37,9 @@ No modules.
 | <a name="input_description"></a> [description](#input\_description) | n/a | `string` | `"Created by Terraform"` | no |
 | <a name="input_firewall_name"></a> [firewall\_name](#input\_firewall\_name) | n/a | `string` | `"tf-example"` | no |
 | <a name="input_firewall_name_update"></a> [firewall\_name\_update](#input\_firewall\_name\_update) | n/a | `string` | `"tf-example-1"` | no |
-| <a name="input_firewall_subnet_cidr"></a> [firewall\_subnet\_cidr](#input\_firewall\_subnet\_cidr) | n/a | `string` | `"192.168.3.0/25"` | no |
 | <a name="input_firewall_vpc_cidr"></a> [firewall\_vpc\_cidr](#input\_firewall\_vpc\_cidr) | n/a | `string` | `"192.168.3.0/24"` | no |
 | <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"terraform-example"` | no |
 | <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"cn-hangzhou"` | no |
-| <a name="input_tr_attachment_master_cidr"></a> [tr\_attachment\_master\_cidr](#input\_tr\_attachment\_master\_cidr) | n/a | `string` | `"192.168.3.192/26"` | no |
-| <a name="input_tr_attachment_slave_cidr"></a> [tr\_attachment\_slave\_cidr](#input\_tr\_attachment\_slave\_cidr) | n/a | `string` | `"192.168.3.128/26"` | no |
 | <a name="input_zone1"></a> [zone1](#input\_zone1) | n/a | `string` | `"cn-hangzhou-h"` | no |
 | <a name="input_zone2"></a> [zone2](#input\_zone2) | n/a | `string` | `"cn-hangzhou-i"` | no |
 <!-- END_TF_DOCS -->

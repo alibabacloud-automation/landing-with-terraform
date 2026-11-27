@@ -49,7 +49,8 @@ resource "alicloud_privatelink_vpc_endpoint" "example" {
 }
 
 resource "alicloud_privatelink_vpc_endpoint_connection" "example" {
-  endpoint_id = alicloud_privatelink_vpc_endpoint.example.id
-  service_id  = alicloud_privatelink_vpc_endpoint.example.service_id
-  bandwidth   = "1024"
+  endpoint_id          = alicloud_privatelink_vpc_endpoint.example.id
+  service_id           = alicloud_privatelink_vpc_endpoint.example.service_id
+  bandwidth            = "1024"
+  traffic_control_mode = "BandwidthLimit"
 }

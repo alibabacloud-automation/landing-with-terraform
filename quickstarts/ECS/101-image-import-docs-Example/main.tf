@@ -29,6 +29,10 @@ resource "alicloud_image_import" "default" {
   license_type = "Auto"
   image_name   = var.name
   description  = var.name
+  features {
+    # The image must have the NVMe driver built in before enabling this.
+    nvme_support = "supported"
+  }
   disk_device_mapping {
     oss_bucket      = alicloud_oss_bucket.default.id
     oss_object      = alicloud_oss_bucket_object.default.id

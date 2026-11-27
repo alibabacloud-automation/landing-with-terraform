@@ -31,5 +31,5 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_slb_backend_server_name"></a> [slb\_backend\_server\_name](#input\_slb\_backend\_server\_name) | alicloud\_slb\_backend\_server | `string` | `"slbbackendservertest"` | no |
+| <a name="input_slb_backend_server_name"></a> [slb\_backend\_server\_name](#input\_slb\_backend\_server\_name) | alicloud\_slb\_backend\_server | `string` | `"tf-slb-backend-server"` | no |
 <!-- END_TF_DOCS -->    

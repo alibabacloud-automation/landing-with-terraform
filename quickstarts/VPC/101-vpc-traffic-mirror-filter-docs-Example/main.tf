@@ -3,12 +3,12 @@ variable "name" {
 }
 
 resource "alicloud_resource_manager_resource_group" "default3iXhoa" {
-  display_name        = "testname03"
+  display_name        = "example03"
   resource_group_name = var.name
 }
 
 resource "alicloud_resource_manager_resource_group" "defaultdNz2qk" {
-  display_name        = "testname04"
+  display_name        = "example04"
   resource_group_name = "${var.name}1"
 }
 

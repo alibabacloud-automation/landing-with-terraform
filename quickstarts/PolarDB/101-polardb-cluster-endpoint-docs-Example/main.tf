@@ -28,4 +28,5 @@ resource "alicloud_polardb_cluster" "default" {
 
 resource "alicloud_polardb_cluster_endpoint" "default" {
   db_cluster_id = alicloud_polardb_cluster.default.id
+  scc_mode      = "on"
 }

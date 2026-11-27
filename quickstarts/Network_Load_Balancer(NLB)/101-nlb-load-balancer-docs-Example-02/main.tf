@@ -32,7 +32,6 @@ resource "alicloud_vpc_ipv6_gateway" "default" {
 }
 
 resource "alicloud_nlb_load_balancer" "nlb" {
-  depends_on         = [alicloud_vpc_ipv6_gateway.default]
   load_balancer_name = var.name
   load_balancer_type = "Network"
   address_type       = "Intranet"

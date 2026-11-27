@@ -43,7 +43,7 @@ resource "alicloud_db_instance" "example" {
   engine                   = "MySQL"
   engine_version           = "8.0"
   instance_type            = data.alicloud_db_instance_classes.example.instance_classes.0.instance_class
-  instance_storage         = data.alicloud_db_instance_classes.example.instance_classes.0.storage_range.min
+  instance_storage         = data.alicloud_db_instance_classes.example.instance_classes.0.storage_range.0.min
   instance_charge_type     = "Postpaid"
   instance_name            = format("${var.name}_%d", count.index + 1)
   vswitch_id               = alicloud_vswitch.example.id

@@ -1,6 +1,6 @@
 // alicloud_slb_backend_server
 variable "slb_backend_server_name" {
-  default = "slbbackendservertest"
+  default = "tf-slb-backend-server"
 }
 
 data "alicloud_zones" "backend_server" {

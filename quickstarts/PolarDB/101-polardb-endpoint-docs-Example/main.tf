@@ -1,8 +1,17 @@
+terraform {
+  required_providers {
+    alicloud = {
+      source = "aliyun/alicloud"
+    }
+  }
+}
+
 data "alicloud_polardb_node_classes" "default" {
-  db_type    = "MySQL"
-  db_version = "8.0"
-  pay_type   = "PostPaid"
-  category   = "Normal"
+  db_type       = "MySQL"
+  db_version    = "8.0"
+  pay_type      = "PostPaid"
+  category      = "Normal"
+  db_node_class = "polar.mysql.x4.medium"
 }
 
 resource "alicloud_vpc" "default" {

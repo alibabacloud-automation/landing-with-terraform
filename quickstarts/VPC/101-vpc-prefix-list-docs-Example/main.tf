@@ -1,14 +1,14 @@
 variable "name" {
-  default = "tf-testacc-example"
+  default = "tf-prefixlist-example"
 }
 
 resource "alicloud_resource_manager_resource_group" "defaultRg" {
-  display_name        = "tf-testacc-chenyi"
+  display_name        = "tf-prefixlist-default-rg"
   resource_group_name = var.name
 }
 
 resource "alicloud_resource_manager_resource_group" "changeRg" {
-  display_name        = "tf-testacc-chenyi-change"
+  display_name        = "tf-prefixlist-change-rg"
   resource_group_name = "${var.name}1"
 }
 

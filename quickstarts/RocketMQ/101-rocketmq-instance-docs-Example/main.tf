@@ -41,9 +41,6 @@ resource "alicloud_rocketmq_instance" "default" {
   resource_group_id = data.alicloud_resource_manager_resource_groups.default.ids.0
   remark            = "example"
   ip_whitelists     = ["192.168.0.0/16", "10.10.0.0/16", "172.168.0.0/16"]
-  software {
-    maintain_time = "02:00-06:00"
-  }
   tags = {
     Created = "TF"
     For     = "example"

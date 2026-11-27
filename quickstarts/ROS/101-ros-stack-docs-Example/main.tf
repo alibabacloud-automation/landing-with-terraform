@@ -1,18 +1,18 @@
 resource "alicloud_ros_stack" "example" {
-  stack_name        = "tf-testaccstack"
+  stack_name        = "tfaccstack"
   template_body     = <<EOF
     {
-    	"ROSTemplateFormatVersion": "2015-09-01"
+      "ROSTemplateFormatVersion": "2015-09-01"
     }
     EOF
   stack_policy_body = <<EOF
     {
-    	"Statement": [{
-    		"Action": "Update:Delete",
-    		"Resource": "*",
-    		"Effect": "Allow",
-    		"Principal": "*"
-    	}]
+      "Statement": [{
+        "Action": "Update:Delete",
+        "Resource": "*",
+        "Effect": "Allow",
+        "Principal": "*"
+      }]
     }
     EOF
 }

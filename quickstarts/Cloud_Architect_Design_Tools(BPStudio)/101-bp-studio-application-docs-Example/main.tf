@@ -19,8 +19,8 @@ resource "alicloud_bp_studio_application" "default" {
   resource_group_id = data.alicloud_resource_manager_resource_groups.default.groups.0.id
   area_id           = "cn-hangzhou"
   instances {
-    id        = "data.alicloud_instances.default.instances.0.id"
-    node_name = "data.alicloud_instances.default.instances.0.name"
+    id        = data.alicloud_instances.default.instances.0.id
+    node_name = data.alicloud_instances.default.instances.0.name
     node_type = "ecs"
   }
   configuration = {

@@ -1,9 +1,13 @@
-variable "region" {
-  default = "cn-hangzhou"
+terraform {
+  required_providers {
+    alicloud = {
+      source = "aliyun/alicloud"
+    }
+  }
 }
 
-variable "endpoint_group_region" {
-  default = "cn-beijing"
+variable "region" {
+  default = "cn-hangzhou"
 }
 
 provider "alicloud" {
@@ -35,20 +39,17 @@ resource "alicloud_slb_load_balancer" "default" {
 }
 
 resource "alicloud_ga_basic_accelerator" "default" {
-  duration               = 1
+  payment_type           = "PayAsYouGo"
   basic_accelerator_name = "terraform-example"
   description            = "terraform-example"
   bandwidth_billing_type = "CDT"
-  auto_use_coupon        = "true"
-  auto_pay               = true
 }
 
 resource "alicloud_ga_basic_endpoint_group" "default" {
   accelerator_id            = alicloud_ga_basic_accelerator.default.id
-  endpoint_group_region     = var.endpoint_group_region
+  endpoint_group_region     = var.region
   endpoint_type             = "SLB"
   endpoint_address          = alicloud_slb_load_balancer.default.id
-  endpoint_sub_address      = "192.168.0.1"
   basic_endpoint_group_name = "terraform-example"
   description               = "terraform-example"
 }

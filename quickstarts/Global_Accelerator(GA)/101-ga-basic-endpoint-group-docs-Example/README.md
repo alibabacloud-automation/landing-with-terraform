@@ -28,6 +28,5 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_endpoint_group_region"></a> [endpoint\_group\_region](#input\_endpoint\_group\_region) | n/a | `string` | `"cn-beijing"` | no |
 | <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"cn-hangzhou"` | no |
 <!-- END_TF_DOCS -->

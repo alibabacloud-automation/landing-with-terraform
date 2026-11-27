@@ -1,9 +1,17 @@
+terraform {
+  required_providers {
+    alicloud = {
+      source = "aliyun/alicloud"
+    }
+  }
+}
+
 variable "name" {
   default = "terraform-example"
 }
 
 variable "instance_type" {
-  default = "ecs.n4.large"
+  default = "ecs.g7.large"
 }
 
 variable "image_id" {
@@ -24,7 +32,7 @@ resource "alicloud_kms_key" "key" {
 }
 
 data "alicloud_zones" "default" {
-  available_disk_category     = "cloud_efficiency"
+  available_disk_category     = "cloud_essd"
   available_resource_creation = "VSwitch"
   available_instance_type     = var.instance_type
 }
@@ -49,7 +57,7 @@ resource "alicloud_instance" "instance" {
 
   # series III
   instance_type              = var.instance_type
-  system_disk_category       = "cloud_efficiency"
+  system_disk_category       = "cloud_essd"
   system_disk_name           = var.name
   system_disk_description    = "test_foo_system_disk_description"
   image_id                   = var.image_id
@@ -59,7 +67,7 @@ resource "alicloud_instance" "instance" {
   data_disks {
     name        = "disk2"
     size        = 20
-    category    = "cloud_efficiency"
+    category    = "cloud_essd"
     description = "disk2"
     encrypted   = true
     kms_key_id  = alicloud_kms_key.key.id

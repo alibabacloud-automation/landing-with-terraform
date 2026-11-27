@@ -1,3 +1,10 @@
+terraform {
+  required_providers {
+    alicloud = {
+      source = "aliyun/alicloud"
+    }
+  }
+}
 variable "name" {
   default = "terraform-example"
 }

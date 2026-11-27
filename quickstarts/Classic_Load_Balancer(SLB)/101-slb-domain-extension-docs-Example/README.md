@@ -29,5 +29,5 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_slb_domain_extension_name"></a> [slb\_domain\_extension\_name](#input\_slb\_domain\_extension\_name) | Create a new load balancer and domain extension | `string` | `"forDomainExtension"` | no |
+| <a name="input_slb_domain_extension_name"></a> [slb\_domain\_extension\_name](#input\_slb\_domain\_extension\_name) | n/a | `string` | `"forDomainExtension"` | no |
 <!-- END_TF_DOCS -->    
